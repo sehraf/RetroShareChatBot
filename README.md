@@ -75,3 +75,8 @@ _i use CamelCase here for better reading_
 - __!leaveLobbies__ enable/disable leaving (all) lobbies when (the bot) is shutdown
 - __!leaveLobbyOnMsg__ enable/disable leaving on special phrase (like "!kill")
 - __!useBlacklist__ enable/disable using blacklist when leaving lobby an command
+
+A few words to the options.conf file:
+-------------------------------------
+The file is parsed line by line. A line staring with '#' is ignored.  
+There are severals scopes starting with [name] marking a section of the file.
