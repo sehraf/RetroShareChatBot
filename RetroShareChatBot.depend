@@ -1,0 +1,635 @@
+# depslib dependency file v1.0
+1374957820 source:/home/michael/Projects/codeblocks/RetroShareChatBot/main.cpp
+	<iostream>
+	<string.h>
+	<unistd.h>
+	<errno.h>
+	"main.h"
+
+1374953102 /home/michael/Projects/codeblocks/RetroShareChatBot/main.h
+
+1376237609 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/ChatBot.cpp
+	"ChatBot.h"
+
+1375623914 /home/michael/.sync/codeblocks/RetroShareChatBot/include/ChatBot.h
+	<iostream>
+	<unistd.h>
+	"RPC.h"
+
+1376146734 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/main.cpp
+	"main.h"
+	"ChatBot.h"
+
+1375462962 /home/michael/.sync/codeblocks/RetroShareChatBot/include/main.h
+	<iostream>
+	<string>
+	<string.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/stat.h>
+	<errno.h>
+
+1375888880 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/RPC.cpp
+	"RPC.h"
+	"SSHConnector.h"
+	"ProtoBuf.h"
+
+1375630811 /home/michael/.sync/codeblocks/RetroShareChatBot/include/RPC.h
+	"SSHConnector.h"
+	"ProtoBuf.h"
+	<string>
+	<queue>
+	<chrono>
+	<stdint.h>
+	<thread>
+
+1375693112 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/SSHConnector.cpp
+	"SSHConnector.h"
+
+1375627005 /home/michael/.sync/codeblocks/RetroShareChatBot/include/SSHConnector.h
+	<libssh/libssh.h>
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+
+1375630360 /home/michael/.sync/codeblocks/RetroShareChatBot/include/ProtoBuf.h
+	<libssh/libssh.h>
+	<iostream>
+	<string>
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+
+1375996826 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/ProtoBuf.cpp
+	"ProtoBuf.h"
+
+1376230806 /home/michael/.sync/codeblocks/RetroShareChatBot/src/ChatBot.h
+	<iostream>
+	<unistd.h>
+	<list>
+	"main.h"
+	"utils.h"
+	"ProtoBuf.h"
+	"RetroShareRPC.h"
+	"ConfigHandler.h"
+	"AutoResponse.h"
+	"IRC.h"
+
+1375887997 /home/michael/.sync/codeblocks/RetroShareChatBot/src/RPC.h
+	"SSHConnector.h"
+	"ProtoBuf.h"
+	<string>
+	<queue>
+	<chrono>
+	<stdint.h>
+	<thread>
+
+1375693112 /home/michael/.sync/codeblocks/RetroShareChatBot/src/SSHConnector.h
+	<libssh/libssh.h>
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+	"ProtoBuf.h"
+
+1376227707 /home/michael/.sync/codeblocks/RetroShareChatBot/src/ProtoBuf.h
+	<libssh/libssh.h>
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+	"gencc/chat.pb.h"
+	"gencc/core.pb.h"
+	"gencc/system.pb.h"
+
+1375632159 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/chat.pb.cc
+	"chat.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/chat.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/core.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+
+1375632159 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/core.pb.cc
+	"core.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/files.pb.cc
+	"files.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/files.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/peers.pb.cc
+	"peers.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/peers.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/search.pb.cc
+	"search.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/search.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/stream.pb.cc
+	"stream.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/stream.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/system.pb.cc
+	"system.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/system.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1376141562 /home/michael/.sync/codeblocks/RetroShareChatBot/src/main.h
+	<iostream>
+	<string>
+	<string.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/stat.h>
+	<errno.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/core.pb.cc
+	"core.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /home/michael/.sync/codeblocks/RetroShareChatBot/src/gencc/system.pb.cc
+	"system.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1376231431 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/ConfigHandler.cpp
+	"ConfigHandler.h"
+
+1376231430 /home/michael/.sync/codeblocks/RetroShareChatBot/src/ConfigHandler.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+	<algorithm>
+	<functional>
+	<cctype>
+	<vector>
+	<locale>
+	<map>
+	"utils.h"
+
+1376166793 /home/michael/.sync/codeblocks/RetroShareChatBot/src/RetroShareRPC.h
+	"SSHConnector.h"
+	"ProtoBuf.h"
+	"ConfigHandler.h"
+	"AutoResponse.h"
+	"utils.h"
+	<string>
+	<queue>
+	<list>
+	<chrono>
+	<stdint.h>
+	<thread>
+	<time.h>
+
+1376170392 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/RetroShareRPC.cc
+	"RetroShareRPC.h"
+
+1376154606 /home/michael/.sync/codeblocks/RetroShareChatBot/src/AutoResponse.h
+	"ConfigHandler.h"
+	"ProtoBuf.h"
+
+1376156122 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/AutoResponse.cpp
+	"AutoResponse.h"
+
+1376156113 /home/michael/.sync/codeblocks/RetroShareChatBot/src/utils.h
+	<string>
+	<algorithm>
+	<sstream>
+
+1376237654 /home/michael/.sync/codeblocks/RetroShareChatBot/src/IRC.h
+	<string.h>
+	<thread>
+	<list>
+	<libircclient/libircclient.h>
+	<libircclient/libirc_rfcnumeric.h>
+	"ConfigHandler.h"
+	"AutoResponse.h"
+
+1376237654 source:/home/michael/.sync/codeblocks/RetroShareChatBot/src/IRC.cpp
+	"IRC.h"
+
+1379883728 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/AutoResponse.cpp
+	"AutoResponse.h"
+	"utils.h"
+
+1379157070 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/AutoResponse.h
+	"ConfigHandler.h"
+	"gencc/chat.pb.h"
+
+1379801976 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/ConfigHandler.h
+	<string>
+	<vector>
+	<map>
+
+1379402246 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/utils.h
+	<string>
+	<algorithm>
+	<sstream>
+
+1379157538 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/ProtoBuf.h
+	<libssh/libssh.h>
+	<string>
+	<vector>
+	"gencc/chat.pb.h"
+	"gencc/core.pb.h"
+	"gencc/system.pb.h"
+
+1375632159 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/chat.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/core.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+
+1375632159 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/system.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1379878982 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/ChatBot.cpp
+	"ChatBot.h"
+	<iostream>
+	<unistd.h>
+	"RetroShareRPC.h"
+	"AutoResponse.h"
+	"IRC.h"
+	"ConfigHandler.h"
+
+1379264491 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/ChatBot.h
+	<list>
+	"main.h"
+	"utils.h"
+
+1379155165 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/main.h
+
+1379880424 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/RetroShareRPC.h
+	"ProtoBuf.h"
+	"ConfigHandler.h"
+	"utils.h"
+	"gencc/chat.pb.h"
+	<string>
+	<queue>
+	<list>
+	<thread>
+	<ctime>
+	<chrono>
+	<stdint.h>
+
+1379156902 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/SSHConnector.h
+	<libssh/libssh.h>
+	<string>
+
+1379878997 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/IRC.h
+	<string>
+	<thread>
+	<list>
+	<queue>
+	<map>
+	<libircclient/libircclient.h>
+	<libircclient/libirc_rfcnumeric.h>
+	"ConfigHandler.h"
+	"utils.h"
+
+1375632159 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/chat.pb.cc
+	"chat.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/core.pb.cc
+	"core.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/files.pb.cc
+	"files.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/files.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/peers.pb.cc
+	"peers.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/peers.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/search.pb.cc
+	"search.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/search.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/stream.pb.cc
+	"stream.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1375632159 /media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/stream.pb.h
+	<string>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/generated_message_util.h>
+	<google/protobuf/message.h>
+	<google/protobuf/repeated_field.h>
+	<google/protobuf/extension_set.h>
+	<google/protobuf/generated_enum_reflection.h>
+	<google/protobuf/unknown_field_set.h>
+	"core.pb.h"
+
+1375632159 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/gencc/system.pb.cc
+	"system.pb.h"
+	<algorithm>
+	<google/protobuf/stubs/common.h>
+	<google/protobuf/stubs/once.h>
+	<google/protobuf/io/coded_stream.h>
+	<google/protobuf/wire_format_lite_inl.h>
+	<google/protobuf/descriptor.h>
+	<google/protobuf/generated_message_reflection.h>
+	<google/protobuf/reflection_ops.h>
+	<google/protobuf/wire_format.h>
+
+1379879080 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/IRC.cpp
+	"IRC.h"
+	<iostream>
+	<cstring>
+	<unistd.h>
+	"AutoResponse.h"
+
+1379155175 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/main.cpp
+	"main.h"
+	"ChatBot.h"
+	<iostream>
+	<string>
+	<string.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/stat.h>
+	<errno.h>
+
+1379080083 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/ProtoBuf.cpp
+	"ProtoBuf.h"
+	<iostream>
+
+1378474100 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/RetroShareRPC.cc
+	"RetroShareRPC.h"
+
+1379156752 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/SSHConnector.cpp
+	"SSHConnector.h"
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+
+1379801988 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/ConfigHandler.cpp
+	"ConfigHandler.h"
+	<iostream>
+	<fstream>
+	"utils.h"
+
+1380022716 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/RetroShareChat.cpp
+	"RetroShareRPC.h"
+	<iostream>
+	"AutoResponse.h"
+
+1379614998 source:/media/D/Daten/sync/codeblocks/RetroShareChatBot/src/RetroShareRPC.cpp
+	"RetroShareRPC.h"
+	<iostream>
+	"SSHConnector.h"
+	"AutoResponse.h"
+

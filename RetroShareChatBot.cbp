@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="RetroShareChatBot" />
+		<Option platforms="Windows;Unix;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;Unix;" />
+				<Option output="bin/Debug/RetroShareChatBot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="ssh" />
+					<Add library="protobuf" />
+					<Add library="crypto" />
+					<Add library="ssl" />
+					<Add library="ircclient" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/RetroShareChatBot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="ssh" />
+					<Add library="protobuf" />
+					<Add library="crypto" />
+					<Add library="ssl" />
+					<Add library="ircclient" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="src/AutoResponse.cpp" />
+		<Unit filename="src/AutoResponse.h" />
+		<Unit filename="src/ChatBot.cpp" />
+		<Unit filename="src/ChatBot.h" />
+		<Unit filename="src/ConfigHandler.cpp" />
+		<Unit filename="src/ConfigHandler.h" />
+		<Unit filename="src/IRC.cpp" />
+		<Unit filename="src/IRC.h" />
+		<Unit filename="src/ProtoBuf.cpp" />
+		<Unit filename="src/ProtoBuf.h" />
+		<Unit filename="src/RetroShareChat.cpp" />
+		<Unit filename="src/RetroShareRPC.cpp" />
+		<Unit filename="src/RetroShareRPC.h" />
+		<Unit filename="src/SSHConnector.cpp" />
+		<Unit filename="src/SSHConnector.h" />
+		<Unit filename="src/gencc/chat.pb.cc" />
+		<Unit filename="src/gencc/chat.pb.h" />
+		<Unit filename="src/gencc/core.pb.cc" />
+		<Unit filename="src/gencc/core.pb.h" />
+		<Unit filename="src/gencc/files.pb.cc" />
+		<Unit filename="src/gencc/files.pb.h" />
+		<Unit filename="src/gencc/peers.pb.cc" />
+		<Unit filename="src/gencc/peers.pb.h" />
+		<Unit filename="src/gencc/search.pb.cc" />
+		<Unit filename="src/gencc/search.pb.h" />
+		<Unit filename="src/gencc/stream.pb.cc" />
+		<Unit filename="src/gencc/stream.pb.h" />
+		<Unit filename="src/gencc/system.pb.cc" />
+		<Unit filename="src/gencc/system.pb.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/main.h" />
+		<Unit filename="src/utils.h" />
+		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
