@@ -67,17 +67,17 @@ _Every command starts with a special character (you can pick one in the options.
 - __!off__ shuts down the bot
 
 __Change settings__  
-_all settings here requere a '1' for on or a '0' for off (e.g. "!autojoin 0")_  
+_all settings here require a '1' for on or a '0' for off (e.g. "!autojoin 0")_  
 _i use CamelCase here for better reading_
-- __!autoResponse__ enable/disable auto reponse 
+- __!autoResponse__ enable/disable auto response 
 - __!autoCreate__ enable/disable lobby creation
 - __!autoJoin__ enable/disable automatically joining of lobbies
 - __!joinAllLobbies__ enable/disable automatically joining of __all__ lobbies (needs !autojoin being on )
-- __!leaveLobbies__ enable/disable leaving (all) lobbies when (the bot) is shutdown
+- __!leaveLobbies__ enable/disable leaving (all) lobbies when (the bot) is shut down
 - __!leaveLobbyOnMsg__ enable/disable leaving on special phrase (like "!kill")
 - __!useBlacklist__ enable/disable using blacklist when leaving lobby an command
 
 A few words to the options.conf file:
 -------------------------------------
 The file is parsed line by line. A line staring with '#' is ignored.  
-There are severals scopes starting with [name] marking a section of the file.
+There are several scopes starting with [name] marking a section of the file.
