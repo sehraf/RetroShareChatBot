@@ -587,7 +587,7 @@ void RetroShareRPC::listCommandLobbies(chat::ChatMessage& chatmsg, bool blacklis
             srcMap = &_lobbyMap;
 
         for(srcIt = srcMap->begin(); srcIt != srcMap->end(); srcIt++)
-            tmpMMap.insert( std::pair<std::string,rsctrl::chat::ChatLobbyInfo>(srcIt->second.lobby_name(), srcIt->second) );
+            tmpMMap.insert( std::pair<std::string,rsctrl::chat::ChatLobbyInfo>( toLower(srcIt->second.lobby_name()), srcIt->second) );
     }
 
     for(it = tmpMMap.begin(); it != tmpMMap.end(); it++)

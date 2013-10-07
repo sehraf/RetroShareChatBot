@@ -158,6 +158,13 @@ void RetroShareRPC::processChatMessageBotControl(chat::ChatMessage& chatmsg)
             return;
         setChatLobbyNick(trim(parts[0]), trim(parts[1]));
     }
+    else if (command == "say")
+    {
+        std::vector<std::string> parts = split(parameter, ';');
+        if(parts.size() != 2)
+            return;
+        sendMessageToLobby(trim(parts[0]), trim(parts[1]));
+    }
 
     // ### AR ###
     else if (command == "autoresponse")
@@ -426,6 +433,36 @@ void RetroShareRPC::setChatLobbyNick(const std::string& lobbyNameOrId, std::stri
     else
         _protobuf->getRequestSetLobbyNicknameMsg(std::vector<std::string> {}, nick, msg);
     _rpcOutQueue->push(msg);
+}
+
+void RetroShareRPC::sendMessageToLobby(std::string& lobbyName, std::string& text)
+{
+    std::cout << "RetroShareRPC::sendMessageToLobby() lobby name: " << lobbyName << " text: " << text << std::endl;
+
+    // find lobby
+    rsctrl::chat::ChatLobbyInfo l;
+    std::string id;
+    std::map<std::string, rsctrl::chat::ChatLobbyInfo>::iterator it;
+    for(it = _lobbyMap.begin(); it != _lobbyMap.end(); it++)
+    {
+        id = it->first;
+        l = it->second;
+
+        if(l.lobby_state() == rsctrl::chat::ChatLobbyInfo::LobbyState::ChatLobbyInfo_LobbyState_LOBBYSTATE_JOINED &&
+            (l.lobby_name() == lobbyName || lobbyName == "%all%"))
+        {
+            std::cout << "  -- sending to lobby " << l.lobby_name() << std::endl;
+
+            // send text
+            rsctrl::chat::ChatId chatId;
+            chatId.set_chat_id(id);
+            chatId.set_chat_type(rsctrl::chat::ChatType::TYPE_LOBBY);
+
+            ProtoBuf::RPCMessage msg;
+            _protobuf->getRequestSendMessageMsg(chatId, text, _options->chatNickname, msg);
+            _rpcOutQueue->push(msg);
+        }
+    }
 }
 
 void RetroShareRPC::sendCmd(const std::string& inMsg)

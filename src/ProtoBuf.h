@@ -36,6 +36,7 @@ public:
     bool getRequestCreateLobbyMsg(std::string name, std::string topic, rsctrl::chat::LobbyPrivacyLevel provacy, ProtoBuf::RPCMessage& msg);
     bool getRequestSetLobbyNicknameMsg(std::vector<std::string> ids, std::string nick, ProtoBuf::RPCMessage& msg);
     bool getRequestSendMessageMsg(rsctrl::chat::ChatMessage& chatMsg, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg);
+    bool getRequestSendMessageMsg(const rsctrl::chat::ChatId& idIn, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg);
     //bool createAnswerToMessage(rsctrl::chat::ChatMessage& chatmsg, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg);
 
     static uint8_t getRpcMsgIdSubMsg(uint32_t msg_id);

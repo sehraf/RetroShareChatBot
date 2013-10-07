@@ -84,6 +84,7 @@ private:
     void listCommandCommands(rsctrl::chat::ChatMessage& chatmsg);
 
     void setChatLobbyNick(const std::string& lobbyNameOrId, std::string& nick);
+    void sendMessageToLobby(std::string& lobbyName, std::string& text);
 
     void sendCmd(const std::string& inMsg);
 

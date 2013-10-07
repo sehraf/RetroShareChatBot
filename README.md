@@ -61,6 +61,7 @@ _Every command starts with a special character (you can pick one in the options.
 - __!lobbies__ lists all available lobbies with their topic and an indicator showing if the bot has joined them
 - __!join *name*__ joins a lobby (use %all% for all lobbies)
 - __!leave *name*__ leaves a lobby (use %all% for all lobbies)
+- __!say *name*;*text*__ sends a message to a chat lobby (use %all% for all lobbies)
 - __!options__ shows current settings
 - __!commands__ shows available commands
 - __!blacklist__ shows lobbies ion the lobby blacklist

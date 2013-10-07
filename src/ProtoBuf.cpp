@@ -123,6 +123,11 @@ bool ProtoBuf::getRequestSetLobbyNicknameMsg(std::vector<std::string> ids, std::
 
 bool ProtoBuf::getRequestSendMessageMsg(rsctrl::chat::ChatMessage& chatMsg, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg)
 {
+    return getRequestSendMessageMsg(chatMsg.id(), answerText, nick, msg);
+}
+
+bool ProtoBuf::getRequestSendMessageMsg(const rsctrl::chat::ChatId& idIn, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg)
+{
     msg.msg_id = ProtoBuf::constructMsgId(
                      (uint8_t)rsctrl::core::ExtensionId::CORE,
                      (uint16_t)rsctrl::core::PackageId::CHAT,
@@ -134,8 +139,8 @@ bool ProtoBuf::getRequestSendMessageMsg(rsctrl::chat::ChatMessage& chatMsg, std:
     rsctrl::chat::ChatMessage* msgOut = req.mutable_msg();
     rsctrl::chat::ChatId *id = msgOut->mutable_id();
 
-    id->set_chat_type(chatMsg.id().chat_type());
-    id->set_chat_id(chatMsg.id().chat_id());
+    id->set_chat_type(idIn.chat_type());
+    id->set_chat_id(idIn.chat_id());
 
     msgOut->set_msg(answerText);
     msgOut->set_peer_nickname(nick);
