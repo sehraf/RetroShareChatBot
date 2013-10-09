@@ -52,7 +52,7 @@ Other things you might want to know:
 ------------------------------------
 - Everything related to lobbies is done based on the __lobby name__! Having two lobbies with the (exact) same name will cause problems!
 - For now the bot only supports __one__ IRC server (multiple channels are fine as long as they are on the same server)
-- I've only tested "normal" public IRC lobby and i expect everything else to fail
+- I've only tested "normal" public IRC channels and i expect everything else to fail
 - The options.conf file parser is not very robust - if you mess around with the file the bot will mostly crash
 
 Control lobby commands:
