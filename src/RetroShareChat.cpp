@@ -368,6 +368,10 @@ void RetroShareRPC::joinLeaveLobby(std::string& in, bool join, bool isID)
 
             if(name == in)
             {
+                // skip bot control lobby
+                if(name == _botControl->chatLobbyName)
+                    continue;
+
                 id = id2;
                 break;
             }
