@@ -4,7 +4,9 @@
 #include "ProtoBuf.h"
 #include "ConfigHandler.h"
 #include "utils.h"
-#include "gencc/chat.pb.h"
+/*
+#include "gencc/chat.pb.h" included in ProtoBuf.h
+*/
 
 #include <string>
 #include <queue>
@@ -41,6 +43,8 @@ private:
     ProtoBuf* _protobuf;
     AutoResponse* _ar;
 
+    const char COMMAND_SPLITTER = ';';
+
     bool _run;
     bool _finishQueue;
     bool _isChatRegistered;
@@ -70,6 +74,8 @@ private:
     void processChatMessageBotControl(rsctrl::chat::ChatMessage& chatmsg);
     void processChatMessageIRC(chat::ChatMessage& chatmsg);
 
+    void processFile(ProtoBuf::RPCMessage& msg);
+
     void ircToRS(std::string& msg);
     void ircSetNick();
 
@@ -85,6 +91,10 @@ private:
 
     void setChatLobbyNick(const std::string& lobbyNameOrId, std::string& nick);
     void sendMessageToLobby(std::string& lobbyName, std::string& text);
+
+#ifdef ENABLE_DOWNLOAD
+    void startRSDownload(std::string& fileName, std::string& fileHash, uint64_t fileSize);
+#endif // ENABLE_DOWNLOAD
 
     void sendCmd(const std::string& inMsg);
 

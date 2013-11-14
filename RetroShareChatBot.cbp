@@ -48,6 +48,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-DENABLE_DOWNLOAD" />
 		</Compiler>
 		<Unit filename="src/AutoResponse.cpp" />
 		<Unit filename="src/AutoResponse.h" />

@@ -153,18 +153,37 @@ void RetroShareRPC::processChatMessageBotControl(chat::ChatMessage& chatmsg)
     // ### nick ###
     else if (command == "nick")
     {
-        std::vector<std::string> parts = split(parameter, ';');
+        std::vector<std::string> parts = split(parameter, COMMAND_SPLITTER);
         if(parts.size() != 2)
             return;
         setChatLobbyNick(trim(parts[0]), trim(parts[1]));
     }
     else if (command == "say")
     {
-        std::vector<std::string> parts = split(parameter, ';');
+        std::vector<std::string> parts = split(parameter, COMMAND_SPLITTER);
         if(parts.size() != 2)
             return;
         sendMessageToLobby(trim(parts[0]), trim(parts[1]));
     }
+
+#ifdef ENABLE_DOWNLOAD
+    // ### files ###
+    else if (command == "download")
+    {
+        std::vector<std::string> parts = split(parameter, COMMAND_SPLITTER);
+        if(parts.size() != 2 && parts.size() != 3)
+            return;
+
+        uint64_t fileSize = 0;
+        if(parts.size() == 3)
+        {
+            std::istringstream iss(trim(parts[2]));
+            iss >> fileSize;
+        }
+
+        startRSDownload(trim(parts[0]), trim(parts[1]), fileSize);
+    }
+#endif // ENABLE_DOWNLOAD
 
     // ### AR ###
     else if (command == "autoresponse")

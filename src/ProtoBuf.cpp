@@ -1,5 +1,11 @@
 #include "ProtoBuf.h"
+
 #include <iostream>
+/*
+#include "gencc/core.pb.h" included in chat.pb.h
+*/
+#include "gencc/files.pb.h"
+#include "gencc/system.pb.h"
 
 ProtoBuf::ProtoBuf()
 {
@@ -13,7 +19,7 @@ ProtoBuf::~ProtoBuf()
 }
 
 /*
-    Chat
+    chat
 */
 bool ProtoBuf::getRequestChatLobbiesMsg(rsctrl::chat::RequestChatLobbies::LobbySet lobbySet, ProtoBuf::RPCMessage& msg)
 {
@@ -154,6 +160,40 @@ bool ProtoBuf::getRequestSendMessageMsg(const rsctrl::chat::ChatId& idIn, std::s
     return true;
 }
 
+#ifdef ENABLE_DOWNLOAD
+/*
+    files
+*/
+bool ProtoBuf::getRequestStartDownload(std::string& fileName, std::string& fileHash, ProtoBuf::RPCMessage& msg, uint64_t fileSize /* = 0 */)
+{
+    msg.msg_id = ProtoBuf::constructMsgId(
+            (uint8_t)rsctrl::core::ExtensionId::CORE,
+            (uint16_t)rsctrl::core::PackageId::FILES,
+            (uint8_t)rsctrl::files::RequestMsgIds::MsgId_RequestControlDownload,
+            false);
+    msg.req_id = getRequestID();
+
+    //file
+    rsctrl::core::File file;
+    file.set_hash(fileHash);
+    file.set_name(fileName);
+    if(fileSize > 0)
+        file.set_size(fileSize);
+
+    rsctrl::files::RequestControlDownload req;
+    req.set_action(rsctrl::files::RequestControlDownload_Action::RequestControlDownload_Action_ACTION_START);
+    req.set_allocated_file(&file);
+
+    if(!req.SerializePartialToString(&msg.msg_body))
+        return false;
+
+    msg.msg_size = msg.msg_body.size();
+
+    return true;
+}
+#endif // ENABLE_DOWNLOAD
+
+
 /*
     help functions
 */
@@ -278,7 +318,6 @@ bool MsgPacker::serialiseHeader(uint32_t msg_id, uint32_t req_id, uint32_t msg_s
 
     return ok;
 }
-
 
 bool MsgPacker::deserialiseHeader(uint32_t &msg_id, uint32_t &req_id, uint32_t &msg_size, uint8_t *buffer, uint32_t bufsize)
 {

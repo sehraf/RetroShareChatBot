@@ -3,6 +3,13 @@
 
 #include "SSHConnector.h"
 #include "AutoResponse.h"
+/*
+#include "gencc/core.pb.h" included in chat.pb.h
+#include "gencc/chat.pb.h" included in RetroShareRPC.h / ProtoBuf.h
+*/
+#ifdef ENABLE_DOWNLOAD
+#include "gencc/files.pb.h"
+#endif // ENABLE_DOWNLOAD
 
 RetroShareRPC::RetroShareRPC(ConfigHandler::RetroShareRPCOptions& rsopt, ConfigHandler::BotControlOptions& botcontrol,  AutoResponse* ar, std::list<Utils::InterModuleCommunicationMessage>* msgList)
 {
@@ -269,11 +276,16 @@ void RetroShareRPC::processTick()
             case core::PackageId::CHAT:
                 processChat(msg);
                 break;
+#ifdef ENABLE_DOWNLOAD
+            case core::PackageId::FILES:
+                processFile(msg);
+                break;
+#endif // ENABLE_DOWNLOAD
             default:
                 std::cerr << "RPC::processMsgs() unsupportet service " << service << std::endl;
                 break;
             }
-        }
+            }
         else
             std::cerr << "RPC::processMsgs() extension id is not CORE" << std::endl;
 
@@ -481,6 +493,52 @@ void RetroShareRPC::processChatLobbies(ProtoBuf::RPCMessage& msg)
 // ################## chat process functions ##################
 // see RetroShareChat.cpp
 
+#ifdef ENABLE_DOWNLOAD
+// ################## file functions ##################
+void RetroShareRPC::processFile(ProtoBuf::RPCMessage& msg)
+{
+    uint8_t submsg = ProtoBuf::getRpcMsgIdSubMsg(msg.msg_id);
+
+    //std::cout << "RPC::processFile() processing submsg " << (int)submsg << std::endl;
+
+    switch (submsg)
+    {
+    case files::ResponseMsgIds::MsgId_ResponseControlDownload:
+        //std::cout << "RPC::processFile() processing download controll response" << std::endl;
+        {
+            files::ResponseControlDownload response;
+            if(!response.ParseFromString(msg.msg_body))
+            {
+                std::cerr << "RPC::processChat() can't parse ResponseRegisterEvents" << std::endl;
+                break;
+            }
+            if(response.status().code() != core::Status::SUCCESS)
+            {
+                std::cerr << "RPC::processChat() ResponseRegisterEvents status != SUCCESS" << std::endl;
+                std::cerr << "RPC::processChat() --> msg: " << response.status().msg() << std::endl;
+            }
+            else
+                std::cout << "RPC::processChat() ResponseRegisterEvents status == SUCCESS" << std::endl;
+        }
+        break;
+    case files::ResponseMsgIds::MsgId_ResponseTransferList:
+        //std::cout << "RPC::processFile() processing download controll response" << std::endl;
+
+        break;
+    default:
+        std::cerr << "RPC::processFile() unsupportet submsg " << submsg << std::endl;
+        break;
+    }
+}
+
+void RetroShareRPC::startRSDownload(std::string& fileName, std::string& fileHash, uint64_t fileSize)
+{
+    ProtoBuf::RPCMessage msg;
+    _protobuf->getRequestStartDownload(fileName, fileHash, msg, fileSize);
+    _rpcOutQueue->push(msg);
+}
+
+#endif // ENABLE_DOWNLOAD
 // ################## irc functions ##################
 
 void RetroShareRPC::ircToRS(std::string& msg)
@@ -621,6 +679,11 @@ void RetroShareRPC::listCommandCommands(chat::ChatMessage& chatmsg)
     out += " " + std::string(1, _botControl->leadingChar) + "lobbies" + nl;
     out += " " + std::string(1, _botControl->leadingChar) + "blacklist" + nl;
     out += " " + std::string(1, _botControl->leadingChar) + "clearblacklist" + nl;
+    out += " " + std::string(1, _botControl->leadingChar) + "nick *lobby namne*" + COMMAND_SPLITTER + " *new nick*" + nl;
+    out += " " + std::string(1, _botControl->leadingChar) + "say *lobby namne*" + COMMAND_SPLITTER + " *msg*" + nl;
+#ifdef ENABLE_DOWNLOAD
+    out += " " + std::string(1, _botControl->leadingChar) + "download *file name*" + COMMAND_SPLITTER + " *file hash*" + nl;
+#endif // ENABLE_DOWNLOAD
 
     ProtoBuf::RPCMessage msg;
     _protobuf->getRequestSendMessageMsg(chatmsg, out, _options->chatNickname, msg);

@@ -6,8 +6,6 @@
 #include <vector>
 
 #include "gencc/chat.pb.h"
-#include "gencc/core.pb.h"
-#include "gencc/system.pb.h"
 
 const uint32_t kMsgHeaderSize = 16;
 const uint32_t kMsgMagicCode  = 0x137f0001;
@@ -38,6 +36,11 @@ public:
     bool getRequestSendMessageMsg(rsctrl::chat::ChatMessage& chatMsg, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg);
     bool getRequestSendMessageMsg(const rsctrl::chat::ChatId& idIn, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg);
     //bool createAnswerToMessage(rsctrl::chat::ChatMessage& chatmsg, std::string& answerText, std::string& nick, ProtoBuf::RPCMessage& msg);
+
+#ifdef ENABLE_DOWNLOAD
+    /* FILE */
+    bool getRequestStartDownload(std::string& fileName, std::string& fileHash, ProtoBuf::RPCMessage& msg, uint64_t fileSize = 0);
+#endif // ENABLE_DOWNLOAD
 
     static uint8_t getRpcMsgIdSubMsg(uint32_t msg_id);
     static uint16_t getRpcMsgIdService(uint32_t msg_id);
