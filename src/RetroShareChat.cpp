@@ -57,12 +57,14 @@ void RetroShareRPC::processChatMessageAutoResponse(chat::ChatMessage& chatmsg)
     std::vector<std::string> ans;
     std::string nick = "";
     {
+        // get lobby specific nick
         std::map<std::string, rsctrl::chat::ChatLobbyInfo>::iterator it;
         if((it = _lobbyMap.find(chatmsg.id().chat_id())) != _lobbyMap.end())
             nick = it->second.lobby_nickname();
     }
+
     if(nick == "")
-        nick = _options->chatNickname;
+        nick = _options->chatNickname; // use default
 
     if(_ar->processMsgRetroShare(chatmsg, ans, nick)) //chat nick is needed for replacement
     {
