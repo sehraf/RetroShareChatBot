@@ -509,16 +509,16 @@ void RetroShareRPC::processFile(ProtoBuf::RPCMessage& msg)
             files::ResponseControlDownload response;
             if(!response.ParseFromString(msg.msg_body))
             {
-                std::cerr << "RPC::processChat() can't parse ResponseRegisterEvents" << std::endl;
+                std::cerr << "RPC::processFile() can't parse ResponseControlDownload" << std::endl;
                 break;
             }
             if(response.status().code() != core::Status::SUCCESS)
             {
-                std::cerr << "RPC::processChat() ResponseRegisterEvents status != SUCCESS" << std::endl;
-                std::cerr << "RPC::processChat() --> msg: " << response.status().msg() << std::endl;
+                std::cerr << "RPC::processFile() ResponseControlDownload status != SUCCESS" << std::endl;
+                std::cerr << "RPC::processFile() --> msg: " << response.status().msg() << std::endl;
             }
             else
-                std::cout << "RPC::processChat() ResponseRegisterEvents status == SUCCESS" << std::endl;
+                std::cout << "RPC::processFile() ResponseControlDownload status == SUCCESS" << std::endl;
         }
         break;
     case files::ResponseMsgIds::MsgId_ResponseTransferList:
@@ -682,7 +682,7 @@ void RetroShareRPC::listCommandCommands(chat::ChatMessage& chatmsg)
     out += " " + std::string(1, _botControl->leadingChar) + "nick *lobby namne*" + COMMAND_SPLITTER + " *new nick*" + nl;
     out += " " + std::string(1, _botControl->leadingChar) + "say *lobby namne*" + COMMAND_SPLITTER + " *msg*" + nl;
 #ifdef ENABLE_DOWNLOAD
-    out += " " + std::string(1, _botControl->leadingChar) + "download *file name*" + COMMAND_SPLITTER + " *file hash*" + nl;
+    out += " " + std::string(1, _botControl->leadingChar) + "download *file name*" + COMMAND_SPLITTER + " *file hash*" + "[" + COMMAND_SPLITTER + " *file size*]" + nl;
 #endif // ENABLE_DOWNLOAD
 
     ProtoBuf::RPCMessage msg;

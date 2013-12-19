@@ -43,10 +43,11 @@ void RetroShareRPC::processChatMessageAutoResponse(chat::ChatMessage& chatmsg)
         }
 
         // don't answer to old messages
-        if(now - chatmsg.send_time() > 90) // 1.5 min should be enough
+        time_t diff = abs(now - (time_t)chatmsg.send_time());
+        if(diff > 90) // 1.5 min should be enough
         {
             std::cout << "RetroShareRPC::processChatMessageAutoResponse() message ignored (too old)" << std::endl;
-            std::cout << "RetroShareRPC::processChatMessageAutoResponse() now: " << now << " send_time(): " << chatmsg.send_time() <<  " -> diff: " << now - chatmsg.send_time() << std::endl;
+            std::cout << "RetroShareRPC::processChatMessageAutoResponse() now: " << now << " send_time(): " << chatmsg.send_time() <<  " -> diff: " << diff << std::endl;
             return;
         }
 
