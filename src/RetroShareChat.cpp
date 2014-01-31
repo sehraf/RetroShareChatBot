@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "AutoResponse.h"
+#include "IRC.h"
 
 // ################## chat process functions ##################
 
@@ -67,7 +68,7 @@ void RetroShareRPC::processChatMessageAutoResponse(chat::ChatMessage& chatmsg)
     if(nick == "")
         nick = _options->chatNickname; // use default
 
-    if(_ar->processMsgRetroShare(chatmsg, ans, nick)) //chat nick is needed for replacement
+    if(_cb->_ar->processMsgRetroShare(chatmsg, ans, nick)) //chat nick is needed for replacement
     {
         std::cout << " -- answers: " << ans.size() << std::endl;
 
@@ -198,38 +199,45 @@ void RetroShareRPC::processChatMessageBotControl(chat::ChatMessage& chatmsg)
 
     // ### AR ###
     else if (command == "autoresponse")
-        _ar->enable(parseBool(parameter));
+        _cb->_ar->enable(parseBool(parameter));
 
     // ### CONTROL ###
     else if (command == "restart" || command == "reload")
-        sendCmd("%restart%");
+        _cb->signalReboot();
     else if (command == "off")
-        sendCmd("%shutdown%");
+        _cb->signalShutdown();
 }
 
 void RetroShareRPC::processChatMessageIRC(chat::ChatMessage& chatmsg)
 {
-    if(_ircBridgeChannelNames->size() == 0)
+    if(_ircBridgeChannelNames->size() == 0 || _cb->_irc == NULL)
         return;
 
     std::string chatID = chatmsg.id().chat_id();
+    std::string msg = chatmsg.msg();
 
     std::vector<std::string>::iterator it;
     for(it = _ircBridgeChannelNames->begin(); it != _ircBridgeChannelNames->end(); it++)
         // (*it) is rs lobby name
         if((*it) == _lobbyMap[chatID].lobby_name())
         {
-            Utils::InterModuleCommunicationMessage msg;
-            msg.from = Utils::Module::m_RETROSHARERPC;
-            msg.to = Utils::Module::m_IRC;
-            msg.type = Utils::IMCType::imct_CHAT;
-            msg.msg = (*it) + Utils::InterModuleCommunicationMessage_splitter + "<" + chatmsg.peer_nickname() + "> " + chatmsg.msg();
-
-            _chatBotMsgList->push_back(msg);
+            std::string message = "<" + chatmsg.peer_nickname() + "> " + msg;
+            _cb->_irc->rsToIrc((*it), message);
 
             std::cout << "RetroShareRPC::processChatMessageGeneric() sending msg to irc" << std::endl;
-        }
 
+            if(msg[0] == _botControl->leadingChar)
+            {
+                msg = msg.substr(1, msg.size()-1);
+
+                std::cout << "RetroShareRPC::processChatMessageGeneric() dope " << msg << std::endl;
+                if(msg == "list")
+                {
+                    _cb->_irc->requestIrcParticipant((*it));
+                    std::cout << "RetroShareRPC::processChatMessageGeneric() requestion names" << std::endl;
+                }
+            }
+        }
 }
 
 // ################## automatic things functions ##################
@@ -497,15 +505,4 @@ void RetroShareRPC::sendMessageToLobby(std::string& lobbyName, std::string& text
             _rpcOutQueue->push(msg);
         }
     }
-}
-
-void RetroShareRPC::sendCmd(const std::string& inMsg)
-{
-    Utils::InterModuleCommunicationMessage msg;
-    msg.from = Utils::Module::m_RETROSHARERPC;
-    msg.to = Utils::Module::m_ChatBot;
-    msg.type = Utils::IMCType::imct_COMMAND;
-    msg.msg = inMsg;
-
-    _chatBotMsgList->push_back(msg);
 }

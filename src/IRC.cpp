@@ -4,16 +4,16 @@
 #include <unistd.h>
 
 #include "AutoResponse.h"
+#include "RetroShareRPC.h"
 
 std::map<irc_session_t*, ConfigHandler::IRCOptions_Server> IRC::_sessionServerMap;
 std::queue<IRC::ircMsg> IRC::_msgQueue;
 
-IRC::IRC(ConfigHandler::IRCOptions& ircopt, AutoResponse* ar, std::list<Utils::InterModuleCommunicationMessage>* msgList)
+IRC::IRC(ConfigHandler::IRCOptions& ircopt, ChatBot* cb)
 {
     //ctor
     _options = &ircopt;
-    _ar = ar;
-    _chatBotMsgList = msgList;
+    _cb = cb;
 
 #ifdef DEBUG
     {
@@ -41,6 +41,7 @@ IRC::IRC(ConfigHandler::IRCOptions& ircopt, AutoResponse* ar, std::list<Utils::I
                 std::cout << std::endl;
             }
         }
+    }
 #endif
 
     initSessions();
@@ -202,55 +203,15 @@ void IRC::processTick()
 #endif
 
         // auto response
-        processAutoResponse(ircMsg);
+        if(!ircMsg.disableAutoResponse)
+            processAutoResponse(ircMsg);
 
-        // send to RS
-        Utils::InterModuleCommunicationMessage msg;
-        msg.from = Utils::Module::m_IRC;
-        msg.to = Utils::Module::m_RETROSHARERPC;
-        msg.type = Utils::IMCType::imct_CHAT;
-        msg.msg = ircMsg.bridge.rsLobbyName + Utils::InterModuleCommunicationMessage_splitter + "<" + ircMsg.nick + "> " + ircMsg.msg;
-
-        _chatBotMsgList->push_back(msg);
+        processMsg(ircMsg);
 
         // remove item
         IRC::_msgQueue.pop();
         counter++;
     }
-}
-
-void IRC::processMsgs()
-{
-    std::list<Utils::InterModuleCommunicationMessage>::iterator it;
-    std::vector<std::list<Utils::InterModuleCommunicationMessage>::iterator> itToRemove;
-    Utils::InterModuleCommunicationMessage msg;
-    for(it = _chatBotMsgList->begin(); it != _chatBotMsgList->end(); it++)
-    {
-        msg = *it;
-
-        //std::cout << "IRC::processMsgs() processing msg '" << msg.msg << "' from " << msg.from << " to " << msg.to << std::endl;
-
-        if(msg.to == Utils::Module::m_IRC)
-        {
-            switch (msg.type)
-            {
-            case Utils::IMCType::imct_CHAT:
-                if(msg.from == Utils::Module::m_RETROSHARERPC)
-                    rsToIrc(msg.msg);
-                break;
-            case Utils::IMCType::imct_COMMAND:
-            default:
-                std::cerr << "IRC::processMsgs() msg.type is unknown" << std::endl;
-                break;
-            }
-
-            //_chatBotMsgList->erase(it);
-            itToRemove.push_back(it);
-        }
-    }
-
-    for(size_t i = 0; i < itToRemove.size(); i++)
-        _chatBotMsgList->erase(itToRemove[i]);
 }
 
 // ################## auto repose ##################
@@ -265,7 +226,7 @@ void IRC::processAutoResponse(ircMsg& ircMsg)
     // no need for find() - if the session doesn't exist things are really bad ...
     std::string ownNick = _sessionServerMap[ircMsg.session].nickName;
 
-    if(_ar->processMsgIrc(ircMsg.msg, ircMsg.nick, ans, ownNick)) //chat nick is needed for replacement
+    if(_cb->_ar->processMsgIrc(ircMsg.msg, ircMsg.nick, ans, ownNick)) //chat nick is needed for replacement
     {
         std::cout << " -- answers: " << ans.size() << std::endl;
 
@@ -287,14 +248,36 @@ void IRC::processAutoResponse(ircMsg& ircMsg)
 
 // ################## functions ##################
 
-void IRC::rsToIrc(std::string& msg)
+void IRC::processMsg(ircMsg& ircMsg)
 {
-    int32_t pos = msg.find(Utils::InterModuleCommunicationMessage_splitter);
-    if(pos <= 0)
-        return;
-    std::string lobbyName = msg.substr(0, pos);
-    std::string message = msg.substr(pos+1, msg.length()-1);
+    // send to RS
+    if(_cb->_rpc != NULL)
+    {
+        std::string message = "<" + ircMsg.nick + "> " + ircMsg.msg;
+        _cb->_rpc->ircToRS(ircMsg.bridge.rsLobbyName, message);
 
+        if(ircMsg.msg == "!list")
+        {
+            std::vector<std::string> nameList = _cb->_rpc->getRsLobbyParticipant(ircMsg.bridge.rsLobbyName);
+
+            // build answer
+            const std::string seperator = ", ";
+            std::string answer = "";
+            answer += "People on RS side:";
+
+            std::vector<std::string>::iterator it;
+            for(it = nameList.begin(); it != nameList.end(); it++)
+                answer += (*it) + seperator;
+
+            answer.substr(0, answer.length() - seperator.length() - 1);
+
+            irc_cmd_msg(ircMsg.session, ircMsg.bridge.ircChannelName.c_str(), answer.c_str());
+        }
+    }
+}
+
+void IRC::rsToIrc(std::string& lobbyName, std::string& message)
+{
     std::cout << "IRC::rsToIrc() lobby: " << lobbyName << " msg: " << message << std::endl;
 
     // search server/channel
@@ -342,6 +325,47 @@ bool IRC::rsLobbyNameToIrc(std::string& rsLobby, irc_session_t*& sessionOut, Con
     }
 
     return false;
+}
+
+void IRC::requestIrcParticipant(std::string& lobbyName)
+{
+    std::cout << "IRC::requestIrcParticipant() lobby: " << lobbyName << std::endl;
+
+    // search server/channel
+    irc_session_t* session = NULL;
+    ConfigHandler::IRCOptions_Server s;
+    ConfigHandler::IRCOptions_Bridge b;
+    bool found = rsLobbyNameToIrc(lobbyName, session, s, b);
+
+    if(found)
+        irc_cmd_names (session, b.ircChannelName.c_str());
+    else
+        std::cerr << "IRC::requestIrcParticipant() unable to find a fitting IRC channel (rs lobby: " << lobbyName << ")" << std::endl;
+}
+
+void IRC::progressIrcParticipant(ConfigHandler::IRCOptions_Bridge b, const std::string& names)
+{
+    // build answer
+    const std::string seperator = ", ";
+    std::string answer = "";
+    answer += "People on IRC side: ";
+
+    std::vector<std::string> nameList = split(names, ' ');
+    std::vector<std::string>::iterator it;
+    for(it = nameList.begin(); it != nameList.end(); it++)
+        answer += (*it) + seperator;
+
+    answer.substr(0, answer.length() - seperator.length() - 1);
+
+    // put in queue
+    ircMsg ircMsg;
+
+    ircMsg.msg = answer;
+    ircMsg.nick = "Bridge";
+    ircMsg.bridge = b;
+    ircMsg.disableAutoResponse = true;
+
+    _msgQueue.push(ircMsg);
 }
 
 // ################## events ##################
@@ -425,6 +449,41 @@ void IRC::event_channel(irc_session_t * session, const char * event, const char 
 
 void IRC::event_numeric(irc_session_t* session, unsigned int event, const char* origin, const char** params, unsigned int count)
 {
+    if(event == LIBIRC_RFC_RPL_NAMREPLY)
+    {
+        //std::cout << "LIBIRC_RFC_RPL_NAMREPLY: " << params[3] << std::endl;
+        // find channel
+        std::string channel = params[2];
+        bool found = false;
+        ConfigHandler::IRCOptions_Bridge b;
+
+        std::vector<ConfigHandler::IRCOptions_Bridge>::iterator it;
+        for(it = _sessionServerMap[session].channelVector.begin(); it != _sessionServerMap[session].channelVector.end(); it++)
+        {
+            b = *it;
+            if(b.ircChannelName == channel)
+            {
+                found = true;
+                break;
+            }
+        }
+
+        if(!found)
+        {
+            std::cerr << "IRC::event_numeric -> LIBIRC_RFC_RPL_NAMREPLY can't find " << std::endl;
+            std::cerr << " -- channel: " << channel << std::endl;
+            std::cerr << " -- names: " << params[3] << std::endl;
+            return;
+        }
+
+        progressIrcParticipant(b, params[3]);
+    }
+
+    if (event == LIBIRC_RFC_RPL_ENDOFNAMES)
+    {
+        // who cares?
+    }
+
     if ( event > 400 )
     {
         std::string fulltext;

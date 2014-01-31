@@ -11,13 +11,12 @@
 #include "gencc/files.pb.h"
 #endif // ENABLE_DOWNLOAD
 
-RetroShareRPC::RetroShareRPC(ConfigHandler::RetroShareRPCOptions& rsopt, ConfigHandler::BotControlOptions& botcontrol,  AutoResponse* ar, std::list<Utils::InterModuleCommunicationMessage>* msgList)
+RetroShareRPC::RetroShareRPC(ConfigHandler::RetroShareRPCOptions& rsopt, ConfigHandler::BotControlOptions& botcontrol, ChatBot* cb)
 {
     //ctor
     _ssh = new SSHConnector(rsopt.userName, rsopt.password, rsopt.address, rsopt.port);
     _protobuf = new ProtoBuf();
-    _ar = ar;
-    _chatBotMsgList = msgList;
+    _cb = cb;
 
     _rpcInQueue = new std::queue<ProtoBuf::RPCMessage>;
     _rpcOutQueue = new std::queue<ProtoBuf::RPCMessage>;
@@ -295,43 +294,10 @@ void RetroShareRPC::processTick()
 
     // ##### error check #####
     if(_errorCounter >= 10)
-        sendCmd("%restart%");
+        _cb->signalReboot();
 
     //std::cout << "RetroShareRPC::processTick() (" << _tickCounter << ")" << std::endl;
     _tickCounter++;
-}
-
-void RetroShareRPC::processMsgs()
-{
-    std::list<Utils::InterModuleCommunicationMessage>::iterator it;
-    std::vector<std::list<Utils::InterModuleCommunicationMessage>::iterator> itToRemove;
-    Utils::InterModuleCommunicationMessage msg;
-    for(it = _chatBotMsgList->begin(); it != _chatBotMsgList->end(); it++)
-    {
-        msg = *it;
-
-        //std::cout << "RetroShareRPC::processMsgs() processing msg '" << msg.msg << "' from " << msg.from << " to " << msg.to << std::endl;
-
-        if(msg.to == Utils::Module::m_RETROSHARERPC)
-        {
-            switch (msg.type)
-            {
-            case Utils::IMCType::imct_CHAT:
-                if(msg.from == Utils::Module::m_IRC)
-                    ircToRS(msg.msg);
-                break;
-            case Utils::IMCType::imct_COMMAND:
-            default:
-                std::cerr << "RetroShareRPC::processMsgs() msg.type is unknown" << std::endl;
-                break;
-            }
-            //_chatBotMsgList->erase(it);
-            itToRemove.push_back(it);
-        }
-    }
-
-    for(size_t i = 0; i < itToRemove.size(); i++)
-        _chatBotMsgList->erase(itToRemove[i]);
 }
 
 // ################## chat functions ##################
@@ -541,14 +507,8 @@ void RetroShareRPC::startRSDownload(std::string& fileName, std::string& fileHash
 #endif // ENABLE_DOWNLOAD
 // ################## irc functions ##################
 
-void RetroShareRPC::ircToRS(std::string& msg)
+void RetroShareRPC::ircToRS(std::string& lobbyName, std::string& message)
 {
-    int32_t pos = msg.find(Utils::InterModuleCommunicationMessage_splitter);
-    if(pos <= 0)
-        return;
-    std::string lobbyName = msg.substr(0, pos);
-    std::string message = msg.substr(pos+1, msg.length()-1);
-
     std::cout << "RetroShareRPC::ircToRS lobby: " << lobbyName << " msg: " << message << std::endl;
 
     std::string name;
@@ -585,6 +545,28 @@ void RetroShareRPC::ircSetNick()
     }
 }
 
+std::vector<std::string> RetroShareRPC::getRsLobbyParticipant(std::string& lobbyName)
+{
+    std::string name;
+    chat::ChatLobbyInfo info;
+    std::map<std::string, chat::ChatLobbyInfo>::iterator it;
+    for(it = _lobbyMap.begin(); it != _lobbyMap.end(); it++)
+    {
+        info = it->second;
+        name = info.lobby_name();
+        trim(name);
+        if(name == lobbyName)
+            break;
+    }
+
+    std::vector<std::string> nameList;
+    int num = info.nicknames_size();
+    for(int i = 0; i < num; i++)
+        nameList.push_back(info.nicknames(i));
+
+    return nameList;
+}
+
 // ################## automatic things functions ##################
 // see RetroShareChat.cpp
 
@@ -613,7 +595,7 @@ void RetroShareRPC::listCommandOptions(chat::ChatMessage& chatmsg)
 
     out += nl;
     out += "Autoresponse" + nl;
-    out += " " + parseBool(_ar->isEnabled()) +" enable" +  nl;
+    out += " " + parseBool(_cb->_ar->isEnabled()) +" enable" +  nl;
 
     ProtoBuf::RPCMessage msg;
     _protobuf->getRequestSendMessageMsg(chatmsg, out, _options->chatNickname, msg);

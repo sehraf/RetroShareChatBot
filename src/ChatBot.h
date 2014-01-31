@@ -17,15 +17,18 @@ public:
     ChatBot();
     virtual ~ChatBot();
 
+    RetroShareRPC* _rpc = NULL;
+    AutoResponse* _ar = NULL;
+    IRC* _irc = NULL;
+
     ReturnCode Run();
+
+    void signalShutdown();
+    void signalReboot();
 protected:
 private:
-    RetroShareRPC* _rpc;
     ConfigHandler* _config;
-    AutoResponse* _ar;
-    IRC* _irc;
-
-    std::list<Utils::InterModuleCommunicationMessage>* _messageList;
+    ReturnCode _status;
 
     ReturnCode processMessageList();
 };

@@ -1,6 +1,7 @@
 #ifndef RPC_H
 #define RPC_H
 
+#include "ChatBot.h"
 #include "ProtoBuf.h"
 #include "ConfigHandler.h"
 #include "utils.h"
@@ -27,7 +28,7 @@ using namespace rsctrl;
 class RetroShareRPC
 {
 public:
-    RetroShareRPC(ConfigHandler::RetroShareRPCOptions& rsopt, ConfigHandler::BotControlOptions& botcontrol, AutoResponse* ar, std::list<Utils::InterModuleCommunicationMessage>* msgList);
+    RetroShareRPC(ConfigHandler::RetroShareRPCOptions& rsopt, ConfigHandler::BotControlOptions& botcontrol, ChatBot* cb);
     virtual ~RetroShareRPC();
 
     bool start();
@@ -35,13 +36,17 @@ public:
 
     void addIRCBridgeChannelName(std::string& name);
 
+    void ircToRS(std::string& lobbyName, std::string& message);
+    std::vector<std::string> getRsLobbyParticipant(std::string& lobbyName);
+
     void processTick();
-    void processMsgs();
+//    void processMsgs();
 protected:
 private:
     SSHConnector* _ssh;
     ProtoBuf* _protobuf;
-    AutoResponse* _ar;
+    //AutoResponse* _ar;
+    ChatBot* _cb;
 
     const char COMMAND_SPLITTER = ';';
 
@@ -60,7 +65,6 @@ private:
     std::queue<ProtoBuf::RPCMessage>* _rpcOutQueue;
     std::map<std::string, rsctrl::chat::ChatLobbyInfo> _lobbyMap;
     std::map<std::string, rsctrl::chat::ChatLobbyInfo> _lobbyMapBlacklist;
-    std::list<Utils::InterModuleCommunicationMessage>* _chatBotMsgList;
     std::vector<std::string>* _ircBridgeChannelNames;
 
     void rpcMessageLoop();
@@ -76,7 +80,6 @@ private:
 
     void processFile(ProtoBuf::RPCMessage& msg);
 
-    void ircToRS(std::string& msg);
     void ircSetNick();
 
     void checkAutoJoinLobbies();
@@ -95,8 +98,6 @@ private:
 #ifdef ENABLE_DOWNLOAD
     void startRSDownload(std::string& fileName, std::string& fileHash, uint64_t fileSize);
 #endif // ENABLE_DOWNLOAD
-
-    void sendCmd(const std::string& inMsg);
 
     bool readFromChannel(ssh_channel* chan, ProtoBuf::RPCMessage& msg);
     bool writeToChannel(ssh_channel* chan, ProtoBuf::RPCMessage& msg);

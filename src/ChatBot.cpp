@@ -13,8 +13,6 @@ ChatBot::ChatBot()
     //ctor
     std::cout << "ChatBot instanziert" << std::endl;
 
-    _messageList = new std::list<Utils::InterModuleCommunicationMessage>;
-
     _config = new ConfigHandler();
     // isOK() is true when the right version number was found
     // it does NOT imply that everything is fine!
@@ -31,7 +29,7 @@ ChatBot::ChatBot()
     ConfigHandler::RetroShareRPCOptions& rsopt = _config->getRetroShareRPCOptions();
     // simple check
     if(rsopt.userName != "" && rsopt.address != "")
-        _rpc = new RetroShareRPC(rsopt, botctrlopt, _ar, _messageList);
+        _rpc = new RetroShareRPC(rsopt, botctrlopt, this);
     else
     {
         std::cerr << "Error seting up RPC (userName and/or address is not set)" << std::endl;
@@ -39,7 +37,7 @@ ChatBot::ChatBot()
     }
 
     ConfigHandler::IRCOptions& ircopt = _config->getIRCOptions();
-    _irc = new IRC(ircopt, _ar, _messageList);
+    _irc = new IRC(ircopt, this);
 
     // send bridged lobby names to rpc
     {
@@ -76,7 +74,7 @@ ReturnCode ChatBot::Run()
 
     bool rc;
     uint8_t counter = 0;
-    ReturnCode rc2 = ReturnCode::rc_OK;
+    _status = ReturnCode::rc_OK;
 
     // start subsystems
     rc = _rpc->start();
@@ -99,14 +97,9 @@ ReturnCode ChatBot::Run()
         _rpc->processTick();
         _irc->processTick();
 
-        _rpc->processMsgs();
-        _irc->processMsgs();
-
-        rc2 = processMessageList();
-
         counter++;
 
-        if(rc2 != ReturnCode::rc_OK)
+        if(_status != ReturnCode::rc_OK)
             break;
 
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
@@ -117,46 +110,15 @@ ReturnCode ChatBot::Run()
     _rpc->stop();
     _irc->stop();
 
-    return rc2;
+    return _status;
 }
 
-ReturnCode ChatBot::processMessageList()
+void ChatBot::signalReboot()
 {
-    ReturnCode rc = ReturnCode::rc_OK;
+    _status = ReturnCode::rc_RESTART;
+}
 
-    std::list<Utils::InterModuleCommunicationMessage>::iterator it;
-    std::vector<std::list<Utils::InterModuleCommunicationMessage>::iterator> itToRemove;
-    Utils::InterModuleCommunicationMessage msg;
-    for(it = _messageList->begin(); it != _messageList->end(); it++)
-    {
-        msg = *it;
-
-#ifdef DEBUG
-        std::cout << "ChatBot::processMessageList() processing msg '" << msg.msg << "' from " << msg.from << " to " << msg.to << std::endl;
-#endif
-
-        if(msg.to == Utils::Module::m_ChatBot)
-        {
-            switch(msg.type)
-            {
-            default:
-                // should not happen ... in case it does just print a warning and continue (no break!)
-                std::cerr << "ChatBot::processMessageList() msg.type is NOT command as expected!" << std::endl;
-            case Utils::IMCType::imct_COMMAND:
-                if      (msg.msg == "%shutdown%")
-                    rc = ReturnCode::rc_EXIT;
-                else if (msg.msg == "%restart%")
-                    rc = ReturnCode::rc_RESTART;
-                break;
-            }
-
-            //_messageList->erase(it);
-            itToRemove.push_back(it);
-        }
-    }
-
-    for(size_t i = 0; i < itToRemove.size(); i++)
-        _messageList->erase(itToRemove[i]);
-
-    return rc;
+void ChatBot::signalShutdown()
+{
+    _status = ReturnCode::rc_EXIT;
 }

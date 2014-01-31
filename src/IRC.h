@@ -10,6 +10,7 @@
 #include <libircclient/libircclient.h>
 #include <libircclient/libirc_rfcnumeric.h>
 
+#include "ChatBot.h"
 #include "ConfigHandler.h"
 #include "utils.h"
 
@@ -24,24 +25,27 @@ class IRC
             std::string msg = "";
             ConfigHandler::IRCOptions_Bridge bridge;
             irc_session_t* session = NULL;
+            bool disableAutoResponse = false;
         };
 
-        IRC(ConfigHandler::IRCOptions& ircopt, AutoResponse* ar, std::list<Utils::InterModuleCommunicationMessage>* msgList);
+        IRC(ConfigHandler::IRCOptions& ircopt, ChatBot* cb);
         virtual ~IRC();
 
         bool start();
         void stop();
 
         void processTick();
-        void processMsgs();
+
+        void rsToIrc(std::string& lobbyName, std::string& message);
+        void requestIrcParticipant(std::string& lobbyName);
     protected:
     private:
         static std::map<irc_session_t*, ConfigHandler::IRCOptions_Server> _sessionServerMap;
         static std::queue<ircMsg> _msgQueue;
-        std::list<Utils::InterModuleCommunicationMessage>* _chatBotMsgList;
         std::thread _ircEventThread;
         ConfigHandler::IRCOptions* _options;
-        AutoResponse* _ar;
+
+        ChatBot* _cb;
 
         bool _run;
 
@@ -52,8 +56,9 @@ class IRC
 
         void processAutoResponse(ircMsg& msg);
 
-        void rsToIrc(std::string& msg);
+        void processMsg(ircMsg& msg);
         bool rsLobbyNameToIrc(std::string& rsLobby, irc_session_t*& sessionOut, ConfigHandler::IRCOptions_Server& server, ConfigHandler::IRCOptions_Bridge& bridge);
+        static void progressIrcParticipant(ConfigHandler::IRCOptions_Bridge, const std::string& names);
 
         static void event_connect(irc_session_t * session, const char * event, const char * origin, const char ** params, unsigned int count);
         static void event_channel(irc_session_t * session, const char * event, const char * origin, const char ** params, unsigned int count);
