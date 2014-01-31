@@ -377,6 +377,9 @@ void IRC::event_connect(irc_session_t* session, const char* event, const char* o
     std::vector<ConfigHandler::IRCOptions_Bridge> channels = IRC::_sessionServerMap[session].channelVector;
     std::vector<ConfigHandler::IRCOptions_Bridge>::iterator it;
 
+    // set user modes
+    irc_cmd_user_mode(session, "i");
+
     for(it = channels.begin(); it != channels.end(); it++)
     {
         std::cout << "IRC::event_connect() joining channel " << it->ircChannelName << std::endl;
