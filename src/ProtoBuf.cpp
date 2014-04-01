@@ -1,6 +1,7 @@
 #include "ProtoBuf.h"
 
 #include <iostream>
+#include <limits>       // std::numeric_limits
 /*
 #include "gencc/core.pb.h" included in chat.pb.h
 */
@@ -173,16 +174,16 @@ bool ProtoBuf::getRequestStartDownload(std::string& fileName, std::string& fileH
             false);
     msg.req_id = getRequestID();
 
-    //file
-    rsctrl::core::File file;
-    file.set_hash(fileHash);
-    file.set_name(fileName);
-    if(fileSize > 0)
-        file.set_size(fileSize);
-
     rsctrl::files::RequestControlDownload req;
     req.set_action(rsctrl::files::RequestControlDownload_Action::RequestControlDownload_Action_ACTION_START);
-    req.set_allocated_file(&file);
+
+    // file
+    rsctrl::core::File* file = req.mutable_file();
+    file->set_size(fileSize > 0 ? fileSize : 0);
+    std::string* fh = new std::string(fileHash);
+    std::string* fn = new std::string(fileName);
+    file->set_allocated_hash(fh);
+    file->set_allocated_name(fn);
 
     if(!req.SerializePartialToString(&msg.msg_body))
         return false;

@@ -12,7 +12,7 @@ LD = g++
 WINDRES = windres
 
 INC = 
-CFLAGS = -Wall -fexceptions -DENABLE_DOWNLOAD
+CFLAGS = -Wall -fexceptions
 RESINC = 
 LIBDIR = 
 LIB = 
