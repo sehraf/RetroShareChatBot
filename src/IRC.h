@@ -28,6 +28,12 @@ class IRC
             bool disableAutoResponse = false;
         };
 
+        struct ircParticipantList
+        {
+            std::vector<std::string> pList;
+            ConfigHandler::IRCOptions_Bridge bridge;
+        };
+
         IRC(ConfigHandler::IRCOptions& ircopt, ChatBot* cb);
         virtual ~IRC();
 
@@ -42,6 +48,8 @@ class IRC
     private:
         static std::map<irc_session_t*, ConfigHandler::IRCOptions_Server> _sessionServerMap;
         static std::queue<ircMsg> _msgQueue;
+        static ircParticipantList _ircParticipantList;
+        static bool _suppressParticipant;
         std::thread _ircEventThread;
         ConfigHandler::IRCOptions* _options;
 
@@ -59,6 +67,7 @@ class IRC
         void processMsg(ircMsg& msg);
         bool rsLobbyNameToIrc(std::string& rsLobby, irc_session_t*& sessionOut, ConfigHandler::IRCOptions_Server& server, ConfigHandler::IRCOptions_Bridge& bridge);
         static void progressIrcParticipant(ConfigHandler::IRCOptions_Bridge, const std::string& names);
+        static void progressIrcParticipantEnd();
 
         static void event_connect(irc_session_t * session, const char * event, const char * origin, const char ** params, unsigned int count);
         static void event_channel(irc_session_t * session, const char * event, const char * origin, const char ** params, unsigned int count);

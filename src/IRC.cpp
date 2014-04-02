@@ -8,6 +8,8 @@
 
 std::map<irc_session_t*, ConfigHandler::IRCOptions_Server> IRC::_sessionServerMap;
 std::queue<IRC::ircMsg> IRC::_msgQueue;
+IRC::ircParticipantList IRC::_ircParticipantList;
+bool IRC::_suppressParticipant;
 
 IRC::IRC(ConfigHandler::IRCOptions& ircopt, ChatBot* cb)
 {
@@ -45,6 +47,7 @@ IRC::IRC(ConfigHandler::IRCOptions& ircopt, ChatBot* cb)
 #endif
 
     initSessions();
+    _suppressParticipant = true;
 }
 
 IRC::~IRC()
@@ -331,6 +334,13 @@ void IRC::requestIrcParticipant(std::string& lobbyName)
 {
     std::cout << "IRC::requestIrcParticipant() lobby: " << lobbyName << std::endl;
 
+    // participant list was requested -> remove lock
+    if(_suppressParticipant)
+        _suppressParticipant = false;
+
+    // clear participants list
+    _ircParticipantList.pList.clear();
+
     // search server/channel
     irc_session_t* session = NULL;
     ConfigHandler::IRCOptions_Server s;
@@ -345,24 +355,45 @@ void IRC::requestIrcParticipant(std::string& lobbyName)
 
 void IRC::progressIrcParticipant(ConfigHandler::IRCOptions_Bridge b, const std::string& names)
 {
-    // build answer
-    const std::string seperator = ", ";
-    std::string answer = "";
-    answer += "People on IRC side: ";
+    // check whether to skip or not
+    if(_suppressParticipant)
+        return;
 
+    // add people
     std::vector<std::string> nameList = split(names, ' ');
     std::vector<std::string>::iterator it;
     for(it = nameList.begin(); it != nameList.end(); it++)
+        _ircParticipantList.pList.push_back(*it);
+
+    //set bridge
+    _ircParticipantList.bridge = b;
+}
+
+void IRC::progressIrcParticipantEnd()
+{
+    // check whether to skip or not
+    if(_suppressParticipant)
+        return;
+
+    // build answer
+    const std::string seperator = ", ";
+    std::string answer = "";
+
+    std::vector<std::string>::iterator it;
+    for(it = _ircParticipantList.pList.begin(); it != _ircParticipantList.pList.end(); it++)
         answer += (*it) + seperator;
 
     answer.substr(0, answer.length() - seperator.length() - 1);
+
+    // work is done - clear everything
+    IRC::_ircParticipantList.pList.clear();
 
     // put in queue
     ircMsg ircMsg;
 
     ircMsg.msg = answer;
-    ircMsg.nick = "Bridge";
-    ircMsg.bridge = b;
+    ircMsg.nick = "People on IRC side";
+    ircMsg.bridge = _ircParticipantList.bridge;
     ircMsg.disableAutoResponse = true;
 
     _msgQueue.push(ircMsg);
@@ -479,12 +510,12 @@ void IRC::event_numeric(irc_session_t* session, unsigned int event, const char* 
             return;
         }
 
-        progressIrcParticipant(b, params[3]);
+        IRC::progressIrcParticipant(b, params[3]);
     }
 
     if (event == LIBIRC_RFC_RPL_ENDOFNAMES)
     {
-        // who cares?
+        IRC::progressIrcParticipantEnd();
     }
 
     if ( event > 400 )

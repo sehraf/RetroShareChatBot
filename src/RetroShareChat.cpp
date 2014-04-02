@@ -193,6 +193,11 @@ void RetroShareRPC::processChatMessageBotControl(chat::ChatMessage& chatmsg)
             iss >> fileSize;
         }
 
+        //std::cout << "RetroShareRPC::processChatMessageBotControl() download request:" << std::endl
+        //       << " - name: " << trim(parts[0]) << std::endl
+        //        << " - hash: " << trim(parts[1]) << std::endl
+        //        << " - size: " << fileSize << std::endl;
+
         startRSDownload(trim(parts[0]), trim(parts[1]), fileSize);
     }
 #endif // ENABLE_DOWNLOAD
@@ -222,15 +227,17 @@ void RetroShareRPC::processChatMessageIRC(chat::ChatMessage& chatmsg)
         if((*it) == _lobbyMap[chatID].lobby_name())
         {
             std::string message = "<" + chatmsg.peer_nickname() + "> " + msg;
+
+            std::cout << "RetroShareRPC::processChatMessageGeneric() sending msg to irc" << message << std::endl;
+
             _cb->_irc->rsToIrc((*it), message);
 
-            std::cout << "RetroShareRPC::processChatMessageGeneric() sending msg to irc" << std::endl;
-
+            // check for commands
             if(msg[0] == _botControl->leadingChar)
             {
                 msg = msg.substr(1, msg.size()-1);
 
-                std::cout << "RetroShareRPC::processChatMessageGeneric() dope " << msg << std::endl;
+                //std::cout << "RetroShareRPC::processChatMessageGeneric() msg: " << msg << std::endl;
                 if(msg == "list")
                 {
                     _cb->_irc->requestIrcParticipant((*it));
