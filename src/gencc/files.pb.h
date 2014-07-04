@@ -28,10 +28,8 @@
 #include "core.pb.h"
 // @@protoc_insertion_point(includes)
 
-namespace rsctrl
-{
-namespace files
-{
+namespace rsctrl {
+namespace files {
 
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_files_2eproto();
@@ -46,15 +44,14 @@ class ResponseControlDownload;
 class RequestShareDirList;
 class ResponseShareDirList;
 
-enum RequestControlDownload_Action
-{
-    RequestControlDownload_Action_ACTION_START = 1,
-    RequestControlDownload_Action_ACTION_CONTINUE = 2,
-    RequestControlDownload_Action_ACTION_WAIT = 3,
-    RequestControlDownload_Action_ACTION_PAUSE = 4,
-    RequestControlDownload_Action_ACTION_RESTART = 5,
-    RequestControlDownload_Action_ACTION_CHECK = 6,
-    RequestControlDownload_Action_ACTION_CANCEL = 7
+enum RequestControlDownload_Action {
+  RequestControlDownload_Action_ACTION_START = 1,
+  RequestControlDownload_Action_ACTION_CONTINUE = 2,
+  RequestControlDownload_Action_ACTION_WAIT = 3,
+  RequestControlDownload_Action_ACTION_PAUSE = 4,
+  RequestControlDownload_Action_ACTION_RESTART = 5,
+  RequestControlDownload_Action_ACTION_CHECK = 6,
+  RequestControlDownload_Action_ACTION_CANCEL = 7
 };
 bool RequestControlDownload_Action_IsValid(int value);
 const RequestControlDownload_Action RequestControlDownload_Action_Action_MIN = RequestControlDownload_Action_ACTION_START;
@@ -62,23 +59,20 @@ const RequestControlDownload_Action RequestControlDownload_Action_Action_MAX = R
 const int RequestControlDownload_Action_Action_ARRAYSIZE = RequestControlDownload_Action_Action_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestControlDownload_Action_descriptor();
-inline const ::std::string& RequestControlDownload_Action_Name(RequestControlDownload_Action value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestControlDownload_Action_descriptor(), value);
+inline const ::std::string& RequestControlDownload_Action_Name(RequestControlDownload_Action value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestControlDownload_Action_descriptor(), value);
 }
 inline bool RequestControlDownload_Action_Parse(
-    const ::std::string& name, RequestControlDownload_Action* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestControlDownload_Action>(
-               RequestControlDownload_Action_descriptor(), name, value);
+    const ::std::string& name, RequestControlDownload_Action* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestControlDownload_Action>(
+    RequestControlDownload_Action_descriptor(), name, value);
 }
-enum ResponseShareDirList_ListType
-{
-    ResponseShareDirList_ListType_DIRQUERY_ROOT = 1,
-    ResponseShareDirList_ListType_DIRQUERY_PERSON = 2,
-    ResponseShareDirList_ListType_DIRQUERY_FILE = 3,
-    ResponseShareDirList_ListType_DIRQUERY_DIR = 4
+enum ResponseShareDirList_ListType {
+  ResponseShareDirList_ListType_DIRQUERY_ROOT = 1,
+  ResponseShareDirList_ListType_DIRQUERY_PERSON = 2,
+  ResponseShareDirList_ListType_DIRQUERY_FILE = 3,
+  ResponseShareDirList_ListType_DIRQUERY_DIR = 4
 };
 bool ResponseShareDirList_ListType_IsValid(int value);
 const ResponseShareDirList_ListType ResponseShareDirList_ListType_ListType_MIN = ResponseShareDirList_ListType_DIRQUERY_ROOT;
@@ -86,22 +80,19 @@ const ResponseShareDirList_ListType ResponseShareDirList_ListType_ListType_MAX =
 const int ResponseShareDirList_ListType_ListType_ARRAYSIZE = ResponseShareDirList_ListType_ListType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ResponseShareDirList_ListType_descriptor();
-inline const ::std::string& ResponseShareDirList_ListType_Name(ResponseShareDirList_ListType value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               ResponseShareDirList_ListType_descriptor(), value);
+inline const ::std::string& ResponseShareDirList_ListType_Name(ResponseShareDirList_ListType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ResponseShareDirList_ListType_descriptor(), value);
 }
 inline bool ResponseShareDirList_ListType_Parse(
-    const ::std::string& name, ResponseShareDirList_ListType* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<ResponseShareDirList_ListType>(
-               ResponseShareDirList_ListType_descriptor(), name, value);
+    const ::std::string& name, ResponseShareDirList_ListType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ResponseShareDirList_ListType>(
+    ResponseShareDirList_ListType_descriptor(), name, value);
 }
-enum RequestMsgIds
-{
-    MsgId_RequestTransferList = 1,
-    MsgId_RequestControlDownload = 2,
-    MsgId_RequestShareDirList = 3
+enum RequestMsgIds {
+  MsgId_RequestTransferList = 1,
+  MsgId_RequestControlDownload = 2,
+  MsgId_RequestShareDirList = 3
 };
 bool RequestMsgIds_IsValid(int value);
 const RequestMsgIds RequestMsgIds_MIN = MsgId_RequestTransferList;
@@ -109,22 +100,19 @@ const RequestMsgIds RequestMsgIds_MAX = MsgId_RequestShareDirList;
 const int RequestMsgIds_ARRAYSIZE = RequestMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestMsgIds_descriptor();
-inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestMsgIds_descriptor(), value);
+inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestMsgIds_descriptor(), value);
 }
 inline bool RequestMsgIds_Parse(
-    const ::std::string& name, RequestMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
-               RequestMsgIds_descriptor(), name, value);
+    const ::std::string& name, RequestMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
+    RequestMsgIds_descriptor(), name, value);
 }
-enum ResponseMsgIds
-{
-    MsgId_ResponseTransferList = 1,
-    MsgId_ResponseControlDownload = 2,
-    MsgId_ResponseShareDirList = 3
+enum ResponseMsgIds {
+  MsgId_ResponseTransferList = 1,
+  MsgId_ResponseControlDownload = 2,
+  MsgId_ResponseShareDirList = 3
 };
 bool ResponseMsgIds_IsValid(int value);
 const ResponseMsgIds ResponseMsgIds_MIN = MsgId_ResponseTransferList;
@@ -132,21 +120,18 @@ const ResponseMsgIds ResponseMsgIds_MAX = MsgId_ResponseShareDirList;
 const int ResponseMsgIds_ARRAYSIZE = ResponseMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ResponseMsgIds_descriptor();
-inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               ResponseMsgIds_descriptor(), value);
+inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ResponseMsgIds_descriptor(), value);
 }
 inline bool ResponseMsgIds_Parse(
-    const ::std::string& name, ResponseMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
-               ResponseMsgIds_descriptor(), name, value);
+    const ::std::string& name, ResponseMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
+    ResponseMsgIds_descriptor(), name, value);
 }
-enum Direction
-{
-    DIRECTION_UPLOAD = 1,
-    DIRECTION_DOWNLOAD = 2
+enum Direction {
+  DIRECTION_UPLOAD = 1,
+  DIRECTION_DOWNLOAD = 2
 };
 bool Direction_IsValid(int value);
 const Direction Direction_MIN = DIRECTION_UPLOAD;
@@ -154,27 +139,24 @@ const Direction Direction_MAX = DIRECTION_DOWNLOAD;
 const int Direction_ARRAYSIZE = Direction_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* Direction_descriptor();
-inline const ::std::string& Direction_Name(Direction value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               Direction_descriptor(), value);
+inline const ::std::string& Direction_Name(Direction value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    Direction_descriptor(), value);
 }
 inline bool Direction_Parse(
-    const ::std::string& name, Direction* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<Direction>(
-               Direction_descriptor(), name, value);
+    const ::std::string& name, Direction* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Direction>(
+    Direction_descriptor(), name, value);
 }
-enum TransferState
-{
-    TRANSFER_FAILED = 1,
-    TRANSFER_OKAY = 2,
-    TRANSFER_PAUSED = 3,
-    TRANSFER_QUEUED = 4,
-    TRANSFER_WAITING = 5,
-    TRANSFER_DOWNLOADING = 6,
-    TRANSFER_CHECKING_HASH = 7,
-    TRANSFER_COMPLETE = 8
+enum TransferState {
+  TRANSFER_FAILED = 1,
+  TRANSFER_OKAY = 2,
+  TRANSFER_PAUSED = 3,
+  TRANSFER_QUEUED = 4,
+  TRANSFER_WAITING = 5,
+  TRANSFER_DOWNLOADING = 6,
+  TRANSFER_CHECKING_HASH = 7,
+  TRANSFER_COMPLETE = 8
 };
 bool TransferState_IsValid(int value);
 const TransferState TransferState_MIN = TRANSFER_FAILED;
@@ -182,848 +164,789 @@ const TransferState TransferState_MAX = TRANSFER_COMPLETE;
 const int TransferState_ARRAYSIZE = TransferState_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* TransferState_descriptor();
-inline const ::std::string& TransferState_Name(TransferState value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               TransferState_descriptor(), value);
+inline const ::std::string& TransferState_Name(TransferState value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    TransferState_descriptor(), value);
 }
 inline bool TransferState_Parse(
-    const ::std::string& name, TransferState* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<TransferState>(
-               TransferState_descriptor(), name, value);
+    const ::std::string& name, TransferState* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<TransferState>(
+    TransferState_descriptor(), name, value);
 }
 // ===================================================================
 
-class FileTransfer : public ::google::protobuf::Message
-{
-public:
-    FileTransfer();
-    virtual ~FileTransfer();
+class FileTransfer : public ::google::protobuf::Message {
+ public:
+  FileTransfer();
+  virtual ~FileTransfer();
 
-    FileTransfer(const FileTransfer& from);
+  FileTransfer(const FileTransfer& from);
 
-    inline FileTransfer& operator=(const FileTransfer& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline FileTransfer& operator=(const FileTransfer& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const FileTransfer& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const FileTransfer& default_instance();
 
-    void Swap(FileTransfer* other);
+  void Swap(FileTransfer* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    FileTransfer* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const FileTransfer& from);
-    void MergeFrom(const FileTransfer& from);
-    void Clear();
-    bool IsInitialized() const;
+  FileTransfer* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const FileTransfer& from);
+  void MergeFrom(const FileTransfer& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.File file = 1;
-    inline bool has_file() const;
-    inline void clear_file();
-    static const int kFileFieldNumber = 1;
-    inline const ::rsctrl::core::File& file() const;
-    inline ::rsctrl::core::File* mutable_file();
-    inline ::rsctrl::core::File* release_file();
-    inline void set_allocated_file(::rsctrl::core::File* file);
+  // required .rsctrl.core.File file = 1;
+  inline bool has_file() const;
+  inline void clear_file();
+  static const int kFileFieldNumber = 1;
+  inline const ::rsctrl::core::File& file() const;
+  inline ::rsctrl::core::File* mutable_file();
+  inline ::rsctrl::core::File* release_file();
+  inline void set_allocated_file(::rsctrl::core::File* file);
 
-    // required .rsctrl.files.Direction direction = 2;
-    inline bool has_direction() const;
-    inline void clear_direction();
-    static const int kDirectionFieldNumber = 2;
-    inline ::rsctrl::files::Direction direction() const;
-    inline void set_direction(::rsctrl::files::Direction value);
+  // required .rsctrl.files.Direction direction = 2;
+  inline bool has_direction() const;
+  inline void clear_direction();
+  static const int kDirectionFieldNumber = 2;
+  inline ::rsctrl::files::Direction direction() const;
+  inline void set_direction(::rsctrl::files::Direction value);
 
-    // required float fraction = 3;
-    inline bool has_fraction() const;
-    inline void clear_fraction();
-    static const int kFractionFieldNumber = 3;
-    inline float fraction() const;
-    inline void set_fraction(float value);
+  // required float fraction = 3;
+  inline bool has_fraction() const;
+  inline void clear_fraction();
+  static const int kFractionFieldNumber = 3;
+  inline float fraction() const;
+  inline void set_fraction(float value);
 
-    // required float rate_kBs = 4;
-    inline bool has_rate_kbs() const;
-    inline void clear_rate_kbs();
-    static const int kRateKBsFieldNumber = 4;
-    inline float rate_kbs() const;
-    inline void set_rate_kbs(float value);
+  // required float rate_kBs = 4;
+  inline bool has_rate_kbs() const;
+  inline void clear_rate_kbs();
+  static const int kRateKBsFieldNumber = 4;
+  inline float rate_kbs() const;
+  inline void set_rate_kbs(float value);
 
-    // required .rsctrl.files.TransferState state = 5;
-    inline bool has_state() const;
-    inline void clear_state();
-    static const int kStateFieldNumber = 5;
-    inline ::rsctrl::files::TransferState state() const;
-    inline void set_state(::rsctrl::files::TransferState value);
+  // required .rsctrl.files.TransferState state = 5;
+  inline bool has_state() const;
+  inline void clear_state();
+  static const int kStateFieldNumber = 5;
+  inline ::rsctrl::files::TransferState state() const;
+  inline void set_state(::rsctrl::files::TransferState value);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.files.FileTransfer)
-private:
-    inline void set_has_file();
-    inline void clear_has_file();
-    inline void set_has_direction();
-    inline void clear_has_direction();
-    inline void set_has_fraction();
-    inline void clear_has_fraction();
-    inline void set_has_rate_kbs();
-    inline void clear_has_rate_kbs();
-    inline void set_has_state();
-    inline void clear_has_state();
+  // @@protoc_insertion_point(class_scope:rsctrl.files.FileTransfer)
+ private:
+  inline void set_has_file();
+  inline void clear_has_file();
+  inline void set_has_direction();
+  inline void clear_has_direction();
+  inline void set_has_fraction();
+  inline void clear_has_fraction();
+  inline void set_has_rate_kbs();
+  inline void clear_has_rate_kbs();
+  inline void set_has_state();
+  inline void clear_has_state();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::File* file_;
-    int direction_;
-    float fraction_;
-    float rate_kbs_;
-    int state_;
+  ::rsctrl::core::File* file_;
+  int direction_;
+  float fraction_;
+  float rate_kbs_;
+  int state_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
-    friend void  protobuf_AddDesc_files_2eproto();
-    friend void protobuf_AssignDesc_files_2eproto();
-    friend void protobuf_ShutdownFile_files_2eproto();
+  friend void  protobuf_AddDesc_files_2eproto();
+  friend void protobuf_AssignDesc_files_2eproto();
+  friend void protobuf_ShutdownFile_files_2eproto();
 
-    void InitAsDefaultInstance();
-    static FileTransfer* default_instance_;
+  void InitAsDefaultInstance();
+  static FileTransfer* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestTransferList : public ::google::protobuf::Message
-{
-public:
-    RequestTransferList();
-    virtual ~RequestTransferList();
+class RequestTransferList : public ::google::protobuf::Message {
+ public:
+  RequestTransferList();
+  virtual ~RequestTransferList();
 
-    RequestTransferList(const RequestTransferList& from);
+  RequestTransferList(const RequestTransferList& from);
 
-    inline RequestTransferList& operator=(const RequestTransferList& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestTransferList& operator=(const RequestTransferList& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestTransferList& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestTransferList& default_instance();
 
-    void Swap(RequestTransferList* other);
+  void Swap(RequestTransferList* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestTransferList* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestTransferList& from);
-    void MergeFrom(const RequestTransferList& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestTransferList* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestTransferList& from);
+  void MergeFrom(const RequestTransferList& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.files.Direction direction = 1;
-    inline bool has_direction() const;
-    inline void clear_direction();
-    static const int kDirectionFieldNumber = 1;
-    inline ::rsctrl::files::Direction direction() const;
-    inline void set_direction(::rsctrl::files::Direction value);
+  // required .rsctrl.files.Direction direction = 1;
+  inline bool has_direction() const;
+  inline void clear_direction();
+  static const int kDirectionFieldNumber = 1;
+  inline ::rsctrl::files::Direction direction() const;
+  inline void set_direction(::rsctrl::files::Direction value);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.files.RequestTransferList)
-private:
-    inline void set_has_direction();
-    inline void clear_has_direction();
+  // @@protoc_insertion_point(class_scope:rsctrl.files.RequestTransferList)
+ private:
+  inline void set_has_direction();
+  inline void clear_has_direction();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    int direction_;
+  int direction_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
-    friend void  protobuf_AddDesc_files_2eproto();
-    friend void protobuf_AssignDesc_files_2eproto();
-    friend void protobuf_ShutdownFile_files_2eproto();
+  friend void  protobuf_AddDesc_files_2eproto();
+  friend void protobuf_AssignDesc_files_2eproto();
+  friend void protobuf_ShutdownFile_files_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestTransferList* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestTransferList* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseTransferList : public ::google::protobuf::Message
-{
-public:
-    ResponseTransferList();
-    virtual ~ResponseTransferList();
+class ResponseTransferList : public ::google::protobuf::Message {
+ public:
+  ResponseTransferList();
+  virtual ~ResponseTransferList();
 
-    ResponseTransferList(const ResponseTransferList& from);
+  ResponseTransferList(const ResponseTransferList& from);
 
-    inline ResponseTransferList& operator=(const ResponseTransferList& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseTransferList& operator=(const ResponseTransferList& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseTransferList& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseTransferList& default_instance();
 
-    void Swap(ResponseTransferList* other);
+  void Swap(ResponseTransferList* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseTransferList* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseTransferList& from);
-    void MergeFrom(const ResponseTransferList& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseTransferList* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseTransferList& from);
+  void MergeFrom(const ResponseTransferList& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // repeated .rsctrl.files.FileTransfer transfers = 2;
-    inline int transfers_size() const;
-    inline void clear_transfers();
-    static const int kTransfersFieldNumber = 2;
-    inline const ::rsctrl::files::FileTransfer& transfers(int index) const;
-    inline ::rsctrl::files::FileTransfer* mutable_transfers(int index);
-    inline ::rsctrl::files::FileTransfer* add_transfers();
-    inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer >&
-    transfers() const;
-    inline ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer >*
-    mutable_transfers();
+  // repeated .rsctrl.files.FileTransfer transfers = 2;
+  inline int transfers_size() const;
+  inline void clear_transfers();
+  static const int kTransfersFieldNumber = 2;
+  inline const ::rsctrl::files::FileTransfer& transfers(int index) const;
+  inline ::rsctrl::files::FileTransfer* mutable_transfers(int index);
+  inline ::rsctrl::files::FileTransfer* add_transfers();
+  inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer >&
+      transfers() const;
+  inline ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer >*
+      mutable_transfers();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.files.ResponseTransferList)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
+  // @@protoc_insertion_point(class_scope:rsctrl.files.ResponseTransferList)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer > transfers_;
+  ::rsctrl::core::Status* status_;
+  ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer > transfers_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_files_2eproto();
-    friend void protobuf_AssignDesc_files_2eproto();
-    friend void protobuf_ShutdownFile_files_2eproto();
+  friend void  protobuf_AddDesc_files_2eproto();
+  friend void protobuf_AssignDesc_files_2eproto();
+  friend void protobuf_ShutdownFile_files_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseTransferList* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseTransferList* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestControlDownload : public ::google::protobuf::Message
-{
-public:
-    RequestControlDownload();
-    virtual ~RequestControlDownload();
+class RequestControlDownload : public ::google::protobuf::Message {
+ public:
+  RequestControlDownload();
+  virtual ~RequestControlDownload();
 
-    RequestControlDownload(const RequestControlDownload& from);
+  RequestControlDownload(const RequestControlDownload& from);
 
-    inline RequestControlDownload& operator=(const RequestControlDownload& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestControlDownload& operator=(const RequestControlDownload& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestControlDownload& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestControlDownload& default_instance();
 
-    void Swap(RequestControlDownload* other);
+  void Swap(RequestControlDownload* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestControlDownload* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestControlDownload& from);
-    void MergeFrom(const RequestControlDownload& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestControlDownload* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestControlDownload& from);
+  void MergeFrom(const RequestControlDownload& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef RequestControlDownload_Action Action;
-    static const Action ACTION_START = RequestControlDownload_Action_ACTION_START;
-    static const Action ACTION_CONTINUE = RequestControlDownload_Action_ACTION_CONTINUE;
-    static const Action ACTION_WAIT = RequestControlDownload_Action_ACTION_WAIT;
-    static const Action ACTION_PAUSE = RequestControlDownload_Action_ACTION_PAUSE;
-    static const Action ACTION_RESTART = RequestControlDownload_Action_ACTION_RESTART;
-    static const Action ACTION_CHECK = RequestControlDownload_Action_ACTION_CHECK;
-    static const Action ACTION_CANCEL = RequestControlDownload_Action_ACTION_CANCEL;
-    static inline bool Action_IsValid(int value)
-    {
-        return RequestControlDownload_Action_IsValid(value);
-    }
-    static const Action Action_MIN =
-        RequestControlDownload_Action_Action_MIN;
-    static const Action Action_MAX =
-        RequestControlDownload_Action_Action_MAX;
-    static const int Action_ARRAYSIZE =
-        RequestControlDownload_Action_Action_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    Action_descriptor()
-    {
-        return RequestControlDownload_Action_descriptor();
-    }
-    static inline const ::std::string& Action_Name(Action value)
-    {
-        return RequestControlDownload_Action_Name(value);
-    }
-    static inline bool Action_Parse(const ::std::string& name,
-                                    Action* value)
-    {
-        return RequestControlDownload_Action_Parse(name, value);
-    }
+  typedef RequestControlDownload_Action Action;
+  static const Action ACTION_START = RequestControlDownload_Action_ACTION_START;
+  static const Action ACTION_CONTINUE = RequestControlDownload_Action_ACTION_CONTINUE;
+  static const Action ACTION_WAIT = RequestControlDownload_Action_ACTION_WAIT;
+  static const Action ACTION_PAUSE = RequestControlDownload_Action_ACTION_PAUSE;
+  static const Action ACTION_RESTART = RequestControlDownload_Action_ACTION_RESTART;
+  static const Action ACTION_CHECK = RequestControlDownload_Action_ACTION_CHECK;
+  static const Action ACTION_CANCEL = RequestControlDownload_Action_ACTION_CANCEL;
+  static inline bool Action_IsValid(int value) {
+    return RequestControlDownload_Action_IsValid(value);
+  }
+  static const Action Action_MIN =
+    RequestControlDownload_Action_Action_MIN;
+  static const Action Action_MAX =
+    RequestControlDownload_Action_Action_MAX;
+  static const int Action_ARRAYSIZE =
+    RequestControlDownload_Action_Action_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Action_descriptor() {
+    return RequestControlDownload_Action_descriptor();
+  }
+  static inline const ::std::string& Action_Name(Action value) {
+    return RequestControlDownload_Action_Name(value);
+  }
+  static inline bool Action_Parse(const ::std::string& name,
+      Action* value) {
+    return RequestControlDownload_Action_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.File file = 1;
-    inline bool has_file() const;
-    inline void clear_file();
-    static const int kFileFieldNumber = 1;
-    inline const ::rsctrl::core::File& file() const;
-    inline ::rsctrl::core::File* mutable_file();
-    inline ::rsctrl::core::File* release_file();
-    inline void set_allocated_file(::rsctrl::core::File* file);
+  // required .rsctrl.core.File file = 1;
+  inline bool has_file() const;
+  inline void clear_file();
+  static const int kFileFieldNumber = 1;
+  inline const ::rsctrl::core::File& file() const;
+  inline ::rsctrl::core::File* mutable_file();
+  inline ::rsctrl::core::File* release_file();
+  inline void set_allocated_file(::rsctrl::core::File* file);
 
-    // required .rsctrl.files.RequestControlDownload.Action action = 2;
-    inline bool has_action() const;
-    inline void clear_action();
-    static const int kActionFieldNumber = 2;
-    inline ::rsctrl::files::RequestControlDownload_Action action() const;
-    inline void set_action(::rsctrl::files::RequestControlDownload_Action value);
+  // required .rsctrl.files.RequestControlDownload.Action action = 2;
+  inline bool has_action() const;
+  inline void clear_action();
+  static const int kActionFieldNumber = 2;
+  inline ::rsctrl::files::RequestControlDownload_Action action() const;
+  inline void set_action(::rsctrl::files::RequestControlDownload_Action value);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.files.RequestControlDownload)
-private:
-    inline void set_has_file();
-    inline void clear_has_file();
-    inline void set_has_action();
-    inline void clear_has_action();
+  // @@protoc_insertion_point(class_scope:rsctrl.files.RequestControlDownload)
+ private:
+  inline void set_has_file();
+  inline void clear_has_file();
+  inline void set_has_action();
+  inline void clear_has_action();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::File* file_;
-    int action_;
+  ::rsctrl::core::File* file_;
+  int action_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_files_2eproto();
-    friend void protobuf_AssignDesc_files_2eproto();
-    friend void protobuf_ShutdownFile_files_2eproto();
+  friend void  protobuf_AddDesc_files_2eproto();
+  friend void protobuf_AssignDesc_files_2eproto();
+  friend void protobuf_ShutdownFile_files_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestControlDownload* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestControlDownload* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseControlDownload : public ::google::protobuf::Message
-{
-public:
-    ResponseControlDownload();
-    virtual ~ResponseControlDownload();
+class ResponseControlDownload : public ::google::protobuf::Message {
+ public:
+  ResponseControlDownload();
+  virtual ~ResponseControlDownload();
 
-    ResponseControlDownload(const ResponseControlDownload& from);
+  ResponseControlDownload(const ResponseControlDownload& from);
 
-    inline ResponseControlDownload& operator=(const ResponseControlDownload& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseControlDownload& operator=(const ResponseControlDownload& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseControlDownload& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseControlDownload& default_instance();
 
-    void Swap(ResponseControlDownload* other);
+  void Swap(ResponseControlDownload* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseControlDownload* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseControlDownload& from);
-    void MergeFrom(const ResponseControlDownload& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseControlDownload* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseControlDownload& from);
+  void MergeFrom(const ResponseControlDownload& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.files.ResponseControlDownload)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
+  // @@protoc_insertion_point(class_scope:rsctrl.files.ResponseControlDownload)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
+  ::rsctrl::core::Status* status_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
-    friend void  protobuf_AddDesc_files_2eproto();
-    friend void protobuf_AssignDesc_files_2eproto();
-    friend void protobuf_ShutdownFile_files_2eproto();
+  friend void  protobuf_AddDesc_files_2eproto();
+  friend void protobuf_AssignDesc_files_2eproto();
+  friend void protobuf_ShutdownFile_files_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseControlDownload* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseControlDownload* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestShareDirList : public ::google::protobuf::Message
-{
-public:
-    RequestShareDirList();
-    virtual ~RequestShareDirList();
+class RequestShareDirList : public ::google::protobuf::Message {
+ public:
+  RequestShareDirList();
+  virtual ~RequestShareDirList();
 
-    RequestShareDirList(const RequestShareDirList& from);
+  RequestShareDirList(const RequestShareDirList& from);
 
-    inline RequestShareDirList& operator=(const RequestShareDirList& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestShareDirList& operator=(const RequestShareDirList& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestShareDirList& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestShareDirList& default_instance();
 
-    void Swap(RequestShareDirList* other);
+  void Swap(RequestShareDirList* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestShareDirList* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestShareDirList& from);
-    void MergeFrom(const RequestShareDirList& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestShareDirList* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestShareDirList& from);
+  void MergeFrom(const RequestShareDirList& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required string ssl_id = 1;
-    inline bool has_ssl_id() const;
-    inline void clear_ssl_id();
-    static const int kSslIdFieldNumber = 1;
-    inline const ::std::string& ssl_id() const;
-    inline void set_ssl_id(const ::std::string& value);
-    inline void set_ssl_id(const char* value);
-    inline void set_ssl_id(const char* value, size_t size);
-    inline ::std::string* mutable_ssl_id();
-    inline ::std::string* release_ssl_id();
-    inline void set_allocated_ssl_id(::std::string* ssl_id);
+  // required string ssl_id = 1;
+  inline bool has_ssl_id() const;
+  inline void clear_ssl_id();
+  static const int kSslIdFieldNumber = 1;
+  inline const ::std::string& ssl_id() const;
+  inline void set_ssl_id(const ::std::string& value);
+  inline void set_ssl_id(const char* value);
+  inline void set_ssl_id(const char* value, size_t size);
+  inline ::std::string* mutable_ssl_id();
+  inline ::std::string* release_ssl_id();
+  inline void set_allocated_ssl_id(::std::string* ssl_id);
 
-    // required string path = 2;
-    inline bool has_path() const;
-    inline void clear_path();
-    static const int kPathFieldNumber = 2;
-    inline const ::std::string& path() const;
-    inline void set_path(const ::std::string& value);
-    inline void set_path(const char* value);
-    inline void set_path(const char* value, size_t size);
-    inline ::std::string* mutable_path();
-    inline ::std::string* release_path();
-    inline void set_allocated_path(::std::string* path);
+  // required string path = 2;
+  inline bool has_path() const;
+  inline void clear_path();
+  static const int kPathFieldNumber = 2;
+  inline const ::std::string& path() const;
+  inline void set_path(const ::std::string& value);
+  inline void set_path(const char* value);
+  inline void set_path(const char* value, size_t size);
+  inline ::std::string* mutable_path();
+  inline ::std::string* release_path();
+  inline void set_allocated_path(::std::string* path);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.files.RequestShareDirList)
-private:
-    inline void set_has_ssl_id();
-    inline void clear_has_ssl_id();
-    inline void set_has_path();
-    inline void clear_has_path();
+  // @@protoc_insertion_point(class_scope:rsctrl.files.RequestShareDirList)
+ private:
+  inline void set_has_ssl_id();
+  inline void clear_has_ssl_id();
+  inline void set_has_path();
+  inline void clear_has_path();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::std::string* ssl_id_;
-    ::std::string* path_;
+  ::std::string* ssl_id_;
+  ::std::string* path_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_files_2eproto();
-    friend void protobuf_AssignDesc_files_2eproto();
-    friend void protobuf_ShutdownFile_files_2eproto();
+  friend void  protobuf_AddDesc_files_2eproto();
+  friend void protobuf_AssignDesc_files_2eproto();
+  friend void protobuf_ShutdownFile_files_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestShareDirList* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestShareDirList* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseShareDirList : public ::google::protobuf::Message
-{
-public:
-    ResponseShareDirList();
-    virtual ~ResponseShareDirList();
+class ResponseShareDirList : public ::google::protobuf::Message {
+ public:
+  ResponseShareDirList();
+  virtual ~ResponseShareDirList();
 
-    ResponseShareDirList(const ResponseShareDirList& from);
+  ResponseShareDirList(const ResponseShareDirList& from);
 
-    inline ResponseShareDirList& operator=(const ResponseShareDirList& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseShareDirList& operator=(const ResponseShareDirList& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseShareDirList& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseShareDirList& default_instance();
 
-    void Swap(ResponseShareDirList* other);
+  void Swap(ResponseShareDirList* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseShareDirList* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseShareDirList& from);
-    void MergeFrom(const ResponseShareDirList& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseShareDirList* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseShareDirList& from);
+  void MergeFrom(const ResponseShareDirList& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef ResponseShareDirList_ListType ListType;
-    static const ListType DIRQUERY_ROOT = ResponseShareDirList_ListType_DIRQUERY_ROOT;
-    static const ListType DIRQUERY_PERSON = ResponseShareDirList_ListType_DIRQUERY_PERSON;
-    static const ListType DIRQUERY_FILE = ResponseShareDirList_ListType_DIRQUERY_FILE;
-    static const ListType DIRQUERY_DIR = ResponseShareDirList_ListType_DIRQUERY_DIR;
-    static inline bool ListType_IsValid(int value)
-    {
-        return ResponseShareDirList_ListType_IsValid(value);
-    }
-    static const ListType ListType_MIN =
-        ResponseShareDirList_ListType_ListType_MIN;
-    static const ListType ListType_MAX =
-        ResponseShareDirList_ListType_ListType_MAX;
-    static const int ListType_ARRAYSIZE =
-        ResponseShareDirList_ListType_ListType_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    ListType_descriptor()
-    {
-        return ResponseShareDirList_ListType_descriptor();
-    }
-    static inline const ::std::string& ListType_Name(ListType value)
-    {
-        return ResponseShareDirList_ListType_Name(value);
-    }
-    static inline bool ListType_Parse(const ::std::string& name,
-                                      ListType* value)
-    {
-        return ResponseShareDirList_ListType_Parse(name, value);
-    }
+  typedef ResponseShareDirList_ListType ListType;
+  static const ListType DIRQUERY_ROOT = ResponseShareDirList_ListType_DIRQUERY_ROOT;
+  static const ListType DIRQUERY_PERSON = ResponseShareDirList_ListType_DIRQUERY_PERSON;
+  static const ListType DIRQUERY_FILE = ResponseShareDirList_ListType_DIRQUERY_FILE;
+  static const ListType DIRQUERY_DIR = ResponseShareDirList_ListType_DIRQUERY_DIR;
+  static inline bool ListType_IsValid(int value) {
+    return ResponseShareDirList_ListType_IsValid(value);
+  }
+  static const ListType ListType_MIN =
+    ResponseShareDirList_ListType_ListType_MIN;
+  static const ListType ListType_MAX =
+    ResponseShareDirList_ListType_ListType_MAX;
+  static const int ListType_ARRAYSIZE =
+    ResponseShareDirList_ListType_ListType_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  ListType_descriptor() {
+    return ResponseShareDirList_ListType_descriptor();
+  }
+  static inline const ::std::string& ListType_Name(ListType value) {
+    return ResponseShareDirList_ListType_Name(value);
+  }
+  static inline bool ListType_Parse(const ::std::string& name,
+      ListType* value) {
+    return ResponseShareDirList_ListType_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // required string ssl_id = 2;
-    inline bool has_ssl_id() const;
-    inline void clear_ssl_id();
-    static const int kSslIdFieldNumber = 2;
-    inline const ::std::string& ssl_id() const;
-    inline void set_ssl_id(const ::std::string& value);
-    inline void set_ssl_id(const char* value);
-    inline void set_ssl_id(const char* value, size_t size);
-    inline ::std::string* mutable_ssl_id();
-    inline ::std::string* release_ssl_id();
-    inline void set_allocated_ssl_id(::std::string* ssl_id);
+  // required string ssl_id = 2;
+  inline bool has_ssl_id() const;
+  inline void clear_ssl_id();
+  static const int kSslIdFieldNumber = 2;
+  inline const ::std::string& ssl_id() const;
+  inline void set_ssl_id(const ::std::string& value);
+  inline void set_ssl_id(const char* value);
+  inline void set_ssl_id(const char* value, size_t size);
+  inline ::std::string* mutable_ssl_id();
+  inline ::std::string* release_ssl_id();
+  inline void set_allocated_ssl_id(::std::string* ssl_id);
 
-    // required string path = 3;
-    inline bool has_path() const;
-    inline void clear_path();
-    static const int kPathFieldNumber = 3;
-    inline const ::std::string& path() const;
-    inline void set_path(const ::std::string& value);
-    inline void set_path(const char* value);
-    inline void set_path(const char* value, size_t size);
-    inline ::std::string* mutable_path();
-    inline ::std::string* release_path();
-    inline void set_allocated_path(::std::string* path);
+  // required string path = 3;
+  inline bool has_path() const;
+  inline void clear_path();
+  static const int kPathFieldNumber = 3;
+  inline const ::std::string& path() const;
+  inline void set_path(const ::std::string& value);
+  inline void set_path(const char* value);
+  inline void set_path(const char* value, size_t size);
+  inline ::std::string* mutable_path();
+  inline ::std::string* release_path();
+  inline void set_allocated_path(::std::string* path);
 
-    // required .rsctrl.files.ResponseShareDirList.ListType list_type = 4;
-    inline bool has_list_type() const;
-    inline void clear_list_type();
-    static const int kListTypeFieldNumber = 4;
-    inline ::rsctrl::files::ResponseShareDirList_ListType list_type() const;
-    inline void set_list_type(::rsctrl::files::ResponseShareDirList_ListType value);
+  // required .rsctrl.files.ResponseShareDirList.ListType list_type = 4;
+  inline bool has_list_type() const;
+  inline void clear_list_type();
+  static const int kListTypeFieldNumber = 4;
+  inline ::rsctrl::files::ResponseShareDirList_ListType list_type() const;
+  inline void set_list_type(::rsctrl::files::ResponseShareDirList_ListType value);
 
-    // repeated .rsctrl.core.File files = 5;
-    inline int files_size() const;
-    inline void clear_files();
-    static const int kFilesFieldNumber = 5;
-    inline const ::rsctrl::core::File& files(int index) const;
-    inline ::rsctrl::core::File* mutable_files(int index);
-    inline ::rsctrl::core::File* add_files();
-    inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File >&
-    files() const;
-    inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File >*
-    mutable_files();
+  // repeated .rsctrl.core.File files = 5;
+  inline int files_size() const;
+  inline void clear_files();
+  static const int kFilesFieldNumber = 5;
+  inline const ::rsctrl::core::File& files(int index) const;
+  inline ::rsctrl::core::File* mutable_files(int index);
+  inline ::rsctrl::core::File* add_files();
+  inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File >&
+      files() const;
+  inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File >*
+      mutable_files();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.files.ResponseShareDirList)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
-    inline void set_has_ssl_id();
-    inline void clear_has_ssl_id();
-    inline void set_has_path();
-    inline void clear_has_path();
-    inline void set_has_list_type();
-    inline void clear_has_list_type();
+  // @@protoc_insertion_point(class_scope:rsctrl.files.ResponseShareDirList)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
+  inline void set_has_ssl_id();
+  inline void clear_has_ssl_id();
+  inline void set_has_path();
+  inline void clear_has_path();
+  inline void set_has_list_type();
+  inline void clear_has_list_type();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::std::string* ssl_id_;
-    ::std::string* path_;
-    ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File > files_;
-    int list_type_;
+  ::rsctrl::core::Status* status_;
+  ::std::string* ssl_id_;
+  ::std::string* path_;
+  ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File > files_;
+  int list_type_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
-    friend void  protobuf_AddDesc_files_2eproto();
-    friend void protobuf_AssignDesc_files_2eproto();
-    friend void protobuf_ShutdownFile_files_2eproto();
+  friend void  protobuf_AddDesc_files_2eproto();
+  friend void protobuf_AssignDesc_files_2eproto();
+  friend void protobuf_ShutdownFile_files_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseShareDirList* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseShareDirList* default_instance_;
 };
 // ===================================================================
 
@@ -1033,166 +956,131 @@ private:
 // FileTransfer
 
 // required .rsctrl.core.File file = 1;
-inline bool FileTransfer::has_file() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool FileTransfer::has_file() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void FileTransfer::set_has_file()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void FileTransfer::set_has_file() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void FileTransfer::clear_has_file()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void FileTransfer::clear_has_file() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void FileTransfer::clear_file()
-{
-    if (file_ != NULL) file_->::rsctrl::core::File::Clear();
-    clear_has_file();
+inline void FileTransfer::clear_file() {
+  if (file_ != NULL) file_->::rsctrl::core::File::Clear();
+  clear_has_file();
 }
-inline const ::rsctrl::core::File& FileTransfer::file() const
-{
-    return file_ != NULL ? *file_ : *default_instance_->file_;
+inline const ::rsctrl::core::File& FileTransfer::file() const {
+  return file_ != NULL ? *file_ : *default_instance_->file_;
 }
-inline ::rsctrl::core::File* FileTransfer::mutable_file()
-{
+inline ::rsctrl::core::File* FileTransfer::mutable_file() {
+  set_has_file();
+  if (file_ == NULL) file_ = new ::rsctrl::core::File;
+  return file_;
+}
+inline ::rsctrl::core::File* FileTransfer::release_file() {
+  clear_has_file();
+  ::rsctrl::core::File* temp = file_;
+  file_ = NULL;
+  return temp;
+}
+inline void FileTransfer::set_allocated_file(::rsctrl::core::File* file) {
+  delete file_;
+  file_ = file;
+  if (file) {
     set_has_file();
-    if (file_ == NULL) file_ = new ::rsctrl::core::File;
-    return file_;
-}
-inline ::rsctrl::core::File* FileTransfer::release_file()
-{
+  } else {
     clear_has_file();
-    ::rsctrl::core::File* temp = file_;
-    file_ = NULL;
-    return temp;
-}
-inline void FileTransfer::set_allocated_file(::rsctrl::core::File* file)
-{
-    delete file_;
-    file_ = file;
-    if (file)
-    {
-        set_has_file();
-    }
-    else
-    {
-        clear_has_file();
-    }
+  }
 }
 
 // required .rsctrl.files.Direction direction = 2;
-inline bool FileTransfer::has_direction() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool FileTransfer::has_direction() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void FileTransfer::set_has_direction()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void FileTransfer::set_has_direction() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void FileTransfer::clear_has_direction()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void FileTransfer::clear_has_direction() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void FileTransfer::clear_direction()
-{
-    direction_ = 1;
-    clear_has_direction();
+inline void FileTransfer::clear_direction() {
+  direction_ = 1;
+  clear_has_direction();
 }
-inline ::rsctrl::files::Direction FileTransfer::direction() const
-{
-    return static_cast< ::rsctrl::files::Direction >(direction_);
+inline ::rsctrl::files::Direction FileTransfer::direction() const {
+  return static_cast< ::rsctrl::files::Direction >(direction_);
 }
-inline void FileTransfer::set_direction(::rsctrl::files::Direction value)
-{
-    assert(::rsctrl::files::Direction_IsValid(value));
-    set_has_direction();
-    direction_ = value;
+inline void FileTransfer::set_direction(::rsctrl::files::Direction value) {
+  assert(::rsctrl::files::Direction_IsValid(value));
+  set_has_direction();
+  direction_ = value;
 }
 
 // required float fraction = 3;
-inline bool FileTransfer::has_fraction() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool FileTransfer::has_fraction() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void FileTransfer::set_has_fraction()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void FileTransfer::set_has_fraction() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void FileTransfer::clear_has_fraction()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void FileTransfer::clear_has_fraction() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void FileTransfer::clear_fraction()
-{
-    fraction_ = 0;
-    clear_has_fraction();
+inline void FileTransfer::clear_fraction() {
+  fraction_ = 0;
+  clear_has_fraction();
 }
-inline float FileTransfer::fraction() const
-{
-    return fraction_;
+inline float FileTransfer::fraction() const {
+  return fraction_;
 }
-inline void FileTransfer::set_fraction(float value)
-{
-    set_has_fraction();
-    fraction_ = value;
+inline void FileTransfer::set_fraction(float value) {
+  set_has_fraction();
+  fraction_ = value;
 }
 
 // required float rate_kBs = 4;
-inline bool FileTransfer::has_rate_kbs() const
-{
-    return (_has_bits_[0] & 0x00000008u) != 0;
+inline bool FileTransfer::has_rate_kbs() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void FileTransfer::set_has_rate_kbs()
-{
-    _has_bits_[0] |= 0x00000008u;
+inline void FileTransfer::set_has_rate_kbs() {
+  _has_bits_[0] |= 0x00000008u;
 }
-inline void FileTransfer::clear_has_rate_kbs()
-{
-    _has_bits_[0] &= ~0x00000008u;
+inline void FileTransfer::clear_has_rate_kbs() {
+  _has_bits_[0] &= ~0x00000008u;
 }
-inline void FileTransfer::clear_rate_kbs()
-{
-    rate_kbs_ = 0;
-    clear_has_rate_kbs();
+inline void FileTransfer::clear_rate_kbs() {
+  rate_kbs_ = 0;
+  clear_has_rate_kbs();
 }
-inline float FileTransfer::rate_kbs() const
-{
-    return rate_kbs_;
+inline float FileTransfer::rate_kbs() const {
+  return rate_kbs_;
 }
-inline void FileTransfer::set_rate_kbs(float value)
-{
-    set_has_rate_kbs();
-    rate_kbs_ = value;
+inline void FileTransfer::set_rate_kbs(float value) {
+  set_has_rate_kbs();
+  rate_kbs_ = value;
 }
 
 // required .rsctrl.files.TransferState state = 5;
-inline bool FileTransfer::has_state() const
-{
-    return (_has_bits_[0] & 0x00000010u) != 0;
+inline bool FileTransfer::has_state() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void FileTransfer::set_has_state()
-{
-    _has_bits_[0] |= 0x00000010u;
+inline void FileTransfer::set_has_state() {
+  _has_bits_[0] |= 0x00000010u;
 }
-inline void FileTransfer::clear_has_state()
-{
-    _has_bits_[0] &= ~0x00000010u;
+inline void FileTransfer::clear_has_state() {
+  _has_bits_[0] &= ~0x00000010u;
 }
-inline void FileTransfer::clear_state()
-{
-    state_ = 1;
-    clear_has_state();
+inline void FileTransfer::clear_state() {
+  state_ = 1;
+  clear_has_state();
 }
-inline ::rsctrl::files::TransferState FileTransfer::state() const
-{
-    return static_cast< ::rsctrl::files::TransferState >(state_);
+inline ::rsctrl::files::TransferState FileTransfer::state() const {
+  return static_cast< ::rsctrl::files::TransferState >(state_);
 }
-inline void FileTransfer::set_state(::rsctrl::files::TransferState value)
-{
-    assert(::rsctrl::files::TransferState_IsValid(value));
-    set_has_state();
-    state_ = value;
+inline void FileTransfer::set_state(::rsctrl::files::TransferState value) {
+  assert(::rsctrl::files::TransferState_IsValid(value));
+  set_has_state();
+  state_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -1200,32 +1088,26 @@ inline void FileTransfer::set_state(::rsctrl::files::TransferState value)
 // RequestTransferList
 
 // required .rsctrl.files.Direction direction = 1;
-inline bool RequestTransferList::has_direction() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestTransferList::has_direction() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestTransferList::set_has_direction()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestTransferList::set_has_direction() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestTransferList::clear_has_direction()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestTransferList::clear_has_direction() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestTransferList::clear_direction()
-{
-    direction_ = 1;
-    clear_has_direction();
+inline void RequestTransferList::clear_direction() {
+  direction_ = 1;
+  clear_has_direction();
 }
-inline ::rsctrl::files::Direction RequestTransferList::direction() const
-{
-    return static_cast< ::rsctrl::files::Direction >(direction_);
+inline ::rsctrl::files::Direction RequestTransferList::direction() const {
+  return static_cast< ::rsctrl::files::Direction >(direction_);
 }
-inline void RequestTransferList::set_direction(::rsctrl::files::Direction value)
-{
-    assert(::rsctrl::files::Direction_IsValid(value));
-    set_has_direction();
-    direction_ = value;
+inline void RequestTransferList::set_direction(::rsctrl::files::Direction value) {
+  assert(::rsctrl::files::Direction_IsValid(value));
+  set_has_direction();
+  direction_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -1233,84 +1115,66 @@ inline void RequestTransferList::set_direction(::rsctrl::files::Direction value)
 // ResponseTransferList
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseTransferList::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseTransferList::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseTransferList::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseTransferList::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseTransferList::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseTransferList::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseTransferList::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseTransferList::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseTransferList::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseTransferList::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseTransferList::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseTransferList::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseTransferList::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseTransferList::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseTransferList::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseTransferList::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // repeated .rsctrl.files.FileTransfer transfers = 2;
-inline int ResponseTransferList::transfers_size() const
-{
-    return transfers_.size();
+inline int ResponseTransferList::transfers_size() const {
+  return transfers_.size();
 }
-inline void ResponseTransferList::clear_transfers()
-{
-    transfers_.Clear();
+inline void ResponseTransferList::clear_transfers() {
+  transfers_.Clear();
 }
-inline const ::rsctrl::files::FileTransfer& ResponseTransferList::transfers(int index) const
-{
-    return transfers_.Get(index);
+inline const ::rsctrl::files::FileTransfer& ResponseTransferList::transfers(int index) const {
+  return transfers_.Get(index);
 }
-inline ::rsctrl::files::FileTransfer* ResponseTransferList::mutable_transfers(int index)
-{
-    return transfers_.Mutable(index);
+inline ::rsctrl::files::FileTransfer* ResponseTransferList::mutable_transfers(int index) {
+  return transfers_.Mutable(index);
 }
-inline ::rsctrl::files::FileTransfer* ResponseTransferList::add_transfers()
-{
-    return transfers_.Add();
+inline ::rsctrl::files::FileTransfer* ResponseTransferList::add_transfers() {
+  return transfers_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer >&
-ResponseTransferList::transfers() const
-{
-    return transfers_;
+ResponseTransferList::transfers() const {
+  return transfers_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::rsctrl::files::FileTransfer >*
-ResponseTransferList::mutable_transfers()
-{
-    return &transfers_;
+ResponseTransferList::mutable_transfers() {
+  return &transfers_;
 }
 
 // -------------------------------------------------------------------
@@ -1318,81 +1182,64 @@ ResponseTransferList::mutable_transfers()
 // RequestControlDownload
 
 // required .rsctrl.core.File file = 1;
-inline bool RequestControlDownload::has_file() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestControlDownload::has_file() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestControlDownload::set_has_file()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestControlDownload::set_has_file() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestControlDownload::clear_has_file()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestControlDownload::clear_has_file() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestControlDownload::clear_file()
-{
-    if (file_ != NULL) file_->::rsctrl::core::File::Clear();
-    clear_has_file();
+inline void RequestControlDownload::clear_file() {
+  if (file_ != NULL) file_->::rsctrl::core::File::Clear();
+  clear_has_file();
 }
-inline const ::rsctrl::core::File& RequestControlDownload::file() const
-{
-    return file_ != NULL ? *file_ : *default_instance_->file_;
+inline const ::rsctrl::core::File& RequestControlDownload::file() const {
+  return file_ != NULL ? *file_ : *default_instance_->file_;
 }
-inline ::rsctrl::core::File* RequestControlDownload::mutable_file()
-{
+inline ::rsctrl::core::File* RequestControlDownload::mutable_file() {
+  set_has_file();
+  if (file_ == NULL) file_ = new ::rsctrl::core::File;
+  return file_;
+}
+inline ::rsctrl::core::File* RequestControlDownload::release_file() {
+  clear_has_file();
+  ::rsctrl::core::File* temp = file_;
+  file_ = NULL;
+  return temp;
+}
+inline void RequestControlDownload::set_allocated_file(::rsctrl::core::File* file) {
+  delete file_;
+  file_ = file;
+  if (file) {
     set_has_file();
-    if (file_ == NULL) file_ = new ::rsctrl::core::File;
-    return file_;
-}
-inline ::rsctrl::core::File* RequestControlDownload::release_file()
-{
+  } else {
     clear_has_file();
-    ::rsctrl::core::File* temp = file_;
-    file_ = NULL;
-    return temp;
-}
-inline void RequestControlDownload::set_allocated_file(::rsctrl::core::File* file)
-{
-    delete file_;
-    file_ = file;
-    if (file)
-    {
-        set_has_file();
-    }
-    else
-    {
-        clear_has_file();
-    }
+  }
 }
 
 // required .rsctrl.files.RequestControlDownload.Action action = 2;
-inline bool RequestControlDownload::has_action() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool RequestControlDownload::has_action() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void RequestControlDownload::set_has_action()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void RequestControlDownload::set_has_action() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void RequestControlDownload::clear_has_action()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void RequestControlDownload::clear_has_action() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void RequestControlDownload::clear_action()
-{
-    action_ = 1;
-    clear_has_action();
+inline void RequestControlDownload::clear_action() {
+  action_ = 1;
+  clear_has_action();
 }
-inline ::rsctrl::files::RequestControlDownload_Action RequestControlDownload::action() const
-{
-    return static_cast< ::rsctrl::files::RequestControlDownload_Action >(action_);
+inline ::rsctrl::files::RequestControlDownload_Action RequestControlDownload::action() const {
+  return static_cast< ::rsctrl::files::RequestControlDownload_Action >(action_);
 }
-inline void RequestControlDownload::set_action(::rsctrl::files::RequestControlDownload_Action value)
-{
-    assert(::rsctrl::files::RequestControlDownload_Action_IsValid(value));
-    set_has_action();
-    action_ = value;
+inline void RequestControlDownload::set_action(::rsctrl::files::RequestControlDownload_Action value) {
+  assert(::rsctrl::files::RequestControlDownload_Action_IsValid(value));
+  set_has_action();
+  action_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -1400,52 +1247,41 @@ inline void RequestControlDownload::set_action(::rsctrl::files::RequestControlDo
 // ResponseControlDownload
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseControlDownload::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseControlDownload::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseControlDownload::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseControlDownload::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseControlDownload::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseControlDownload::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseControlDownload::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseControlDownload::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseControlDownload::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseControlDownload::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseControlDownload::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseControlDownload::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseControlDownload::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseControlDownload::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseControlDownload::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseControlDownload::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // -------------------------------------------------------------------
@@ -1453,189 +1289,143 @@ inline void ResponseControlDownload::set_allocated_status(::rsctrl::core::Status
 // RequestShareDirList
 
 // required string ssl_id = 1;
-inline bool RequestShareDirList::has_ssl_id() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestShareDirList::has_ssl_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestShareDirList::set_has_ssl_id()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestShareDirList::set_has_ssl_id() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestShareDirList::clear_has_ssl_id()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestShareDirList::clear_has_ssl_id() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestShareDirList::clear_ssl_id()
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_->clear();
-    }
+inline void RequestShareDirList::clear_ssl_id() {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    ssl_id_->clear();
+  }
+  clear_has_ssl_id();
+}
+inline const ::std::string& RequestShareDirList::ssl_id() const {
+  return *ssl_id_;
+}
+inline void RequestShareDirList::set_ssl_id(const ::std::string& value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void RequestShareDirList::set_ssl_id(const char* value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void RequestShareDirList::set_ssl_id(const char* value, size_t size) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* RequestShareDirList::mutable_ssl_id() {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  return ssl_id_;
+}
+inline ::std::string* RequestShareDirList::release_ssl_id() {
+  clear_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = ssl_id_;
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void RequestShareDirList::set_allocated_ssl_id(::std::string* ssl_id) {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete ssl_id_;
+  }
+  if (ssl_id) {
+    set_has_ssl_id();
+    ssl_id_ = ssl_id;
+  } else {
     clear_has_ssl_id();
-}
-inline const ::std::string& RequestShareDirList::ssl_id() const
-{
-    return *ssl_id_;
-}
-inline void RequestShareDirList::set_ssl_id(const ::std::string& value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void RequestShareDirList::set_ssl_id(const char* value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void RequestShareDirList::set_ssl_id(const char* value, size_t size)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* RequestShareDirList::mutable_ssl_id()
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    return ssl_id_;
-}
-inline ::std::string* RequestShareDirList::release_ssl_id()
-{
-    clear_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = ssl_id_;
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void RequestShareDirList::set_allocated_ssl_id(::std::string* ssl_id)
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete ssl_id_;
-    }
-    if (ssl_id)
-    {
-        set_has_ssl_id();
-        ssl_id_ = ssl_id;
-    }
-    else
-    {
-        clear_has_ssl_id();
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required string path = 2;
-inline bool RequestShareDirList::has_path() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool RequestShareDirList::has_path() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void RequestShareDirList::set_has_path()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void RequestShareDirList::set_has_path() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void RequestShareDirList::clear_has_path()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void RequestShareDirList::clear_has_path() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void RequestShareDirList::clear_path()
-{
-    if (path_ != &::google::protobuf::internal::kEmptyString)
-    {
-        path_->clear();
-    }
+inline void RequestShareDirList::clear_path() {
+  if (path_ != &::google::protobuf::internal::kEmptyString) {
+    path_->clear();
+  }
+  clear_has_path();
+}
+inline const ::std::string& RequestShareDirList::path() const {
+  return *path_;
+}
+inline void RequestShareDirList::set_path(const ::std::string& value) {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  path_->assign(value);
+}
+inline void RequestShareDirList::set_path(const char* value) {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  path_->assign(value);
+}
+inline void RequestShareDirList::set_path(const char* value, size_t size) {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  path_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* RequestShareDirList::mutable_path() {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  return path_;
+}
+inline ::std::string* RequestShareDirList::release_path() {
+  clear_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = path_;
+    path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void RequestShareDirList::set_allocated_path(::std::string* path) {
+  if (path_ != &::google::protobuf::internal::kEmptyString) {
+    delete path_;
+  }
+  if (path) {
+    set_has_path();
+    path_ = path;
+  } else {
     clear_has_path();
-}
-inline const ::std::string& RequestShareDirList::path() const
-{
-    return *path_;
-}
-inline void RequestShareDirList::set_path(const ::std::string& value)
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    path_->assign(value);
-}
-inline void RequestShareDirList::set_path(const char* value)
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    path_->assign(value);
-}
-inline void RequestShareDirList::set_path(const char* value, size_t size)
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    path_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* RequestShareDirList::mutable_path()
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    return path_;
-}
-inline ::std::string* RequestShareDirList::release_path()
-{
-    clear_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = path_;
-        path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void RequestShareDirList::set_allocated_path(::std::string* path)
-{
-    if (path_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete path_;
-    }
-    if (path)
-    {
-        set_has_path();
-        path_ = path;
-    }
-    else
-    {
-        clear_has_path();
-        path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------
@@ -1643,299 +1433,229 @@ inline void RequestShareDirList::set_allocated_path(::std::string* path)
 // ResponseShareDirList
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseShareDirList::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseShareDirList::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseShareDirList::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseShareDirList::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseShareDirList::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseShareDirList::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseShareDirList::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseShareDirList::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseShareDirList::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseShareDirList::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseShareDirList::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseShareDirList::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseShareDirList::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseShareDirList::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseShareDirList::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseShareDirList::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // required string ssl_id = 2;
-inline bool ResponseShareDirList::has_ssl_id() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool ResponseShareDirList::has_ssl_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ResponseShareDirList::set_has_ssl_id()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void ResponseShareDirList::set_has_ssl_id() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void ResponseShareDirList::clear_has_ssl_id()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void ResponseShareDirList::clear_has_ssl_id() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void ResponseShareDirList::clear_ssl_id()
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_->clear();
-    }
+inline void ResponseShareDirList::clear_ssl_id() {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    ssl_id_->clear();
+  }
+  clear_has_ssl_id();
+}
+inline const ::std::string& ResponseShareDirList::ssl_id() const {
+  return *ssl_id_;
+}
+inline void ResponseShareDirList::set_ssl_id(const ::std::string& value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void ResponseShareDirList::set_ssl_id(const char* value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void ResponseShareDirList::set_ssl_id(const char* value, size_t size) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ResponseShareDirList::mutable_ssl_id() {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  return ssl_id_;
+}
+inline ::std::string* ResponseShareDirList::release_ssl_id() {
+  clear_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = ssl_id_;
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ResponseShareDirList::set_allocated_ssl_id(::std::string* ssl_id) {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete ssl_id_;
+  }
+  if (ssl_id) {
+    set_has_ssl_id();
+    ssl_id_ = ssl_id;
+  } else {
     clear_has_ssl_id();
-}
-inline const ::std::string& ResponseShareDirList::ssl_id() const
-{
-    return *ssl_id_;
-}
-inline void ResponseShareDirList::set_ssl_id(const ::std::string& value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void ResponseShareDirList::set_ssl_id(const char* value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void ResponseShareDirList::set_ssl_id(const char* value, size_t size)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ResponseShareDirList::mutable_ssl_id()
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    return ssl_id_;
-}
-inline ::std::string* ResponseShareDirList::release_ssl_id()
-{
-    clear_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = ssl_id_;
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void ResponseShareDirList::set_allocated_ssl_id(::std::string* ssl_id)
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete ssl_id_;
-    }
-    if (ssl_id)
-    {
-        set_has_ssl_id();
-        ssl_id_ = ssl_id;
-    }
-    else
-    {
-        clear_has_ssl_id();
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required string path = 3;
-inline bool ResponseShareDirList::has_path() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool ResponseShareDirList::has_path() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void ResponseShareDirList::set_has_path()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void ResponseShareDirList::set_has_path() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void ResponseShareDirList::clear_has_path()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void ResponseShareDirList::clear_has_path() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void ResponseShareDirList::clear_path()
-{
-    if (path_ != &::google::protobuf::internal::kEmptyString)
-    {
-        path_->clear();
-    }
+inline void ResponseShareDirList::clear_path() {
+  if (path_ != &::google::protobuf::internal::kEmptyString) {
+    path_->clear();
+  }
+  clear_has_path();
+}
+inline const ::std::string& ResponseShareDirList::path() const {
+  return *path_;
+}
+inline void ResponseShareDirList::set_path(const ::std::string& value) {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  path_->assign(value);
+}
+inline void ResponseShareDirList::set_path(const char* value) {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  path_->assign(value);
+}
+inline void ResponseShareDirList::set_path(const char* value, size_t size) {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  path_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ResponseShareDirList::mutable_path() {
+  set_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    path_ = new ::std::string;
+  }
+  return path_;
+}
+inline ::std::string* ResponseShareDirList::release_path() {
+  clear_has_path();
+  if (path_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = path_;
+    path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ResponseShareDirList::set_allocated_path(::std::string* path) {
+  if (path_ != &::google::protobuf::internal::kEmptyString) {
+    delete path_;
+  }
+  if (path) {
+    set_has_path();
+    path_ = path;
+  } else {
     clear_has_path();
-}
-inline const ::std::string& ResponseShareDirList::path() const
-{
-    return *path_;
-}
-inline void ResponseShareDirList::set_path(const ::std::string& value)
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    path_->assign(value);
-}
-inline void ResponseShareDirList::set_path(const char* value)
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    path_->assign(value);
-}
-inline void ResponseShareDirList::set_path(const char* value, size_t size)
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    path_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ResponseShareDirList::mutable_path()
-{
-    set_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        path_ = new ::std::string;
-    }
-    return path_;
-}
-inline ::std::string* ResponseShareDirList::release_path()
-{
-    clear_has_path();
-    if (path_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = path_;
-        path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void ResponseShareDirList::set_allocated_path(::std::string* path)
-{
-    if (path_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete path_;
-    }
-    if (path)
-    {
-        set_has_path();
-        path_ = path;
-    }
-    else
-    {
-        clear_has_path();
-        path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    path_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required .rsctrl.files.ResponseShareDirList.ListType list_type = 4;
-inline bool ResponseShareDirList::has_list_type() const
-{
-    return (_has_bits_[0] & 0x00000008u) != 0;
+inline bool ResponseShareDirList::has_list_type() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void ResponseShareDirList::set_has_list_type()
-{
-    _has_bits_[0] |= 0x00000008u;
+inline void ResponseShareDirList::set_has_list_type() {
+  _has_bits_[0] |= 0x00000008u;
 }
-inline void ResponseShareDirList::clear_has_list_type()
-{
-    _has_bits_[0] &= ~0x00000008u;
+inline void ResponseShareDirList::clear_has_list_type() {
+  _has_bits_[0] &= ~0x00000008u;
 }
-inline void ResponseShareDirList::clear_list_type()
-{
-    list_type_ = 1;
-    clear_has_list_type();
+inline void ResponseShareDirList::clear_list_type() {
+  list_type_ = 1;
+  clear_has_list_type();
 }
-inline ::rsctrl::files::ResponseShareDirList_ListType ResponseShareDirList::list_type() const
-{
-    return static_cast< ::rsctrl::files::ResponseShareDirList_ListType >(list_type_);
+inline ::rsctrl::files::ResponseShareDirList_ListType ResponseShareDirList::list_type() const {
+  return static_cast< ::rsctrl::files::ResponseShareDirList_ListType >(list_type_);
 }
-inline void ResponseShareDirList::set_list_type(::rsctrl::files::ResponseShareDirList_ListType value)
-{
-    assert(::rsctrl::files::ResponseShareDirList_ListType_IsValid(value));
-    set_has_list_type();
-    list_type_ = value;
+inline void ResponseShareDirList::set_list_type(::rsctrl::files::ResponseShareDirList_ListType value) {
+  assert(::rsctrl::files::ResponseShareDirList_ListType_IsValid(value));
+  set_has_list_type();
+  list_type_ = value;
 }
 
 // repeated .rsctrl.core.File files = 5;
-inline int ResponseShareDirList::files_size() const
-{
-    return files_.size();
+inline int ResponseShareDirList::files_size() const {
+  return files_.size();
 }
-inline void ResponseShareDirList::clear_files()
-{
-    files_.Clear();
+inline void ResponseShareDirList::clear_files() {
+  files_.Clear();
 }
-inline const ::rsctrl::core::File& ResponseShareDirList::files(int index) const
-{
-    return files_.Get(index);
+inline const ::rsctrl::core::File& ResponseShareDirList::files(int index) const {
+  return files_.Get(index);
 }
-inline ::rsctrl::core::File* ResponseShareDirList::mutable_files(int index)
-{
-    return files_.Mutable(index);
+inline ::rsctrl::core::File* ResponseShareDirList::mutable_files(int index) {
+  return files_.Mutable(index);
 }
-inline ::rsctrl::core::File* ResponseShareDirList::add_files()
-{
-    return files_.Add();
+inline ::rsctrl::core::File* ResponseShareDirList::add_files() {
+  return files_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File >&
-ResponseShareDirList::files() const
-{
-    return files_;
+ResponseShareDirList::files() const {
+  return files_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::File >*
-ResponseShareDirList::mutable_files()
-{
-    return &files_;
+ResponseShareDirList::mutable_files() {
+  return &files_;
 }
 
 
@@ -1945,40 +1665,32 @@ ResponseShareDirList::mutable_files()
 }  // namespace rsctrl
 
 #ifndef SWIG
-namespace google
-{
-namespace protobuf
-{
+namespace google {
+namespace protobuf {
 
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::RequestControlDownload_Action>()
-{
-    return ::rsctrl::files::RequestControlDownload_Action_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::RequestControlDownload_Action>() {
+  return ::rsctrl::files::RequestControlDownload_Action_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::ResponseShareDirList_ListType>()
-{
-    return ::rsctrl::files::ResponseShareDirList_ListType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::ResponseShareDirList_ListType>() {
+  return ::rsctrl::files::ResponseShareDirList_ListType_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::RequestMsgIds>()
-{
-    return ::rsctrl::files::RequestMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::RequestMsgIds>() {
+  return ::rsctrl::files::RequestMsgIds_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::ResponseMsgIds>()
-{
-    return ::rsctrl::files::ResponseMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::ResponseMsgIds>() {
+  return ::rsctrl::files::ResponseMsgIds_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::Direction>()
-{
-    return ::rsctrl::files::Direction_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::Direction>() {
+  return ::rsctrl::files::Direction_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::TransferState>()
-{
-    return ::rsctrl::files::TransferState_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::files::TransferState>() {
+  return ::rsctrl::files::TransferState_descriptor();
 }
 
 }  // namespace google

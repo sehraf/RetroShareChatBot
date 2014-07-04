@@ -28,10 +28,8 @@
 #include "core.pb.h"
 // @@protoc_insertion_point(includes)
 
-namespace rsctrl
-{
-namespace system
-{
+namespace rsctrl {
+namespace system {
 
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_system_2eproto();
@@ -47,17 +45,16 @@ class ResponseSystemExternalAccess;
 class RequestSystemAccount;
 class ResponseSystemAccount;
 
-enum ResponseSystemStatus_NetCode
-{
-    ResponseSystemStatus_NetCode_BAD_UNKNOWN = 0,
-    ResponseSystemStatus_NetCode_BAD_OFFLINE = 1,
-    ResponseSystemStatus_NetCode_BAD_NATSYM = 2,
-    ResponseSystemStatus_NetCode_BAD_NODHT_NAT = 3,
-    ResponseSystemStatus_NetCode_WARNING_RESTART = 4,
-    ResponseSystemStatus_NetCode_WARNING_NATTED = 5,
-    ResponseSystemStatus_NetCode_WARNING_NODHT = 6,
-    ResponseSystemStatus_NetCode_GOOD = 7,
-    ResponseSystemStatus_NetCode_ADV_FORWARD = 8
+enum ResponseSystemStatus_NetCode {
+  ResponseSystemStatus_NetCode_BAD_UNKNOWN = 0,
+  ResponseSystemStatus_NetCode_BAD_OFFLINE = 1,
+  ResponseSystemStatus_NetCode_BAD_NATSYM = 2,
+  ResponseSystemStatus_NetCode_BAD_NODHT_NAT = 3,
+  ResponseSystemStatus_NetCode_WARNING_RESTART = 4,
+  ResponseSystemStatus_NetCode_WARNING_NATTED = 5,
+  ResponseSystemStatus_NetCode_WARNING_NODHT = 6,
+  ResponseSystemStatus_NetCode_GOOD = 7,
+  ResponseSystemStatus_NetCode_ADV_FORWARD = 8
 };
 bool ResponseSystemStatus_NetCode_IsValid(int value);
 const ResponseSystemStatus_NetCode ResponseSystemStatus_NetCode_NetCode_MIN = ResponseSystemStatus_NetCode_BAD_UNKNOWN;
@@ -65,21 +62,18 @@ const ResponseSystemStatus_NetCode ResponseSystemStatus_NetCode_NetCode_MAX = Re
 const int ResponseSystemStatus_NetCode_NetCode_ARRAYSIZE = ResponseSystemStatus_NetCode_NetCode_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ResponseSystemStatus_NetCode_descriptor();
-inline const ::std::string& ResponseSystemStatus_NetCode_Name(ResponseSystemStatus_NetCode value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               ResponseSystemStatus_NetCode_descriptor(), value);
+inline const ::std::string& ResponseSystemStatus_NetCode_Name(ResponseSystemStatus_NetCode value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ResponseSystemStatus_NetCode_descriptor(), value);
 }
 inline bool ResponseSystemStatus_NetCode_Parse(
-    const ::std::string& name, ResponseSystemStatus_NetCode* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<ResponseSystemStatus_NetCode>(
-               ResponseSystemStatus_NetCode_descriptor(), name, value);
+    const ::std::string& name, ResponseSystemStatus_NetCode* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ResponseSystemStatus_NetCode>(
+    ResponseSystemStatus_NetCode_descriptor(), name, value);
 }
-enum RequestSystemQuit_QuitCode
-{
-    RequestSystemQuit_QuitCode_CLOSE_CHANNEL = 1,
-    RequestSystemQuit_QuitCode_SHUTDOWN_RS = 2
+enum RequestSystemQuit_QuitCode {
+  RequestSystemQuit_QuitCode_CLOSE_CHANNEL = 1,
+  RequestSystemQuit_QuitCode_SHUTDOWN_RS = 2
 };
 bool RequestSystemQuit_QuitCode_IsValid(int value);
 const RequestSystemQuit_QuitCode RequestSystemQuit_QuitCode_QuitCode_MIN = RequestSystemQuit_QuitCode_CLOSE_CHANNEL;
@@ -87,23 +81,20 @@ const RequestSystemQuit_QuitCode RequestSystemQuit_QuitCode_QuitCode_MAX = Reque
 const int RequestSystemQuit_QuitCode_QuitCode_ARRAYSIZE = RequestSystemQuit_QuitCode_QuitCode_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestSystemQuit_QuitCode_descriptor();
-inline const ::std::string& RequestSystemQuit_QuitCode_Name(RequestSystemQuit_QuitCode value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestSystemQuit_QuitCode_descriptor(), value);
+inline const ::std::string& RequestSystemQuit_QuitCode_Name(RequestSystemQuit_QuitCode value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestSystemQuit_QuitCode_descriptor(), value);
 }
 inline bool RequestSystemQuit_QuitCode_Parse(
-    const ::std::string& name, RequestSystemQuit_QuitCode* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestSystemQuit_QuitCode>(
-               RequestSystemQuit_QuitCode_descriptor(), name, value);
+    const ::std::string& name, RequestSystemQuit_QuitCode* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestSystemQuit_QuitCode>(
+    RequestSystemQuit_QuitCode_descriptor(), name, value);
 }
-enum RequestMsgIds
-{
-    MsgId_RequestSystemStatus = 1,
-    MsgId_RequestSystemQuit = 2,
-    MsgId_RequestSystemExternalAccess = 3,
-    MsgId_RequestSystemAccount = 4
+enum RequestMsgIds {
+  MsgId_RequestSystemStatus = 1,
+  MsgId_RequestSystemQuit = 2,
+  MsgId_RequestSystemExternalAccess = 3,
+  MsgId_RequestSystemAccount = 4
 };
 bool RequestMsgIds_IsValid(int value);
 const RequestMsgIds RequestMsgIds_MIN = MsgId_RequestSystemStatus;
@@ -111,23 +102,20 @@ const RequestMsgIds RequestMsgIds_MAX = MsgId_RequestSystemAccount;
 const int RequestMsgIds_ARRAYSIZE = RequestMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestMsgIds_descriptor();
-inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestMsgIds_descriptor(), value);
+inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestMsgIds_descriptor(), value);
 }
 inline bool RequestMsgIds_Parse(
-    const ::std::string& name, RequestMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
-               RequestMsgIds_descriptor(), name, value);
+    const ::std::string& name, RequestMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
+    RequestMsgIds_descriptor(), name, value);
 }
-enum ResponseMsgIds
-{
-    MsgId_ResponseSystemStatus = 1,
-    MsgId_ResponseSystemQuit = 2,
-    MsgId_ResponseSystemExternalAccess = 3,
-    MsgId_ResponseSystemAccount = 4
+enum ResponseMsgIds {
+  MsgId_ResponseSystemStatus = 1,
+  MsgId_ResponseSystemQuit = 2,
+  MsgId_ResponseSystemExternalAccess = 3,
+  MsgId_ResponseSystemAccount = 4
 };
 bool ResponseMsgIds_IsValid(int value);
 const ResponseMsgIds ResponseMsgIds_MIN = MsgId_ResponseSystemStatus;
@@ -135,896 +123,830 @@ const ResponseMsgIds ResponseMsgIds_MAX = MsgId_ResponseSystemAccount;
 const int ResponseMsgIds_ARRAYSIZE = ResponseMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ResponseMsgIds_descriptor();
-inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               ResponseMsgIds_descriptor(), value);
+inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ResponseMsgIds_descriptor(), value);
 }
 inline bool ResponseMsgIds_Parse(
-    const ::std::string& name, ResponseMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
-               ResponseMsgIds_descriptor(), name, value);
+    const ::std::string& name, ResponseMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
+    ResponseMsgIds_descriptor(), name, value);
 }
 // ===================================================================
 
-class RequestSystemStatus : public ::google::protobuf::Message
-{
-public:
-    RequestSystemStatus();
-    virtual ~RequestSystemStatus();
+class RequestSystemStatus : public ::google::protobuf::Message {
+ public:
+  RequestSystemStatus();
+  virtual ~RequestSystemStatus();
 
-    RequestSystemStatus(const RequestSystemStatus& from);
+  RequestSystemStatus(const RequestSystemStatus& from);
 
-    inline RequestSystemStatus& operator=(const RequestSystemStatus& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestSystemStatus& operator=(const RequestSystemStatus& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestSystemStatus& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestSystemStatus& default_instance();
 
-    void Swap(RequestSystemStatus* other);
+  void Swap(RequestSystemStatus* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestSystemStatus* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestSystemStatus& from);
-    void MergeFrom(const RequestSystemStatus& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestSystemStatus* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestSystemStatus& from);
+  void MergeFrom(const RequestSystemStatus& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemStatus)
-private:
+  // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemStatus)
+ private:
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[1];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[1];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestSystemStatus* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestSystemStatus* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseSystemStatus : public ::google::protobuf::Message
-{
-public:
-    ResponseSystemStatus();
-    virtual ~ResponseSystemStatus();
+class ResponseSystemStatus : public ::google::protobuf::Message {
+ public:
+  ResponseSystemStatus();
+  virtual ~ResponseSystemStatus();
 
-    ResponseSystemStatus(const ResponseSystemStatus& from);
+  ResponseSystemStatus(const ResponseSystemStatus& from);
 
-    inline ResponseSystemStatus& operator=(const ResponseSystemStatus& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseSystemStatus& operator=(const ResponseSystemStatus& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseSystemStatus& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseSystemStatus& default_instance();
 
-    void Swap(ResponseSystemStatus* other);
+  void Swap(ResponseSystemStatus* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseSystemStatus* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseSystemStatus& from);
-    void MergeFrom(const ResponseSystemStatus& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseSystemStatus* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseSystemStatus& from);
+  void MergeFrom(const ResponseSystemStatus& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef ResponseSystemStatus_NetCode NetCode;
-    static const NetCode BAD_UNKNOWN = ResponseSystemStatus_NetCode_BAD_UNKNOWN;
-    static const NetCode BAD_OFFLINE = ResponseSystemStatus_NetCode_BAD_OFFLINE;
-    static const NetCode BAD_NATSYM = ResponseSystemStatus_NetCode_BAD_NATSYM;
-    static const NetCode BAD_NODHT_NAT = ResponseSystemStatus_NetCode_BAD_NODHT_NAT;
-    static const NetCode WARNING_RESTART = ResponseSystemStatus_NetCode_WARNING_RESTART;
-    static const NetCode WARNING_NATTED = ResponseSystemStatus_NetCode_WARNING_NATTED;
-    static const NetCode WARNING_NODHT = ResponseSystemStatus_NetCode_WARNING_NODHT;
-    static const NetCode GOOD = ResponseSystemStatus_NetCode_GOOD;
-    static const NetCode ADV_FORWARD = ResponseSystemStatus_NetCode_ADV_FORWARD;
-    static inline bool NetCode_IsValid(int value)
-    {
-        return ResponseSystemStatus_NetCode_IsValid(value);
-    }
-    static const NetCode NetCode_MIN =
-        ResponseSystemStatus_NetCode_NetCode_MIN;
-    static const NetCode NetCode_MAX =
-        ResponseSystemStatus_NetCode_NetCode_MAX;
-    static const int NetCode_ARRAYSIZE =
-        ResponseSystemStatus_NetCode_NetCode_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    NetCode_descriptor()
-    {
-        return ResponseSystemStatus_NetCode_descriptor();
-    }
-    static inline const ::std::string& NetCode_Name(NetCode value)
-    {
-        return ResponseSystemStatus_NetCode_Name(value);
-    }
-    static inline bool NetCode_Parse(const ::std::string& name,
-                                     NetCode* value)
-    {
-        return ResponseSystemStatus_NetCode_Parse(name, value);
-    }
+  typedef ResponseSystemStatus_NetCode NetCode;
+  static const NetCode BAD_UNKNOWN = ResponseSystemStatus_NetCode_BAD_UNKNOWN;
+  static const NetCode BAD_OFFLINE = ResponseSystemStatus_NetCode_BAD_OFFLINE;
+  static const NetCode BAD_NATSYM = ResponseSystemStatus_NetCode_BAD_NATSYM;
+  static const NetCode BAD_NODHT_NAT = ResponseSystemStatus_NetCode_BAD_NODHT_NAT;
+  static const NetCode WARNING_RESTART = ResponseSystemStatus_NetCode_WARNING_RESTART;
+  static const NetCode WARNING_NATTED = ResponseSystemStatus_NetCode_WARNING_NATTED;
+  static const NetCode WARNING_NODHT = ResponseSystemStatus_NetCode_WARNING_NODHT;
+  static const NetCode GOOD = ResponseSystemStatus_NetCode_GOOD;
+  static const NetCode ADV_FORWARD = ResponseSystemStatus_NetCode_ADV_FORWARD;
+  static inline bool NetCode_IsValid(int value) {
+    return ResponseSystemStatus_NetCode_IsValid(value);
+  }
+  static const NetCode NetCode_MIN =
+    ResponseSystemStatus_NetCode_NetCode_MIN;
+  static const NetCode NetCode_MAX =
+    ResponseSystemStatus_NetCode_NetCode_MAX;
+  static const int NetCode_ARRAYSIZE =
+    ResponseSystemStatus_NetCode_NetCode_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  NetCode_descriptor() {
+    return ResponseSystemStatus_NetCode_descriptor();
+  }
+  static inline const ::std::string& NetCode_Name(NetCode value) {
+    return ResponseSystemStatus_NetCode_Name(value);
+  }
+  static inline bool NetCode_Parse(const ::std::string& name,
+      NetCode* value) {
+    return ResponseSystemStatus_NetCode_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // required uint32 no_peers = 2;
-    inline bool has_no_peers() const;
-    inline void clear_no_peers();
-    static const int kNoPeersFieldNumber = 2;
-    inline ::google::protobuf::uint32 no_peers() const;
-    inline void set_no_peers(::google::protobuf::uint32 value);
+  // required uint32 no_peers = 2;
+  inline bool has_no_peers() const;
+  inline void clear_no_peers();
+  static const int kNoPeersFieldNumber = 2;
+  inline ::google::protobuf::uint32 no_peers() const;
+  inline void set_no_peers(::google::protobuf::uint32 value);
 
-    // required uint32 no_connected = 3;
-    inline bool has_no_connected() const;
-    inline void clear_no_connected();
-    static const int kNoConnectedFieldNumber = 3;
-    inline ::google::protobuf::uint32 no_connected() const;
-    inline void set_no_connected(::google::protobuf::uint32 value);
+  // required uint32 no_connected = 3;
+  inline bool has_no_connected() const;
+  inline void clear_no_connected();
+  static const int kNoConnectedFieldNumber = 3;
+  inline ::google::protobuf::uint32 no_connected() const;
+  inline void set_no_connected(::google::protobuf::uint32 value);
 
-    // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
-    inline bool has_net_status() const;
-    inline void clear_net_status();
-    static const int kNetStatusFieldNumber = 4;
-    inline ::rsctrl::system::ResponseSystemStatus_NetCode net_status() const;
-    inline void set_net_status(::rsctrl::system::ResponseSystemStatus_NetCode value);
+  // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
+  inline bool has_net_status() const;
+  inline void clear_net_status();
+  static const int kNetStatusFieldNumber = 4;
+  inline ::rsctrl::system::ResponseSystemStatus_NetCode net_status() const;
+  inline void set_net_status(::rsctrl::system::ResponseSystemStatus_NetCode value);
 
-    // required .rsctrl.core.Bandwidth bw_total = 5;
-    inline bool has_bw_total() const;
-    inline void clear_bw_total();
-    static const int kBwTotalFieldNumber = 5;
-    inline const ::rsctrl::core::Bandwidth& bw_total() const;
-    inline ::rsctrl::core::Bandwidth* mutable_bw_total();
-    inline ::rsctrl::core::Bandwidth* release_bw_total();
-    inline void set_allocated_bw_total(::rsctrl::core::Bandwidth* bw_total);
+  // required .rsctrl.core.Bandwidth bw_total = 5;
+  inline bool has_bw_total() const;
+  inline void clear_bw_total();
+  static const int kBwTotalFieldNumber = 5;
+  inline const ::rsctrl::core::Bandwidth& bw_total() const;
+  inline ::rsctrl::core::Bandwidth* mutable_bw_total();
+  inline ::rsctrl::core::Bandwidth* release_bw_total();
+  inline void set_allocated_bw_total(::rsctrl::core::Bandwidth* bw_total);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemStatus)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
-    inline void set_has_no_peers();
-    inline void clear_has_no_peers();
-    inline void set_has_no_connected();
-    inline void clear_has_no_connected();
-    inline void set_has_net_status();
-    inline void clear_has_net_status();
-    inline void set_has_bw_total();
-    inline void clear_has_bw_total();
+  // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemStatus)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
+  inline void set_has_no_peers();
+  inline void clear_has_no_peers();
+  inline void set_has_no_connected();
+  inline void clear_has_no_connected();
+  inline void set_has_net_status();
+  inline void clear_has_net_status();
+  inline void set_has_bw_total();
+  inline void clear_has_bw_total();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::google::protobuf::uint32 no_peers_;
-    ::google::protobuf::uint32 no_connected_;
-    ::rsctrl::core::Bandwidth* bw_total_;
-    int net_status_;
+  ::rsctrl::core::Status* status_;
+  ::google::protobuf::uint32 no_peers_;
+  ::google::protobuf::uint32 no_connected_;
+  ::rsctrl::core::Bandwidth* bw_total_;
+  int net_status_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseSystemStatus* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseSystemStatus* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestSystemQuit : public ::google::protobuf::Message
-{
-public:
-    RequestSystemQuit();
-    virtual ~RequestSystemQuit();
+class RequestSystemQuit : public ::google::protobuf::Message {
+ public:
+  RequestSystemQuit();
+  virtual ~RequestSystemQuit();
 
-    RequestSystemQuit(const RequestSystemQuit& from);
+  RequestSystemQuit(const RequestSystemQuit& from);
 
-    inline RequestSystemQuit& operator=(const RequestSystemQuit& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestSystemQuit& operator=(const RequestSystemQuit& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestSystemQuit& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestSystemQuit& default_instance();
 
-    void Swap(RequestSystemQuit* other);
+  void Swap(RequestSystemQuit* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestSystemQuit* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestSystemQuit& from);
-    void MergeFrom(const RequestSystemQuit& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestSystemQuit* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestSystemQuit& from);
+  void MergeFrom(const RequestSystemQuit& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef RequestSystemQuit_QuitCode QuitCode;
-    static const QuitCode CLOSE_CHANNEL = RequestSystemQuit_QuitCode_CLOSE_CHANNEL;
-    static const QuitCode SHUTDOWN_RS = RequestSystemQuit_QuitCode_SHUTDOWN_RS;
-    static inline bool QuitCode_IsValid(int value)
-    {
-        return RequestSystemQuit_QuitCode_IsValid(value);
-    }
-    static const QuitCode QuitCode_MIN =
-        RequestSystemQuit_QuitCode_QuitCode_MIN;
-    static const QuitCode QuitCode_MAX =
-        RequestSystemQuit_QuitCode_QuitCode_MAX;
-    static const int QuitCode_ARRAYSIZE =
-        RequestSystemQuit_QuitCode_QuitCode_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    QuitCode_descriptor()
-    {
-        return RequestSystemQuit_QuitCode_descriptor();
-    }
-    static inline const ::std::string& QuitCode_Name(QuitCode value)
-    {
-        return RequestSystemQuit_QuitCode_Name(value);
-    }
-    static inline bool QuitCode_Parse(const ::std::string& name,
-                                      QuitCode* value)
-    {
-        return RequestSystemQuit_QuitCode_Parse(name, value);
-    }
+  typedef RequestSystemQuit_QuitCode QuitCode;
+  static const QuitCode CLOSE_CHANNEL = RequestSystemQuit_QuitCode_CLOSE_CHANNEL;
+  static const QuitCode SHUTDOWN_RS = RequestSystemQuit_QuitCode_SHUTDOWN_RS;
+  static inline bool QuitCode_IsValid(int value) {
+    return RequestSystemQuit_QuitCode_IsValid(value);
+  }
+  static const QuitCode QuitCode_MIN =
+    RequestSystemQuit_QuitCode_QuitCode_MIN;
+  static const QuitCode QuitCode_MAX =
+    RequestSystemQuit_QuitCode_QuitCode_MAX;
+  static const int QuitCode_ARRAYSIZE =
+    RequestSystemQuit_QuitCode_QuitCode_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  QuitCode_descriptor() {
+    return RequestSystemQuit_QuitCode_descriptor();
+  }
+  static inline const ::std::string& QuitCode_Name(QuitCode value) {
+    return RequestSystemQuit_QuitCode_Name(value);
+  }
+  static inline bool QuitCode_Parse(const ::std::string& name,
+      QuitCode* value) {
+    return RequestSystemQuit_QuitCode_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
-    inline bool has_quit_code() const;
-    inline void clear_quit_code();
-    static const int kQuitCodeFieldNumber = 1;
-    inline ::rsctrl::system::RequestSystemQuit_QuitCode quit_code() const;
-    inline void set_quit_code(::rsctrl::system::RequestSystemQuit_QuitCode value);
+  // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
+  inline bool has_quit_code() const;
+  inline void clear_quit_code();
+  static const int kQuitCodeFieldNumber = 1;
+  inline ::rsctrl::system::RequestSystemQuit_QuitCode quit_code() const;
+  inline void set_quit_code(::rsctrl::system::RequestSystemQuit_QuitCode value);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemQuit)
-private:
-    inline void set_has_quit_code();
-    inline void clear_has_quit_code();
+  // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemQuit)
+ private:
+  inline void set_has_quit_code();
+  inline void clear_has_quit_code();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    int quit_code_;
+  int quit_code_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestSystemQuit* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestSystemQuit* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseSystemQuit : public ::google::protobuf::Message
-{
-public:
-    ResponseSystemQuit();
-    virtual ~ResponseSystemQuit();
+class ResponseSystemQuit : public ::google::protobuf::Message {
+ public:
+  ResponseSystemQuit();
+  virtual ~ResponseSystemQuit();
 
-    ResponseSystemQuit(const ResponseSystemQuit& from);
+  ResponseSystemQuit(const ResponseSystemQuit& from);
 
-    inline ResponseSystemQuit& operator=(const ResponseSystemQuit& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseSystemQuit& operator=(const ResponseSystemQuit& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseSystemQuit& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseSystemQuit& default_instance();
 
-    void Swap(ResponseSystemQuit* other);
+  void Swap(ResponseSystemQuit* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseSystemQuit* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseSystemQuit& from);
-    void MergeFrom(const ResponseSystemQuit& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseSystemQuit* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseSystemQuit& from);
+  void MergeFrom(const ResponseSystemQuit& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemQuit)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
+  // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemQuit)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
+  ::rsctrl::core::Status* status_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseSystemQuit* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseSystemQuit* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestSystemExternalAccess : public ::google::protobuf::Message
-{
-public:
-    RequestSystemExternalAccess();
-    virtual ~RequestSystemExternalAccess();
+class RequestSystemExternalAccess : public ::google::protobuf::Message {
+ public:
+  RequestSystemExternalAccess();
+  virtual ~RequestSystemExternalAccess();
 
-    RequestSystemExternalAccess(const RequestSystemExternalAccess& from);
+  RequestSystemExternalAccess(const RequestSystemExternalAccess& from);
 
-    inline RequestSystemExternalAccess& operator=(const RequestSystemExternalAccess& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestSystemExternalAccess& operator=(const RequestSystemExternalAccess& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestSystemExternalAccess& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestSystemExternalAccess& default_instance();
 
-    void Swap(RequestSystemExternalAccess* other);
+  void Swap(RequestSystemExternalAccess* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestSystemExternalAccess* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestSystemExternalAccess& from);
-    void MergeFrom(const RequestSystemExternalAccess& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestSystemExternalAccess* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestSystemExternalAccess& from);
+  void MergeFrom(const RequestSystemExternalAccess& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemExternalAccess)
-private:
+  // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemExternalAccess)
+ private:
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[1];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[1];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestSystemExternalAccess* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestSystemExternalAccess* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseSystemExternalAccess : public ::google::protobuf::Message
-{
-public:
-    ResponseSystemExternalAccess();
-    virtual ~ResponseSystemExternalAccess();
+class ResponseSystemExternalAccess : public ::google::protobuf::Message {
+ public:
+  ResponseSystemExternalAccess();
+  virtual ~ResponseSystemExternalAccess();
 
-    ResponseSystemExternalAccess(const ResponseSystemExternalAccess& from);
+  ResponseSystemExternalAccess(const ResponseSystemExternalAccess& from);
 
-    inline ResponseSystemExternalAccess& operator=(const ResponseSystemExternalAccess& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseSystemExternalAccess& operator=(const ResponseSystemExternalAccess& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseSystemExternalAccess& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseSystemExternalAccess& default_instance();
 
-    void Swap(ResponseSystemExternalAccess* other);
+  void Swap(ResponseSystemExternalAccess* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseSystemExternalAccess* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseSystemExternalAccess& from);
-    void MergeFrom(const ResponseSystemExternalAccess& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseSystemExternalAccess* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseSystemExternalAccess& from);
+  void MergeFrom(const ResponseSystemExternalAccess& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // required uint32 ext_port = 2;
-    inline bool has_ext_port() const;
-    inline void clear_ext_port();
-    static const int kExtPortFieldNumber = 2;
-    inline ::google::protobuf::uint32 ext_port() const;
-    inline void set_ext_port(::google::protobuf::uint32 value);
+  // required uint32 ext_port = 2;
+  inline bool has_ext_port() const;
+  inline void clear_ext_port();
+  static const int kExtPortFieldNumber = 2;
+  inline ::google::protobuf::uint32 ext_port() const;
+  inline void set_ext_port(::google::protobuf::uint32 value);
 
-    // required string dht_key = 3;
-    inline bool has_dht_key() const;
-    inline void clear_dht_key();
-    static const int kDhtKeyFieldNumber = 3;
-    inline const ::std::string& dht_key() const;
-    inline void set_dht_key(const ::std::string& value);
-    inline void set_dht_key(const char* value);
-    inline void set_dht_key(const char* value, size_t size);
-    inline ::std::string* mutable_dht_key();
-    inline ::std::string* release_dht_key();
-    inline void set_allocated_dht_key(::std::string* dht_key);
+  // required string dht_key = 3;
+  inline bool has_dht_key() const;
+  inline void clear_dht_key();
+  static const int kDhtKeyFieldNumber = 3;
+  inline const ::std::string& dht_key() const;
+  inline void set_dht_key(const ::std::string& value);
+  inline void set_dht_key(const char* value);
+  inline void set_dht_key(const char* value, size_t size);
+  inline ::std::string* mutable_dht_key();
+  inline ::std::string* release_dht_key();
+  inline void set_allocated_dht_key(::std::string* dht_key);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemExternalAccess)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
-    inline void set_has_ext_port();
-    inline void clear_has_ext_port();
-    inline void set_has_dht_key();
-    inline void clear_has_dht_key();
+  // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemExternalAccess)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
+  inline void set_has_ext_port();
+  inline void clear_has_ext_port();
+  inline void set_has_dht_key();
+  inline void clear_has_dht_key();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::std::string* dht_key_;
-    ::google::protobuf::uint32 ext_port_;
+  ::rsctrl::core::Status* status_;
+  ::std::string* dht_key_;
+  ::google::protobuf::uint32 ext_port_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseSystemExternalAccess* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseSystemExternalAccess* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestSystemAccount : public ::google::protobuf::Message
-{
-public:
-    RequestSystemAccount();
-    virtual ~RequestSystemAccount();
+class RequestSystemAccount : public ::google::protobuf::Message {
+ public:
+  RequestSystemAccount();
+  virtual ~RequestSystemAccount();
 
-    RequestSystemAccount(const RequestSystemAccount& from);
+  RequestSystemAccount(const RequestSystemAccount& from);
 
-    inline RequestSystemAccount& operator=(const RequestSystemAccount& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestSystemAccount& operator=(const RequestSystemAccount& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestSystemAccount& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestSystemAccount& default_instance();
 
-    void Swap(RequestSystemAccount* other);
+  void Swap(RequestSystemAccount* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestSystemAccount* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestSystemAccount& from);
-    void MergeFrom(const RequestSystemAccount& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestSystemAccount* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestSystemAccount& from);
+  void MergeFrom(const RequestSystemAccount& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemAccount)
-private:
+  // @@protoc_insertion_point(class_scope:rsctrl.system.RequestSystemAccount)
+ private:
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[1];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[1];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestSystemAccount* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestSystemAccount* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseSystemAccount : public ::google::protobuf::Message
-{
-public:
-    ResponseSystemAccount();
-    virtual ~ResponseSystemAccount();
+class ResponseSystemAccount : public ::google::protobuf::Message {
+ public:
+  ResponseSystemAccount();
+  virtual ~ResponseSystemAccount();
 
-    ResponseSystemAccount(const ResponseSystemAccount& from);
+  ResponseSystemAccount(const ResponseSystemAccount& from);
 
-    inline ResponseSystemAccount& operator=(const ResponseSystemAccount& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseSystemAccount& operator=(const ResponseSystemAccount& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseSystemAccount& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseSystemAccount& default_instance();
 
-    void Swap(ResponseSystemAccount* other);
+  void Swap(ResponseSystemAccount* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseSystemAccount* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseSystemAccount& from);
-    void MergeFrom(const ResponseSystemAccount& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseSystemAccount* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseSystemAccount& from);
+  void MergeFrom(const ResponseSystemAccount& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // required string pgp_name = 2;
-    inline bool has_pgp_name() const;
-    inline void clear_pgp_name();
-    static const int kPgpNameFieldNumber = 2;
-    inline const ::std::string& pgp_name() const;
-    inline void set_pgp_name(const ::std::string& value);
-    inline void set_pgp_name(const char* value);
-    inline void set_pgp_name(const char* value, size_t size);
-    inline ::std::string* mutable_pgp_name();
-    inline ::std::string* release_pgp_name();
-    inline void set_allocated_pgp_name(::std::string* pgp_name);
+  // required string pgp_name = 2;
+  inline bool has_pgp_name() const;
+  inline void clear_pgp_name();
+  static const int kPgpNameFieldNumber = 2;
+  inline const ::std::string& pgp_name() const;
+  inline void set_pgp_name(const ::std::string& value);
+  inline void set_pgp_name(const char* value);
+  inline void set_pgp_name(const char* value, size_t size);
+  inline ::std::string* mutable_pgp_name();
+  inline ::std::string* release_pgp_name();
+  inline void set_allocated_pgp_name(::std::string* pgp_name);
 
-    // required string location = 3;
-    inline bool has_location() const;
-    inline void clear_location();
-    static const int kLocationFieldNumber = 3;
-    inline const ::std::string& location() const;
-    inline void set_location(const ::std::string& value);
-    inline void set_location(const char* value);
-    inline void set_location(const char* value, size_t size);
-    inline ::std::string* mutable_location();
-    inline ::std::string* release_location();
-    inline void set_allocated_location(::std::string* location);
+  // required string location = 3;
+  inline bool has_location() const;
+  inline void clear_location();
+  static const int kLocationFieldNumber = 3;
+  inline const ::std::string& location() const;
+  inline void set_location(const ::std::string& value);
+  inline void set_location(const char* value);
+  inline void set_location(const char* value, size_t size);
+  inline ::std::string* mutable_location();
+  inline ::std::string* release_location();
+  inline void set_allocated_location(::std::string* location);
 
-    // required string pgp_id = 4;
-    inline bool has_pgp_id() const;
-    inline void clear_pgp_id();
-    static const int kPgpIdFieldNumber = 4;
-    inline const ::std::string& pgp_id() const;
-    inline void set_pgp_id(const ::std::string& value);
-    inline void set_pgp_id(const char* value);
-    inline void set_pgp_id(const char* value, size_t size);
-    inline ::std::string* mutable_pgp_id();
-    inline ::std::string* release_pgp_id();
-    inline void set_allocated_pgp_id(::std::string* pgp_id);
+  // required string pgp_id = 4;
+  inline bool has_pgp_id() const;
+  inline void clear_pgp_id();
+  static const int kPgpIdFieldNumber = 4;
+  inline const ::std::string& pgp_id() const;
+  inline void set_pgp_id(const ::std::string& value);
+  inline void set_pgp_id(const char* value);
+  inline void set_pgp_id(const char* value, size_t size);
+  inline ::std::string* mutable_pgp_id();
+  inline ::std::string* release_pgp_id();
+  inline void set_allocated_pgp_id(::std::string* pgp_id);
 
-    // required string ssl_id = 5;
-    inline bool has_ssl_id() const;
-    inline void clear_ssl_id();
-    static const int kSslIdFieldNumber = 5;
-    inline const ::std::string& ssl_id() const;
-    inline void set_ssl_id(const ::std::string& value);
-    inline void set_ssl_id(const char* value);
-    inline void set_ssl_id(const char* value, size_t size);
-    inline ::std::string* mutable_ssl_id();
-    inline ::std::string* release_ssl_id();
-    inline void set_allocated_ssl_id(::std::string* ssl_id);
+  // required string ssl_id = 5;
+  inline bool has_ssl_id() const;
+  inline void clear_ssl_id();
+  static const int kSslIdFieldNumber = 5;
+  inline const ::std::string& ssl_id() const;
+  inline void set_ssl_id(const ::std::string& value);
+  inline void set_ssl_id(const char* value);
+  inline void set_ssl_id(const char* value, size_t size);
+  inline ::std::string* mutable_ssl_id();
+  inline ::std::string* release_ssl_id();
+  inline void set_allocated_ssl_id(::std::string* ssl_id);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemAccount)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
-    inline void set_has_pgp_name();
-    inline void clear_has_pgp_name();
-    inline void set_has_location();
-    inline void clear_has_location();
-    inline void set_has_pgp_id();
-    inline void clear_has_pgp_id();
-    inline void set_has_ssl_id();
-    inline void clear_has_ssl_id();
+  // @@protoc_insertion_point(class_scope:rsctrl.system.ResponseSystemAccount)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
+  inline void set_has_pgp_name();
+  inline void clear_has_pgp_name();
+  inline void set_has_location();
+  inline void clear_has_location();
+  inline void set_has_pgp_id();
+  inline void clear_has_pgp_id();
+  inline void set_has_ssl_id();
+  inline void clear_has_ssl_id();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::std::string* pgp_name_;
-    ::std::string* location_;
-    ::std::string* pgp_id_;
-    ::std::string* ssl_id_;
+  ::rsctrl::core::Status* status_;
+  ::std::string* pgp_name_;
+  ::std::string* location_;
+  ::std::string* pgp_id_;
+  ::std::string* ssl_id_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
-    friend void  protobuf_AddDesc_system_2eproto();
-    friend void protobuf_AssignDesc_system_2eproto();
-    friend void protobuf_ShutdownFile_system_2eproto();
+  friend void  protobuf_AddDesc_system_2eproto();
+  friend void protobuf_AssignDesc_system_2eproto();
+  friend void protobuf_ShutdownFile_system_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseSystemAccount* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseSystemAccount* default_instance_;
 };
 // ===================================================================
 
@@ -1038,186 +960,146 @@ private:
 // ResponseSystemStatus
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseSystemStatus::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseSystemStatus::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseSystemStatus::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseSystemStatus::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseSystemStatus::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseSystemStatus::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseSystemStatus::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseSystemStatus::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseSystemStatus::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseSystemStatus::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseSystemStatus::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseSystemStatus::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseSystemStatus::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseSystemStatus::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseSystemStatus::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseSystemStatus::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // required uint32 no_peers = 2;
-inline bool ResponseSystemStatus::has_no_peers() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool ResponseSystemStatus::has_no_peers() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ResponseSystemStatus::set_has_no_peers()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void ResponseSystemStatus::set_has_no_peers() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void ResponseSystemStatus::clear_has_no_peers()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void ResponseSystemStatus::clear_has_no_peers() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void ResponseSystemStatus::clear_no_peers()
-{
-    no_peers_ = 0u;
-    clear_has_no_peers();
+inline void ResponseSystemStatus::clear_no_peers() {
+  no_peers_ = 0u;
+  clear_has_no_peers();
 }
-inline ::google::protobuf::uint32 ResponseSystemStatus::no_peers() const
-{
-    return no_peers_;
+inline ::google::protobuf::uint32 ResponseSystemStatus::no_peers() const {
+  return no_peers_;
 }
-inline void ResponseSystemStatus::set_no_peers(::google::protobuf::uint32 value)
-{
-    set_has_no_peers();
-    no_peers_ = value;
+inline void ResponseSystemStatus::set_no_peers(::google::protobuf::uint32 value) {
+  set_has_no_peers();
+  no_peers_ = value;
 }
 
 // required uint32 no_connected = 3;
-inline bool ResponseSystemStatus::has_no_connected() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool ResponseSystemStatus::has_no_connected() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void ResponseSystemStatus::set_has_no_connected()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void ResponseSystemStatus::set_has_no_connected() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void ResponseSystemStatus::clear_has_no_connected()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void ResponseSystemStatus::clear_has_no_connected() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void ResponseSystemStatus::clear_no_connected()
-{
-    no_connected_ = 0u;
-    clear_has_no_connected();
+inline void ResponseSystemStatus::clear_no_connected() {
+  no_connected_ = 0u;
+  clear_has_no_connected();
 }
-inline ::google::protobuf::uint32 ResponseSystemStatus::no_connected() const
-{
-    return no_connected_;
+inline ::google::protobuf::uint32 ResponseSystemStatus::no_connected() const {
+  return no_connected_;
 }
-inline void ResponseSystemStatus::set_no_connected(::google::protobuf::uint32 value)
-{
-    set_has_no_connected();
-    no_connected_ = value;
+inline void ResponseSystemStatus::set_no_connected(::google::protobuf::uint32 value) {
+  set_has_no_connected();
+  no_connected_ = value;
 }
 
 // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
-inline bool ResponseSystemStatus::has_net_status() const
-{
-    return (_has_bits_[0] & 0x00000008u) != 0;
+inline bool ResponseSystemStatus::has_net_status() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void ResponseSystemStatus::set_has_net_status()
-{
-    _has_bits_[0] |= 0x00000008u;
+inline void ResponseSystemStatus::set_has_net_status() {
+  _has_bits_[0] |= 0x00000008u;
 }
-inline void ResponseSystemStatus::clear_has_net_status()
-{
-    _has_bits_[0] &= ~0x00000008u;
+inline void ResponseSystemStatus::clear_has_net_status() {
+  _has_bits_[0] &= ~0x00000008u;
 }
-inline void ResponseSystemStatus::clear_net_status()
-{
-    net_status_ = 0;
-    clear_has_net_status();
+inline void ResponseSystemStatus::clear_net_status() {
+  net_status_ = 0;
+  clear_has_net_status();
 }
-inline ::rsctrl::system::ResponseSystemStatus_NetCode ResponseSystemStatus::net_status() const
-{
-    return static_cast< ::rsctrl::system::ResponseSystemStatus_NetCode >(net_status_);
+inline ::rsctrl::system::ResponseSystemStatus_NetCode ResponseSystemStatus::net_status() const {
+  return static_cast< ::rsctrl::system::ResponseSystemStatus_NetCode >(net_status_);
 }
-inline void ResponseSystemStatus::set_net_status(::rsctrl::system::ResponseSystemStatus_NetCode value)
-{
-    assert(::rsctrl::system::ResponseSystemStatus_NetCode_IsValid(value));
-    set_has_net_status();
-    net_status_ = value;
+inline void ResponseSystemStatus::set_net_status(::rsctrl::system::ResponseSystemStatus_NetCode value) {
+  assert(::rsctrl::system::ResponseSystemStatus_NetCode_IsValid(value));
+  set_has_net_status();
+  net_status_ = value;
 }
 
 // required .rsctrl.core.Bandwidth bw_total = 5;
-inline bool ResponseSystemStatus::has_bw_total() const
-{
-    return (_has_bits_[0] & 0x00000010u) != 0;
+inline bool ResponseSystemStatus::has_bw_total() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void ResponseSystemStatus::set_has_bw_total()
-{
-    _has_bits_[0] |= 0x00000010u;
+inline void ResponseSystemStatus::set_has_bw_total() {
+  _has_bits_[0] |= 0x00000010u;
 }
-inline void ResponseSystemStatus::clear_has_bw_total()
-{
-    _has_bits_[0] &= ~0x00000010u;
+inline void ResponseSystemStatus::clear_has_bw_total() {
+  _has_bits_[0] &= ~0x00000010u;
 }
-inline void ResponseSystemStatus::clear_bw_total()
-{
-    if (bw_total_ != NULL) bw_total_->::rsctrl::core::Bandwidth::Clear();
-    clear_has_bw_total();
+inline void ResponseSystemStatus::clear_bw_total() {
+  if (bw_total_ != NULL) bw_total_->::rsctrl::core::Bandwidth::Clear();
+  clear_has_bw_total();
 }
-inline const ::rsctrl::core::Bandwidth& ResponseSystemStatus::bw_total() const
-{
-    return bw_total_ != NULL ? *bw_total_ : *default_instance_->bw_total_;
+inline const ::rsctrl::core::Bandwidth& ResponseSystemStatus::bw_total() const {
+  return bw_total_ != NULL ? *bw_total_ : *default_instance_->bw_total_;
 }
-inline ::rsctrl::core::Bandwidth* ResponseSystemStatus::mutable_bw_total()
-{
+inline ::rsctrl::core::Bandwidth* ResponseSystemStatus::mutable_bw_total() {
+  set_has_bw_total();
+  if (bw_total_ == NULL) bw_total_ = new ::rsctrl::core::Bandwidth;
+  return bw_total_;
+}
+inline ::rsctrl::core::Bandwidth* ResponseSystemStatus::release_bw_total() {
+  clear_has_bw_total();
+  ::rsctrl::core::Bandwidth* temp = bw_total_;
+  bw_total_ = NULL;
+  return temp;
+}
+inline void ResponseSystemStatus::set_allocated_bw_total(::rsctrl::core::Bandwidth* bw_total) {
+  delete bw_total_;
+  bw_total_ = bw_total;
+  if (bw_total) {
     set_has_bw_total();
-    if (bw_total_ == NULL) bw_total_ = new ::rsctrl::core::Bandwidth;
-    return bw_total_;
-}
-inline ::rsctrl::core::Bandwidth* ResponseSystemStatus::release_bw_total()
-{
+  } else {
     clear_has_bw_total();
-    ::rsctrl::core::Bandwidth* temp = bw_total_;
-    bw_total_ = NULL;
-    return temp;
-}
-inline void ResponseSystemStatus::set_allocated_bw_total(::rsctrl::core::Bandwidth* bw_total)
-{
-    delete bw_total_;
-    bw_total_ = bw_total;
-    if (bw_total)
-    {
-        set_has_bw_total();
-    }
-    else
-    {
-        clear_has_bw_total();
-    }
+  }
 }
 
 // -------------------------------------------------------------------
@@ -1225,32 +1107,26 @@ inline void ResponseSystemStatus::set_allocated_bw_total(::rsctrl::core::Bandwid
 // RequestSystemQuit
 
 // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
-inline bool RequestSystemQuit::has_quit_code() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestSystemQuit::has_quit_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestSystemQuit::set_has_quit_code()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestSystemQuit::set_has_quit_code() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestSystemQuit::clear_has_quit_code()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestSystemQuit::clear_has_quit_code() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestSystemQuit::clear_quit_code()
-{
-    quit_code_ = 1;
-    clear_has_quit_code();
+inline void RequestSystemQuit::clear_quit_code() {
+  quit_code_ = 1;
+  clear_has_quit_code();
 }
-inline ::rsctrl::system::RequestSystemQuit_QuitCode RequestSystemQuit::quit_code() const
-{
-    return static_cast< ::rsctrl::system::RequestSystemQuit_QuitCode >(quit_code_);
+inline ::rsctrl::system::RequestSystemQuit_QuitCode RequestSystemQuit::quit_code() const {
+  return static_cast< ::rsctrl::system::RequestSystemQuit_QuitCode >(quit_code_);
 }
-inline void RequestSystemQuit::set_quit_code(::rsctrl::system::RequestSystemQuit_QuitCode value)
-{
-    assert(::rsctrl::system::RequestSystemQuit_QuitCode_IsValid(value));
-    set_has_quit_code();
-    quit_code_ = value;
+inline void RequestSystemQuit::set_quit_code(::rsctrl::system::RequestSystemQuit_QuitCode value) {
+  assert(::rsctrl::system::RequestSystemQuit_QuitCode_IsValid(value));
+  set_has_quit_code();
+  quit_code_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -1258,52 +1134,41 @@ inline void RequestSystemQuit::set_quit_code(::rsctrl::system::RequestSystemQuit
 // ResponseSystemQuit
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseSystemQuit::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseSystemQuit::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseSystemQuit::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseSystemQuit::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseSystemQuit::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseSystemQuit::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseSystemQuit::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseSystemQuit::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseSystemQuit::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseSystemQuit::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseSystemQuit::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseSystemQuit::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseSystemQuit::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseSystemQuit::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseSystemQuit::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseSystemQuit::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // -------------------------------------------------------------------
@@ -1315,173 +1180,133 @@ inline void ResponseSystemQuit::set_allocated_status(::rsctrl::core::Status* sta
 // ResponseSystemExternalAccess
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseSystemExternalAccess::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseSystemExternalAccess::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseSystemExternalAccess::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseSystemExternalAccess::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseSystemExternalAccess::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseSystemExternalAccess::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseSystemExternalAccess::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseSystemExternalAccess::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseSystemExternalAccess::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseSystemExternalAccess::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseSystemExternalAccess::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseSystemExternalAccess::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseSystemExternalAccess::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseSystemExternalAccess::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseSystemExternalAccess::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseSystemExternalAccess::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // required uint32 ext_port = 2;
-inline bool ResponseSystemExternalAccess::has_ext_port() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool ResponseSystemExternalAccess::has_ext_port() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ResponseSystemExternalAccess::set_has_ext_port()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void ResponseSystemExternalAccess::set_has_ext_port() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void ResponseSystemExternalAccess::clear_has_ext_port()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void ResponseSystemExternalAccess::clear_has_ext_port() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void ResponseSystemExternalAccess::clear_ext_port()
-{
-    ext_port_ = 0u;
-    clear_has_ext_port();
+inline void ResponseSystemExternalAccess::clear_ext_port() {
+  ext_port_ = 0u;
+  clear_has_ext_port();
 }
-inline ::google::protobuf::uint32 ResponseSystemExternalAccess::ext_port() const
-{
-    return ext_port_;
+inline ::google::protobuf::uint32 ResponseSystemExternalAccess::ext_port() const {
+  return ext_port_;
 }
-inline void ResponseSystemExternalAccess::set_ext_port(::google::protobuf::uint32 value)
-{
-    set_has_ext_port();
-    ext_port_ = value;
+inline void ResponseSystemExternalAccess::set_ext_port(::google::protobuf::uint32 value) {
+  set_has_ext_port();
+  ext_port_ = value;
 }
 
 // required string dht_key = 3;
-inline bool ResponseSystemExternalAccess::has_dht_key() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool ResponseSystemExternalAccess::has_dht_key() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void ResponseSystemExternalAccess::set_has_dht_key()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void ResponseSystemExternalAccess::set_has_dht_key() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void ResponseSystemExternalAccess::clear_has_dht_key()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void ResponseSystemExternalAccess::clear_has_dht_key() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void ResponseSystemExternalAccess::clear_dht_key()
-{
-    if (dht_key_ != &::google::protobuf::internal::kEmptyString)
-    {
-        dht_key_->clear();
-    }
+inline void ResponseSystemExternalAccess::clear_dht_key() {
+  if (dht_key_ != &::google::protobuf::internal::kEmptyString) {
+    dht_key_->clear();
+  }
+  clear_has_dht_key();
+}
+inline const ::std::string& ResponseSystemExternalAccess::dht_key() const {
+  return *dht_key_;
+}
+inline void ResponseSystemExternalAccess::set_dht_key(const ::std::string& value) {
+  set_has_dht_key();
+  if (dht_key_ == &::google::protobuf::internal::kEmptyString) {
+    dht_key_ = new ::std::string;
+  }
+  dht_key_->assign(value);
+}
+inline void ResponseSystemExternalAccess::set_dht_key(const char* value) {
+  set_has_dht_key();
+  if (dht_key_ == &::google::protobuf::internal::kEmptyString) {
+    dht_key_ = new ::std::string;
+  }
+  dht_key_->assign(value);
+}
+inline void ResponseSystemExternalAccess::set_dht_key(const char* value, size_t size) {
+  set_has_dht_key();
+  if (dht_key_ == &::google::protobuf::internal::kEmptyString) {
+    dht_key_ = new ::std::string;
+  }
+  dht_key_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ResponseSystemExternalAccess::mutable_dht_key() {
+  set_has_dht_key();
+  if (dht_key_ == &::google::protobuf::internal::kEmptyString) {
+    dht_key_ = new ::std::string;
+  }
+  return dht_key_;
+}
+inline ::std::string* ResponseSystemExternalAccess::release_dht_key() {
+  clear_has_dht_key();
+  if (dht_key_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = dht_key_;
+    dht_key_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ResponseSystemExternalAccess::set_allocated_dht_key(::std::string* dht_key) {
+  if (dht_key_ != &::google::protobuf::internal::kEmptyString) {
+    delete dht_key_;
+  }
+  if (dht_key) {
+    set_has_dht_key();
+    dht_key_ = dht_key;
+  } else {
     clear_has_dht_key();
-}
-inline const ::std::string& ResponseSystemExternalAccess::dht_key() const
-{
-    return *dht_key_;
-}
-inline void ResponseSystemExternalAccess::set_dht_key(const ::std::string& value)
-{
-    set_has_dht_key();
-    if (dht_key_ == &::google::protobuf::internal::kEmptyString)
-    {
-        dht_key_ = new ::std::string;
-    }
-    dht_key_->assign(value);
-}
-inline void ResponseSystemExternalAccess::set_dht_key(const char* value)
-{
-    set_has_dht_key();
-    if (dht_key_ == &::google::protobuf::internal::kEmptyString)
-    {
-        dht_key_ = new ::std::string;
-    }
-    dht_key_->assign(value);
-}
-inline void ResponseSystemExternalAccess::set_dht_key(const char* value, size_t size)
-{
-    set_has_dht_key();
-    if (dht_key_ == &::google::protobuf::internal::kEmptyString)
-    {
-        dht_key_ = new ::std::string;
-    }
-    dht_key_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ResponseSystemExternalAccess::mutable_dht_key()
-{
-    set_has_dht_key();
-    if (dht_key_ == &::google::protobuf::internal::kEmptyString)
-    {
-        dht_key_ = new ::std::string;
-    }
-    return dht_key_;
-}
-inline ::std::string* ResponseSystemExternalAccess::release_dht_key()
-{
-    clear_has_dht_key();
-    if (dht_key_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = dht_key_;
-        dht_key_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void ResponseSystemExternalAccess::set_allocated_dht_key(::std::string* dht_key)
-{
-    if (dht_key_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete dht_key_;
-    }
-    if (dht_key)
-    {
-        set_has_dht_key();
-        dht_key_ = dht_key;
-    }
-    else
-    {
-        clear_has_dht_key();
-        dht_key_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    dht_key_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------
@@ -1493,424 +1318,321 @@ inline void ResponseSystemExternalAccess::set_allocated_dht_key(::std::string* d
 // ResponseSystemAccount
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseSystemAccount::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseSystemAccount::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseSystemAccount::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseSystemAccount::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseSystemAccount::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseSystemAccount::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseSystemAccount::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseSystemAccount::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseSystemAccount::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseSystemAccount::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseSystemAccount::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseSystemAccount::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseSystemAccount::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseSystemAccount::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseSystemAccount::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseSystemAccount::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // required string pgp_name = 2;
-inline bool ResponseSystemAccount::has_pgp_name() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool ResponseSystemAccount::has_pgp_name() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ResponseSystemAccount::set_has_pgp_name()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void ResponseSystemAccount::set_has_pgp_name() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void ResponseSystemAccount::clear_has_pgp_name()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void ResponseSystemAccount::clear_has_pgp_name() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void ResponseSystemAccount::clear_pgp_name()
-{
-    if (pgp_name_ != &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_name_->clear();
-    }
+inline void ResponseSystemAccount::clear_pgp_name() {
+  if (pgp_name_ != &::google::protobuf::internal::kEmptyString) {
+    pgp_name_->clear();
+  }
+  clear_has_pgp_name();
+}
+inline const ::std::string& ResponseSystemAccount::pgp_name() const {
+  return *pgp_name_;
+}
+inline void ResponseSystemAccount::set_pgp_name(const ::std::string& value) {
+  set_has_pgp_name();
+  if (pgp_name_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_name_ = new ::std::string;
+  }
+  pgp_name_->assign(value);
+}
+inline void ResponseSystemAccount::set_pgp_name(const char* value) {
+  set_has_pgp_name();
+  if (pgp_name_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_name_ = new ::std::string;
+  }
+  pgp_name_->assign(value);
+}
+inline void ResponseSystemAccount::set_pgp_name(const char* value, size_t size) {
+  set_has_pgp_name();
+  if (pgp_name_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_name_ = new ::std::string;
+  }
+  pgp_name_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ResponseSystemAccount::mutable_pgp_name() {
+  set_has_pgp_name();
+  if (pgp_name_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_name_ = new ::std::string;
+  }
+  return pgp_name_;
+}
+inline ::std::string* ResponseSystemAccount::release_pgp_name() {
+  clear_has_pgp_name();
+  if (pgp_name_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = pgp_name_;
+    pgp_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ResponseSystemAccount::set_allocated_pgp_name(::std::string* pgp_name) {
+  if (pgp_name_ != &::google::protobuf::internal::kEmptyString) {
+    delete pgp_name_;
+  }
+  if (pgp_name) {
+    set_has_pgp_name();
+    pgp_name_ = pgp_name;
+  } else {
     clear_has_pgp_name();
-}
-inline const ::std::string& ResponseSystemAccount::pgp_name() const
-{
-    return *pgp_name_;
-}
-inline void ResponseSystemAccount::set_pgp_name(const ::std::string& value)
-{
-    set_has_pgp_name();
-    if (pgp_name_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_name_ = new ::std::string;
-    }
-    pgp_name_->assign(value);
-}
-inline void ResponseSystemAccount::set_pgp_name(const char* value)
-{
-    set_has_pgp_name();
-    if (pgp_name_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_name_ = new ::std::string;
-    }
-    pgp_name_->assign(value);
-}
-inline void ResponseSystemAccount::set_pgp_name(const char* value, size_t size)
-{
-    set_has_pgp_name();
-    if (pgp_name_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_name_ = new ::std::string;
-    }
-    pgp_name_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ResponseSystemAccount::mutable_pgp_name()
-{
-    set_has_pgp_name();
-    if (pgp_name_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_name_ = new ::std::string;
-    }
-    return pgp_name_;
-}
-inline ::std::string* ResponseSystemAccount::release_pgp_name()
-{
-    clear_has_pgp_name();
-    if (pgp_name_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = pgp_name_;
-        pgp_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void ResponseSystemAccount::set_allocated_pgp_name(::std::string* pgp_name)
-{
-    if (pgp_name_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete pgp_name_;
-    }
-    if (pgp_name)
-    {
-        set_has_pgp_name();
-        pgp_name_ = pgp_name;
-    }
-    else
-    {
-        clear_has_pgp_name();
-        pgp_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    pgp_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required string location = 3;
-inline bool ResponseSystemAccount::has_location() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool ResponseSystemAccount::has_location() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void ResponseSystemAccount::set_has_location()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void ResponseSystemAccount::set_has_location() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void ResponseSystemAccount::clear_has_location()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void ResponseSystemAccount::clear_has_location() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void ResponseSystemAccount::clear_location()
-{
-    if (location_ != &::google::protobuf::internal::kEmptyString)
-    {
-        location_->clear();
-    }
+inline void ResponseSystemAccount::clear_location() {
+  if (location_ != &::google::protobuf::internal::kEmptyString) {
+    location_->clear();
+  }
+  clear_has_location();
+}
+inline const ::std::string& ResponseSystemAccount::location() const {
+  return *location_;
+}
+inline void ResponseSystemAccount::set_location(const ::std::string& value) {
+  set_has_location();
+  if (location_ == &::google::protobuf::internal::kEmptyString) {
+    location_ = new ::std::string;
+  }
+  location_->assign(value);
+}
+inline void ResponseSystemAccount::set_location(const char* value) {
+  set_has_location();
+  if (location_ == &::google::protobuf::internal::kEmptyString) {
+    location_ = new ::std::string;
+  }
+  location_->assign(value);
+}
+inline void ResponseSystemAccount::set_location(const char* value, size_t size) {
+  set_has_location();
+  if (location_ == &::google::protobuf::internal::kEmptyString) {
+    location_ = new ::std::string;
+  }
+  location_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ResponseSystemAccount::mutable_location() {
+  set_has_location();
+  if (location_ == &::google::protobuf::internal::kEmptyString) {
+    location_ = new ::std::string;
+  }
+  return location_;
+}
+inline ::std::string* ResponseSystemAccount::release_location() {
+  clear_has_location();
+  if (location_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = location_;
+    location_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ResponseSystemAccount::set_allocated_location(::std::string* location) {
+  if (location_ != &::google::protobuf::internal::kEmptyString) {
+    delete location_;
+  }
+  if (location) {
+    set_has_location();
+    location_ = location;
+  } else {
     clear_has_location();
-}
-inline const ::std::string& ResponseSystemAccount::location() const
-{
-    return *location_;
-}
-inline void ResponseSystemAccount::set_location(const ::std::string& value)
-{
-    set_has_location();
-    if (location_ == &::google::protobuf::internal::kEmptyString)
-    {
-        location_ = new ::std::string;
-    }
-    location_->assign(value);
-}
-inline void ResponseSystemAccount::set_location(const char* value)
-{
-    set_has_location();
-    if (location_ == &::google::protobuf::internal::kEmptyString)
-    {
-        location_ = new ::std::string;
-    }
-    location_->assign(value);
-}
-inline void ResponseSystemAccount::set_location(const char* value, size_t size)
-{
-    set_has_location();
-    if (location_ == &::google::protobuf::internal::kEmptyString)
-    {
-        location_ = new ::std::string;
-    }
-    location_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ResponseSystemAccount::mutable_location()
-{
-    set_has_location();
-    if (location_ == &::google::protobuf::internal::kEmptyString)
-    {
-        location_ = new ::std::string;
-    }
-    return location_;
-}
-inline ::std::string* ResponseSystemAccount::release_location()
-{
-    clear_has_location();
-    if (location_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = location_;
-        location_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void ResponseSystemAccount::set_allocated_location(::std::string* location)
-{
-    if (location_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete location_;
-    }
-    if (location)
-    {
-        set_has_location();
-        location_ = location;
-    }
-    else
-    {
-        clear_has_location();
-        location_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    location_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required string pgp_id = 4;
-inline bool ResponseSystemAccount::has_pgp_id() const
-{
-    return (_has_bits_[0] & 0x00000008u) != 0;
+inline bool ResponseSystemAccount::has_pgp_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void ResponseSystemAccount::set_has_pgp_id()
-{
-    _has_bits_[0] |= 0x00000008u;
+inline void ResponseSystemAccount::set_has_pgp_id() {
+  _has_bits_[0] |= 0x00000008u;
 }
-inline void ResponseSystemAccount::clear_has_pgp_id()
-{
-    _has_bits_[0] &= ~0x00000008u;
+inline void ResponseSystemAccount::clear_has_pgp_id() {
+  _has_bits_[0] &= ~0x00000008u;
 }
-inline void ResponseSystemAccount::clear_pgp_id()
-{
-    if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_->clear();
-    }
+inline void ResponseSystemAccount::clear_pgp_id() {
+  if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+    pgp_id_->clear();
+  }
+  clear_has_pgp_id();
+}
+inline const ::std::string& ResponseSystemAccount::pgp_id() const {
+  return *pgp_id_;
+}
+inline void ResponseSystemAccount::set_pgp_id(const ::std::string& value) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(value);
+}
+inline void ResponseSystemAccount::set_pgp_id(const char* value) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(value);
+}
+inline void ResponseSystemAccount::set_pgp_id(const char* value, size_t size) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ResponseSystemAccount::mutable_pgp_id() {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  return pgp_id_;
+}
+inline ::std::string* ResponseSystemAccount::release_pgp_id() {
+  clear_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = pgp_id_;
+    pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ResponseSystemAccount::set_allocated_pgp_id(::std::string* pgp_id) {
+  if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete pgp_id_;
+  }
+  if (pgp_id) {
+    set_has_pgp_id();
+    pgp_id_ = pgp_id;
+  } else {
     clear_has_pgp_id();
-}
-inline const ::std::string& ResponseSystemAccount::pgp_id() const
-{
-    return *pgp_id_;
-}
-inline void ResponseSystemAccount::set_pgp_id(const ::std::string& value)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(value);
-}
-inline void ResponseSystemAccount::set_pgp_id(const char* value)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(value);
-}
-inline void ResponseSystemAccount::set_pgp_id(const char* value, size_t size)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ResponseSystemAccount::mutable_pgp_id()
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    return pgp_id_;
-}
-inline ::std::string* ResponseSystemAccount::release_pgp_id()
-{
-    clear_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = pgp_id_;
-        pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void ResponseSystemAccount::set_allocated_pgp_id(::std::string* pgp_id)
-{
-    if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete pgp_id_;
-    }
-    if (pgp_id)
-    {
-        set_has_pgp_id();
-        pgp_id_ = pgp_id;
-    }
-    else
-    {
-        clear_has_pgp_id();
-        pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required string ssl_id = 5;
-inline bool ResponseSystemAccount::has_ssl_id() const
-{
-    return (_has_bits_[0] & 0x00000010u) != 0;
+inline bool ResponseSystemAccount::has_ssl_id() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void ResponseSystemAccount::set_has_ssl_id()
-{
-    _has_bits_[0] |= 0x00000010u;
+inline void ResponseSystemAccount::set_has_ssl_id() {
+  _has_bits_[0] |= 0x00000010u;
 }
-inline void ResponseSystemAccount::clear_has_ssl_id()
-{
-    _has_bits_[0] &= ~0x00000010u;
+inline void ResponseSystemAccount::clear_has_ssl_id() {
+  _has_bits_[0] &= ~0x00000010u;
 }
-inline void ResponseSystemAccount::clear_ssl_id()
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_->clear();
-    }
+inline void ResponseSystemAccount::clear_ssl_id() {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    ssl_id_->clear();
+  }
+  clear_has_ssl_id();
+}
+inline const ::std::string& ResponseSystemAccount::ssl_id() const {
+  return *ssl_id_;
+}
+inline void ResponseSystemAccount::set_ssl_id(const ::std::string& value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void ResponseSystemAccount::set_ssl_id(const char* value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void ResponseSystemAccount::set_ssl_id(const char* value, size_t size) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ResponseSystemAccount::mutable_ssl_id() {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  return ssl_id_;
+}
+inline ::std::string* ResponseSystemAccount::release_ssl_id() {
+  clear_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = ssl_id_;
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ResponseSystemAccount::set_allocated_ssl_id(::std::string* ssl_id) {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete ssl_id_;
+  }
+  if (ssl_id) {
+    set_has_ssl_id();
+    ssl_id_ = ssl_id;
+  } else {
     clear_has_ssl_id();
-}
-inline const ::std::string& ResponseSystemAccount::ssl_id() const
-{
-    return *ssl_id_;
-}
-inline void ResponseSystemAccount::set_ssl_id(const ::std::string& value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void ResponseSystemAccount::set_ssl_id(const char* value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void ResponseSystemAccount::set_ssl_id(const char* value, size_t size)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ResponseSystemAccount::mutable_ssl_id()
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    return ssl_id_;
-}
-inline ::std::string* ResponseSystemAccount::release_ssl_id()
-{
-    clear_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = ssl_id_;
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void ResponseSystemAccount::set_allocated_ssl_id(::std::string* ssl_id)
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete ssl_id_;
-    }
-    if (ssl_id)
-    {
-        set_has_ssl_id();
-        ssl_id_ = ssl_id;
-    }
-    else
-    {
-        clear_has_ssl_id();
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 
@@ -1920,30 +1642,24 @@ inline void ResponseSystemAccount::set_allocated_ssl_id(::std::string* ssl_id)
 }  // namespace rsctrl
 
 #ifndef SWIG
-namespace google
-{
-namespace protobuf
-{
+namespace google {
+namespace protobuf {
 
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::ResponseSystemStatus_NetCode>()
-{
-    return ::rsctrl::system::ResponseSystemStatus_NetCode_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::ResponseSystemStatus_NetCode>() {
+  return ::rsctrl::system::ResponseSystemStatus_NetCode_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::RequestSystemQuit_QuitCode>()
-{
-    return ::rsctrl::system::RequestSystemQuit_QuitCode_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::RequestSystemQuit_QuitCode>() {
+  return ::rsctrl::system::RequestSystemQuit_QuitCode_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::RequestMsgIds>()
-{
-    return ::rsctrl::system::RequestMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::RequestMsgIds>() {
+  return ::rsctrl::system::RequestMsgIds_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::ResponseMsgIds>()
-{
-    return ::rsctrl::system::ResponseMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::system::ResponseMsgIds>() {
+  return ::rsctrl::system::ResponseMsgIds_descriptor();
 }
 
 }  // namespace google

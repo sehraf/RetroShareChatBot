@@ -28,10 +28,8 @@
 #include "core.pb.h"
 // @@protoc_insertion_point(includes)
 
-namespace rsctrl
-{
-namespace peers
-{
+namespace rsctrl {
+namespace peers {
 
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_peers_2eproto();
@@ -44,15 +42,14 @@ class RequestAddPeer;
 class RequestExaminePeer;
 class RequestModifyPeer;
 
-enum RequestPeers_SetOption
-{
-    RequestPeers_SetOption_OWNID = 1,
-    RequestPeers_SetOption_LISTED = 2,
-    RequestPeers_SetOption_CONNECTED = 3,
-    RequestPeers_SetOption_FRIENDS = 4,
-    RequestPeers_SetOption_VALID = 5,
-    RequestPeers_SetOption_SIGNED = 6,
-    RequestPeers_SetOption_ALL = 7
+enum RequestPeers_SetOption {
+  RequestPeers_SetOption_OWNID = 1,
+  RequestPeers_SetOption_LISTED = 2,
+  RequestPeers_SetOption_CONNECTED = 3,
+  RequestPeers_SetOption_FRIENDS = 4,
+  RequestPeers_SetOption_VALID = 5,
+  RequestPeers_SetOption_SIGNED = 6,
+  RequestPeers_SetOption_ALL = 7
 };
 bool RequestPeers_SetOption_IsValid(int value);
 const RequestPeers_SetOption RequestPeers_SetOption_SetOption_MIN = RequestPeers_SetOption_OWNID;
@@ -60,23 +57,20 @@ const RequestPeers_SetOption RequestPeers_SetOption_SetOption_MAX = RequestPeers
 const int RequestPeers_SetOption_SetOption_ARRAYSIZE = RequestPeers_SetOption_SetOption_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestPeers_SetOption_descriptor();
-inline const ::std::string& RequestPeers_SetOption_Name(RequestPeers_SetOption value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestPeers_SetOption_descriptor(), value);
+inline const ::std::string& RequestPeers_SetOption_Name(RequestPeers_SetOption value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestPeers_SetOption_descriptor(), value);
 }
 inline bool RequestPeers_SetOption_Parse(
-    const ::std::string& name, RequestPeers_SetOption* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestPeers_SetOption>(
-               RequestPeers_SetOption_descriptor(), name, value);
+    const ::std::string& name, RequestPeers_SetOption* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestPeers_SetOption>(
+    RequestPeers_SetOption_descriptor(), name, value);
 }
-enum RequestPeers_InfoOption
-{
-    RequestPeers_InfoOption_NAMEONLY = 1,
-    RequestPeers_InfoOption_BASIC = 2,
-    RequestPeers_InfoOption_LOCATION = 3,
-    RequestPeers_InfoOption_ALLINFO = 4
+enum RequestPeers_InfoOption {
+  RequestPeers_InfoOption_NAMEONLY = 1,
+  RequestPeers_InfoOption_BASIC = 2,
+  RequestPeers_InfoOption_LOCATION = 3,
+  RequestPeers_InfoOption_ALLINFO = 4
 };
 bool RequestPeers_InfoOption_IsValid(int value);
 const RequestPeers_InfoOption RequestPeers_InfoOption_InfoOption_MIN = RequestPeers_InfoOption_NAMEONLY;
@@ -84,21 +78,18 @@ const RequestPeers_InfoOption RequestPeers_InfoOption_InfoOption_MAX = RequestPe
 const int RequestPeers_InfoOption_InfoOption_ARRAYSIZE = RequestPeers_InfoOption_InfoOption_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestPeers_InfoOption_descriptor();
-inline const ::std::string& RequestPeers_InfoOption_Name(RequestPeers_InfoOption value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestPeers_InfoOption_descriptor(), value);
+inline const ::std::string& RequestPeers_InfoOption_Name(RequestPeers_InfoOption value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestPeers_InfoOption_descriptor(), value);
 }
 inline bool RequestPeers_InfoOption_Parse(
-    const ::std::string& name, RequestPeers_InfoOption* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestPeers_InfoOption>(
-               RequestPeers_InfoOption_descriptor(), name, value);
+    const ::std::string& name, RequestPeers_InfoOption* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestPeers_InfoOption>(
+    RequestPeers_InfoOption_descriptor(), name, value);
 }
-enum RequestAddPeer_AddCmd
-{
-    RequestAddPeer_AddCmd_ADD = 1,
-    RequestAddPeer_AddCmd_REMOVE = 2
+enum RequestAddPeer_AddCmd {
+  RequestAddPeer_AddCmd_ADD = 1,
+  RequestAddPeer_AddCmd_REMOVE = 2
 };
 bool RequestAddPeer_AddCmd_IsValid(int value);
 const RequestAddPeer_AddCmd RequestAddPeer_AddCmd_AddCmd_MIN = RequestAddPeer_AddCmd_ADD;
@@ -106,21 +97,18 @@ const RequestAddPeer_AddCmd RequestAddPeer_AddCmd_AddCmd_MAX = RequestAddPeer_Ad
 const int RequestAddPeer_AddCmd_AddCmd_ARRAYSIZE = RequestAddPeer_AddCmd_AddCmd_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestAddPeer_AddCmd_descriptor();
-inline const ::std::string& RequestAddPeer_AddCmd_Name(RequestAddPeer_AddCmd value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestAddPeer_AddCmd_descriptor(), value);
+inline const ::std::string& RequestAddPeer_AddCmd_Name(RequestAddPeer_AddCmd value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestAddPeer_AddCmd_descriptor(), value);
 }
 inline bool RequestAddPeer_AddCmd_Parse(
-    const ::std::string& name, RequestAddPeer_AddCmd* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestAddPeer_AddCmd>(
-               RequestAddPeer_AddCmd_descriptor(), name, value);
+    const ::std::string& name, RequestAddPeer_AddCmd* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestAddPeer_AddCmd>(
+    RequestAddPeer_AddCmd_descriptor(), name, value);
 }
-enum RequestExaminePeer_ExamineCmd
-{
-    RequestExaminePeer_ExamineCmd_IMPORT = 3,
-    RequestExaminePeer_ExamineCmd_EXAMINE = 4
+enum RequestExaminePeer_ExamineCmd {
+  RequestExaminePeer_ExamineCmd_IMPORT = 3,
+  RequestExaminePeer_ExamineCmd_EXAMINE = 4
 };
 bool RequestExaminePeer_ExamineCmd_IsValid(int value);
 const RequestExaminePeer_ExamineCmd RequestExaminePeer_ExamineCmd_ExamineCmd_MIN = RequestExaminePeer_ExamineCmd_IMPORT;
@@ -128,22 +116,19 @@ const RequestExaminePeer_ExamineCmd RequestExaminePeer_ExamineCmd_ExamineCmd_MAX
 const int RequestExaminePeer_ExamineCmd_ExamineCmd_ARRAYSIZE = RequestExaminePeer_ExamineCmd_ExamineCmd_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestExaminePeer_ExamineCmd_descriptor();
-inline const ::std::string& RequestExaminePeer_ExamineCmd_Name(RequestExaminePeer_ExamineCmd value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestExaminePeer_ExamineCmd_descriptor(), value);
+inline const ::std::string& RequestExaminePeer_ExamineCmd_Name(RequestExaminePeer_ExamineCmd value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestExaminePeer_ExamineCmd_descriptor(), value);
 }
 inline bool RequestExaminePeer_ExamineCmd_Parse(
-    const ::std::string& name, RequestExaminePeer_ExamineCmd* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestExaminePeer_ExamineCmd>(
-               RequestExaminePeer_ExamineCmd_descriptor(), name, value);
+    const ::std::string& name, RequestExaminePeer_ExamineCmd* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestExaminePeer_ExamineCmd>(
+    RequestExaminePeer_ExamineCmd_descriptor(), name, value);
 }
-enum RequestModifyPeer_ModCmd
-{
-    RequestModifyPeer_ModCmd_NOOP = 0,
-    RequestModifyPeer_ModCmd_ADDRESS = 1,
-    RequestModifyPeer_ModCmd_DYNDNS = 2
+enum RequestModifyPeer_ModCmd {
+  RequestModifyPeer_ModCmd_NOOP = 0,
+  RequestModifyPeer_ModCmd_ADDRESS = 1,
+  RequestModifyPeer_ModCmd_DYNDNS = 2
 };
 bool RequestModifyPeer_ModCmd_IsValid(int value);
 const RequestModifyPeer_ModCmd RequestModifyPeer_ModCmd_ModCmd_MIN = RequestModifyPeer_ModCmd_NOOP;
@@ -151,23 +136,20 @@ const RequestModifyPeer_ModCmd RequestModifyPeer_ModCmd_ModCmd_MAX = RequestModi
 const int RequestModifyPeer_ModCmd_ModCmd_ARRAYSIZE = RequestModifyPeer_ModCmd_ModCmd_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestModifyPeer_ModCmd_descriptor();
-inline const ::std::string& RequestModifyPeer_ModCmd_Name(RequestModifyPeer_ModCmd value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestModifyPeer_ModCmd_descriptor(), value);
+inline const ::std::string& RequestModifyPeer_ModCmd_Name(RequestModifyPeer_ModCmd value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestModifyPeer_ModCmd_descriptor(), value);
 }
 inline bool RequestModifyPeer_ModCmd_Parse(
-    const ::std::string& name, RequestModifyPeer_ModCmd* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestModifyPeer_ModCmd>(
-               RequestModifyPeer_ModCmd_descriptor(), name, value);
+    const ::std::string& name, RequestModifyPeer_ModCmd* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestModifyPeer_ModCmd>(
+    RequestModifyPeer_ModCmd_descriptor(), name, value);
 }
-enum RequestMsgIds
-{
-    MsgId_RequestPeers = 1,
-    MsgId_RequestAddPeer = 2,
-    MsgId_RequestExaminePeer = 3,
-    MsgId_RequestModifyPeer = 4
+enum RequestMsgIds {
+  MsgId_RequestPeers = 1,
+  MsgId_RequestAddPeer = 2,
+  MsgId_RequestExaminePeer = 3,
+  MsgId_RequestModifyPeer = 4
 };
 bool RequestMsgIds_IsValid(int value);
 const RequestMsgIds RequestMsgIds_MIN = MsgId_RequestPeers;
@@ -175,20 +157,17 @@ const RequestMsgIds RequestMsgIds_MAX = MsgId_RequestModifyPeer;
 const int RequestMsgIds_ARRAYSIZE = RequestMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestMsgIds_descriptor();
-inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestMsgIds_descriptor(), value);
+inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestMsgIds_descriptor(), value);
 }
 inline bool RequestMsgIds_Parse(
-    const ::std::string& name, RequestMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
-               RequestMsgIds_descriptor(), name, value);
+    const ::std::string& name, RequestMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
+    RequestMsgIds_descriptor(), name, value);
 }
-enum ResponseMsgIds
-{
-    MsgId_ResponsePeerList = 1
+enum ResponseMsgIds {
+  MsgId_ResponsePeerList = 1
 };
 bool ResponseMsgIds_IsValid(int value);
 const ResponseMsgIds ResponseMsgIds_MIN = MsgId_ResponsePeerList;
@@ -196,724 +175,667 @@ const ResponseMsgIds ResponseMsgIds_MAX = MsgId_ResponsePeerList;
 const int ResponseMsgIds_ARRAYSIZE = ResponseMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ResponseMsgIds_descriptor();
-inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               ResponseMsgIds_descriptor(), value);
+inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ResponseMsgIds_descriptor(), value);
 }
 inline bool ResponseMsgIds_Parse(
-    const ::std::string& name, ResponseMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
-               ResponseMsgIds_descriptor(), name, value);
+    const ::std::string& name, ResponseMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
+    ResponseMsgIds_descriptor(), name, value);
 }
 // ===================================================================
 
-class RequestPeers : public ::google::protobuf::Message
-{
-public:
-    RequestPeers();
-    virtual ~RequestPeers();
+class RequestPeers : public ::google::protobuf::Message {
+ public:
+  RequestPeers();
+  virtual ~RequestPeers();
 
-    RequestPeers(const RequestPeers& from);
+  RequestPeers(const RequestPeers& from);
 
-    inline RequestPeers& operator=(const RequestPeers& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestPeers& operator=(const RequestPeers& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestPeers& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestPeers& default_instance();
 
-    void Swap(RequestPeers* other);
+  void Swap(RequestPeers* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestPeers* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestPeers& from);
-    void MergeFrom(const RequestPeers& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestPeers* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestPeers& from);
+  void MergeFrom(const RequestPeers& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef RequestPeers_SetOption SetOption;
-    static const SetOption OWNID = RequestPeers_SetOption_OWNID;
-    static const SetOption LISTED = RequestPeers_SetOption_LISTED;
-    static const SetOption CONNECTED = RequestPeers_SetOption_CONNECTED;
-    static const SetOption FRIENDS = RequestPeers_SetOption_FRIENDS;
-    static const SetOption VALID = RequestPeers_SetOption_VALID;
-    static const SetOption SIGNED = RequestPeers_SetOption_SIGNED;
-    static const SetOption ALL = RequestPeers_SetOption_ALL;
-    static inline bool SetOption_IsValid(int value)
-    {
-        return RequestPeers_SetOption_IsValid(value);
-    }
-    static const SetOption SetOption_MIN =
-        RequestPeers_SetOption_SetOption_MIN;
-    static const SetOption SetOption_MAX =
-        RequestPeers_SetOption_SetOption_MAX;
-    static const int SetOption_ARRAYSIZE =
-        RequestPeers_SetOption_SetOption_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    SetOption_descriptor()
-    {
-        return RequestPeers_SetOption_descriptor();
-    }
-    static inline const ::std::string& SetOption_Name(SetOption value)
-    {
-        return RequestPeers_SetOption_Name(value);
-    }
-    static inline bool SetOption_Parse(const ::std::string& name,
-                                       SetOption* value)
-    {
-        return RequestPeers_SetOption_Parse(name, value);
-    }
+  typedef RequestPeers_SetOption SetOption;
+  static const SetOption OWNID = RequestPeers_SetOption_OWNID;
+  static const SetOption LISTED = RequestPeers_SetOption_LISTED;
+  static const SetOption CONNECTED = RequestPeers_SetOption_CONNECTED;
+  static const SetOption FRIENDS = RequestPeers_SetOption_FRIENDS;
+  static const SetOption VALID = RequestPeers_SetOption_VALID;
+  static const SetOption SIGNED = RequestPeers_SetOption_SIGNED;
+  static const SetOption ALL = RequestPeers_SetOption_ALL;
+  static inline bool SetOption_IsValid(int value) {
+    return RequestPeers_SetOption_IsValid(value);
+  }
+  static const SetOption SetOption_MIN =
+    RequestPeers_SetOption_SetOption_MIN;
+  static const SetOption SetOption_MAX =
+    RequestPeers_SetOption_SetOption_MAX;
+  static const int SetOption_ARRAYSIZE =
+    RequestPeers_SetOption_SetOption_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  SetOption_descriptor() {
+    return RequestPeers_SetOption_descriptor();
+  }
+  static inline const ::std::string& SetOption_Name(SetOption value) {
+    return RequestPeers_SetOption_Name(value);
+  }
+  static inline bool SetOption_Parse(const ::std::string& name,
+      SetOption* value) {
+    return RequestPeers_SetOption_Parse(name, value);
+  }
 
-    typedef RequestPeers_InfoOption InfoOption;
-    static const InfoOption NAMEONLY = RequestPeers_InfoOption_NAMEONLY;
-    static const InfoOption BASIC = RequestPeers_InfoOption_BASIC;
-    static const InfoOption LOCATION = RequestPeers_InfoOption_LOCATION;
-    static const InfoOption ALLINFO = RequestPeers_InfoOption_ALLINFO;
-    static inline bool InfoOption_IsValid(int value)
-    {
-        return RequestPeers_InfoOption_IsValid(value);
-    }
-    static const InfoOption InfoOption_MIN =
-        RequestPeers_InfoOption_InfoOption_MIN;
-    static const InfoOption InfoOption_MAX =
-        RequestPeers_InfoOption_InfoOption_MAX;
-    static const int InfoOption_ARRAYSIZE =
-        RequestPeers_InfoOption_InfoOption_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    InfoOption_descriptor()
-    {
-        return RequestPeers_InfoOption_descriptor();
-    }
-    static inline const ::std::string& InfoOption_Name(InfoOption value)
-    {
-        return RequestPeers_InfoOption_Name(value);
-    }
-    static inline bool InfoOption_Parse(const ::std::string& name,
-                                        InfoOption* value)
-    {
-        return RequestPeers_InfoOption_Parse(name, value);
-    }
+  typedef RequestPeers_InfoOption InfoOption;
+  static const InfoOption NAMEONLY = RequestPeers_InfoOption_NAMEONLY;
+  static const InfoOption BASIC = RequestPeers_InfoOption_BASIC;
+  static const InfoOption LOCATION = RequestPeers_InfoOption_LOCATION;
+  static const InfoOption ALLINFO = RequestPeers_InfoOption_ALLINFO;
+  static inline bool InfoOption_IsValid(int value) {
+    return RequestPeers_InfoOption_IsValid(value);
+  }
+  static const InfoOption InfoOption_MIN =
+    RequestPeers_InfoOption_InfoOption_MIN;
+  static const InfoOption InfoOption_MAX =
+    RequestPeers_InfoOption_InfoOption_MAX;
+  static const int InfoOption_ARRAYSIZE =
+    RequestPeers_InfoOption_InfoOption_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  InfoOption_descriptor() {
+    return RequestPeers_InfoOption_descriptor();
+  }
+  static inline const ::std::string& InfoOption_Name(InfoOption value) {
+    return RequestPeers_InfoOption_Name(value);
+  }
+  static inline bool InfoOption_Parse(const ::std::string& name,
+      InfoOption* value) {
+    return RequestPeers_InfoOption_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.peers.RequestPeers.SetOption set = 1;
-    inline bool has_set() const;
-    inline void clear_set();
-    static const int kSetFieldNumber = 1;
-    inline ::rsctrl::peers::RequestPeers_SetOption set() const;
-    inline void set_set(::rsctrl::peers::RequestPeers_SetOption value);
+  // required .rsctrl.peers.RequestPeers.SetOption set = 1;
+  inline bool has_set() const;
+  inline void clear_set();
+  static const int kSetFieldNumber = 1;
+  inline ::rsctrl::peers::RequestPeers_SetOption set() const;
+  inline void set_set(::rsctrl::peers::RequestPeers_SetOption value);
 
-    // required .rsctrl.peers.RequestPeers.InfoOption info = 2;
-    inline bool has_info() const;
-    inline void clear_info();
-    static const int kInfoFieldNumber = 2;
-    inline ::rsctrl::peers::RequestPeers_InfoOption info() const;
-    inline void set_info(::rsctrl::peers::RequestPeers_InfoOption value);
+  // required .rsctrl.peers.RequestPeers.InfoOption info = 2;
+  inline bool has_info() const;
+  inline void clear_info();
+  static const int kInfoFieldNumber = 2;
+  inline ::rsctrl::peers::RequestPeers_InfoOption info() const;
+  inline void set_info(::rsctrl::peers::RequestPeers_InfoOption value);
 
-    // repeated string pgp_ids = 3;
-    inline int pgp_ids_size() const;
-    inline void clear_pgp_ids();
-    static const int kPgpIdsFieldNumber = 3;
-    inline const ::std::string& pgp_ids(int index) const;
-    inline ::std::string* mutable_pgp_ids(int index);
-    inline void set_pgp_ids(int index, const ::std::string& value);
-    inline void set_pgp_ids(int index, const char* value);
-    inline void set_pgp_ids(int index, const char* value, size_t size);
-    inline ::std::string* add_pgp_ids();
-    inline void add_pgp_ids(const ::std::string& value);
-    inline void add_pgp_ids(const char* value);
-    inline void add_pgp_ids(const char* value, size_t size);
-    inline const ::google::protobuf::RepeatedPtrField< ::std::string>& pgp_ids() const;
-    inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_pgp_ids();
+  // repeated string pgp_ids = 3;
+  inline int pgp_ids_size() const;
+  inline void clear_pgp_ids();
+  static const int kPgpIdsFieldNumber = 3;
+  inline const ::std::string& pgp_ids(int index) const;
+  inline ::std::string* mutable_pgp_ids(int index);
+  inline void set_pgp_ids(int index, const ::std::string& value);
+  inline void set_pgp_ids(int index, const char* value);
+  inline void set_pgp_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_pgp_ids();
+  inline void add_pgp_ids(const ::std::string& value);
+  inline void add_pgp_ids(const char* value);
+  inline void add_pgp_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& pgp_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_pgp_ids();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestPeers)
-private:
-    inline void set_has_set();
-    inline void clear_has_set();
-    inline void set_has_info();
-    inline void clear_has_info();
+  // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestPeers)
+ private:
+  inline void set_has_set();
+  inline void clear_has_set();
+  inline void set_has_info();
+  inline void clear_has_info();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    int set_;
-    int info_;
-    ::google::protobuf::RepeatedPtrField< ::std::string> pgp_ids_;
+  int set_;
+  int info_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> pgp_ids_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
 
-    friend void  protobuf_AddDesc_peers_2eproto();
-    friend void protobuf_AssignDesc_peers_2eproto();
-    friend void protobuf_ShutdownFile_peers_2eproto();
+  friend void  protobuf_AddDesc_peers_2eproto();
+  friend void protobuf_AssignDesc_peers_2eproto();
+  friend void protobuf_ShutdownFile_peers_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestPeers* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestPeers* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponsePeerList : public ::google::protobuf::Message
-{
-public:
-    ResponsePeerList();
-    virtual ~ResponsePeerList();
+class ResponsePeerList : public ::google::protobuf::Message {
+ public:
+  ResponsePeerList();
+  virtual ~ResponsePeerList();
 
-    ResponsePeerList(const ResponsePeerList& from);
+  ResponsePeerList(const ResponsePeerList& from);
 
-    inline ResponsePeerList& operator=(const ResponsePeerList& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponsePeerList& operator=(const ResponsePeerList& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponsePeerList& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponsePeerList& default_instance();
 
-    void Swap(ResponsePeerList* other);
+  void Swap(ResponsePeerList* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponsePeerList* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponsePeerList& from);
-    void MergeFrom(const ResponsePeerList& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponsePeerList* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponsePeerList& from);
+  void MergeFrom(const ResponsePeerList& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // repeated .rsctrl.core.Person peers = 2;
-    inline int peers_size() const;
-    inline void clear_peers();
-    static const int kPeersFieldNumber = 2;
-    inline const ::rsctrl::core::Person& peers(int index) const;
-    inline ::rsctrl::core::Person* mutable_peers(int index);
-    inline ::rsctrl::core::Person* add_peers();
-    inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >&
-    peers() const;
-    inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >*
-    mutable_peers();
+  // repeated .rsctrl.core.Person peers = 2;
+  inline int peers_size() const;
+  inline void clear_peers();
+  static const int kPeersFieldNumber = 2;
+  inline const ::rsctrl::core::Person& peers(int index) const;
+  inline ::rsctrl::core::Person* mutable_peers(int index);
+  inline ::rsctrl::core::Person* add_peers();
+  inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >&
+      peers() const;
+  inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >*
+      mutable_peers();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.peers.ResponsePeerList)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
+  // @@protoc_insertion_point(class_scope:rsctrl.peers.ResponsePeerList)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person > peers_;
+  ::rsctrl::core::Status* status_;
+  ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person > peers_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_peers_2eproto();
-    friend void protobuf_AssignDesc_peers_2eproto();
-    friend void protobuf_ShutdownFile_peers_2eproto();
+  friend void  protobuf_AddDesc_peers_2eproto();
+  friend void protobuf_AssignDesc_peers_2eproto();
+  friend void protobuf_ShutdownFile_peers_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponsePeerList* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponsePeerList* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestAddPeer : public ::google::protobuf::Message
-{
-public:
-    RequestAddPeer();
-    virtual ~RequestAddPeer();
+class RequestAddPeer : public ::google::protobuf::Message {
+ public:
+  RequestAddPeer();
+  virtual ~RequestAddPeer();
 
-    RequestAddPeer(const RequestAddPeer& from);
+  RequestAddPeer(const RequestAddPeer& from);
 
-    inline RequestAddPeer& operator=(const RequestAddPeer& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestAddPeer& operator=(const RequestAddPeer& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestAddPeer& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestAddPeer& default_instance();
 
-    void Swap(RequestAddPeer* other);
+  void Swap(RequestAddPeer* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestAddPeer* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestAddPeer& from);
-    void MergeFrom(const RequestAddPeer& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestAddPeer* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestAddPeer& from);
+  void MergeFrom(const RequestAddPeer& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef RequestAddPeer_AddCmd AddCmd;
-    static const AddCmd ADD = RequestAddPeer_AddCmd_ADD;
-    static const AddCmd REMOVE = RequestAddPeer_AddCmd_REMOVE;
-    static inline bool AddCmd_IsValid(int value)
-    {
-        return RequestAddPeer_AddCmd_IsValid(value);
-    }
-    static const AddCmd AddCmd_MIN =
-        RequestAddPeer_AddCmd_AddCmd_MIN;
-    static const AddCmd AddCmd_MAX =
-        RequestAddPeer_AddCmd_AddCmd_MAX;
-    static const int AddCmd_ARRAYSIZE =
-        RequestAddPeer_AddCmd_AddCmd_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    AddCmd_descriptor()
-    {
-        return RequestAddPeer_AddCmd_descriptor();
-    }
-    static inline const ::std::string& AddCmd_Name(AddCmd value)
-    {
-        return RequestAddPeer_AddCmd_Name(value);
-    }
-    static inline bool AddCmd_Parse(const ::std::string& name,
-                                    AddCmd* value)
-    {
-        return RequestAddPeer_AddCmd_Parse(name, value);
-    }
+  typedef RequestAddPeer_AddCmd AddCmd;
+  static const AddCmd ADD = RequestAddPeer_AddCmd_ADD;
+  static const AddCmd REMOVE = RequestAddPeer_AddCmd_REMOVE;
+  static inline bool AddCmd_IsValid(int value) {
+    return RequestAddPeer_AddCmd_IsValid(value);
+  }
+  static const AddCmd AddCmd_MIN =
+    RequestAddPeer_AddCmd_AddCmd_MIN;
+  static const AddCmd AddCmd_MAX =
+    RequestAddPeer_AddCmd_AddCmd_MAX;
+  static const int AddCmd_ARRAYSIZE =
+    RequestAddPeer_AddCmd_AddCmd_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  AddCmd_descriptor() {
+    return RequestAddPeer_AddCmd_descriptor();
+  }
+  static inline const ::std::string& AddCmd_Name(AddCmd value) {
+    return RequestAddPeer_AddCmd_Name(value);
+  }
+  static inline bool AddCmd_Parse(const ::std::string& name,
+      AddCmd* value) {
+    return RequestAddPeer_AddCmd_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.peers.RequestAddPeer.AddCmd cmd = 1;
-    inline bool has_cmd() const;
-    inline void clear_cmd();
-    static const int kCmdFieldNumber = 1;
-    inline ::rsctrl::peers::RequestAddPeer_AddCmd cmd() const;
-    inline void set_cmd(::rsctrl::peers::RequestAddPeer_AddCmd value);
+  // required .rsctrl.peers.RequestAddPeer.AddCmd cmd = 1;
+  inline bool has_cmd() const;
+  inline void clear_cmd();
+  static const int kCmdFieldNumber = 1;
+  inline ::rsctrl::peers::RequestAddPeer_AddCmd cmd() const;
+  inline void set_cmd(::rsctrl::peers::RequestAddPeer_AddCmd value);
 
-    // required string pgp_id = 2;
-    inline bool has_pgp_id() const;
-    inline void clear_pgp_id();
-    static const int kPgpIdFieldNumber = 2;
-    inline const ::std::string& pgp_id() const;
-    inline void set_pgp_id(const ::std::string& value);
-    inline void set_pgp_id(const char* value);
-    inline void set_pgp_id(const char* value, size_t size);
-    inline ::std::string* mutable_pgp_id();
-    inline ::std::string* release_pgp_id();
-    inline void set_allocated_pgp_id(::std::string* pgp_id);
+  // required string pgp_id = 2;
+  inline bool has_pgp_id() const;
+  inline void clear_pgp_id();
+  static const int kPgpIdFieldNumber = 2;
+  inline const ::std::string& pgp_id() const;
+  inline void set_pgp_id(const ::std::string& value);
+  inline void set_pgp_id(const char* value);
+  inline void set_pgp_id(const char* value, size_t size);
+  inline ::std::string* mutable_pgp_id();
+  inline ::std::string* release_pgp_id();
+  inline void set_allocated_pgp_id(::std::string* pgp_id);
 
-    // optional string ssl_id = 3;
-    inline bool has_ssl_id() const;
-    inline void clear_ssl_id();
-    static const int kSslIdFieldNumber = 3;
-    inline const ::std::string& ssl_id() const;
-    inline void set_ssl_id(const ::std::string& value);
-    inline void set_ssl_id(const char* value);
-    inline void set_ssl_id(const char* value, size_t size);
-    inline ::std::string* mutable_ssl_id();
-    inline ::std::string* release_ssl_id();
-    inline void set_allocated_ssl_id(::std::string* ssl_id);
+  // optional string ssl_id = 3;
+  inline bool has_ssl_id() const;
+  inline void clear_ssl_id();
+  static const int kSslIdFieldNumber = 3;
+  inline const ::std::string& ssl_id() const;
+  inline void set_ssl_id(const ::std::string& value);
+  inline void set_ssl_id(const char* value);
+  inline void set_ssl_id(const char* value, size_t size);
+  inline ::std::string* mutable_ssl_id();
+  inline ::std::string* release_ssl_id();
+  inline void set_allocated_ssl_id(::std::string* ssl_id);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestAddPeer)
-private:
-    inline void set_has_cmd();
-    inline void clear_has_cmd();
-    inline void set_has_pgp_id();
-    inline void clear_has_pgp_id();
-    inline void set_has_ssl_id();
-    inline void clear_has_ssl_id();
+  // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestAddPeer)
+ private:
+  inline void set_has_cmd();
+  inline void clear_has_cmd();
+  inline void set_has_pgp_id();
+  inline void clear_has_pgp_id();
+  inline void set_has_ssl_id();
+  inline void clear_has_ssl_id();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::std::string* pgp_id_;
-    ::std::string* ssl_id_;
-    int cmd_;
+  ::std::string* pgp_id_;
+  ::std::string* ssl_id_;
+  int cmd_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
 
-    friend void  protobuf_AddDesc_peers_2eproto();
-    friend void protobuf_AssignDesc_peers_2eproto();
-    friend void protobuf_ShutdownFile_peers_2eproto();
+  friend void  protobuf_AddDesc_peers_2eproto();
+  friend void protobuf_AssignDesc_peers_2eproto();
+  friend void protobuf_ShutdownFile_peers_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestAddPeer* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestAddPeer* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestExaminePeer : public ::google::protobuf::Message
-{
-public:
-    RequestExaminePeer();
-    virtual ~RequestExaminePeer();
+class RequestExaminePeer : public ::google::protobuf::Message {
+ public:
+  RequestExaminePeer();
+  virtual ~RequestExaminePeer();
 
-    RequestExaminePeer(const RequestExaminePeer& from);
+  RequestExaminePeer(const RequestExaminePeer& from);
 
-    inline RequestExaminePeer& operator=(const RequestExaminePeer& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestExaminePeer& operator=(const RequestExaminePeer& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestExaminePeer& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestExaminePeer& default_instance();
 
-    void Swap(RequestExaminePeer* other);
+  void Swap(RequestExaminePeer* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestExaminePeer* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestExaminePeer& from);
-    void MergeFrom(const RequestExaminePeer& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestExaminePeer* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestExaminePeer& from);
+  void MergeFrom(const RequestExaminePeer& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef RequestExaminePeer_ExamineCmd ExamineCmd;
-    static const ExamineCmd IMPORT = RequestExaminePeer_ExamineCmd_IMPORT;
-    static const ExamineCmd EXAMINE = RequestExaminePeer_ExamineCmd_EXAMINE;
-    static inline bool ExamineCmd_IsValid(int value)
-    {
-        return RequestExaminePeer_ExamineCmd_IsValid(value);
-    }
-    static const ExamineCmd ExamineCmd_MIN =
-        RequestExaminePeer_ExamineCmd_ExamineCmd_MIN;
-    static const ExamineCmd ExamineCmd_MAX =
-        RequestExaminePeer_ExamineCmd_ExamineCmd_MAX;
-    static const int ExamineCmd_ARRAYSIZE =
-        RequestExaminePeer_ExamineCmd_ExamineCmd_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    ExamineCmd_descriptor()
-    {
-        return RequestExaminePeer_ExamineCmd_descriptor();
-    }
-    static inline const ::std::string& ExamineCmd_Name(ExamineCmd value)
-    {
-        return RequestExaminePeer_ExamineCmd_Name(value);
-    }
-    static inline bool ExamineCmd_Parse(const ::std::string& name,
-                                        ExamineCmd* value)
-    {
-        return RequestExaminePeer_ExamineCmd_Parse(name, value);
-    }
+  typedef RequestExaminePeer_ExamineCmd ExamineCmd;
+  static const ExamineCmd IMPORT = RequestExaminePeer_ExamineCmd_IMPORT;
+  static const ExamineCmd EXAMINE = RequestExaminePeer_ExamineCmd_EXAMINE;
+  static inline bool ExamineCmd_IsValid(int value) {
+    return RequestExaminePeer_ExamineCmd_IsValid(value);
+  }
+  static const ExamineCmd ExamineCmd_MIN =
+    RequestExaminePeer_ExamineCmd_ExamineCmd_MIN;
+  static const ExamineCmd ExamineCmd_MAX =
+    RequestExaminePeer_ExamineCmd_ExamineCmd_MAX;
+  static const int ExamineCmd_ARRAYSIZE =
+    RequestExaminePeer_ExamineCmd_ExamineCmd_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  ExamineCmd_descriptor() {
+    return RequestExaminePeer_ExamineCmd_descriptor();
+  }
+  static inline const ::std::string& ExamineCmd_Name(ExamineCmd value) {
+    return RequestExaminePeer_ExamineCmd_Name(value);
+  }
+  static inline bool ExamineCmd_Parse(const ::std::string& name,
+      ExamineCmd* value) {
+    return RequestExaminePeer_ExamineCmd_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required string pgp_id = 1;
-    inline bool has_pgp_id() const;
-    inline void clear_pgp_id();
-    static const int kPgpIdFieldNumber = 1;
-    inline const ::std::string& pgp_id() const;
-    inline void set_pgp_id(const ::std::string& value);
-    inline void set_pgp_id(const char* value);
-    inline void set_pgp_id(const char* value, size_t size);
-    inline ::std::string* mutable_pgp_id();
-    inline ::std::string* release_pgp_id();
-    inline void set_allocated_pgp_id(::std::string* pgp_id);
+  // required string pgp_id = 1;
+  inline bool has_pgp_id() const;
+  inline void clear_pgp_id();
+  static const int kPgpIdFieldNumber = 1;
+  inline const ::std::string& pgp_id() const;
+  inline void set_pgp_id(const ::std::string& value);
+  inline void set_pgp_id(const char* value);
+  inline void set_pgp_id(const char* value, size_t size);
+  inline ::std::string* mutable_pgp_id();
+  inline ::std::string* release_pgp_id();
+  inline void set_allocated_pgp_id(::std::string* pgp_id);
 
-    // required .rsctrl.peers.RequestExaminePeer.ExamineCmd cmd = 2;
-    inline bool has_cmd() const;
-    inline void clear_cmd();
-    static const int kCmdFieldNumber = 2;
-    inline ::rsctrl::peers::RequestExaminePeer_ExamineCmd cmd() const;
-    inline void set_cmd(::rsctrl::peers::RequestExaminePeer_ExamineCmd value);
+  // required .rsctrl.peers.RequestExaminePeer.ExamineCmd cmd = 2;
+  inline bool has_cmd() const;
+  inline void clear_cmd();
+  static const int kCmdFieldNumber = 2;
+  inline ::rsctrl::peers::RequestExaminePeer_ExamineCmd cmd() const;
+  inline void set_cmd(::rsctrl::peers::RequestExaminePeer_ExamineCmd value);
 
-    // required string cert = 3;
-    inline bool has_cert() const;
-    inline void clear_cert();
-    static const int kCertFieldNumber = 3;
-    inline const ::std::string& cert() const;
-    inline void set_cert(const ::std::string& value);
-    inline void set_cert(const char* value);
-    inline void set_cert(const char* value, size_t size);
-    inline ::std::string* mutable_cert();
-    inline ::std::string* release_cert();
-    inline void set_allocated_cert(::std::string* cert);
+  // required string cert = 3;
+  inline bool has_cert() const;
+  inline void clear_cert();
+  static const int kCertFieldNumber = 3;
+  inline const ::std::string& cert() const;
+  inline void set_cert(const ::std::string& value);
+  inline void set_cert(const char* value);
+  inline void set_cert(const char* value, size_t size);
+  inline ::std::string* mutable_cert();
+  inline ::std::string* release_cert();
+  inline void set_allocated_cert(::std::string* cert);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestExaminePeer)
-private:
-    inline void set_has_pgp_id();
-    inline void clear_has_pgp_id();
-    inline void set_has_cmd();
-    inline void clear_has_cmd();
-    inline void set_has_cert();
-    inline void clear_has_cert();
+  // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestExaminePeer)
+ private:
+  inline void set_has_pgp_id();
+  inline void clear_has_pgp_id();
+  inline void set_has_cmd();
+  inline void clear_has_cmd();
+  inline void set_has_cert();
+  inline void clear_has_cert();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::std::string* pgp_id_;
-    ::std::string* cert_;
-    int cmd_;
+  ::std::string* pgp_id_;
+  ::std::string* cert_;
+  int cmd_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
 
-    friend void  protobuf_AddDesc_peers_2eproto();
-    friend void protobuf_AssignDesc_peers_2eproto();
-    friend void protobuf_ShutdownFile_peers_2eproto();
+  friend void  protobuf_AddDesc_peers_2eproto();
+  friend void protobuf_AssignDesc_peers_2eproto();
+  friend void protobuf_ShutdownFile_peers_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestExaminePeer* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestExaminePeer* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestModifyPeer : public ::google::protobuf::Message
-{
-public:
-    RequestModifyPeer();
-    virtual ~RequestModifyPeer();
+class RequestModifyPeer : public ::google::protobuf::Message {
+ public:
+  RequestModifyPeer();
+  virtual ~RequestModifyPeer();
 
-    RequestModifyPeer(const RequestModifyPeer& from);
+  RequestModifyPeer(const RequestModifyPeer& from);
 
-    inline RequestModifyPeer& operator=(const RequestModifyPeer& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestModifyPeer& operator=(const RequestModifyPeer& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestModifyPeer& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestModifyPeer& default_instance();
 
-    void Swap(RequestModifyPeer* other);
+  void Swap(RequestModifyPeer* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestModifyPeer* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestModifyPeer& from);
-    void MergeFrom(const RequestModifyPeer& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestModifyPeer* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestModifyPeer& from);
+  void MergeFrom(const RequestModifyPeer& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef RequestModifyPeer_ModCmd ModCmd;
-    static const ModCmd NOOP = RequestModifyPeer_ModCmd_NOOP;
-    static const ModCmd ADDRESS = RequestModifyPeer_ModCmd_ADDRESS;
-    static const ModCmd DYNDNS = RequestModifyPeer_ModCmd_DYNDNS;
-    static inline bool ModCmd_IsValid(int value)
-    {
-        return RequestModifyPeer_ModCmd_IsValid(value);
-    }
-    static const ModCmd ModCmd_MIN =
-        RequestModifyPeer_ModCmd_ModCmd_MIN;
-    static const ModCmd ModCmd_MAX =
-        RequestModifyPeer_ModCmd_ModCmd_MAX;
-    static const int ModCmd_ARRAYSIZE =
-        RequestModifyPeer_ModCmd_ModCmd_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    ModCmd_descriptor()
-    {
-        return RequestModifyPeer_ModCmd_descriptor();
-    }
-    static inline const ::std::string& ModCmd_Name(ModCmd value)
-    {
-        return RequestModifyPeer_ModCmd_Name(value);
-    }
-    static inline bool ModCmd_Parse(const ::std::string& name,
-                                    ModCmd* value)
-    {
-        return RequestModifyPeer_ModCmd_Parse(name, value);
-    }
+  typedef RequestModifyPeer_ModCmd ModCmd;
+  static const ModCmd NOOP = RequestModifyPeer_ModCmd_NOOP;
+  static const ModCmd ADDRESS = RequestModifyPeer_ModCmd_ADDRESS;
+  static const ModCmd DYNDNS = RequestModifyPeer_ModCmd_DYNDNS;
+  static inline bool ModCmd_IsValid(int value) {
+    return RequestModifyPeer_ModCmd_IsValid(value);
+  }
+  static const ModCmd ModCmd_MIN =
+    RequestModifyPeer_ModCmd_ModCmd_MIN;
+  static const ModCmd ModCmd_MAX =
+    RequestModifyPeer_ModCmd_ModCmd_MAX;
+  static const int ModCmd_ARRAYSIZE =
+    RequestModifyPeer_ModCmd_ModCmd_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  ModCmd_descriptor() {
+    return RequestModifyPeer_ModCmd_descriptor();
+  }
+  static inline const ::std::string& ModCmd_Name(ModCmd value) {
+    return RequestModifyPeer_ModCmd_Name(value);
+  }
+  static inline bool ModCmd_Parse(const ::std::string& name,
+      ModCmd* value) {
+    return RequestModifyPeer_ModCmd_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.peers.RequestModifyPeer.ModCmd cmd = 1;
-    inline bool has_cmd() const;
-    inline void clear_cmd();
-    static const int kCmdFieldNumber = 1;
-    inline ::rsctrl::peers::RequestModifyPeer_ModCmd cmd() const;
-    inline void set_cmd(::rsctrl::peers::RequestModifyPeer_ModCmd value);
+  // required .rsctrl.peers.RequestModifyPeer.ModCmd cmd = 1;
+  inline bool has_cmd() const;
+  inline void clear_cmd();
+  static const int kCmdFieldNumber = 1;
+  inline ::rsctrl::peers::RequestModifyPeer_ModCmd cmd() const;
+  inline void set_cmd(::rsctrl::peers::RequestModifyPeer_ModCmd value);
 
-    // repeated .rsctrl.core.Person peers = 2;
-    inline int peers_size() const;
-    inline void clear_peers();
-    static const int kPeersFieldNumber = 2;
-    inline const ::rsctrl::core::Person& peers(int index) const;
-    inline ::rsctrl::core::Person* mutable_peers(int index);
-    inline ::rsctrl::core::Person* add_peers();
-    inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >&
-    peers() const;
-    inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >*
-    mutable_peers();
+  // repeated .rsctrl.core.Person peers = 2;
+  inline int peers_size() const;
+  inline void clear_peers();
+  static const int kPeersFieldNumber = 2;
+  inline const ::rsctrl::core::Person& peers(int index) const;
+  inline ::rsctrl::core::Person* mutable_peers(int index);
+  inline ::rsctrl::core::Person* add_peers();
+  inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >&
+      peers() const;
+  inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >*
+      mutable_peers();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestModifyPeer)
-private:
-    inline void set_has_cmd();
-    inline void clear_has_cmd();
+  // @@protoc_insertion_point(class_scope:rsctrl.peers.RequestModifyPeer)
+ private:
+  inline void set_has_cmd();
+  inline void clear_has_cmd();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person > peers_;
-    int cmd_;
+  ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person > peers_;
+  int cmd_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_peers_2eproto();
-    friend void protobuf_AssignDesc_peers_2eproto();
-    friend void protobuf_ShutdownFile_peers_2eproto();
+  friend void  protobuf_AddDesc_peers_2eproto();
+  friend void protobuf_AssignDesc_peers_2eproto();
+  friend void protobuf_ShutdownFile_peers_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestModifyPeer* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestModifyPeer* default_instance_;
 };
 // ===================================================================
 
@@ -923,118 +845,93 @@ private:
 // RequestPeers
 
 // required .rsctrl.peers.RequestPeers.SetOption set = 1;
-inline bool RequestPeers::has_set() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestPeers::has_set() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestPeers::set_has_set()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestPeers::set_has_set() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestPeers::clear_has_set()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestPeers::clear_has_set() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestPeers::clear_set()
-{
-    set_ = 1;
-    clear_has_set();
+inline void RequestPeers::clear_set() {
+  set_ = 1;
+  clear_has_set();
 }
-inline ::rsctrl::peers::RequestPeers_SetOption RequestPeers::set() const
-{
-    return static_cast< ::rsctrl::peers::RequestPeers_SetOption >(set_);
+inline ::rsctrl::peers::RequestPeers_SetOption RequestPeers::set() const {
+  return static_cast< ::rsctrl::peers::RequestPeers_SetOption >(set_);
 }
-inline void RequestPeers::set_set(::rsctrl::peers::RequestPeers_SetOption value)
-{
-    assert(::rsctrl::peers::RequestPeers_SetOption_IsValid(value));
-    set_has_set();
-    set_ = value;
+inline void RequestPeers::set_set(::rsctrl::peers::RequestPeers_SetOption value) {
+  assert(::rsctrl::peers::RequestPeers_SetOption_IsValid(value));
+  set_has_set();
+  set_ = value;
 }
 
 // required .rsctrl.peers.RequestPeers.InfoOption info = 2;
-inline bool RequestPeers::has_info() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool RequestPeers::has_info() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void RequestPeers::set_has_info()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void RequestPeers::set_has_info() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void RequestPeers::clear_has_info()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void RequestPeers::clear_has_info() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void RequestPeers::clear_info()
-{
-    info_ = 1;
-    clear_has_info();
+inline void RequestPeers::clear_info() {
+  info_ = 1;
+  clear_has_info();
 }
-inline ::rsctrl::peers::RequestPeers_InfoOption RequestPeers::info() const
-{
-    return static_cast< ::rsctrl::peers::RequestPeers_InfoOption >(info_);
+inline ::rsctrl::peers::RequestPeers_InfoOption RequestPeers::info() const {
+  return static_cast< ::rsctrl::peers::RequestPeers_InfoOption >(info_);
 }
-inline void RequestPeers::set_info(::rsctrl::peers::RequestPeers_InfoOption value)
-{
-    assert(::rsctrl::peers::RequestPeers_InfoOption_IsValid(value));
-    set_has_info();
-    info_ = value;
+inline void RequestPeers::set_info(::rsctrl::peers::RequestPeers_InfoOption value) {
+  assert(::rsctrl::peers::RequestPeers_InfoOption_IsValid(value));
+  set_has_info();
+  info_ = value;
 }
 
 // repeated string pgp_ids = 3;
-inline int RequestPeers::pgp_ids_size() const
-{
-    return pgp_ids_.size();
+inline int RequestPeers::pgp_ids_size() const {
+  return pgp_ids_.size();
 }
-inline void RequestPeers::clear_pgp_ids()
-{
-    pgp_ids_.Clear();
+inline void RequestPeers::clear_pgp_ids() {
+  pgp_ids_.Clear();
 }
-inline const ::std::string& RequestPeers::pgp_ids(int index) const
-{
-    return pgp_ids_.Get(index);
+inline const ::std::string& RequestPeers::pgp_ids(int index) const {
+  return pgp_ids_.Get(index);
 }
-inline ::std::string* RequestPeers::mutable_pgp_ids(int index)
-{
-    return pgp_ids_.Mutable(index);
+inline ::std::string* RequestPeers::mutable_pgp_ids(int index) {
+  return pgp_ids_.Mutable(index);
 }
-inline void RequestPeers::set_pgp_ids(int index, const ::std::string& value)
-{
-    pgp_ids_.Mutable(index)->assign(value);
+inline void RequestPeers::set_pgp_ids(int index, const ::std::string& value) {
+  pgp_ids_.Mutable(index)->assign(value);
 }
-inline void RequestPeers::set_pgp_ids(int index, const char* value)
-{
-    pgp_ids_.Mutable(index)->assign(value);
+inline void RequestPeers::set_pgp_ids(int index, const char* value) {
+  pgp_ids_.Mutable(index)->assign(value);
 }
-inline void RequestPeers::set_pgp_ids(int index, const char* value, size_t size)
-{
-    pgp_ids_.Mutable(index)->assign(
-        reinterpret_cast<const char*>(value), size);
+inline void RequestPeers::set_pgp_ids(int index, const char* value, size_t size) {
+  pgp_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* RequestPeers::add_pgp_ids()
-{
-    return pgp_ids_.Add();
+inline ::std::string* RequestPeers::add_pgp_ids() {
+  return pgp_ids_.Add();
 }
-inline void RequestPeers::add_pgp_ids(const ::std::string& value)
-{
-    pgp_ids_.Add()->assign(value);
+inline void RequestPeers::add_pgp_ids(const ::std::string& value) {
+  pgp_ids_.Add()->assign(value);
 }
-inline void RequestPeers::add_pgp_ids(const char* value)
-{
-    pgp_ids_.Add()->assign(value);
+inline void RequestPeers::add_pgp_ids(const char* value) {
+  pgp_ids_.Add()->assign(value);
 }
-inline void RequestPeers::add_pgp_ids(const char* value, size_t size)
-{
-    pgp_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+inline void RequestPeers::add_pgp_ids(const char* value, size_t size) {
+  pgp_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-RequestPeers::pgp_ids() const
-{
-    return pgp_ids_;
+RequestPeers::pgp_ids() const {
+  return pgp_ids_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-RequestPeers::mutable_pgp_ids()
-{
-    return &pgp_ids_;
+RequestPeers::mutable_pgp_ids() {
+  return &pgp_ids_;
 }
 
 // -------------------------------------------------------------------
@@ -1042,84 +939,66 @@ RequestPeers::mutable_pgp_ids()
 // ResponsePeerList
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponsePeerList::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponsePeerList::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponsePeerList::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponsePeerList::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponsePeerList::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponsePeerList::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponsePeerList::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponsePeerList::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponsePeerList::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponsePeerList::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponsePeerList::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponsePeerList::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponsePeerList::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponsePeerList::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponsePeerList::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponsePeerList::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // repeated .rsctrl.core.Person peers = 2;
-inline int ResponsePeerList::peers_size() const
-{
-    return peers_.size();
+inline int ResponsePeerList::peers_size() const {
+  return peers_.size();
 }
-inline void ResponsePeerList::clear_peers()
-{
-    peers_.Clear();
+inline void ResponsePeerList::clear_peers() {
+  peers_.Clear();
 }
-inline const ::rsctrl::core::Person& ResponsePeerList::peers(int index) const
-{
-    return peers_.Get(index);
+inline const ::rsctrl::core::Person& ResponsePeerList::peers(int index) const {
+  return peers_.Get(index);
 }
-inline ::rsctrl::core::Person* ResponsePeerList::mutable_peers(int index)
-{
-    return peers_.Mutable(index);
+inline ::rsctrl::core::Person* ResponsePeerList::mutable_peers(int index) {
+  return peers_.Mutable(index);
 }
-inline ::rsctrl::core::Person* ResponsePeerList::add_peers()
-{
-    return peers_.Add();
+inline ::rsctrl::core::Person* ResponsePeerList::add_peers() {
+  return peers_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >&
-ResponsePeerList::peers() const
-{
-    return peers_;
+ResponsePeerList::peers() const {
+  return peers_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >*
-ResponsePeerList::mutable_peers()
-{
-    return &peers_;
+ResponsePeerList::mutable_peers() {
+  return &peers_;
 }
 
 // -------------------------------------------------------------------
@@ -1127,218 +1006,166 @@ ResponsePeerList::mutable_peers()
 // RequestAddPeer
 
 // required .rsctrl.peers.RequestAddPeer.AddCmd cmd = 1;
-inline bool RequestAddPeer::has_cmd() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestAddPeer::has_cmd() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestAddPeer::set_has_cmd()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestAddPeer::set_has_cmd() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestAddPeer::clear_has_cmd()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestAddPeer::clear_has_cmd() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestAddPeer::clear_cmd()
-{
-    cmd_ = 1;
-    clear_has_cmd();
+inline void RequestAddPeer::clear_cmd() {
+  cmd_ = 1;
+  clear_has_cmd();
 }
-inline ::rsctrl::peers::RequestAddPeer_AddCmd RequestAddPeer::cmd() const
-{
-    return static_cast< ::rsctrl::peers::RequestAddPeer_AddCmd >(cmd_);
+inline ::rsctrl::peers::RequestAddPeer_AddCmd RequestAddPeer::cmd() const {
+  return static_cast< ::rsctrl::peers::RequestAddPeer_AddCmd >(cmd_);
 }
-inline void RequestAddPeer::set_cmd(::rsctrl::peers::RequestAddPeer_AddCmd value)
-{
-    assert(::rsctrl::peers::RequestAddPeer_AddCmd_IsValid(value));
-    set_has_cmd();
-    cmd_ = value;
+inline void RequestAddPeer::set_cmd(::rsctrl::peers::RequestAddPeer_AddCmd value) {
+  assert(::rsctrl::peers::RequestAddPeer_AddCmd_IsValid(value));
+  set_has_cmd();
+  cmd_ = value;
 }
 
 // required string pgp_id = 2;
-inline bool RequestAddPeer::has_pgp_id() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool RequestAddPeer::has_pgp_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void RequestAddPeer::set_has_pgp_id()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void RequestAddPeer::set_has_pgp_id() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void RequestAddPeer::clear_has_pgp_id()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void RequestAddPeer::clear_has_pgp_id() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void RequestAddPeer::clear_pgp_id()
-{
-    if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_->clear();
-    }
+inline void RequestAddPeer::clear_pgp_id() {
+  if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+    pgp_id_->clear();
+  }
+  clear_has_pgp_id();
+}
+inline const ::std::string& RequestAddPeer::pgp_id() const {
+  return *pgp_id_;
+}
+inline void RequestAddPeer::set_pgp_id(const ::std::string& value) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(value);
+}
+inline void RequestAddPeer::set_pgp_id(const char* value) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(value);
+}
+inline void RequestAddPeer::set_pgp_id(const char* value, size_t size) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* RequestAddPeer::mutable_pgp_id() {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  return pgp_id_;
+}
+inline ::std::string* RequestAddPeer::release_pgp_id() {
+  clear_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = pgp_id_;
+    pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void RequestAddPeer::set_allocated_pgp_id(::std::string* pgp_id) {
+  if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete pgp_id_;
+  }
+  if (pgp_id) {
+    set_has_pgp_id();
+    pgp_id_ = pgp_id;
+  } else {
     clear_has_pgp_id();
-}
-inline const ::std::string& RequestAddPeer::pgp_id() const
-{
-    return *pgp_id_;
-}
-inline void RequestAddPeer::set_pgp_id(const ::std::string& value)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(value);
-}
-inline void RequestAddPeer::set_pgp_id(const char* value)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(value);
-}
-inline void RequestAddPeer::set_pgp_id(const char* value, size_t size)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* RequestAddPeer::mutable_pgp_id()
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    return pgp_id_;
-}
-inline ::std::string* RequestAddPeer::release_pgp_id()
-{
-    clear_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = pgp_id_;
-        pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void RequestAddPeer::set_allocated_pgp_id(::std::string* pgp_id)
-{
-    if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete pgp_id_;
-    }
-    if (pgp_id)
-    {
-        set_has_pgp_id();
-        pgp_id_ = pgp_id;
-    }
-    else
-    {
-        clear_has_pgp_id();
-        pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // optional string ssl_id = 3;
-inline bool RequestAddPeer::has_ssl_id() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool RequestAddPeer::has_ssl_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void RequestAddPeer::set_has_ssl_id()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void RequestAddPeer::set_has_ssl_id() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void RequestAddPeer::clear_has_ssl_id()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void RequestAddPeer::clear_has_ssl_id() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void RequestAddPeer::clear_ssl_id()
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_->clear();
-    }
+inline void RequestAddPeer::clear_ssl_id() {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    ssl_id_->clear();
+  }
+  clear_has_ssl_id();
+}
+inline const ::std::string& RequestAddPeer::ssl_id() const {
+  return *ssl_id_;
+}
+inline void RequestAddPeer::set_ssl_id(const ::std::string& value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void RequestAddPeer::set_ssl_id(const char* value) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(value);
+}
+inline void RequestAddPeer::set_ssl_id(const char* value, size_t size) {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  ssl_id_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* RequestAddPeer::mutable_ssl_id() {
+  set_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    ssl_id_ = new ::std::string;
+  }
+  return ssl_id_;
+}
+inline ::std::string* RequestAddPeer::release_ssl_id() {
+  clear_has_ssl_id();
+  if (ssl_id_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = ssl_id_;
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void RequestAddPeer::set_allocated_ssl_id(::std::string* ssl_id) {
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete ssl_id_;
+  }
+  if (ssl_id) {
+    set_has_ssl_id();
+    ssl_id_ = ssl_id;
+  } else {
     clear_has_ssl_id();
-}
-inline const ::std::string& RequestAddPeer::ssl_id() const
-{
-    return *ssl_id_;
-}
-inline void RequestAddPeer::set_ssl_id(const ::std::string& value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void RequestAddPeer::set_ssl_id(const char* value)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(value);
-}
-inline void RequestAddPeer::set_ssl_id(const char* value, size_t size)
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    ssl_id_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* RequestAddPeer::mutable_ssl_id()
-{
-    set_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        ssl_id_ = new ::std::string;
-    }
-    return ssl_id_;
-}
-inline ::std::string* RequestAddPeer::release_ssl_id()
-{
-    clear_has_ssl_id();
-    if (ssl_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = ssl_id_;
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void RequestAddPeer::set_allocated_ssl_id(::std::string* ssl_id)
-{
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete ssl_id_;
-    }
-    if (ssl_id)
-    {
-        set_has_ssl_id();
-        ssl_id_ = ssl_id;
-    }
-    else
-    {
-        clear_has_ssl_id();
-        ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------
@@ -1346,218 +1173,166 @@ inline void RequestAddPeer::set_allocated_ssl_id(::std::string* ssl_id)
 // RequestExaminePeer
 
 // required string pgp_id = 1;
-inline bool RequestExaminePeer::has_pgp_id() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestExaminePeer::has_pgp_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestExaminePeer::set_has_pgp_id()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestExaminePeer::set_has_pgp_id() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestExaminePeer::clear_has_pgp_id()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestExaminePeer::clear_has_pgp_id() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestExaminePeer::clear_pgp_id()
-{
-    if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_->clear();
-    }
+inline void RequestExaminePeer::clear_pgp_id() {
+  if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+    pgp_id_->clear();
+  }
+  clear_has_pgp_id();
+}
+inline const ::std::string& RequestExaminePeer::pgp_id() const {
+  return *pgp_id_;
+}
+inline void RequestExaminePeer::set_pgp_id(const ::std::string& value) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(value);
+}
+inline void RequestExaminePeer::set_pgp_id(const char* value) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(value);
+}
+inline void RequestExaminePeer::set_pgp_id(const char* value, size_t size) {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  pgp_id_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* RequestExaminePeer::mutable_pgp_id() {
+  set_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    pgp_id_ = new ::std::string;
+  }
+  return pgp_id_;
+}
+inline ::std::string* RequestExaminePeer::release_pgp_id() {
+  clear_has_pgp_id();
+  if (pgp_id_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = pgp_id_;
+    pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void RequestExaminePeer::set_allocated_pgp_id(::std::string* pgp_id) {
+  if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete pgp_id_;
+  }
+  if (pgp_id) {
+    set_has_pgp_id();
+    pgp_id_ = pgp_id;
+  } else {
     clear_has_pgp_id();
-}
-inline const ::std::string& RequestExaminePeer::pgp_id() const
-{
-    return *pgp_id_;
-}
-inline void RequestExaminePeer::set_pgp_id(const ::std::string& value)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(value);
-}
-inline void RequestExaminePeer::set_pgp_id(const char* value)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(value);
-}
-inline void RequestExaminePeer::set_pgp_id(const char* value, size_t size)
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    pgp_id_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* RequestExaminePeer::mutable_pgp_id()
-{
-    set_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        pgp_id_ = new ::std::string;
-    }
-    return pgp_id_;
-}
-inline ::std::string* RequestExaminePeer::release_pgp_id()
-{
-    clear_has_pgp_id();
-    if (pgp_id_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = pgp_id_;
-        pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void RequestExaminePeer::set_allocated_pgp_id(::std::string* pgp_id)
-{
-    if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete pgp_id_;
-    }
-    if (pgp_id)
-    {
-        set_has_pgp_id();
-        pgp_id_ = pgp_id;
-    }
-    else
-    {
-        clear_has_pgp_id();
-        pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required .rsctrl.peers.RequestExaminePeer.ExamineCmd cmd = 2;
-inline bool RequestExaminePeer::has_cmd() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool RequestExaminePeer::has_cmd() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void RequestExaminePeer::set_has_cmd()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void RequestExaminePeer::set_has_cmd() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void RequestExaminePeer::clear_has_cmd()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void RequestExaminePeer::clear_has_cmd() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void RequestExaminePeer::clear_cmd()
-{
-    cmd_ = 3;
-    clear_has_cmd();
+inline void RequestExaminePeer::clear_cmd() {
+  cmd_ = 3;
+  clear_has_cmd();
 }
-inline ::rsctrl::peers::RequestExaminePeer_ExamineCmd RequestExaminePeer::cmd() const
-{
-    return static_cast< ::rsctrl::peers::RequestExaminePeer_ExamineCmd >(cmd_);
+inline ::rsctrl::peers::RequestExaminePeer_ExamineCmd RequestExaminePeer::cmd() const {
+  return static_cast< ::rsctrl::peers::RequestExaminePeer_ExamineCmd >(cmd_);
 }
-inline void RequestExaminePeer::set_cmd(::rsctrl::peers::RequestExaminePeer_ExamineCmd value)
-{
-    assert(::rsctrl::peers::RequestExaminePeer_ExamineCmd_IsValid(value));
-    set_has_cmd();
-    cmd_ = value;
+inline void RequestExaminePeer::set_cmd(::rsctrl::peers::RequestExaminePeer_ExamineCmd value) {
+  assert(::rsctrl::peers::RequestExaminePeer_ExamineCmd_IsValid(value));
+  set_has_cmd();
+  cmd_ = value;
 }
 
 // required string cert = 3;
-inline bool RequestExaminePeer::has_cert() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool RequestExaminePeer::has_cert() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void RequestExaminePeer::set_has_cert()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void RequestExaminePeer::set_has_cert() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void RequestExaminePeer::clear_has_cert()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void RequestExaminePeer::clear_has_cert() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void RequestExaminePeer::clear_cert()
-{
-    if (cert_ != &::google::protobuf::internal::kEmptyString)
-    {
-        cert_->clear();
-    }
+inline void RequestExaminePeer::clear_cert() {
+  if (cert_ != &::google::protobuf::internal::kEmptyString) {
+    cert_->clear();
+  }
+  clear_has_cert();
+}
+inline const ::std::string& RequestExaminePeer::cert() const {
+  return *cert_;
+}
+inline void RequestExaminePeer::set_cert(const ::std::string& value) {
+  set_has_cert();
+  if (cert_ == &::google::protobuf::internal::kEmptyString) {
+    cert_ = new ::std::string;
+  }
+  cert_->assign(value);
+}
+inline void RequestExaminePeer::set_cert(const char* value) {
+  set_has_cert();
+  if (cert_ == &::google::protobuf::internal::kEmptyString) {
+    cert_ = new ::std::string;
+  }
+  cert_->assign(value);
+}
+inline void RequestExaminePeer::set_cert(const char* value, size_t size) {
+  set_has_cert();
+  if (cert_ == &::google::protobuf::internal::kEmptyString) {
+    cert_ = new ::std::string;
+  }
+  cert_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* RequestExaminePeer::mutable_cert() {
+  set_has_cert();
+  if (cert_ == &::google::protobuf::internal::kEmptyString) {
+    cert_ = new ::std::string;
+  }
+  return cert_;
+}
+inline ::std::string* RequestExaminePeer::release_cert() {
+  clear_has_cert();
+  if (cert_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = cert_;
+    cert_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void RequestExaminePeer::set_allocated_cert(::std::string* cert) {
+  if (cert_ != &::google::protobuf::internal::kEmptyString) {
+    delete cert_;
+  }
+  if (cert) {
+    set_has_cert();
+    cert_ = cert;
+  } else {
     clear_has_cert();
-}
-inline const ::std::string& RequestExaminePeer::cert() const
-{
-    return *cert_;
-}
-inline void RequestExaminePeer::set_cert(const ::std::string& value)
-{
-    set_has_cert();
-    if (cert_ == &::google::protobuf::internal::kEmptyString)
-    {
-        cert_ = new ::std::string;
-    }
-    cert_->assign(value);
-}
-inline void RequestExaminePeer::set_cert(const char* value)
-{
-    set_has_cert();
-    if (cert_ == &::google::protobuf::internal::kEmptyString)
-    {
-        cert_ = new ::std::string;
-    }
-    cert_->assign(value);
-}
-inline void RequestExaminePeer::set_cert(const char* value, size_t size)
-{
-    set_has_cert();
-    if (cert_ == &::google::protobuf::internal::kEmptyString)
-    {
-        cert_ = new ::std::string;
-    }
-    cert_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* RequestExaminePeer::mutable_cert()
-{
-    set_has_cert();
-    if (cert_ == &::google::protobuf::internal::kEmptyString)
-    {
-        cert_ = new ::std::string;
-    }
-    return cert_;
-}
-inline ::std::string* RequestExaminePeer::release_cert()
-{
-    clear_has_cert();
-    if (cert_ == &::google::protobuf::internal::kEmptyString)
-    {
-        return NULL;
-    }
-    else
-    {
-        ::std::string* temp = cert_;
-        cert_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-        return temp;
-    }
-}
-inline void RequestExaminePeer::set_allocated_cert(::std::string* cert)
-{
-    if (cert_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete cert_;
-    }
-    if (cert)
-    {
-        set_has_cert();
-        cert_ = cert;
-    }
-    else
-    {
-        clear_has_cert();
-        cert_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    }
+    cert_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------
@@ -1565,64 +1340,51 @@ inline void RequestExaminePeer::set_allocated_cert(::std::string* cert)
 // RequestModifyPeer
 
 // required .rsctrl.peers.RequestModifyPeer.ModCmd cmd = 1;
-inline bool RequestModifyPeer::has_cmd() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestModifyPeer::has_cmd() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestModifyPeer::set_has_cmd()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestModifyPeer::set_has_cmd() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestModifyPeer::clear_has_cmd()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestModifyPeer::clear_has_cmd() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestModifyPeer::clear_cmd()
-{
-    cmd_ = 0;
-    clear_has_cmd();
+inline void RequestModifyPeer::clear_cmd() {
+  cmd_ = 0;
+  clear_has_cmd();
 }
-inline ::rsctrl::peers::RequestModifyPeer_ModCmd RequestModifyPeer::cmd() const
-{
-    return static_cast< ::rsctrl::peers::RequestModifyPeer_ModCmd >(cmd_);
+inline ::rsctrl::peers::RequestModifyPeer_ModCmd RequestModifyPeer::cmd() const {
+  return static_cast< ::rsctrl::peers::RequestModifyPeer_ModCmd >(cmd_);
 }
-inline void RequestModifyPeer::set_cmd(::rsctrl::peers::RequestModifyPeer_ModCmd value)
-{
-    assert(::rsctrl::peers::RequestModifyPeer_ModCmd_IsValid(value));
-    set_has_cmd();
-    cmd_ = value;
+inline void RequestModifyPeer::set_cmd(::rsctrl::peers::RequestModifyPeer_ModCmd value) {
+  assert(::rsctrl::peers::RequestModifyPeer_ModCmd_IsValid(value));
+  set_has_cmd();
+  cmd_ = value;
 }
 
 // repeated .rsctrl.core.Person peers = 2;
-inline int RequestModifyPeer::peers_size() const
-{
-    return peers_.size();
+inline int RequestModifyPeer::peers_size() const {
+  return peers_.size();
 }
-inline void RequestModifyPeer::clear_peers()
-{
-    peers_.Clear();
+inline void RequestModifyPeer::clear_peers() {
+  peers_.Clear();
 }
-inline const ::rsctrl::core::Person& RequestModifyPeer::peers(int index) const
-{
-    return peers_.Get(index);
+inline const ::rsctrl::core::Person& RequestModifyPeer::peers(int index) const {
+  return peers_.Get(index);
 }
-inline ::rsctrl::core::Person* RequestModifyPeer::mutable_peers(int index)
-{
-    return peers_.Mutable(index);
+inline ::rsctrl::core::Person* RequestModifyPeer::mutable_peers(int index) {
+  return peers_.Mutable(index);
 }
-inline ::rsctrl::core::Person* RequestModifyPeer::add_peers()
-{
-    return peers_.Add();
+inline ::rsctrl::core::Person* RequestModifyPeer::add_peers() {
+  return peers_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >&
-RequestModifyPeer::peers() const
-{
-    return peers_;
+RequestModifyPeer::peers() const {
+  return peers_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::rsctrl::core::Person >*
-RequestModifyPeer::mutable_peers()
-{
-    return &peers_;
+RequestModifyPeer::mutable_peers() {
+  return &peers_;
 }
 
 
@@ -1632,45 +1394,36 @@ RequestModifyPeer::mutable_peers()
 }  // namespace rsctrl
 
 #ifndef SWIG
-namespace google
-{
-namespace protobuf
-{
+namespace google {
+namespace protobuf {
 
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestPeers_SetOption>()
-{
-    return ::rsctrl::peers::RequestPeers_SetOption_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestPeers_SetOption>() {
+  return ::rsctrl::peers::RequestPeers_SetOption_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestPeers_InfoOption>()
-{
-    return ::rsctrl::peers::RequestPeers_InfoOption_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestPeers_InfoOption>() {
+  return ::rsctrl::peers::RequestPeers_InfoOption_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestAddPeer_AddCmd>()
-{
-    return ::rsctrl::peers::RequestAddPeer_AddCmd_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestAddPeer_AddCmd>() {
+  return ::rsctrl::peers::RequestAddPeer_AddCmd_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestExaminePeer_ExamineCmd>()
-{
-    return ::rsctrl::peers::RequestExaminePeer_ExamineCmd_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestExaminePeer_ExamineCmd>() {
+  return ::rsctrl::peers::RequestExaminePeer_ExamineCmd_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestModifyPeer_ModCmd>()
-{
-    return ::rsctrl::peers::RequestModifyPeer_ModCmd_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestModifyPeer_ModCmd>() {
+  return ::rsctrl::peers::RequestModifyPeer_ModCmd_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestMsgIds>()
-{
-    return ::rsctrl::peers::RequestMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::RequestMsgIds>() {
+  return ::rsctrl::peers::RequestMsgIds_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::ResponseMsgIds>()
-{
-    return ::rsctrl::peers::ResponseMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::peers::ResponseMsgIds>() {
+  return ::rsctrl::peers::ResponseMsgIds_descriptor();
 }
 
 }  // namespace google

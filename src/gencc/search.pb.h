@@ -28,10 +28,8 @@
 #include "core.pb.h"
 // @@protoc_insertion_point(includes)
 
-namespace rsctrl
-{
-namespace search
-{
+namespace rsctrl {
+namespace search {
 
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_search_2eproto();
@@ -48,11 +46,10 @@ class RequestListSearches;
 class RequestSearchResults;
 class ResponseSearchResults;
 
-enum SearchHit_LocFlag
-{
-    SearchHit_LocFlag_LOCAL = 1,
-    SearchHit_LocFlag_FRIEND = 2,
-    SearchHit_LocFlag_NETWORK = 4
+enum SearchHit_LocFlag {
+  SearchHit_LocFlag_LOCAL = 1,
+  SearchHit_LocFlag_FRIEND = 2,
+  SearchHit_LocFlag_NETWORK = 4
 };
 bool SearchHit_LocFlag_IsValid(int value);
 const SearchHit_LocFlag SearchHit_LocFlag_LocFlag_MIN = SearchHit_LocFlag_LOCAL;
@@ -60,23 +57,20 @@ const SearchHit_LocFlag SearchHit_LocFlag_LocFlag_MAX = SearchHit_LocFlag_NETWOR
 const int SearchHit_LocFlag_LocFlag_ARRAYSIZE = SearchHit_LocFlag_LocFlag_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* SearchHit_LocFlag_descriptor();
-inline const ::std::string& SearchHit_LocFlag_Name(SearchHit_LocFlag value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               SearchHit_LocFlag_descriptor(), value);
+inline const ::std::string& SearchHit_LocFlag_Name(SearchHit_LocFlag value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    SearchHit_LocFlag_descriptor(), value);
 }
 inline bool SearchHit_LocFlag_Parse(
-    const ::std::string& name, SearchHit_LocFlag* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<SearchHit_LocFlag>(
-               SearchHit_LocFlag_descriptor(), name, value);
+    const ::std::string& name, SearchHit_LocFlag* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<SearchHit_LocFlag>(
+    SearchHit_LocFlag_descriptor(), name, value);
 }
-enum RequestMsgIds
-{
-    MsgId_RequestBasicSearch = 1,
-    MsgId_RequestCloseSearch = 3,
-    MsgId_RequestListSearches = 4,
-    MsgId_RequestSearchResults = 5
+enum RequestMsgIds {
+  MsgId_RequestBasicSearch = 1,
+  MsgId_RequestCloseSearch = 3,
+  MsgId_RequestListSearches = 4,
+  MsgId_RequestSearchResults = 5
 };
 bool RequestMsgIds_IsValid(int value);
 const RequestMsgIds RequestMsgIds_MIN = MsgId_RequestBasicSearch;
@@ -84,21 +78,18 @@ const RequestMsgIds RequestMsgIds_MAX = MsgId_RequestSearchResults;
 const int RequestMsgIds_ARRAYSIZE = RequestMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* RequestMsgIds_descriptor();
-inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               RequestMsgIds_descriptor(), value);
+inline const ::std::string& RequestMsgIds_Name(RequestMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RequestMsgIds_descriptor(), value);
 }
 inline bool RequestMsgIds_Parse(
-    const ::std::string& name, RequestMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
-               RequestMsgIds_descriptor(), name, value);
+    const ::std::string& name, RequestMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RequestMsgIds>(
+    RequestMsgIds_descriptor(), name, value);
 }
-enum ResponseMsgIds
-{
-    MsgId_ResponseSearchIds = 1,
-    MsgId_ResponseSearchResults = 5
+enum ResponseMsgIds {
+  MsgId_ResponseSearchIds = 1,
+  MsgId_ResponseSearchResults = 5
 };
 bool ResponseMsgIds_IsValid(int value);
 const ResponseMsgIds ResponseMsgIds_MIN = MsgId_ResponseSearchIds;
@@ -106,945 +97,876 @@ const ResponseMsgIds ResponseMsgIds_MAX = MsgId_ResponseSearchResults;
 const int ResponseMsgIds_ARRAYSIZE = ResponseMsgIds_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ResponseMsgIds_descriptor();
-inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value)
-{
-    return ::google::protobuf::internal::NameOfEnum(
-               ResponseMsgIds_descriptor(), value);
+inline const ::std::string& ResponseMsgIds_Name(ResponseMsgIds value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ResponseMsgIds_descriptor(), value);
 }
 inline bool ResponseMsgIds_Parse(
-    const ::std::string& name, ResponseMsgIds* value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
-               ResponseMsgIds_descriptor(), name, value);
+    const ::std::string& name, ResponseMsgIds* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ResponseMsgIds>(
+    ResponseMsgIds_descriptor(), name, value);
 }
 // ===================================================================
 
-class SearchHit : public ::google::protobuf::Message
-{
-public:
-    SearchHit();
-    virtual ~SearchHit();
+class SearchHit : public ::google::protobuf::Message {
+ public:
+  SearchHit();
+  virtual ~SearchHit();
 
-    SearchHit(const SearchHit& from);
+  SearchHit(const SearchHit& from);
 
-    inline SearchHit& operator=(const SearchHit& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline SearchHit& operator=(const SearchHit& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const SearchHit& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SearchHit& default_instance();
 
-    void Swap(SearchHit* other);
+  void Swap(SearchHit* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    SearchHit* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const SearchHit& from);
-    void MergeFrom(const SearchHit& from);
-    void Clear();
-    bool IsInitialized() const;
+  SearchHit* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const SearchHit& from);
+  void MergeFrom(const SearchHit& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    typedef SearchHit_LocFlag LocFlag;
-    static const LocFlag LOCAL = SearchHit_LocFlag_LOCAL;
-    static const LocFlag FRIEND = SearchHit_LocFlag_FRIEND;
-    static const LocFlag NETWORK = SearchHit_LocFlag_NETWORK;
-    static inline bool LocFlag_IsValid(int value)
-    {
-        return SearchHit_LocFlag_IsValid(value);
-    }
-    static const LocFlag LocFlag_MIN =
-        SearchHit_LocFlag_LocFlag_MIN;
-    static const LocFlag LocFlag_MAX =
-        SearchHit_LocFlag_LocFlag_MAX;
-    static const int LocFlag_ARRAYSIZE =
-        SearchHit_LocFlag_LocFlag_ARRAYSIZE;
-    static inline const ::google::protobuf::EnumDescriptor*
-    LocFlag_descriptor()
-    {
-        return SearchHit_LocFlag_descriptor();
-    }
-    static inline const ::std::string& LocFlag_Name(LocFlag value)
-    {
-        return SearchHit_LocFlag_Name(value);
-    }
-    static inline bool LocFlag_Parse(const ::std::string& name,
-                                     LocFlag* value)
-    {
-        return SearchHit_LocFlag_Parse(name, value);
-    }
+  typedef SearchHit_LocFlag LocFlag;
+  static const LocFlag LOCAL = SearchHit_LocFlag_LOCAL;
+  static const LocFlag FRIEND = SearchHit_LocFlag_FRIEND;
+  static const LocFlag NETWORK = SearchHit_LocFlag_NETWORK;
+  static inline bool LocFlag_IsValid(int value) {
+    return SearchHit_LocFlag_IsValid(value);
+  }
+  static const LocFlag LocFlag_MIN =
+    SearchHit_LocFlag_LocFlag_MIN;
+  static const LocFlag LocFlag_MAX =
+    SearchHit_LocFlag_LocFlag_MAX;
+  static const int LocFlag_ARRAYSIZE =
+    SearchHit_LocFlag_LocFlag_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  LocFlag_descriptor() {
+    return SearchHit_LocFlag_descriptor();
+  }
+  static inline const ::std::string& LocFlag_Name(LocFlag value) {
+    return SearchHit_LocFlag_Name(value);
+  }
+  static inline bool LocFlag_Parse(const ::std::string& name,
+      LocFlag* value) {
+    return SearchHit_LocFlag_Parse(name, value);
+  }
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.File file = 1;
-    inline bool has_file() const;
-    inline void clear_file();
-    static const int kFileFieldNumber = 1;
-    inline const ::rsctrl::core::File& file() const;
-    inline ::rsctrl::core::File* mutable_file();
-    inline ::rsctrl::core::File* release_file();
-    inline void set_allocated_file(::rsctrl::core::File* file);
+  // required .rsctrl.core.File file = 1;
+  inline bool has_file() const;
+  inline void clear_file();
+  static const int kFileFieldNumber = 1;
+  inline const ::rsctrl::core::File& file() const;
+  inline ::rsctrl::core::File* mutable_file();
+  inline ::rsctrl::core::File* release_file();
+  inline void set_allocated_file(::rsctrl::core::File* file);
 
-    // required uint32 loc = 2;
-    inline bool has_loc() const;
-    inline void clear_loc();
-    static const int kLocFieldNumber = 2;
-    inline ::google::protobuf::uint32 loc() const;
-    inline void set_loc(::google::protobuf::uint32 value);
+  // required uint32 loc = 2;
+  inline bool has_loc() const;
+  inline void clear_loc();
+  static const int kLocFieldNumber = 2;
+  inline ::google::protobuf::uint32 loc() const;
+  inline void set_loc(::google::protobuf::uint32 value);
 
-    // required uint32 no_hits = 3;
-    inline bool has_no_hits() const;
-    inline void clear_no_hits();
-    static const int kNoHitsFieldNumber = 3;
-    inline ::google::protobuf::uint32 no_hits() const;
-    inline void set_no_hits(::google::protobuf::uint32 value);
+  // required uint32 no_hits = 3;
+  inline bool has_no_hits() const;
+  inline void clear_no_hits();
+  static const int kNoHitsFieldNumber = 3;
+  inline ::google::protobuf::uint32 no_hits() const;
+  inline void set_no_hits(::google::protobuf::uint32 value);
 
-    // repeated string alt_names = 4;
-    inline int alt_names_size() const;
-    inline void clear_alt_names();
-    static const int kAltNamesFieldNumber = 4;
-    inline const ::std::string& alt_names(int index) const;
-    inline ::std::string* mutable_alt_names(int index);
-    inline void set_alt_names(int index, const ::std::string& value);
-    inline void set_alt_names(int index, const char* value);
-    inline void set_alt_names(int index, const char* value, size_t size);
-    inline ::std::string* add_alt_names();
-    inline void add_alt_names(const ::std::string& value);
-    inline void add_alt_names(const char* value);
-    inline void add_alt_names(const char* value, size_t size);
-    inline const ::google::protobuf::RepeatedPtrField< ::std::string>& alt_names() const;
-    inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_alt_names();
+  // repeated string alt_names = 4;
+  inline int alt_names_size() const;
+  inline void clear_alt_names();
+  static const int kAltNamesFieldNumber = 4;
+  inline const ::std::string& alt_names(int index) const;
+  inline ::std::string* mutable_alt_names(int index);
+  inline void set_alt_names(int index, const ::std::string& value);
+  inline void set_alt_names(int index, const char* value);
+  inline void set_alt_names(int index, const char* value, size_t size);
+  inline ::std::string* add_alt_names();
+  inline void add_alt_names(const ::std::string& value);
+  inline void add_alt_names(const char* value);
+  inline void add_alt_names(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& alt_names() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_alt_names();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.SearchHit)
-private:
-    inline void set_has_file();
-    inline void clear_has_file();
-    inline void set_has_loc();
-    inline void clear_has_loc();
-    inline void set_has_no_hits();
-    inline void clear_has_no_hits();
+  // @@protoc_insertion_point(class_scope:rsctrl.search.SearchHit)
+ private:
+  inline void set_has_file();
+  inline void clear_has_file();
+  inline void set_has_loc();
+  inline void clear_has_loc();
+  inline void set_has_no_hits();
+  inline void clear_has_no_hits();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::File* file_;
-    ::google::protobuf::uint32 loc_;
-    ::google::protobuf::uint32 no_hits_;
-    ::google::protobuf::RepeatedPtrField< ::std::string> alt_names_;
+  ::rsctrl::core::File* file_;
+  ::google::protobuf::uint32 loc_;
+  ::google::protobuf::uint32 no_hits_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> alt_names_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static SearchHit* default_instance_;
+  void InitAsDefaultInstance();
+  static SearchHit* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class SearchSet : public ::google::protobuf::Message
-{
-public:
-    SearchSet();
-    virtual ~SearchSet();
+class SearchSet : public ::google::protobuf::Message {
+ public:
+  SearchSet();
+  virtual ~SearchSet();
 
-    SearchSet(const SearchSet& from);
+  SearchSet(const SearchSet& from);
 
-    inline SearchSet& operator=(const SearchSet& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline SearchSet& operator=(const SearchSet& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const SearchSet& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SearchSet& default_instance();
 
-    void Swap(SearchSet* other);
+  void Swap(SearchSet* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    SearchSet* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const SearchSet& from);
-    void MergeFrom(const SearchSet& from);
-    void Clear();
-    bool IsInitialized() const;
+  SearchSet* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const SearchSet& from);
+  void MergeFrom(const SearchSet& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required uint32 search_id = 1;
-    inline bool has_search_id() const;
-    inline void clear_search_id();
-    static const int kSearchIdFieldNumber = 1;
-    inline ::google::protobuf::uint32 search_id() const;
-    inline void set_search_id(::google::protobuf::uint32 value);
+  // required uint32 search_id = 1;
+  inline bool has_search_id() const;
+  inline void clear_search_id();
+  static const int kSearchIdFieldNumber = 1;
+  inline ::google::protobuf::uint32 search_id() const;
+  inline void set_search_id(::google::protobuf::uint32 value);
 
-    // repeated .rsctrl.search.SearchHit hits = 2;
-    inline int hits_size() const;
-    inline void clear_hits();
-    static const int kHitsFieldNumber = 2;
-    inline const ::rsctrl::search::SearchHit& hits(int index) const;
-    inline ::rsctrl::search::SearchHit* mutable_hits(int index);
-    inline ::rsctrl::search::SearchHit* add_hits();
-    inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit >&
-    hits() const;
-    inline ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit >*
-    mutable_hits();
+  // repeated .rsctrl.search.SearchHit hits = 2;
+  inline int hits_size() const;
+  inline void clear_hits();
+  static const int kHitsFieldNumber = 2;
+  inline const ::rsctrl::search::SearchHit& hits(int index) const;
+  inline ::rsctrl::search::SearchHit* mutable_hits(int index);
+  inline ::rsctrl::search::SearchHit* add_hits();
+  inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit >&
+      hits() const;
+  inline ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit >*
+      mutable_hits();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.SearchSet)
-private:
-    inline void set_has_search_id();
-    inline void clear_has_search_id();
+  // @@protoc_insertion_point(class_scope:rsctrl.search.SearchSet)
+ private:
+  inline void set_has_search_id();
+  inline void clear_has_search_id();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit > hits_;
-    ::google::protobuf::uint32 search_id_;
+  ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit > hits_;
+  ::google::protobuf::uint32 search_id_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static SearchSet* default_instance_;
+  void InitAsDefaultInstance();
+  static SearchSet* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestBasicSearch : public ::google::protobuf::Message
-{
-public:
-    RequestBasicSearch();
-    virtual ~RequestBasicSearch();
+class RequestBasicSearch : public ::google::protobuf::Message {
+ public:
+  RequestBasicSearch();
+  virtual ~RequestBasicSearch();
 
-    RequestBasicSearch(const RequestBasicSearch& from);
+  RequestBasicSearch(const RequestBasicSearch& from);
 
-    inline RequestBasicSearch& operator=(const RequestBasicSearch& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestBasicSearch& operator=(const RequestBasicSearch& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestBasicSearch& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestBasicSearch& default_instance();
 
-    void Swap(RequestBasicSearch* other);
+  void Swap(RequestBasicSearch* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestBasicSearch* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestBasicSearch& from);
-    void MergeFrom(const RequestBasicSearch& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestBasicSearch* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestBasicSearch& from);
+  void MergeFrom(const RequestBasicSearch& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // repeated string terms = 1;
-    inline int terms_size() const;
-    inline void clear_terms();
-    static const int kTermsFieldNumber = 1;
-    inline const ::std::string& terms(int index) const;
-    inline ::std::string* mutable_terms(int index);
-    inline void set_terms(int index, const ::std::string& value);
-    inline void set_terms(int index, const char* value);
-    inline void set_terms(int index, const char* value, size_t size);
-    inline ::std::string* add_terms();
-    inline void add_terms(const ::std::string& value);
-    inline void add_terms(const char* value);
-    inline void add_terms(const char* value, size_t size);
-    inline const ::google::protobuf::RepeatedPtrField< ::std::string>& terms() const;
-    inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_terms();
+  // repeated string terms = 1;
+  inline int terms_size() const;
+  inline void clear_terms();
+  static const int kTermsFieldNumber = 1;
+  inline const ::std::string& terms(int index) const;
+  inline ::std::string* mutable_terms(int index);
+  inline void set_terms(int index, const ::std::string& value);
+  inline void set_terms(int index, const char* value);
+  inline void set_terms(int index, const char* value, size_t size);
+  inline ::std::string* add_terms();
+  inline void add_terms(const ::std::string& value);
+  inline void add_terms(const char* value);
+  inline void add_terms(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& terms() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_terms();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.RequestBasicSearch)
-private:
+  // @@protoc_insertion_point(class_scope:rsctrl.search.RequestBasicSearch)
+ private:
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::google::protobuf::RepeatedPtrField< ::std::string> terms_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> terms_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestBasicSearch* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestBasicSearch* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestAdvSearch : public ::google::protobuf::Message
-{
-public:
-    RequestAdvSearch();
-    virtual ~RequestAdvSearch();
+class RequestAdvSearch : public ::google::protobuf::Message {
+ public:
+  RequestAdvSearch();
+  virtual ~RequestAdvSearch();
 
-    RequestAdvSearch(const RequestAdvSearch& from);
+  RequestAdvSearch(const RequestAdvSearch& from);
 
-    inline RequestAdvSearch& operator=(const RequestAdvSearch& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestAdvSearch& operator=(const RequestAdvSearch& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestAdvSearch& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestAdvSearch& default_instance();
 
-    void Swap(RequestAdvSearch* other);
+  void Swap(RequestAdvSearch* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestAdvSearch* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestAdvSearch& from);
-    void MergeFrom(const RequestAdvSearch& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestAdvSearch* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestAdvSearch& from);
+  void MergeFrom(const RequestAdvSearch& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // repeated string terms = 1;
-    inline int terms_size() const;
-    inline void clear_terms();
-    static const int kTermsFieldNumber = 1;
-    inline const ::std::string& terms(int index) const;
-    inline ::std::string* mutable_terms(int index);
-    inline void set_terms(int index, const ::std::string& value);
-    inline void set_terms(int index, const char* value);
-    inline void set_terms(int index, const char* value, size_t size);
-    inline ::std::string* add_terms();
-    inline void add_terms(const ::std::string& value);
-    inline void add_terms(const char* value);
-    inline void add_terms(const char* value, size_t size);
-    inline const ::google::protobuf::RepeatedPtrField< ::std::string>& terms() const;
-    inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_terms();
+  // repeated string terms = 1;
+  inline int terms_size() const;
+  inline void clear_terms();
+  static const int kTermsFieldNumber = 1;
+  inline const ::std::string& terms(int index) const;
+  inline ::std::string* mutable_terms(int index);
+  inline void set_terms(int index, const ::std::string& value);
+  inline void set_terms(int index, const char* value);
+  inline void set_terms(int index, const char* value, size_t size);
+  inline ::std::string* add_terms();
+  inline void add_terms(const ::std::string& value);
+  inline void add_terms(const char* value);
+  inline void add_terms(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& terms() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_terms();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.RequestAdvSearch)
-private:
+  // @@protoc_insertion_point(class_scope:rsctrl.search.RequestAdvSearch)
+ private:
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::google::protobuf::RepeatedPtrField< ::std::string> terms_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> terms_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestAdvSearch* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestAdvSearch* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseSearchIds : public ::google::protobuf::Message
-{
-public:
-    ResponseSearchIds();
-    virtual ~ResponseSearchIds();
+class ResponseSearchIds : public ::google::protobuf::Message {
+ public:
+  ResponseSearchIds();
+  virtual ~ResponseSearchIds();
 
-    ResponseSearchIds(const ResponseSearchIds& from);
+  ResponseSearchIds(const ResponseSearchIds& from);
 
-    inline ResponseSearchIds& operator=(const ResponseSearchIds& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseSearchIds& operator=(const ResponseSearchIds& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseSearchIds& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseSearchIds& default_instance();
 
-    void Swap(ResponseSearchIds* other);
+  void Swap(ResponseSearchIds* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseSearchIds* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseSearchIds& from);
-    void MergeFrom(const ResponseSearchIds& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseSearchIds* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseSearchIds& from);
+  void MergeFrom(const ResponseSearchIds& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // repeated uint32 search_id = 2;
-    inline int search_id_size() const;
-    inline void clear_search_id();
-    static const int kSearchIdFieldNumber = 2;
-    inline ::google::protobuf::uint32 search_id(int index) const;
-    inline void set_search_id(int index, ::google::protobuf::uint32 value);
-    inline void add_search_id(::google::protobuf::uint32 value);
-    inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
-    search_id() const;
-    inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
-    mutable_search_id();
+  // repeated uint32 search_id = 2;
+  inline int search_id_size() const;
+  inline void clear_search_id();
+  static const int kSearchIdFieldNumber = 2;
+  inline ::google::protobuf::uint32 search_id(int index) const;
+  inline void set_search_id(int index, ::google::protobuf::uint32 value);
+  inline void add_search_id(::google::protobuf::uint32 value);
+  inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+      search_id() const;
+  inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+      mutable_search_id();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.ResponseSearchIds)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
+  // @@protoc_insertion_point(class_scope:rsctrl.search.ResponseSearchIds)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > search_id_;
+  ::rsctrl::core::Status* status_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > search_id_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseSearchIds* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseSearchIds* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestCloseSearch : public ::google::protobuf::Message
-{
-public:
-    RequestCloseSearch();
-    virtual ~RequestCloseSearch();
+class RequestCloseSearch : public ::google::protobuf::Message {
+ public:
+  RequestCloseSearch();
+  virtual ~RequestCloseSearch();
 
-    RequestCloseSearch(const RequestCloseSearch& from);
+  RequestCloseSearch(const RequestCloseSearch& from);
 
-    inline RequestCloseSearch& operator=(const RequestCloseSearch& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestCloseSearch& operator=(const RequestCloseSearch& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestCloseSearch& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestCloseSearch& default_instance();
 
-    void Swap(RequestCloseSearch* other);
+  void Swap(RequestCloseSearch* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestCloseSearch* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestCloseSearch& from);
-    void MergeFrom(const RequestCloseSearch& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestCloseSearch* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestCloseSearch& from);
+  void MergeFrom(const RequestCloseSearch& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required uint32 search_id = 1;
-    inline bool has_search_id() const;
-    inline void clear_search_id();
-    static const int kSearchIdFieldNumber = 1;
-    inline ::google::protobuf::uint32 search_id() const;
-    inline void set_search_id(::google::protobuf::uint32 value);
+  // required uint32 search_id = 1;
+  inline bool has_search_id() const;
+  inline void clear_search_id();
+  static const int kSearchIdFieldNumber = 1;
+  inline ::google::protobuf::uint32 search_id() const;
+  inline void set_search_id(::google::protobuf::uint32 value);
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.RequestCloseSearch)
-private:
-    inline void set_has_search_id();
-    inline void clear_has_search_id();
+  // @@protoc_insertion_point(class_scope:rsctrl.search.RequestCloseSearch)
+ private:
+  inline void set_has_search_id();
+  inline void clear_has_search_id();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::google::protobuf::uint32 search_id_;
+  ::google::protobuf::uint32 search_id_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestCloseSearch* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestCloseSearch* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestListSearches : public ::google::protobuf::Message
-{
-public:
-    RequestListSearches();
-    virtual ~RequestListSearches();
+class RequestListSearches : public ::google::protobuf::Message {
+ public:
+  RequestListSearches();
+  virtual ~RequestListSearches();
 
-    RequestListSearches(const RequestListSearches& from);
+  RequestListSearches(const RequestListSearches& from);
 
-    inline RequestListSearches& operator=(const RequestListSearches& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestListSearches& operator=(const RequestListSearches& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestListSearches& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestListSearches& default_instance();
 
-    void Swap(RequestListSearches* other);
+  void Swap(RequestListSearches* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestListSearches* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestListSearches& from);
-    void MergeFrom(const RequestListSearches& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestListSearches* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestListSearches& from);
+  void MergeFrom(const RequestListSearches& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.RequestListSearches)
-private:
+  // @@protoc_insertion_point(class_scope:rsctrl.search.RequestListSearches)
+ private:
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[1];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[1];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestListSearches* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestListSearches* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class RequestSearchResults : public ::google::protobuf::Message
-{
-public:
-    RequestSearchResults();
-    virtual ~RequestSearchResults();
+class RequestSearchResults : public ::google::protobuf::Message {
+ public:
+  RequestSearchResults();
+  virtual ~RequestSearchResults();
 
-    RequestSearchResults(const RequestSearchResults& from);
+  RequestSearchResults(const RequestSearchResults& from);
 
-    inline RequestSearchResults& operator=(const RequestSearchResults& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline RequestSearchResults& operator=(const RequestSearchResults& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const RequestSearchResults& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RequestSearchResults& default_instance();
 
-    void Swap(RequestSearchResults* other);
+  void Swap(RequestSearchResults* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    RequestSearchResults* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const RequestSearchResults& from);
-    void MergeFrom(const RequestSearchResults& from);
-    void Clear();
-    bool IsInitialized() const;
+  RequestSearchResults* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const RequestSearchResults& from);
+  void MergeFrom(const RequestSearchResults& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // optional uint32 result_limit = 1;
-    inline bool has_result_limit() const;
-    inline void clear_result_limit();
-    static const int kResultLimitFieldNumber = 1;
-    inline ::google::protobuf::uint32 result_limit() const;
-    inline void set_result_limit(::google::protobuf::uint32 value);
+  // optional uint32 result_limit = 1;
+  inline bool has_result_limit() const;
+  inline void clear_result_limit();
+  static const int kResultLimitFieldNumber = 1;
+  inline ::google::protobuf::uint32 result_limit() const;
+  inline void set_result_limit(::google::protobuf::uint32 value);
 
-    // repeated uint32 search_ids = 2;
-    inline int search_ids_size() const;
-    inline void clear_search_ids();
-    static const int kSearchIdsFieldNumber = 2;
-    inline ::google::protobuf::uint32 search_ids(int index) const;
-    inline void set_search_ids(int index, ::google::protobuf::uint32 value);
-    inline void add_search_ids(::google::protobuf::uint32 value);
-    inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
-    search_ids() const;
-    inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
-    mutable_search_ids();
+  // repeated uint32 search_ids = 2;
+  inline int search_ids_size() const;
+  inline void clear_search_ids();
+  static const int kSearchIdsFieldNumber = 2;
+  inline ::google::protobuf::uint32 search_ids(int index) const;
+  inline void set_search_ids(int index, ::google::protobuf::uint32 value);
+  inline void add_search_ids(::google::protobuf::uint32 value);
+  inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+      search_ids() const;
+  inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+      mutable_search_ids();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.RequestSearchResults)
-private:
-    inline void set_has_result_limit();
-    inline void clear_has_result_limit();
+  // @@protoc_insertion_point(class_scope:rsctrl.search.RequestSearchResults)
+ private:
+  inline void set_has_result_limit();
+  inline void clear_has_result_limit();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > search_ids_;
-    ::google::protobuf::uint32 result_limit_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > search_ids_;
+  ::google::protobuf::uint32 result_limit_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static RequestSearchResults* default_instance_;
+  void InitAsDefaultInstance();
+  static RequestSearchResults* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class ResponseSearchResults : public ::google::protobuf::Message
-{
-public:
-    ResponseSearchResults();
-    virtual ~ResponseSearchResults();
+class ResponseSearchResults : public ::google::protobuf::Message {
+ public:
+  ResponseSearchResults();
+  virtual ~ResponseSearchResults();
 
-    ResponseSearchResults(const ResponseSearchResults& from);
+  ResponseSearchResults(const ResponseSearchResults& from);
 
-    inline ResponseSearchResults& operator=(const ResponseSearchResults& from)
-    {
-        CopyFrom(from);
-        return *this;
-    }
+  inline ResponseSearchResults& operator=(const ResponseSearchResults& from) {
+    CopyFrom(from);
+    return *this;
+  }
 
-    inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-    {
-        return _unknown_fields_;
-    }
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
 
-    inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-    {
-        return &_unknown_fields_;
-    }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
 
-    static const ::google::protobuf::Descriptor* descriptor();
-    static const ResponseSearchResults& default_instance();
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResponseSearchResults& default_instance();
 
-    void Swap(ResponseSearchResults* other);
+  void Swap(ResponseSearchResults* other);
 
-    // implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-    ResponseSearchResults* New() const;
-    void CopyFrom(const ::google::protobuf::Message& from);
-    void MergeFrom(const ::google::protobuf::Message& from);
-    void CopyFrom(const ResponseSearchResults& from);
-    void MergeFrom(const ResponseSearchResults& from);
-    void Clear();
-    bool IsInitialized() const;
+  ResponseSearchResults* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ResponseSearchResults& from);
+  void MergeFrom(const ResponseSearchResults& from);
+  void Clear();
+  bool IsInitialized() const;
 
-    int ByteSize() const;
-    bool MergePartialFromCodedStream(
-        ::google::protobuf::io::CodedInputStream* input);
-    void SerializeWithCachedSizes(
-        ::google::protobuf::io::CodedOutputStream* output) const;
-    ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-    int GetCachedSize() const
-    {
-        return _cached_size_;
-    }
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const;
-public:
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
 
-    ::google::protobuf::Metadata GetMetadata() const;
+  ::google::protobuf::Metadata GetMetadata() const;
 
-    // nested types ----------------------------------------------------
+  // nested types ----------------------------------------------------
 
-    // accessors -------------------------------------------------------
+  // accessors -------------------------------------------------------
 
-    // required .rsctrl.core.Status status = 1;
-    inline bool has_status() const;
-    inline void clear_status();
-    static const int kStatusFieldNumber = 1;
-    inline const ::rsctrl::core::Status& status() const;
-    inline ::rsctrl::core::Status* mutable_status();
-    inline ::rsctrl::core::Status* release_status();
-    inline void set_allocated_status(::rsctrl::core::Status* status);
+  // required .rsctrl.core.Status status = 1;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 1;
+  inline const ::rsctrl::core::Status& status() const;
+  inline ::rsctrl::core::Status* mutable_status();
+  inline ::rsctrl::core::Status* release_status();
+  inline void set_allocated_status(::rsctrl::core::Status* status);
 
-    // repeated .rsctrl.search.SearchSet searches = 2;
-    inline int searches_size() const;
-    inline void clear_searches();
-    static const int kSearchesFieldNumber = 2;
-    inline const ::rsctrl::search::SearchSet& searches(int index) const;
-    inline ::rsctrl::search::SearchSet* mutable_searches(int index);
-    inline ::rsctrl::search::SearchSet* add_searches();
-    inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet >&
-    searches() const;
-    inline ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet >*
-    mutable_searches();
+  // repeated .rsctrl.search.SearchSet searches = 2;
+  inline int searches_size() const;
+  inline void clear_searches();
+  static const int kSearchesFieldNumber = 2;
+  inline const ::rsctrl::search::SearchSet& searches(int index) const;
+  inline ::rsctrl::search::SearchSet* mutable_searches(int index);
+  inline ::rsctrl::search::SearchSet* add_searches();
+  inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet >&
+      searches() const;
+  inline ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet >*
+      mutable_searches();
 
-    // @@protoc_insertion_point(class_scope:rsctrl.search.ResponseSearchResults)
-private:
-    inline void set_has_status();
-    inline void clear_has_status();
+  // @@protoc_insertion_point(class_scope:rsctrl.search.ResponseSearchResults)
+ private:
+  inline void set_has_status();
+  inline void clear_has_status();
 
-    ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
-    ::rsctrl::core::Status* status_;
-    ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet > searches_;
+  ::rsctrl::core::Status* status_;
+  ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet > searches_;
 
-    mutable int _cached_size_;
-    ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
-    friend void  protobuf_AddDesc_search_2eproto();
-    friend void protobuf_AssignDesc_search_2eproto();
-    friend void protobuf_ShutdownFile_search_2eproto();
+  friend void  protobuf_AddDesc_search_2eproto();
+  friend void protobuf_AssignDesc_search_2eproto();
+  friend void protobuf_ShutdownFile_search_2eproto();
 
-    void InitAsDefaultInstance();
-    static ResponseSearchResults* default_instance_;
+  void InitAsDefaultInstance();
+  static ResponseSearchResults* default_instance_;
 };
 // ===================================================================
 
@@ -1054,165 +976,129 @@ private:
 // SearchHit
 
 // required .rsctrl.core.File file = 1;
-inline bool SearchHit::has_file() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool SearchHit::has_file() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void SearchHit::set_has_file()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void SearchHit::set_has_file() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void SearchHit::clear_has_file()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void SearchHit::clear_has_file() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void SearchHit::clear_file()
-{
-    if (file_ != NULL) file_->::rsctrl::core::File::Clear();
-    clear_has_file();
+inline void SearchHit::clear_file() {
+  if (file_ != NULL) file_->::rsctrl::core::File::Clear();
+  clear_has_file();
 }
-inline const ::rsctrl::core::File& SearchHit::file() const
-{
-    return file_ != NULL ? *file_ : *default_instance_->file_;
+inline const ::rsctrl::core::File& SearchHit::file() const {
+  return file_ != NULL ? *file_ : *default_instance_->file_;
 }
-inline ::rsctrl::core::File* SearchHit::mutable_file()
-{
+inline ::rsctrl::core::File* SearchHit::mutable_file() {
+  set_has_file();
+  if (file_ == NULL) file_ = new ::rsctrl::core::File;
+  return file_;
+}
+inline ::rsctrl::core::File* SearchHit::release_file() {
+  clear_has_file();
+  ::rsctrl::core::File* temp = file_;
+  file_ = NULL;
+  return temp;
+}
+inline void SearchHit::set_allocated_file(::rsctrl::core::File* file) {
+  delete file_;
+  file_ = file;
+  if (file) {
     set_has_file();
-    if (file_ == NULL) file_ = new ::rsctrl::core::File;
-    return file_;
-}
-inline ::rsctrl::core::File* SearchHit::release_file()
-{
+  } else {
     clear_has_file();
-    ::rsctrl::core::File* temp = file_;
-    file_ = NULL;
-    return temp;
-}
-inline void SearchHit::set_allocated_file(::rsctrl::core::File* file)
-{
-    delete file_;
-    file_ = file;
-    if (file)
-    {
-        set_has_file();
-    }
-    else
-    {
-        clear_has_file();
-    }
+  }
 }
 
 // required uint32 loc = 2;
-inline bool SearchHit::has_loc() const
-{
-    return (_has_bits_[0] & 0x00000002u) != 0;
+inline bool SearchHit::has_loc() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void SearchHit::set_has_loc()
-{
-    _has_bits_[0] |= 0x00000002u;
+inline void SearchHit::set_has_loc() {
+  _has_bits_[0] |= 0x00000002u;
 }
-inline void SearchHit::clear_has_loc()
-{
-    _has_bits_[0] &= ~0x00000002u;
+inline void SearchHit::clear_has_loc() {
+  _has_bits_[0] &= ~0x00000002u;
 }
-inline void SearchHit::clear_loc()
-{
-    loc_ = 0u;
-    clear_has_loc();
+inline void SearchHit::clear_loc() {
+  loc_ = 0u;
+  clear_has_loc();
 }
-inline ::google::protobuf::uint32 SearchHit::loc() const
-{
-    return loc_;
+inline ::google::protobuf::uint32 SearchHit::loc() const {
+  return loc_;
 }
-inline void SearchHit::set_loc(::google::protobuf::uint32 value)
-{
-    set_has_loc();
-    loc_ = value;
+inline void SearchHit::set_loc(::google::protobuf::uint32 value) {
+  set_has_loc();
+  loc_ = value;
 }
 
 // required uint32 no_hits = 3;
-inline bool SearchHit::has_no_hits() const
-{
-    return (_has_bits_[0] & 0x00000004u) != 0;
+inline bool SearchHit::has_no_hits() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void SearchHit::set_has_no_hits()
-{
-    _has_bits_[0] |= 0x00000004u;
+inline void SearchHit::set_has_no_hits() {
+  _has_bits_[0] |= 0x00000004u;
 }
-inline void SearchHit::clear_has_no_hits()
-{
-    _has_bits_[0] &= ~0x00000004u;
+inline void SearchHit::clear_has_no_hits() {
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline void SearchHit::clear_no_hits()
-{
-    no_hits_ = 0u;
-    clear_has_no_hits();
+inline void SearchHit::clear_no_hits() {
+  no_hits_ = 0u;
+  clear_has_no_hits();
 }
-inline ::google::protobuf::uint32 SearchHit::no_hits() const
-{
-    return no_hits_;
+inline ::google::protobuf::uint32 SearchHit::no_hits() const {
+  return no_hits_;
 }
-inline void SearchHit::set_no_hits(::google::protobuf::uint32 value)
-{
-    set_has_no_hits();
-    no_hits_ = value;
+inline void SearchHit::set_no_hits(::google::protobuf::uint32 value) {
+  set_has_no_hits();
+  no_hits_ = value;
 }
 
 // repeated string alt_names = 4;
-inline int SearchHit::alt_names_size() const
-{
-    return alt_names_.size();
+inline int SearchHit::alt_names_size() const {
+  return alt_names_.size();
 }
-inline void SearchHit::clear_alt_names()
-{
-    alt_names_.Clear();
+inline void SearchHit::clear_alt_names() {
+  alt_names_.Clear();
 }
-inline const ::std::string& SearchHit::alt_names(int index) const
-{
-    return alt_names_.Get(index);
+inline const ::std::string& SearchHit::alt_names(int index) const {
+  return alt_names_.Get(index);
 }
-inline ::std::string* SearchHit::mutable_alt_names(int index)
-{
-    return alt_names_.Mutable(index);
+inline ::std::string* SearchHit::mutable_alt_names(int index) {
+  return alt_names_.Mutable(index);
 }
-inline void SearchHit::set_alt_names(int index, const ::std::string& value)
-{
-    alt_names_.Mutable(index)->assign(value);
+inline void SearchHit::set_alt_names(int index, const ::std::string& value) {
+  alt_names_.Mutable(index)->assign(value);
 }
-inline void SearchHit::set_alt_names(int index, const char* value)
-{
-    alt_names_.Mutable(index)->assign(value);
+inline void SearchHit::set_alt_names(int index, const char* value) {
+  alt_names_.Mutable(index)->assign(value);
 }
-inline void SearchHit::set_alt_names(int index, const char* value, size_t size)
-{
-    alt_names_.Mutable(index)->assign(
-        reinterpret_cast<const char*>(value), size);
+inline void SearchHit::set_alt_names(int index, const char* value, size_t size) {
+  alt_names_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* SearchHit::add_alt_names()
-{
-    return alt_names_.Add();
+inline ::std::string* SearchHit::add_alt_names() {
+  return alt_names_.Add();
 }
-inline void SearchHit::add_alt_names(const ::std::string& value)
-{
-    alt_names_.Add()->assign(value);
+inline void SearchHit::add_alt_names(const ::std::string& value) {
+  alt_names_.Add()->assign(value);
 }
-inline void SearchHit::add_alt_names(const char* value)
-{
-    alt_names_.Add()->assign(value);
+inline void SearchHit::add_alt_names(const char* value) {
+  alt_names_.Add()->assign(value);
 }
-inline void SearchHit::add_alt_names(const char* value, size_t size)
-{
-    alt_names_.Add()->assign(reinterpret_cast<const char*>(value), size);
+inline void SearchHit::add_alt_names(const char* value, size_t size) {
+  alt_names_.Add()->assign(reinterpret_cast<const char*>(value), size);
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-SearchHit::alt_names() const
-{
-    return alt_names_;
+SearchHit::alt_names() const {
+  return alt_names_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-SearchHit::mutable_alt_names()
-{
-    return &alt_names_;
+SearchHit::mutable_alt_names() {
+  return &alt_names_;
 }
 
 // -------------------------------------------------------------------
@@ -1220,63 +1106,50 @@ SearchHit::mutable_alt_names()
 // SearchSet
 
 // required uint32 search_id = 1;
-inline bool SearchSet::has_search_id() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool SearchSet::has_search_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void SearchSet::set_has_search_id()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void SearchSet::set_has_search_id() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void SearchSet::clear_has_search_id()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void SearchSet::clear_has_search_id() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void SearchSet::clear_search_id()
-{
-    search_id_ = 0u;
-    clear_has_search_id();
+inline void SearchSet::clear_search_id() {
+  search_id_ = 0u;
+  clear_has_search_id();
 }
-inline ::google::protobuf::uint32 SearchSet::search_id() const
-{
-    return search_id_;
+inline ::google::protobuf::uint32 SearchSet::search_id() const {
+  return search_id_;
 }
-inline void SearchSet::set_search_id(::google::protobuf::uint32 value)
-{
-    set_has_search_id();
-    search_id_ = value;
+inline void SearchSet::set_search_id(::google::protobuf::uint32 value) {
+  set_has_search_id();
+  search_id_ = value;
 }
 
 // repeated .rsctrl.search.SearchHit hits = 2;
-inline int SearchSet::hits_size() const
-{
-    return hits_.size();
+inline int SearchSet::hits_size() const {
+  return hits_.size();
 }
-inline void SearchSet::clear_hits()
-{
-    hits_.Clear();
+inline void SearchSet::clear_hits() {
+  hits_.Clear();
 }
-inline const ::rsctrl::search::SearchHit& SearchSet::hits(int index) const
-{
-    return hits_.Get(index);
+inline const ::rsctrl::search::SearchHit& SearchSet::hits(int index) const {
+  return hits_.Get(index);
 }
-inline ::rsctrl::search::SearchHit* SearchSet::mutable_hits(int index)
-{
-    return hits_.Mutable(index);
+inline ::rsctrl::search::SearchHit* SearchSet::mutable_hits(int index) {
+  return hits_.Mutable(index);
 }
-inline ::rsctrl::search::SearchHit* SearchSet::add_hits()
-{
-    return hits_.Add();
+inline ::rsctrl::search::SearchHit* SearchSet::add_hits() {
+  return hits_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit >&
-SearchSet::hits() const
-{
-    return hits_;
+SearchSet::hits() const {
+  return hits_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchHit >*
-SearchSet::mutable_hits()
-{
-    return &hits_;
+SearchSet::mutable_hits() {
+  return &hits_;
 }
 
 // -------------------------------------------------------------------
@@ -1284,60 +1157,47 @@ SearchSet::mutable_hits()
 // RequestBasicSearch
 
 // repeated string terms = 1;
-inline int RequestBasicSearch::terms_size() const
-{
-    return terms_.size();
+inline int RequestBasicSearch::terms_size() const {
+  return terms_.size();
 }
-inline void RequestBasicSearch::clear_terms()
-{
-    terms_.Clear();
+inline void RequestBasicSearch::clear_terms() {
+  terms_.Clear();
 }
-inline const ::std::string& RequestBasicSearch::terms(int index) const
-{
-    return terms_.Get(index);
+inline const ::std::string& RequestBasicSearch::terms(int index) const {
+  return terms_.Get(index);
 }
-inline ::std::string* RequestBasicSearch::mutable_terms(int index)
-{
-    return terms_.Mutable(index);
+inline ::std::string* RequestBasicSearch::mutable_terms(int index) {
+  return terms_.Mutable(index);
 }
-inline void RequestBasicSearch::set_terms(int index, const ::std::string& value)
-{
-    terms_.Mutable(index)->assign(value);
+inline void RequestBasicSearch::set_terms(int index, const ::std::string& value) {
+  terms_.Mutable(index)->assign(value);
 }
-inline void RequestBasicSearch::set_terms(int index, const char* value)
-{
-    terms_.Mutable(index)->assign(value);
+inline void RequestBasicSearch::set_terms(int index, const char* value) {
+  terms_.Mutable(index)->assign(value);
 }
-inline void RequestBasicSearch::set_terms(int index, const char* value, size_t size)
-{
-    terms_.Mutable(index)->assign(
-        reinterpret_cast<const char*>(value), size);
+inline void RequestBasicSearch::set_terms(int index, const char* value, size_t size) {
+  terms_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* RequestBasicSearch::add_terms()
-{
-    return terms_.Add();
+inline ::std::string* RequestBasicSearch::add_terms() {
+  return terms_.Add();
 }
-inline void RequestBasicSearch::add_terms(const ::std::string& value)
-{
-    terms_.Add()->assign(value);
+inline void RequestBasicSearch::add_terms(const ::std::string& value) {
+  terms_.Add()->assign(value);
 }
-inline void RequestBasicSearch::add_terms(const char* value)
-{
-    terms_.Add()->assign(value);
+inline void RequestBasicSearch::add_terms(const char* value) {
+  terms_.Add()->assign(value);
 }
-inline void RequestBasicSearch::add_terms(const char* value, size_t size)
-{
-    terms_.Add()->assign(reinterpret_cast<const char*>(value), size);
+inline void RequestBasicSearch::add_terms(const char* value, size_t size) {
+  terms_.Add()->assign(reinterpret_cast<const char*>(value), size);
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-RequestBasicSearch::terms() const
-{
-    return terms_;
+RequestBasicSearch::terms() const {
+  return terms_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-RequestBasicSearch::mutable_terms()
-{
-    return &terms_;
+RequestBasicSearch::mutable_terms() {
+  return &terms_;
 }
 
 // -------------------------------------------------------------------
@@ -1345,60 +1205,47 @@ RequestBasicSearch::mutable_terms()
 // RequestAdvSearch
 
 // repeated string terms = 1;
-inline int RequestAdvSearch::terms_size() const
-{
-    return terms_.size();
+inline int RequestAdvSearch::terms_size() const {
+  return terms_.size();
 }
-inline void RequestAdvSearch::clear_terms()
-{
-    terms_.Clear();
+inline void RequestAdvSearch::clear_terms() {
+  terms_.Clear();
 }
-inline const ::std::string& RequestAdvSearch::terms(int index) const
-{
-    return terms_.Get(index);
+inline const ::std::string& RequestAdvSearch::terms(int index) const {
+  return terms_.Get(index);
 }
-inline ::std::string* RequestAdvSearch::mutable_terms(int index)
-{
-    return terms_.Mutable(index);
+inline ::std::string* RequestAdvSearch::mutable_terms(int index) {
+  return terms_.Mutable(index);
 }
-inline void RequestAdvSearch::set_terms(int index, const ::std::string& value)
-{
-    terms_.Mutable(index)->assign(value);
+inline void RequestAdvSearch::set_terms(int index, const ::std::string& value) {
+  terms_.Mutable(index)->assign(value);
 }
-inline void RequestAdvSearch::set_terms(int index, const char* value)
-{
-    terms_.Mutable(index)->assign(value);
+inline void RequestAdvSearch::set_terms(int index, const char* value) {
+  terms_.Mutable(index)->assign(value);
 }
-inline void RequestAdvSearch::set_terms(int index, const char* value, size_t size)
-{
-    terms_.Mutable(index)->assign(
-        reinterpret_cast<const char*>(value), size);
+inline void RequestAdvSearch::set_terms(int index, const char* value, size_t size) {
+  terms_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* RequestAdvSearch::add_terms()
-{
-    return terms_.Add();
+inline ::std::string* RequestAdvSearch::add_terms() {
+  return terms_.Add();
 }
-inline void RequestAdvSearch::add_terms(const ::std::string& value)
-{
-    terms_.Add()->assign(value);
+inline void RequestAdvSearch::add_terms(const ::std::string& value) {
+  terms_.Add()->assign(value);
 }
-inline void RequestAdvSearch::add_terms(const char* value)
-{
-    terms_.Add()->assign(value);
+inline void RequestAdvSearch::add_terms(const char* value) {
+  terms_.Add()->assign(value);
 }
-inline void RequestAdvSearch::add_terms(const char* value, size_t size)
-{
-    terms_.Add()->assign(reinterpret_cast<const char*>(value), size);
+inline void RequestAdvSearch::add_terms(const char* value, size_t size) {
+  terms_.Add()->assign(reinterpret_cast<const char*>(value), size);
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-RequestAdvSearch::terms() const
-{
-    return terms_;
+RequestAdvSearch::terms() const {
+  return terms_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-RequestAdvSearch::mutable_terms()
-{
-    return &terms_;
+RequestAdvSearch::mutable_terms() {
+  return &terms_;
 }
 
 // -------------------------------------------------------------------
@@ -1406,84 +1253,66 @@ RequestAdvSearch::mutable_terms()
 // ResponseSearchIds
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseSearchIds::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseSearchIds::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseSearchIds::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseSearchIds::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseSearchIds::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseSearchIds::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseSearchIds::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseSearchIds::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseSearchIds::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseSearchIds::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseSearchIds::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseSearchIds::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseSearchIds::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseSearchIds::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseSearchIds::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseSearchIds::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // repeated uint32 search_id = 2;
-inline int ResponseSearchIds::search_id_size() const
-{
-    return search_id_.size();
+inline int ResponseSearchIds::search_id_size() const {
+  return search_id_.size();
 }
-inline void ResponseSearchIds::clear_search_id()
-{
-    search_id_.Clear();
+inline void ResponseSearchIds::clear_search_id() {
+  search_id_.Clear();
 }
-inline ::google::protobuf::uint32 ResponseSearchIds::search_id(int index) const
-{
-    return search_id_.Get(index);
+inline ::google::protobuf::uint32 ResponseSearchIds::search_id(int index) const {
+  return search_id_.Get(index);
 }
-inline void ResponseSearchIds::set_search_id(int index, ::google::protobuf::uint32 value)
-{
-    search_id_.Set(index, value);
+inline void ResponseSearchIds::set_search_id(int index, ::google::protobuf::uint32 value) {
+  search_id_.Set(index, value);
 }
-inline void ResponseSearchIds::add_search_id(::google::protobuf::uint32 value)
-{
-    search_id_.Add(value);
+inline void ResponseSearchIds::add_search_id(::google::protobuf::uint32 value) {
+  search_id_.Add(value);
 }
 inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
-ResponseSearchIds::search_id() const
-{
-    return search_id_;
+ResponseSearchIds::search_id() const {
+  return search_id_;
 }
 inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
-ResponseSearchIds::mutable_search_id()
-{
-    return &search_id_;
+ResponseSearchIds::mutable_search_id() {
+  return &search_id_;
 }
 
 // -------------------------------------------------------------------
@@ -1491,31 +1320,25 @@ ResponseSearchIds::mutable_search_id()
 // RequestCloseSearch
 
 // required uint32 search_id = 1;
-inline bool RequestCloseSearch::has_search_id() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestCloseSearch::has_search_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestCloseSearch::set_has_search_id()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestCloseSearch::set_has_search_id() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestCloseSearch::clear_has_search_id()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestCloseSearch::clear_has_search_id() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestCloseSearch::clear_search_id()
-{
-    search_id_ = 0u;
-    clear_has_search_id();
+inline void RequestCloseSearch::clear_search_id() {
+  search_id_ = 0u;
+  clear_has_search_id();
 }
-inline ::google::protobuf::uint32 RequestCloseSearch::search_id() const
-{
-    return search_id_;
+inline ::google::protobuf::uint32 RequestCloseSearch::search_id() const {
+  return search_id_;
 }
-inline void RequestCloseSearch::set_search_id(::google::protobuf::uint32 value)
-{
-    set_has_search_id();
-    search_id_ = value;
+inline void RequestCloseSearch::set_search_id(::google::protobuf::uint32 value) {
+  set_has_search_id();
+  search_id_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -1527,63 +1350,50 @@ inline void RequestCloseSearch::set_search_id(::google::protobuf::uint32 value)
 // RequestSearchResults
 
 // optional uint32 result_limit = 1;
-inline bool RequestSearchResults::has_result_limit() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool RequestSearchResults::has_result_limit() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void RequestSearchResults::set_has_result_limit()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void RequestSearchResults::set_has_result_limit() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void RequestSearchResults::clear_has_result_limit()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void RequestSearchResults::clear_has_result_limit() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void RequestSearchResults::clear_result_limit()
-{
-    result_limit_ = 0u;
-    clear_has_result_limit();
+inline void RequestSearchResults::clear_result_limit() {
+  result_limit_ = 0u;
+  clear_has_result_limit();
 }
-inline ::google::protobuf::uint32 RequestSearchResults::result_limit() const
-{
-    return result_limit_;
+inline ::google::protobuf::uint32 RequestSearchResults::result_limit() const {
+  return result_limit_;
 }
-inline void RequestSearchResults::set_result_limit(::google::protobuf::uint32 value)
-{
-    set_has_result_limit();
-    result_limit_ = value;
+inline void RequestSearchResults::set_result_limit(::google::protobuf::uint32 value) {
+  set_has_result_limit();
+  result_limit_ = value;
 }
 
 // repeated uint32 search_ids = 2;
-inline int RequestSearchResults::search_ids_size() const
-{
-    return search_ids_.size();
+inline int RequestSearchResults::search_ids_size() const {
+  return search_ids_.size();
 }
-inline void RequestSearchResults::clear_search_ids()
-{
-    search_ids_.Clear();
+inline void RequestSearchResults::clear_search_ids() {
+  search_ids_.Clear();
 }
-inline ::google::protobuf::uint32 RequestSearchResults::search_ids(int index) const
-{
-    return search_ids_.Get(index);
+inline ::google::protobuf::uint32 RequestSearchResults::search_ids(int index) const {
+  return search_ids_.Get(index);
 }
-inline void RequestSearchResults::set_search_ids(int index, ::google::protobuf::uint32 value)
-{
-    search_ids_.Set(index, value);
+inline void RequestSearchResults::set_search_ids(int index, ::google::protobuf::uint32 value) {
+  search_ids_.Set(index, value);
 }
-inline void RequestSearchResults::add_search_ids(::google::protobuf::uint32 value)
-{
-    search_ids_.Add(value);
+inline void RequestSearchResults::add_search_ids(::google::protobuf::uint32 value) {
+  search_ids_.Add(value);
 }
 inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
-RequestSearchResults::search_ids() const
-{
-    return search_ids_;
+RequestSearchResults::search_ids() const {
+  return search_ids_;
 }
 inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
-RequestSearchResults::mutable_search_ids()
-{
-    return &search_ids_;
+RequestSearchResults::mutable_search_ids() {
+  return &search_ids_;
 }
 
 // -------------------------------------------------------------------
@@ -1591,84 +1401,66 @@ RequestSearchResults::mutable_search_ids()
 // ResponseSearchResults
 
 // required .rsctrl.core.Status status = 1;
-inline bool ResponseSearchResults::has_status() const
-{
-    return (_has_bits_[0] & 0x00000001u) != 0;
+inline bool ResponseSearchResults::has_status() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ResponseSearchResults::set_has_status()
-{
-    _has_bits_[0] |= 0x00000001u;
+inline void ResponseSearchResults::set_has_status() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void ResponseSearchResults::clear_has_status()
-{
-    _has_bits_[0] &= ~0x00000001u;
+inline void ResponseSearchResults::clear_has_status() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void ResponseSearchResults::clear_status()
-{
-    if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-    clear_has_status();
+inline void ResponseSearchResults::clear_status() {
+  if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
+  clear_has_status();
 }
-inline const ::rsctrl::core::Status& ResponseSearchResults::status() const
-{
-    return status_ != NULL ? *status_ : *default_instance_->status_;
+inline const ::rsctrl::core::Status& ResponseSearchResults::status() const {
+  return status_ != NULL ? *status_ : *default_instance_->status_;
 }
-inline ::rsctrl::core::Status* ResponseSearchResults::mutable_status()
-{
+inline ::rsctrl::core::Status* ResponseSearchResults::mutable_status() {
+  set_has_status();
+  if (status_ == NULL) status_ = new ::rsctrl::core::Status;
+  return status_;
+}
+inline ::rsctrl::core::Status* ResponseSearchResults::release_status() {
+  clear_has_status();
+  ::rsctrl::core::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline void ResponseSearchResults::set_allocated_status(::rsctrl::core::Status* status) {
+  delete status_;
+  status_ = status;
+  if (status) {
     set_has_status();
-    if (status_ == NULL) status_ = new ::rsctrl::core::Status;
-    return status_;
-}
-inline ::rsctrl::core::Status* ResponseSearchResults::release_status()
-{
+  } else {
     clear_has_status();
-    ::rsctrl::core::Status* temp = status_;
-    status_ = NULL;
-    return temp;
-}
-inline void ResponseSearchResults::set_allocated_status(::rsctrl::core::Status* status)
-{
-    delete status_;
-    status_ = status;
-    if (status)
-    {
-        set_has_status();
-    }
-    else
-    {
-        clear_has_status();
-    }
+  }
 }
 
 // repeated .rsctrl.search.SearchSet searches = 2;
-inline int ResponseSearchResults::searches_size() const
-{
-    return searches_.size();
+inline int ResponseSearchResults::searches_size() const {
+  return searches_.size();
 }
-inline void ResponseSearchResults::clear_searches()
-{
-    searches_.Clear();
+inline void ResponseSearchResults::clear_searches() {
+  searches_.Clear();
 }
-inline const ::rsctrl::search::SearchSet& ResponseSearchResults::searches(int index) const
-{
-    return searches_.Get(index);
+inline const ::rsctrl::search::SearchSet& ResponseSearchResults::searches(int index) const {
+  return searches_.Get(index);
 }
-inline ::rsctrl::search::SearchSet* ResponseSearchResults::mutable_searches(int index)
-{
-    return searches_.Mutable(index);
+inline ::rsctrl::search::SearchSet* ResponseSearchResults::mutable_searches(int index) {
+  return searches_.Mutable(index);
 }
-inline ::rsctrl::search::SearchSet* ResponseSearchResults::add_searches()
-{
-    return searches_.Add();
+inline ::rsctrl::search::SearchSet* ResponseSearchResults::add_searches() {
+  return searches_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet >&
-ResponseSearchResults::searches() const
-{
-    return searches_;
+ResponseSearchResults::searches() const {
+  return searches_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::rsctrl::search::SearchSet >*
-ResponseSearchResults::mutable_searches()
-{
-    return &searches_;
+ResponseSearchResults::mutable_searches() {
+  return &searches_;
 }
 
 
@@ -1678,25 +1470,20 @@ ResponseSearchResults::mutable_searches()
 }  // namespace rsctrl
 
 #ifndef SWIG
-namespace google
-{
-namespace protobuf
-{
+namespace google {
+namespace protobuf {
 
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::search::SearchHit_LocFlag>()
-{
-    return ::rsctrl::search::SearchHit_LocFlag_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::search::SearchHit_LocFlag>() {
+  return ::rsctrl::search::SearchHit_LocFlag_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::search::RequestMsgIds>()
-{
-    return ::rsctrl::search::RequestMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::search::RequestMsgIds>() {
+  return ::rsctrl::search::RequestMsgIds_descriptor();
 }
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::search::ResponseMsgIds>()
-{
-    return ::rsctrl::search::ResponseMsgIds_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rsctrl::search::ResponseMsgIds>() {
+  return ::rsctrl::search::ResponseMsgIds_descriptor();
 }
 
 }  // namespace google

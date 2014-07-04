@@ -47,7 +47,7 @@ void RetroShareRPC::processChatMessageAutoResponse(chat::ChatMessage& chatmsg)
         time_t diff = abs(now - (time_t)chatmsg.send_time());
         if(diff > 90) // 1.5 min should be enough
         {
-            std::cout << "RetroShareRPC::processChatMessageAutoResponse() message ignored (too old)" << std::endl;
+            std::cout << "RetroShareRPC::processChatMessageAutoResponse() message ignored " << (diff > 0 ? "(too old)" : "(from the future)") << std::endl;
             std::cout << "RetroShareRPC::processChatMessageAutoResponse() now: " << now << " send_time(): " << chatmsg.send_time() <<  " -> diff: " << diff << std::endl;
             return;
         }
@@ -328,7 +328,6 @@ void RetroShareRPC::checkAutoJoinIrcLobbies()
             joinLeaveLobby(id, true);
     }
 }
-
 
 void RetroShareRPC::checkAutoJoinLobbiesBotControl()
 {

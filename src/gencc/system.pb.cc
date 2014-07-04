@@ -16,352 +16,327 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
-namespace rsctrl
-{
-namespace system
-{
+namespace rsctrl {
+namespace system {
 
-namespace
-{
+namespace {
 
 const ::google::protobuf::Descriptor* RequestSystemStatus_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-RequestSystemStatus_reflection_ = NULL;
+  RequestSystemStatus_reflection_ = NULL;
 const ::google::protobuf::Descriptor* ResponseSystemStatus_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-ResponseSystemStatus_reflection_ = NULL;
+  ResponseSystemStatus_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* ResponseSystemStatus_NetCode_descriptor_ = NULL;
 const ::google::protobuf::Descriptor* RequestSystemQuit_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-RequestSystemQuit_reflection_ = NULL;
+  RequestSystemQuit_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* RequestSystemQuit_QuitCode_descriptor_ = NULL;
 const ::google::protobuf::Descriptor* ResponseSystemQuit_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-ResponseSystemQuit_reflection_ = NULL;
+  ResponseSystemQuit_reflection_ = NULL;
 const ::google::protobuf::Descriptor* RequestSystemExternalAccess_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-RequestSystemExternalAccess_reflection_ = NULL;
+  RequestSystemExternalAccess_reflection_ = NULL;
 const ::google::protobuf::Descriptor* ResponseSystemExternalAccess_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-ResponseSystemExternalAccess_reflection_ = NULL;
+  ResponseSystemExternalAccess_reflection_ = NULL;
 const ::google::protobuf::Descriptor* RequestSystemAccount_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-RequestSystemAccount_reflection_ = NULL;
+  RequestSystemAccount_reflection_ = NULL;
 const ::google::protobuf::Descriptor* ResponseSystemAccount_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-ResponseSystemAccount_reflection_ = NULL;
+  ResponseSystemAccount_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* RequestMsgIds_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* ResponseMsgIds_descriptor_ = NULL;
 
 }  // namespace
 
 
-void protobuf_AssignDesc_system_2eproto()
-{
-    protobuf_AddDesc_system_2eproto();
-    const ::google::protobuf::FileDescriptor* file =
-        ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-            "system.proto");
-    GOOGLE_CHECK(file != NULL);
-    RequestSystemStatus_descriptor_ = file->message_type(0);
-    static const int RequestSystemStatus_offsets_[1] =
-    {
-    };
-    RequestSystemStatus_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        RequestSystemStatus_descriptor_,
-        RequestSystemStatus::default_instance_,
-        RequestSystemStatus_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemStatus, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemStatus, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(RequestSystemStatus));
-    ResponseSystemStatus_descriptor_ = file->message_type(1);
-    static const int ResponseSystemStatus_offsets_[5] =
-    {
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, status_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, no_peers_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, no_connected_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, net_status_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, bw_total_),
-    };
-    ResponseSystemStatus_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        ResponseSystemStatus_descriptor_,
-        ResponseSystemStatus::default_instance_,
-        ResponseSystemStatus_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(ResponseSystemStatus));
-    ResponseSystemStatus_NetCode_descriptor_ = ResponseSystemStatus_descriptor_->enum_type(0);
-    RequestSystemQuit_descriptor_ = file->message_type(2);
-    static const int RequestSystemQuit_offsets_[1] =
-    {
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemQuit, quit_code_),
-    };
-    RequestSystemQuit_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        RequestSystemQuit_descriptor_,
-        RequestSystemQuit::default_instance_,
-        RequestSystemQuit_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemQuit, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemQuit, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(RequestSystemQuit));
-    RequestSystemQuit_QuitCode_descriptor_ = RequestSystemQuit_descriptor_->enum_type(0);
-    ResponseSystemQuit_descriptor_ = file->message_type(3);
-    static const int ResponseSystemQuit_offsets_[1] =
-    {
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemQuit, status_),
-    };
-    ResponseSystemQuit_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        ResponseSystemQuit_descriptor_,
-        ResponseSystemQuit::default_instance_,
-        ResponseSystemQuit_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemQuit, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemQuit, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(ResponseSystemQuit));
-    RequestSystemExternalAccess_descriptor_ = file->message_type(4);
-    static const int RequestSystemExternalAccess_offsets_[1] =
-    {
-    };
-    RequestSystemExternalAccess_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        RequestSystemExternalAccess_descriptor_,
-        RequestSystemExternalAccess::default_instance_,
-        RequestSystemExternalAccess_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemExternalAccess, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemExternalAccess, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(RequestSystemExternalAccess));
-    ResponseSystemExternalAccess_descriptor_ = file->message_type(5);
-    static const int ResponseSystemExternalAccess_offsets_[3] =
-    {
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, status_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, ext_port_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, dht_key_),
-    };
-    ResponseSystemExternalAccess_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        ResponseSystemExternalAccess_descriptor_,
-        ResponseSystemExternalAccess::default_instance_,
-        ResponseSystemExternalAccess_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(ResponseSystemExternalAccess));
-    RequestSystemAccount_descriptor_ = file->message_type(6);
-    static const int RequestSystemAccount_offsets_[1] =
-    {
-    };
-    RequestSystemAccount_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        RequestSystemAccount_descriptor_,
-        RequestSystemAccount::default_instance_,
-        RequestSystemAccount_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemAccount, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemAccount, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(RequestSystemAccount));
-    ResponseSystemAccount_descriptor_ = file->message_type(7);
-    static const int ResponseSystemAccount_offsets_[5] =
-    {
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, status_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, pgp_name_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, location_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, pgp_id_),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, ssl_id_),
-    };
-    ResponseSystemAccount_reflection_ =
-        new ::google::protobuf::internal::GeneratedMessageReflection(
-        ResponseSystemAccount_descriptor_,
-        ResponseSystemAccount::default_instance_,
-        ResponseSystemAccount_offsets_,
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, _has_bits_[0]),
-        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, _unknown_fields_),
-        -1,
-        ::google::protobuf::DescriptorPool::generated_pool(),
-        ::google::protobuf::MessageFactory::generated_factory(),
-        sizeof(ResponseSystemAccount));
-    RequestMsgIds_descriptor_ = file->enum_type(0);
-    ResponseMsgIds_descriptor_ = file->enum_type(1);
+void protobuf_AssignDesc_system_2eproto() {
+  protobuf_AddDesc_system_2eproto();
+  const ::google::protobuf::FileDescriptor* file =
+    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
+      "system.proto");
+  GOOGLE_CHECK(file != NULL);
+  RequestSystemStatus_descriptor_ = file->message_type(0);
+  static const int RequestSystemStatus_offsets_[1] = {
+  };
+  RequestSystemStatus_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      RequestSystemStatus_descriptor_,
+      RequestSystemStatus::default_instance_,
+      RequestSystemStatus_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemStatus, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemStatus, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(RequestSystemStatus));
+  ResponseSystemStatus_descriptor_ = file->message_type(1);
+  static const int ResponseSystemStatus_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, status_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, no_peers_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, no_connected_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, net_status_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, bw_total_),
+  };
+  ResponseSystemStatus_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ResponseSystemStatus_descriptor_,
+      ResponseSystemStatus::default_instance_,
+      ResponseSystemStatus_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemStatus, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ResponseSystemStatus));
+  ResponseSystemStatus_NetCode_descriptor_ = ResponseSystemStatus_descriptor_->enum_type(0);
+  RequestSystemQuit_descriptor_ = file->message_type(2);
+  static const int RequestSystemQuit_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemQuit, quit_code_),
+  };
+  RequestSystemQuit_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      RequestSystemQuit_descriptor_,
+      RequestSystemQuit::default_instance_,
+      RequestSystemQuit_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemQuit, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemQuit, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(RequestSystemQuit));
+  RequestSystemQuit_QuitCode_descriptor_ = RequestSystemQuit_descriptor_->enum_type(0);
+  ResponseSystemQuit_descriptor_ = file->message_type(3);
+  static const int ResponseSystemQuit_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemQuit, status_),
+  };
+  ResponseSystemQuit_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ResponseSystemQuit_descriptor_,
+      ResponseSystemQuit::default_instance_,
+      ResponseSystemQuit_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemQuit, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemQuit, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ResponseSystemQuit));
+  RequestSystemExternalAccess_descriptor_ = file->message_type(4);
+  static const int RequestSystemExternalAccess_offsets_[1] = {
+  };
+  RequestSystemExternalAccess_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      RequestSystemExternalAccess_descriptor_,
+      RequestSystemExternalAccess::default_instance_,
+      RequestSystemExternalAccess_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemExternalAccess, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemExternalAccess, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(RequestSystemExternalAccess));
+  ResponseSystemExternalAccess_descriptor_ = file->message_type(5);
+  static const int ResponseSystemExternalAccess_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, status_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, ext_port_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, dht_key_),
+  };
+  ResponseSystemExternalAccess_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ResponseSystemExternalAccess_descriptor_,
+      ResponseSystemExternalAccess::default_instance_,
+      ResponseSystemExternalAccess_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemExternalAccess, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ResponseSystemExternalAccess));
+  RequestSystemAccount_descriptor_ = file->message_type(6);
+  static const int RequestSystemAccount_offsets_[1] = {
+  };
+  RequestSystemAccount_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      RequestSystemAccount_descriptor_,
+      RequestSystemAccount::default_instance_,
+      RequestSystemAccount_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemAccount, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RequestSystemAccount, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(RequestSystemAccount));
+  ResponseSystemAccount_descriptor_ = file->message_type(7);
+  static const int ResponseSystemAccount_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, status_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, pgp_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, location_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, pgp_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, ssl_id_),
+  };
+  ResponseSystemAccount_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ResponseSystemAccount_descriptor_,
+      ResponseSystemAccount::default_instance_,
+      ResponseSystemAccount_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ResponseSystemAccount, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ResponseSystemAccount));
+  RequestMsgIds_descriptor_ = file->enum_type(0);
+  ResponseMsgIds_descriptor_ = file->enum_type(1);
 }
 
-namespace
-{
+namespace {
 
 GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce()
-{
-    ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                                       &protobuf_AssignDesc_system_2eproto);
+inline void protobuf_AssignDescriptorsOnce() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
+                 &protobuf_AssignDesc_system_2eproto);
 }
 
-void protobuf_RegisterTypes(const ::std::string&)
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        RequestSystemStatus_descriptor_, &RequestSystemStatus::default_instance());
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        ResponseSystemStatus_descriptor_, &ResponseSystemStatus::default_instance());
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        RequestSystemQuit_descriptor_, &RequestSystemQuit::default_instance());
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        ResponseSystemQuit_descriptor_, &ResponseSystemQuit::default_instance());
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        RequestSystemExternalAccess_descriptor_, &RequestSystemExternalAccess::default_instance());
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        ResponseSystemExternalAccess_descriptor_, &ResponseSystemExternalAccess::default_instance());
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        RequestSystemAccount_descriptor_, &RequestSystemAccount::default_instance());
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        ResponseSystemAccount_descriptor_, &ResponseSystemAccount::default_instance());
+void protobuf_RegisterTypes(const ::std::string&) {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    RequestSystemStatus_descriptor_, &RequestSystemStatus::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ResponseSystemStatus_descriptor_, &ResponseSystemStatus::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    RequestSystemQuit_descriptor_, &RequestSystemQuit::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ResponseSystemQuit_descriptor_, &ResponseSystemQuit::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    RequestSystemExternalAccess_descriptor_, &RequestSystemExternalAccess::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ResponseSystemExternalAccess_descriptor_, &ResponseSystemExternalAccess::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    RequestSystemAccount_descriptor_, &RequestSystemAccount::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ResponseSystemAccount_descriptor_, &ResponseSystemAccount::default_instance());
 }
 
 }  // namespace
 
-void protobuf_ShutdownFile_system_2eproto()
-{
-    delete RequestSystemStatus::default_instance_;
-    delete RequestSystemStatus_reflection_;
-    delete ResponseSystemStatus::default_instance_;
-    delete ResponseSystemStatus_reflection_;
-    delete RequestSystemQuit::default_instance_;
-    delete RequestSystemQuit_reflection_;
-    delete ResponseSystemQuit::default_instance_;
-    delete ResponseSystemQuit_reflection_;
-    delete RequestSystemExternalAccess::default_instance_;
-    delete RequestSystemExternalAccess_reflection_;
-    delete ResponseSystemExternalAccess::default_instance_;
-    delete ResponseSystemExternalAccess_reflection_;
-    delete RequestSystemAccount::default_instance_;
-    delete RequestSystemAccount_reflection_;
-    delete ResponseSystemAccount::default_instance_;
-    delete ResponseSystemAccount_reflection_;
+void protobuf_ShutdownFile_system_2eproto() {
+  delete RequestSystemStatus::default_instance_;
+  delete RequestSystemStatus_reflection_;
+  delete ResponseSystemStatus::default_instance_;
+  delete ResponseSystemStatus_reflection_;
+  delete RequestSystemQuit::default_instance_;
+  delete RequestSystemQuit_reflection_;
+  delete ResponseSystemQuit::default_instance_;
+  delete ResponseSystemQuit_reflection_;
+  delete RequestSystemExternalAccess::default_instance_;
+  delete RequestSystemExternalAccess_reflection_;
+  delete ResponseSystemExternalAccess::default_instance_;
+  delete ResponseSystemExternalAccess_reflection_;
+  delete RequestSystemAccount::default_instance_;
+  delete RequestSystemAccount_reflection_;
+  delete ResponseSystemAccount::default_instance_;
+  delete ResponseSystemAccount_reflection_;
 }
 
-void protobuf_AddDesc_system_2eproto()
-{
-    static bool already_here = false;
-    if (already_here) return;
-    already_here = true;
-    GOOGLE_PROTOBUF_VERIFY_VERSION;
+void protobuf_AddDesc_system_2eproto() {
+  static bool already_here = false;
+  if (already_here) return;
+  already_here = true;
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-    ::rsctrl::core::protobuf_AddDesc_core_2eproto();
-    ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-        "\n\014system.proto\022\rrsctrl.system\032\ncore.prot"
-        "o\"\025\n\023RequestSystemStatus\"\366\002\n\024ResponseSys"
-        "temStatus\022#\n\006status\030\001 \002(\0132\023.rsctrl.core."
-        "Status\022\020\n\010no_peers\030\002 \002(\r\022\024\n\014no_connected"
-        "\030\003 \002(\r\022\?\n\nnet_status\030\004 \002(\0162+.rsctrl.syst"
-        "em.ResponseSystemStatus.NetCode\022(\n\010bw_to"
-        "tal\030\005 \002(\0132\026.rsctrl.core.Bandwidth\"\245\001\n\007Ne"
-        "tCode\022\017\n\013BAD_UNKNOWN\020\000\022\017\n\013BAD_OFFLINE\020\001\022"
-        "\016\n\nBAD_NATSYM\020\002\022\021\n\rBAD_NODHT_NAT\020\003\022\023\n\017WA"
-        "RNING_RESTART\020\004\022\022\n\016WARNING_NATTED\020\005\022\021\n\rW"
-        "ARNING_NODHT\020\006\022\010\n\004GOOD\020\007\022\017\n\013ADV_FORWARD\020"
-        "\010\"\201\001\n\021RequestSystemQuit\022<\n\tquit_code\030\001 \002"
-        "(\0162).rsctrl.system.RequestSystemQuit.Qui"
-        "tCode\".\n\010QuitCode\022\021\n\rCLOSE_CHANNEL\020\001\022\017\n\013"
-        "SHUTDOWN_RS\020\002\"9\n\022ResponseSystemQuit\022#\n\006s"
-        "tatus\030\001 \002(\0132\023.rsctrl.core.Status\"\035\n\033Requ"
-        "estSystemExternalAccess\"f\n\034ResponseSyste"
-        "mExternalAccess\022#\n\006status\030\001 \002(\0132\023.rsctrl"
-        ".core.Status\022\020\n\010ext_port\030\002 \002(\r\022\017\n\007dht_ke"
-        "y\030\003 \002(\t\"\026\n\024RequestSystemAccount\"\200\001\n\025Resp"
-        "onseSystemAccount\022#\n\006status\030\001 \002(\0132\023.rsct"
-        "rl.core.Status\022\020\n\010pgp_name\030\002 \002(\t\022\020\n\010loca"
-        "tion\030\003 \002(\t\022\016\n\006pgp_id\030\004 \002(\t\022\016\n\006ssl_id\030\005 \002"
-        "(\t*\222\001\n\rRequestMsgIds\022\035\n\031MsgId_RequestSys"
-        "temStatus\020\001\022\033\n\027MsgId_RequestSystemQuit\020\002"
-        "\022%\n!MsgId_RequestSystemExternalAccess\020\003\022"
-        "\036\n\032MsgId_RequestSystemAccount\020\004*\227\001\n\016Resp"
-        "onseMsgIds\022\036\n\032MsgId_ResponseSystemStatus"
-        "\020\001\022\034\n\030MsgId_ResponseSystemQuit\020\002\022&\n\"MsgI"
-        "d_ResponseSystemExternalAccess\020\003\022\037\n\033MsgI"
-        "d_ResponseSystemAccount\020\004", 1225);
-    ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-        "system.proto", &protobuf_RegisterTypes);
-    RequestSystemStatus::default_instance_ = new RequestSystemStatus();
-    ResponseSystemStatus::default_instance_ = new ResponseSystemStatus();
-    RequestSystemQuit::default_instance_ = new RequestSystemQuit();
-    ResponseSystemQuit::default_instance_ = new ResponseSystemQuit();
-    RequestSystemExternalAccess::default_instance_ = new RequestSystemExternalAccess();
-    ResponseSystemExternalAccess::default_instance_ = new ResponseSystemExternalAccess();
-    RequestSystemAccount::default_instance_ = new RequestSystemAccount();
-    ResponseSystemAccount::default_instance_ = new ResponseSystemAccount();
-    RequestSystemStatus::default_instance_->InitAsDefaultInstance();
-    ResponseSystemStatus::default_instance_->InitAsDefaultInstance();
-    RequestSystemQuit::default_instance_->InitAsDefaultInstance();
-    ResponseSystemQuit::default_instance_->InitAsDefaultInstance();
-    RequestSystemExternalAccess::default_instance_->InitAsDefaultInstance();
-    ResponseSystemExternalAccess::default_instance_->InitAsDefaultInstance();
-    RequestSystemAccount::default_instance_->InitAsDefaultInstance();
-    ResponseSystemAccount::default_instance_->InitAsDefaultInstance();
-    ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_system_2eproto);
+  ::rsctrl::core::protobuf_AddDesc_core_2eproto();
+  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+    "\n\014system.proto\022\rrsctrl.system\032\ncore.prot"
+    "o\"\025\n\023RequestSystemStatus\"\366\002\n\024ResponseSys"
+    "temStatus\022#\n\006status\030\001 \002(\0132\023.rsctrl.core."
+    "Status\022\020\n\010no_peers\030\002 \002(\r\022\024\n\014no_connected"
+    "\030\003 \002(\r\022\?\n\nnet_status\030\004 \002(\0162+.rsctrl.syst"
+    "em.ResponseSystemStatus.NetCode\022(\n\010bw_to"
+    "tal\030\005 \002(\0132\026.rsctrl.core.Bandwidth\"\245\001\n\007Ne"
+    "tCode\022\017\n\013BAD_UNKNOWN\020\000\022\017\n\013BAD_OFFLINE\020\001\022"
+    "\016\n\nBAD_NATSYM\020\002\022\021\n\rBAD_NODHT_NAT\020\003\022\023\n\017WA"
+    "RNING_RESTART\020\004\022\022\n\016WARNING_NATTED\020\005\022\021\n\rW"
+    "ARNING_NODHT\020\006\022\010\n\004GOOD\020\007\022\017\n\013ADV_FORWARD\020"
+    "\010\"\201\001\n\021RequestSystemQuit\022<\n\tquit_code\030\001 \002"
+    "(\0162).rsctrl.system.RequestSystemQuit.Qui"
+    "tCode\".\n\010QuitCode\022\021\n\rCLOSE_CHANNEL\020\001\022\017\n\013"
+    "SHUTDOWN_RS\020\002\"9\n\022ResponseSystemQuit\022#\n\006s"
+    "tatus\030\001 \002(\0132\023.rsctrl.core.Status\"\035\n\033Requ"
+    "estSystemExternalAccess\"f\n\034ResponseSyste"
+    "mExternalAccess\022#\n\006status\030\001 \002(\0132\023.rsctrl"
+    ".core.Status\022\020\n\010ext_port\030\002 \002(\r\022\017\n\007dht_ke"
+    "y\030\003 \002(\t\"\026\n\024RequestSystemAccount\"\200\001\n\025Resp"
+    "onseSystemAccount\022#\n\006status\030\001 \002(\0132\023.rsct"
+    "rl.core.Status\022\020\n\010pgp_name\030\002 \002(\t\022\020\n\010loca"
+    "tion\030\003 \002(\t\022\016\n\006pgp_id\030\004 \002(\t\022\016\n\006ssl_id\030\005 \002"
+    "(\t*\222\001\n\rRequestMsgIds\022\035\n\031MsgId_RequestSys"
+    "temStatus\020\001\022\033\n\027MsgId_RequestSystemQuit\020\002"
+    "\022%\n!MsgId_RequestSystemExternalAccess\020\003\022"
+    "\036\n\032MsgId_RequestSystemAccount\020\004*\227\001\n\016Resp"
+    "onseMsgIds\022\036\n\032MsgId_ResponseSystemStatus"
+    "\020\001\022\034\n\030MsgId_ResponseSystemQuit\020\002\022&\n\"MsgI"
+    "d_ResponseSystemExternalAccess\020\003\022\037\n\033MsgI"
+    "d_ResponseSystemAccount\020\004", 1225);
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+    "system.proto", &protobuf_RegisterTypes);
+  RequestSystemStatus::default_instance_ = new RequestSystemStatus();
+  ResponseSystemStatus::default_instance_ = new ResponseSystemStatus();
+  RequestSystemQuit::default_instance_ = new RequestSystemQuit();
+  ResponseSystemQuit::default_instance_ = new ResponseSystemQuit();
+  RequestSystemExternalAccess::default_instance_ = new RequestSystemExternalAccess();
+  ResponseSystemExternalAccess::default_instance_ = new ResponseSystemExternalAccess();
+  RequestSystemAccount::default_instance_ = new RequestSystemAccount();
+  ResponseSystemAccount::default_instance_ = new ResponseSystemAccount();
+  RequestSystemStatus::default_instance_->InitAsDefaultInstance();
+  ResponseSystemStatus::default_instance_->InitAsDefaultInstance();
+  RequestSystemQuit::default_instance_->InitAsDefaultInstance();
+  ResponseSystemQuit::default_instance_->InitAsDefaultInstance();
+  RequestSystemExternalAccess::default_instance_->InitAsDefaultInstance();
+  ResponseSystemExternalAccess::default_instance_->InitAsDefaultInstance();
+  RequestSystemAccount::default_instance_->InitAsDefaultInstance();
+  ResponseSystemAccount::default_instance_->InitAsDefaultInstance();
+  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_system_2eproto);
 }
 
 // Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_system_2eproto
-{
-    StaticDescriptorInitializer_system_2eproto()
-    {
-        protobuf_AddDesc_system_2eproto();
-    }
+struct StaticDescriptorInitializer_system_2eproto {
+  StaticDescriptorInitializer_system_2eproto() {
+    protobuf_AddDesc_system_2eproto();
+  }
 } static_descriptor_initializer_system_2eproto_;
-const ::google::protobuf::EnumDescriptor* RequestMsgIds_descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return RequestMsgIds_descriptor_;
+const ::google::protobuf::EnumDescriptor* RequestMsgIds_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return RequestMsgIds_descriptor_;
 }
-bool RequestMsgIds_IsValid(int value)
-{
-    switch(value)
-    {
+bool RequestMsgIds_IsValid(int value) {
+  switch(value) {
     case 1:
     case 2:
     case 3:
     case 4:
-        return true;
+      return true;
     default:
-        return false;
-    }
+      return false;
+  }
 }
 
-const ::google::protobuf::EnumDescriptor* ResponseMsgIds_descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return ResponseMsgIds_descriptor_;
+const ::google::protobuf::EnumDescriptor* ResponseMsgIds_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ResponseMsgIds_descriptor_;
 }
-bool ResponseMsgIds_IsValid(int value)
-{
-    switch(value)
-    {
+bool ResponseMsgIds_IsValid(int value) {
+  switch(value) {
     case 1:
     case 2:
     case 3:
     case 4:
-        return true;
+      return true;
     default:
-        return false;
-    }
+      return false;
+  }
 }
 
 
@@ -371,199 +346,164 @@ bool ResponseMsgIds_IsValid(int value)
 #endif  // !_MSC_VER
 
 RequestSystemStatus::RequestSystemStatus()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void RequestSystemStatus::InitAsDefaultInstance()
-{
+void RequestSystemStatus::InitAsDefaultInstance() {
 }
 
 RequestSystemStatus::RequestSystemStatus(const RequestSystemStatus& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void RequestSystemStatus::SharedCtor()
-{
-    _cached_size_ = 0;
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void RequestSystemStatus::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-RequestSystemStatus::~RequestSystemStatus()
-{
-    SharedDtor();
+RequestSystemStatus::~RequestSystemStatus() {
+  SharedDtor();
 }
 
-void RequestSystemStatus::SharedDtor()
-{
-    if (this != default_instance_)
-    {
-    }
+void RequestSystemStatus::SharedDtor() {
+  if (this != default_instance_) {
+  }
 }
 
-void RequestSystemStatus::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void RequestSystemStatus::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* RequestSystemStatus::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return RequestSystemStatus_descriptor_;
+const ::google::protobuf::Descriptor* RequestSystemStatus::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return RequestSystemStatus_descriptor_;
 }
 
-const RequestSystemStatus& RequestSystemStatus::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const RequestSystemStatus& RequestSystemStatus::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 RequestSystemStatus* RequestSystemStatus::default_instance_ = NULL;
 
-RequestSystemStatus* RequestSystemStatus::New() const
-{
-    return new RequestSystemStatus;
+RequestSystemStatus* RequestSystemStatus::New() const {
+  return new RequestSystemStatus;
 }
 
-void RequestSystemStatus::Clear()
-{
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+void RequestSystemStatus::Clear() {
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool RequestSystemStatus::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-        {
-            return true;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-                input, tag, mutable_unknown_fields()));
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      return true;
     }
-    return true;
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+  return true;
 #undef DO_
 }
 
 void RequestSystemStatus::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* RequestSystemStatus::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
-    }
-    return target;
+    ::google::protobuf::uint8* target) const {
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
 }
 
-int RequestSystemStatus::ByteSize() const
-{
-    int total_size = 0;
+int RequestSystemStatus::ByteSize() const {
+  int total_size = 0;
 
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
 }
 
-void RequestSystemStatus::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const RequestSystemStatus* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemStatus*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-    }
-    else
-    {
-        MergeFrom(*source);
-    }
+void RequestSystemStatus::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const RequestSystemStatus* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemStatus*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
 }
 
-void RequestSystemStatus::MergeFrom(const RequestSystemStatus& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+void RequestSystemStatus::MergeFrom(const RequestSystemStatus& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void RequestSystemStatus::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void RequestSystemStatus::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void RequestSystemStatus::CopyFrom(const RequestSystemStatus& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void RequestSystemStatus::CopyFrom(const RequestSystemStatus& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-bool RequestSystemStatus::IsInitialized() const
-{
+bool RequestSystemStatus::IsInitialized() const {
 
-    return true;
+  return true;
 }
 
-void RequestSystemStatus::Swap(RequestSystemStatus* other)
-{
-    if (other != this)
-    {
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
-    }
+void RequestSystemStatus::Swap(RequestSystemStatus* other) {
+  if (other != this) {
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
 }
 
-::google::protobuf::Metadata RequestSystemStatus::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = RequestSystemStatus_descriptor_;
-    metadata.reflection = RequestSystemStatus_reflection_;
-    return metadata;
+::google::protobuf::Metadata RequestSystemStatus::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = RequestSystemStatus_descriptor_;
+  metadata.reflection = RequestSystemStatus_reflection_;
+  return metadata;
 }
 
 
 // ===================================================================
 
-const ::google::protobuf::EnumDescriptor* ResponseSystemStatus_NetCode_descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return ResponseSystemStatus_NetCode_descriptor_;
+const ::google::protobuf::EnumDescriptor* ResponseSystemStatus_NetCode_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ResponseSystemStatus_NetCode_descriptor_;
 }
-bool ResponseSystemStatus_NetCode_IsValid(int value)
-{
-    switch(value)
-    {
+bool ResponseSystemStatus_NetCode_IsValid(int value) {
+  switch(value) {
     case 0:
     case 1:
     case 2:
@@ -573,10 +513,10 @@ bool ResponseSystemStatus_NetCode_IsValid(int value)
     case 6:
     case 7:
     case 8:
-        return true;
+      return true;
     default:
-        return false;
-    }
+      return false;
+  }
 }
 
 #ifndef _MSC_VER
@@ -602,487 +542,400 @@ const int ResponseSystemStatus::kBwTotalFieldNumber;
 #endif  // !_MSC_VER
 
 ResponseSystemStatus::ResponseSystemStatus()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void ResponseSystemStatus::InitAsDefaultInstance()
-{
-    status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
-    bw_total_ = const_cast< ::rsctrl::core::Bandwidth*>(&::rsctrl::core::Bandwidth::default_instance());
+void ResponseSystemStatus::InitAsDefaultInstance() {
+  status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
+  bw_total_ = const_cast< ::rsctrl::core::Bandwidth*>(&::rsctrl::core::Bandwidth::default_instance());
 }
 
 ResponseSystemStatus::ResponseSystemStatus(const ResponseSystemStatus& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void ResponseSystemStatus::SharedCtor()
-{
-    _cached_size_ = 0;
-    status_ = NULL;
-    no_peers_ = 0u;
-    no_connected_ = 0u;
-    net_status_ = 0;
-    bw_total_ = NULL;
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void ResponseSystemStatus::SharedCtor() {
+  _cached_size_ = 0;
+  status_ = NULL;
+  no_peers_ = 0u;
+  no_connected_ = 0u;
+  net_status_ = 0;
+  bw_total_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-ResponseSystemStatus::~ResponseSystemStatus()
-{
-    SharedDtor();
+ResponseSystemStatus::~ResponseSystemStatus() {
+  SharedDtor();
 }
 
-void ResponseSystemStatus::SharedDtor()
-{
-    if (this != default_instance_)
-    {
-        delete status_;
-        delete bw_total_;
-    }
+void ResponseSystemStatus::SharedDtor() {
+  if (this != default_instance_) {
+    delete status_;
+    delete bw_total_;
+  }
 }
 
-void ResponseSystemStatus::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void ResponseSystemStatus::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ResponseSystemStatus::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return ResponseSystemStatus_descriptor_;
+const ::google::protobuf::Descriptor* ResponseSystemStatus::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ResponseSystemStatus_descriptor_;
 }
 
-const ResponseSystemStatus& ResponseSystemStatus::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const ResponseSystemStatus& ResponseSystemStatus::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 ResponseSystemStatus* ResponseSystemStatus::default_instance_ = NULL;
 
-ResponseSystemStatus* ResponseSystemStatus::New() const
-{
-    return new ResponseSystemStatus;
+ResponseSystemStatus* ResponseSystemStatus::New() const {
+  return new ResponseSystemStatus;
 }
 
-void ResponseSystemStatus::Clear()
-{
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (has_status())
-        {
-            if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-        }
-        no_peers_ = 0u;
-        no_connected_ = 0u;
-        net_status_ = 0;
-        if (has_bw_total())
-        {
-            if (bw_total_ != NULL) bw_total_->::rsctrl::core::Bandwidth::Clear();
-        }
+void ResponseSystemStatus::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_status()) {
+      if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
     }
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+    no_peers_ = 0u;
+    no_connected_ = 0u;
+    net_status_ = 0;
+    if (has_bw_total()) {
+      if (bw_total_ != NULL) bw_total_->::rsctrl::core::Bandwidth::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool ResponseSystemStatus::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
-        {
-            // required .rsctrl.core.Status status = 1;
-        case 1:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                        input, mutable_status()));
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(16)) goto parse_no_peers;
-            break;
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .rsctrl.core.Status status = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_status()));
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(16)) goto parse_no_peers;
+        break;
+      }
 
-        // required uint32 no_peers = 2;
-        case 2:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT)
-            {
-parse_no_peers:
-                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                     ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                         input, &no_peers_)));
-                set_has_no_peers();
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(24)) goto parse_no_connected;
-            break;
+      // required uint32 no_peers = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_no_peers:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &no_peers_)));
+          set_has_no_peers();
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(24)) goto parse_no_connected;
+        break;
+      }
 
-        // required uint32 no_connected = 3;
-        case 3:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT)
-            {
-parse_no_connected:
-                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                     ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                         input, &no_connected_)));
-                set_has_no_connected();
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(32)) goto parse_net_status;
-            break;
+      // required uint32 no_connected = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_no_connected:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &no_connected_)));
+          set_has_no_connected();
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(32)) goto parse_net_status;
+        break;
+      }
 
-        // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
-        case 4:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT)
-            {
-parse_net_status:
-                int value;
-                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                     int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                         input, &value)));
-                if (::rsctrl::system::ResponseSystemStatus_NetCode_IsValid(value))
-                {
-                    set_net_status(static_cast< ::rsctrl::system::ResponseSystemStatus_NetCode >(value));
-                }
-                else
-                {
-                    mutable_unknown_fields()->AddVarint(4, value);
-                }
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(42)) goto parse_bw_total;
-            break;
+      // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_net_status:
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::rsctrl::system::ResponseSystemStatus_NetCode_IsValid(value)) {
+            set_net_status(static_cast< ::rsctrl::system::ResponseSystemStatus_NetCode >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(4, value);
+          }
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(42)) goto parse_bw_total;
+        break;
+      }
 
-        // required .rsctrl.core.Bandwidth bw_total = 5;
-        case 5:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-parse_bw_total:
-                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                        input, mutable_bw_total()));
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectAtEnd()) return true;
-            break;
+      // required .rsctrl.core.Bandwidth bw_total = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_bw_total:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_bw_total()));
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
 
-        default:
-        {
-handle_uninterpreted:
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-            {
-                return true;
-            }
-            DO_(::google::protobuf::internal::WireFormat::SkipField(
-                    input, tag, mutable_unknown_fields()));
-            break;
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
         }
-        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
     }
-    return true;
+  }
+  return true;
 #undef DO_
 }
 
 void ResponseSystemStatus::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, this->status(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->status(), output);
+  }
 
-    // required uint32 no_peers = 2;
-    if (has_no_peers())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->no_peers(), output);
-    }
+  // required uint32 no_peers = 2;
+  if (has_no_peers()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->no_peers(), output);
+  }
 
-    // required uint32 no_connected = 3;
-    if (has_no_connected())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->no_connected(), output);
-    }
+  // required uint32 no_connected = 3;
+  if (has_no_connected()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->no_connected(), output);
+  }
 
-    // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
-    if (has_net_status())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteEnum(
-            4, this->net_status(), output);
-    }
+  // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
+  if (has_net_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      4, this->net_status(), output);
+  }
 
-    // required .rsctrl.core.Bandwidth bw_total = 5;
-    if (has_bw_total())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            5, this->bw_total(), output);
-    }
+  // required .rsctrl.core.Bandwidth bw_total = 5;
+  if (has_bw_total()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->bw_total(), output);
+  }
 
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* ResponseSystemStatus::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
+    ::google::protobuf::uint8* target) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->status(), target);
+  }
+
+  // required uint32 no_peers = 2;
+  if (has_no_peers()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->no_peers(), target);
+  }
+
+  // required uint32 no_connected = 3;
+  if (has_no_connected()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->no_connected(), target);
+  }
+
+  // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
+  if (has_net_status()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      4, this->net_status(), target);
+  }
+
+  // required .rsctrl.core.Bandwidth bw_total = 5;
+  if (has_bw_total()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->bw_total(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ResponseSystemStatus::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::
-                 WriteMessageNoVirtualToArray(
-                     1, this->status(), target);
+    if (has_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->status());
     }
 
     // required uint32 no_peers = 2;
-    if (has_no_peers())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->no_peers(), target);
+    if (has_no_peers()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->no_peers());
     }
 
     // required uint32 no_connected = 3;
-    if (has_no_connected())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->no_connected(), target);
+    if (has_no_connected()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->no_connected());
     }
 
     // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
-    if (has_net_status())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-                     4, this->net_status(), target);
+    if (has_net_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->net_status());
     }
 
     // required .rsctrl.core.Bandwidth bw_total = 5;
-    if (has_bw_total())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::
-                 WriteMessageNoVirtualToArray(
-                     5, this->bw_total(), target);
+    if (has_bw_total()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->bw_total());
     }
 
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
-    }
-    return target;
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
 }
 
-int ResponseSystemStatus::ByteSize() const
-{
-    int total_size = 0;
-
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        // required .rsctrl.core.Status status = 1;
-        if (has_status())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                              this->status());
-        }
-
-        // required uint32 no_peers = 2;
-        if (has_no_peers())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::UInt32Size(
-                              this->no_peers());
-        }
-
-        // required uint32 no_connected = 3;
-        if (has_no_connected())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::UInt32Size(
-                              this->no_connected());
-        }
-
-        // required .rsctrl.system.ResponseSystemStatus.NetCode net_status = 4;
-        if (has_net_status())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::EnumSize(this->net_status());
-        }
-
-        // required .rsctrl.core.Bandwidth bw_total = 5;
-        if (has_bw_total())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                              this->bw_total());
-        }
-
-    }
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+void ResponseSystemStatus::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ResponseSystemStatus* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemStatus*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
 }
 
-void ResponseSystemStatus::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const ResponseSystemStatus* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemStatus*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+void ResponseSystemStatus::MergeFrom(const ResponseSystemStatus& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_status()) {
+      mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
     }
-    else
-    {
-        MergeFrom(*source);
+    if (from.has_no_peers()) {
+      set_no_peers(from.no_peers());
     }
+    if (from.has_no_connected()) {
+      set_no_connected(from.no_connected());
+    }
+    if (from.has_net_status()) {
+      set_net_status(from.net_status());
+    }
+    if (from.has_bw_total()) {
+      mutable_bw_total()->::rsctrl::core::Bandwidth::MergeFrom(from.bw_total());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void ResponseSystemStatus::MergeFrom(const ResponseSystemStatus& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    if (from._has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (from.has_status())
-        {
-            mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
-        }
-        if (from.has_no_peers())
-        {
-            set_no_peers(from.no_peers());
-        }
-        if (from.has_no_connected())
-        {
-            set_no_connected(from.no_connected());
-        }
-        if (from.has_net_status())
-        {
-            set_net_status(from.net_status());
-        }
-        if (from.has_bw_total())
-        {
-            mutable_bw_total()->::rsctrl::core::Bandwidth::MergeFrom(from.bw_total());
-        }
-    }
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+void ResponseSystemStatus::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void ResponseSystemStatus::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void ResponseSystemStatus::CopyFrom(const ResponseSystemStatus& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void ResponseSystemStatus::CopyFrom(const ResponseSystemStatus& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+bool ResponseSystemStatus::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
+
+  if (has_status()) {
+    if (!this->status().IsInitialized()) return false;
+  }
+  if (has_bw_total()) {
+    if (!this->bw_total().IsInitialized()) return false;
+  }
+  return true;
 }
 
-bool ResponseSystemStatus::IsInitialized() const
-{
-    if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
-
-    if (has_status())
-    {
-        if (!this->status().IsInitialized()) return false;
-    }
-    if (has_bw_total())
-    {
-        if (!this->bw_total().IsInitialized()) return false;
-    }
-    return true;
+void ResponseSystemStatus::Swap(ResponseSystemStatus* other) {
+  if (other != this) {
+    std::swap(status_, other->status_);
+    std::swap(no_peers_, other->no_peers_);
+    std::swap(no_connected_, other->no_connected_);
+    std::swap(net_status_, other->net_status_);
+    std::swap(bw_total_, other->bw_total_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
 }
 
-void ResponseSystemStatus::Swap(ResponseSystemStatus* other)
-{
-    if (other != this)
-    {
-        std::swap(status_, other->status_);
-        std::swap(no_peers_, other->no_peers_);
-        std::swap(no_connected_, other->no_connected_);
-        std::swap(net_status_, other->net_status_);
-        std::swap(bw_total_, other->bw_total_);
-        std::swap(_has_bits_[0], other->_has_bits_[0]);
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
-    }
-}
-
-::google::protobuf::Metadata ResponseSystemStatus::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = ResponseSystemStatus_descriptor_;
-    metadata.reflection = ResponseSystemStatus_reflection_;
-    return metadata;
+::google::protobuf::Metadata ResponseSystemStatus::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ResponseSystemStatus_descriptor_;
+  metadata.reflection = ResponseSystemStatus_reflection_;
+  return metadata;
 }
 
 
 // ===================================================================
 
-const ::google::protobuf::EnumDescriptor* RequestSystemQuit_QuitCode_descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return RequestSystemQuit_QuitCode_descriptor_;
+const ::google::protobuf::EnumDescriptor* RequestSystemQuit_QuitCode_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return RequestSystemQuit_QuitCode_descriptor_;
 }
-bool RequestSystemQuit_QuitCode_IsValid(int value)
-{
-    switch(value)
-    {
+bool RequestSystemQuit_QuitCode_IsValid(int value) {
+  switch(value) {
     case 1:
     case 2:
-        return true;
+      return true;
     default:
-        return false;
-    }
+      return false;
+  }
 }
 
 #ifndef _MSC_VER
@@ -1097,259 +950,211 @@ const int RequestSystemQuit::kQuitCodeFieldNumber;
 #endif  // !_MSC_VER
 
 RequestSystemQuit::RequestSystemQuit()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void RequestSystemQuit::InitAsDefaultInstance()
-{
+void RequestSystemQuit::InitAsDefaultInstance() {
 }
 
 RequestSystemQuit::RequestSystemQuit(const RequestSystemQuit& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void RequestSystemQuit::SharedCtor()
-{
-    _cached_size_ = 0;
-    quit_code_ = 1;
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void RequestSystemQuit::SharedCtor() {
+  _cached_size_ = 0;
+  quit_code_ = 1;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-RequestSystemQuit::~RequestSystemQuit()
-{
-    SharedDtor();
+RequestSystemQuit::~RequestSystemQuit() {
+  SharedDtor();
 }
 
-void RequestSystemQuit::SharedDtor()
-{
-    if (this != default_instance_)
-    {
-    }
+void RequestSystemQuit::SharedDtor() {
+  if (this != default_instance_) {
+  }
 }
 
-void RequestSystemQuit::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void RequestSystemQuit::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* RequestSystemQuit::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return RequestSystemQuit_descriptor_;
+const ::google::protobuf::Descriptor* RequestSystemQuit::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return RequestSystemQuit_descriptor_;
 }
 
-const RequestSystemQuit& RequestSystemQuit::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const RequestSystemQuit& RequestSystemQuit::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 RequestSystemQuit* RequestSystemQuit::default_instance_ = NULL;
 
-RequestSystemQuit* RequestSystemQuit::New() const
-{
-    return new RequestSystemQuit;
+RequestSystemQuit* RequestSystemQuit::New() const {
+  return new RequestSystemQuit;
 }
 
-void RequestSystemQuit::Clear()
-{
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        quit_code_ = 1;
-    }
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+void RequestSystemQuit::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    quit_code_ = 1;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool RequestSystemQuit::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
-        {
-            // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
-        case 1:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT)
-            {
-                int value;
-                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                     int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                         input, &value)));
-                if (::rsctrl::system::RequestSystemQuit_QuitCode_IsValid(value))
-                {
-                    set_quit_code(static_cast< ::rsctrl::system::RequestSystemQuit_QuitCode >(value));
-                }
-                else
-                {
-                    mutable_unknown_fields()->AddVarint(1, value);
-                }
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectAtEnd()) return true;
-            break;
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::rsctrl::system::RequestSystemQuit_QuitCode_IsValid(value)) {
+            set_quit_code(static_cast< ::rsctrl::system::RequestSystemQuit_QuitCode >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
 
-        default:
-        {
-handle_uninterpreted:
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-            {
-                return true;
-            }
-            DO_(::google::protobuf::internal::WireFormat::SkipField(
-                    input, tag, mutable_unknown_fields()));
-            break;
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
         }
-        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
     }
-    return true;
+  }
+  return true;
 #undef DO_
 }
 
 void RequestSystemQuit::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
-    if (has_quit_code())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteEnum(
-            1, this->quit_code(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
+  if (has_quit_code()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->quit_code(), output);
+  }
 
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* RequestSystemQuit::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
+    ::google::protobuf::uint8* target) const {
+  // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
+  if (has_quit_code()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->quit_code(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int RequestSystemQuit::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
-    if (has_quit_code())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-                     1, this->quit_code(), target);
+    if (has_quit_code()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->quit_code());
     }
 
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void RequestSystemQuit::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const RequestSystemQuit* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemQuit*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void RequestSystemQuit::MergeFrom(const RequestSystemQuit& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_quit_code()) {
+      set_quit_code(from.quit_code());
     }
-    return target;
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-int RequestSystemQuit::ByteSize() const
-{
-    int total_size = 0;
-
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        // required .rsctrl.system.RequestSystemQuit.QuitCode quit_code = 1;
-        if (has_quit_code())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::EnumSize(this->quit_code());
-        }
-
-    }
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+void RequestSystemQuit::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void RequestSystemQuit::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const RequestSystemQuit* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemQuit*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-    }
-    else
-    {
-        MergeFrom(*source);
-    }
+void RequestSystemQuit::CopyFrom(const RequestSystemQuit& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void RequestSystemQuit::MergeFrom(const RequestSystemQuit& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    if (from._has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (from.has_quit_code())
-        {
-            set_quit_code(from.quit_code());
-        }
-    }
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+bool RequestSystemQuit::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  return true;
 }
 
-void RequestSystemQuit::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void RequestSystemQuit::Swap(RequestSystemQuit* other) {
+  if (other != this) {
+    std::swap(quit_code_, other->quit_code_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
 }
 
-void RequestSystemQuit::CopyFrom(const RequestSystemQuit& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
-}
-
-bool RequestSystemQuit::IsInitialized() const
-{
-    if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
-
-    return true;
-}
-
-void RequestSystemQuit::Swap(RequestSystemQuit* other)
-{
-    if (other != this)
-    {
-        std::swap(quit_code_, other->quit_code_);
-        std::swap(_has_bits_[0], other->_has_bits_[0]);
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
-    }
-}
-
-::google::protobuf::Metadata RequestSystemQuit::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = RequestSystemQuit_descriptor_;
-    metadata.reflection = RequestSystemQuit_reflection_;
-    return metadata;
+::google::protobuf::Metadata RequestSystemQuit::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = RequestSystemQuit_descriptor_;
+  metadata.reflection = RequestSystemQuit_reflection_;
+  return metadata;
 }
 
 
@@ -1360,260 +1165,213 @@ const int ResponseSystemQuit::kStatusFieldNumber;
 #endif  // !_MSC_VER
 
 ResponseSystemQuit::ResponseSystemQuit()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void ResponseSystemQuit::InitAsDefaultInstance()
-{
-    status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
+void ResponseSystemQuit::InitAsDefaultInstance() {
+  status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
 }
 
 ResponseSystemQuit::ResponseSystemQuit(const ResponseSystemQuit& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void ResponseSystemQuit::SharedCtor()
-{
-    _cached_size_ = 0;
-    status_ = NULL;
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void ResponseSystemQuit::SharedCtor() {
+  _cached_size_ = 0;
+  status_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-ResponseSystemQuit::~ResponseSystemQuit()
-{
-    SharedDtor();
+ResponseSystemQuit::~ResponseSystemQuit() {
+  SharedDtor();
 }
 
-void ResponseSystemQuit::SharedDtor()
-{
-    if (this != default_instance_)
-    {
-        delete status_;
-    }
+void ResponseSystemQuit::SharedDtor() {
+  if (this != default_instance_) {
+    delete status_;
+  }
 }
 
-void ResponseSystemQuit::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void ResponseSystemQuit::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ResponseSystemQuit::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return ResponseSystemQuit_descriptor_;
+const ::google::protobuf::Descriptor* ResponseSystemQuit::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ResponseSystemQuit_descriptor_;
 }
 
-const ResponseSystemQuit& ResponseSystemQuit::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const ResponseSystemQuit& ResponseSystemQuit::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 ResponseSystemQuit* ResponseSystemQuit::default_instance_ = NULL;
 
-ResponseSystemQuit* ResponseSystemQuit::New() const
-{
-    return new ResponseSystemQuit;
+ResponseSystemQuit* ResponseSystemQuit::New() const {
+  return new ResponseSystemQuit;
 }
 
-void ResponseSystemQuit::Clear()
-{
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (has_status())
-        {
-            if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-        }
+void ResponseSystemQuit::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_status()) {
+      if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
     }
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool ResponseSystemQuit::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
-        {
-            // required .rsctrl.core.Status status = 1;
-        case 1:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                        input, mutable_status()));
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectAtEnd()) return true;
-            break;
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .rsctrl.core.Status status = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_status()));
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
 
-        default:
-        {
-handle_uninterpreted:
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-            {
-                return true;
-            }
-            DO_(::google::protobuf::internal::WireFormat::SkipField(
-                    input, tag, mutable_unknown_fields()));
-            break;
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
         }
-        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
     }
-    return true;
+  }
+  return true;
 #undef DO_
 }
 
 void ResponseSystemQuit::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, this->status(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->status(), output);
+  }
 
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* ResponseSystemQuit::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
+    ::google::protobuf::uint8* target) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->status(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ResponseSystemQuit::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::
-                 WriteMessageNoVirtualToArray(
-                     1, this->status(), target);
+    if (has_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->status());
     }
 
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
-    }
-    return target;
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
 }
 
-int ResponseSystemQuit::ByteSize() const
-{
-    int total_size = 0;
-
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        // required .rsctrl.core.Status status = 1;
-        if (has_status())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                              this->status());
-        }
-
-    }
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+void ResponseSystemQuit::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ResponseSystemQuit* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemQuit*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
 }
 
-void ResponseSystemQuit::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const ResponseSystemQuit* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemQuit*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+void ResponseSystemQuit::MergeFrom(const ResponseSystemQuit& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_status()) {
+      mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
     }
-    else
-    {
-        MergeFrom(*source);
-    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void ResponseSystemQuit::MergeFrom(const ResponseSystemQuit& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    if (from._has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (from.has_status())
-        {
-            mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
-        }
-    }
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+void ResponseSystemQuit::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void ResponseSystemQuit::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void ResponseSystemQuit::CopyFrom(const ResponseSystemQuit& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void ResponseSystemQuit::CopyFrom(const ResponseSystemQuit& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+bool ResponseSystemQuit::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_status()) {
+    if (!this->status().IsInitialized()) return false;
+  }
+  return true;
 }
 
-bool ResponseSystemQuit::IsInitialized() const
-{
-    if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
-
-    if (has_status())
-    {
-        if (!this->status().IsInitialized()) return false;
-    }
-    return true;
+void ResponseSystemQuit::Swap(ResponseSystemQuit* other) {
+  if (other != this) {
+    std::swap(status_, other->status_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
 }
 
-void ResponseSystemQuit::Swap(ResponseSystemQuit* other)
-{
-    if (other != this)
-    {
-        std::swap(status_, other->status_);
-        std::swap(_has_bits_[0], other->_has_bits_[0]);
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
-    }
-}
-
-::google::protobuf::Metadata ResponseSystemQuit::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = ResponseSystemQuit_descriptor_;
-    metadata.reflection = ResponseSystemQuit_reflection_;
-    return metadata;
+::google::protobuf::Metadata ResponseSystemQuit::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ResponseSystemQuit_descriptor_;
+  metadata.reflection = ResponseSystemQuit_reflection_;
+  return metadata;
 }
 
 
@@ -1623,185 +1381,153 @@ void ResponseSystemQuit::Swap(ResponseSystemQuit* other)
 #endif  // !_MSC_VER
 
 RequestSystemExternalAccess::RequestSystemExternalAccess()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void RequestSystemExternalAccess::InitAsDefaultInstance()
-{
+void RequestSystemExternalAccess::InitAsDefaultInstance() {
 }
 
 RequestSystemExternalAccess::RequestSystemExternalAccess(const RequestSystemExternalAccess& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void RequestSystemExternalAccess::SharedCtor()
-{
-    _cached_size_ = 0;
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void RequestSystemExternalAccess::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-RequestSystemExternalAccess::~RequestSystemExternalAccess()
-{
-    SharedDtor();
+RequestSystemExternalAccess::~RequestSystemExternalAccess() {
+  SharedDtor();
 }
 
-void RequestSystemExternalAccess::SharedDtor()
-{
-    if (this != default_instance_)
-    {
-    }
+void RequestSystemExternalAccess::SharedDtor() {
+  if (this != default_instance_) {
+  }
 }
 
-void RequestSystemExternalAccess::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void RequestSystemExternalAccess::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* RequestSystemExternalAccess::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return RequestSystemExternalAccess_descriptor_;
+const ::google::protobuf::Descriptor* RequestSystemExternalAccess::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return RequestSystemExternalAccess_descriptor_;
 }
 
-const RequestSystemExternalAccess& RequestSystemExternalAccess::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const RequestSystemExternalAccess& RequestSystemExternalAccess::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 RequestSystemExternalAccess* RequestSystemExternalAccess::default_instance_ = NULL;
 
-RequestSystemExternalAccess* RequestSystemExternalAccess::New() const
-{
-    return new RequestSystemExternalAccess;
+RequestSystemExternalAccess* RequestSystemExternalAccess::New() const {
+  return new RequestSystemExternalAccess;
 }
 
-void RequestSystemExternalAccess::Clear()
-{
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+void RequestSystemExternalAccess::Clear() {
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool RequestSystemExternalAccess::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-        {
-            return true;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-                input, tag, mutable_unknown_fields()));
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      return true;
     }
-    return true;
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+  return true;
 #undef DO_
 }
 
 void RequestSystemExternalAccess::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* RequestSystemExternalAccess::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
-    }
-    return target;
+    ::google::protobuf::uint8* target) const {
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
 }
 
-int RequestSystemExternalAccess::ByteSize() const
-{
-    int total_size = 0;
+int RequestSystemExternalAccess::ByteSize() const {
+  int total_size = 0;
 
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
 }
 
-void RequestSystemExternalAccess::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const RequestSystemExternalAccess* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemExternalAccess*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-    }
-    else
-    {
-        MergeFrom(*source);
-    }
+void RequestSystemExternalAccess::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const RequestSystemExternalAccess* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemExternalAccess*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
 }
 
-void RequestSystemExternalAccess::MergeFrom(const RequestSystemExternalAccess& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+void RequestSystemExternalAccess::MergeFrom(const RequestSystemExternalAccess& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void RequestSystemExternalAccess::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void RequestSystemExternalAccess::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void RequestSystemExternalAccess::CopyFrom(const RequestSystemExternalAccess& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void RequestSystemExternalAccess::CopyFrom(const RequestSystemExternalAccess& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-bool RequestSystemExternalAccess::IsInitialized() const
-{
+bool RequestSystemExternalAccess::IsInitialized() const {
 
-    return true;
+  return true;
 }
 
-void RequestSystemExternalAccess::Swap(RequestSystemExternalAccess* other)
-{
-    if (other != this)
-    {
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
-    }
+void RequestSystemExternalAccess::Swap(RequestSystemExternalAccess* other) {
+  if (other != this) {
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
 }
 
-::google::protobuf::Metadata RequestSystemExternalAccess::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = RequestSystemExternalAccess_descriptor_;
-    metadata.reflection = RequestSystemExternalAccess_reflection_;
-    return metadata;
+::google::protobuf::Metadata RequestSystemExternalAccess::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = RequestSystemExternalAccess_descriptor_;
+  metadata.reflection = RequestSystemExternalAccess_reflection_;
+  return metadata;
 }
 
 
@@ -1814,374 +1540,308 @@ const int ResponseSystemExternalAccess::kDhtKeyFieldNumber;
 #endif  // !_MSC_VER
 
 ResponseSystemExternalAccess::ResponseSystemExternalAccess()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void ResponseSystemExternalAccess::InitAsDefaultInstance()
-{
-    status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
+void ResponseSystemExternalAccess::InitAsDefaultInstance() {
+  status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
 }
 
 ResponseSystemExternalAccess::ResponseSystemExternalAccess(const ResponseSystemExternalAccess& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void ResponseSystemExternalAccess::SharedCtor()
-{
-    _cached_size_ = 0;
-    status_ = NULL;
-    ext_port_ = 0u;
-    dht_key_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void ResponseSystemExternalAccess::SharedCtor() {
+  _cached_size_ = 0;
+  status_ = NULL;
+  ext_port_ = 0u;
+  dht_key_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-ResponseSystemExternalAccess::~ResponseSystemExternalAccess()
-{
-    SharedDtor();
+ResponseSystemExternalAccess::~ResponseSystemExternalAccess() {
+  SharedDtor();
 }
 
-void ResponseSystemExternalAccess::SharedDtor()
-{
-    if (dht_key_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete dht_key_;
-    }
-    if (this != default_instance_)
-    {
-        delete status_;
-    }
+void ResponseSystemExternalAccess::SharedDtor() {
+  if (dht_key_ != &::google::protobuf::internal::kEmptyString) {
+    delete dht_key_;
+  }
+  if (this != default_instance_) {
+    delete status_;
+  }
 }
 
-void ResponseSystemExternalAccess::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void ResponseSystemExternalAccess::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ResponseSystemExternalAccess::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return ResponseSystemExternalAccess_descriptor_;
+const ::google::protobuf::Descriptor* ResponseSystemExternalAccess::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ResponseSystemExternalAccess_descriptor_;
 }
 
-const ResponseSystemExternalAccess& ResponseSystemExternalAccess::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const ResponseSystemExternalAccess& ResponseSystemExternalAccess::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 ResponseSystemExternalAccess* ResponseSystemExternalAccess::default_instance_ = NULL;
 
-ResponseSystemExternalAccess* ResponseSystemExternalAccess::New() const
-{
-    return new ResponseSystemExternalAccess;
+ResponseSystemExternalAccess* ResponseSystemExternalAccess::New() const {
+  return new ResponseSystemExternalAccess;
 }
 
-void ResponseSystemExternalAccess::Clear()
-{
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (has_status())
-        {
-            if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-        }
-        ext_port_ = 0u;
-        if (has_dht_key())
-        {
-            if (dht_key_ != &::google::protobuf::internal::kEmptyString)
-            {
-                dht_key_->clear();
-            }
-        }
+void ResponseSystemExternalAccess::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_status()) {
+      if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
     }
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+    ext_port_ = 0u;
+    if (has_dht_key()) {
+      if (dht_key_ != &::google::protobuf::internal::kEmptyString) {
+        dht_key_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool ResponseSystemExternalAccess::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
-        {
-            // required .rsctrl.core.Status status = 1;
-        case 1:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                        input, mutable_status()));
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(16)) goto parse_ext_port;
-            break;
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .rsctrl.core.Status status = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_status()));
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(16)) goto parse_ext_port;
+        break;
+      }
 
-        // required uint32 ext_port = 2;
-        case 2:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT)
-            {
-parse_ext_port:
-                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                     ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                         input, &ext_port_)));
-                set_has_ext_port();
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(26)) goto parse_dht_key;
-            break;
+      // required uint32 ext_port = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_ext_port:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &ext_port_)));
+          set_has_ext_port();
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(26)) goto parse_dht_key;
+        break;
+      }
 
-        // required string dht_key = 3;
-        case 3:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-parse_dht_key:
-                DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                        input, this->mutable_dht_key()));
-                ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-                    this->dht_key().data(), this->dht_key().length(),
-                    ::google::protobuf::internal::WireFormat::PARSE);
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectAtEnd()) return true;
-            break;
+      // required string dht_key = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_dht_key:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_dht_key()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->dht_key().data(), this->dht_key().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
 
-        default:
-        {
-handle_uninterpreted:
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-            {
-                return true;
-            }
-            DO_(::google::protobuf::internal::WireFormat::SkipField(
-                    input, tag, mutable_unknown_fields()));
-            break;
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
         }
-        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
     }
-    return true;
+  }
+  return true;
 #undef DO_
 }
 
 void ResponseSystemExternalAccess::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, this->status(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->status(), output);
+  }
 
-    // required uint32 ext_port = 2;
-    if (has_ext_port())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->ext_port(), output);
-    }
+  // required uint32 ext_port = 2;
+  if (has_ext_port()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->ext_port(), output);
+  }
 
-    // required string dht_key = 3;
-    if (has_dht_key())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->dht_key().data(), this->dht_key().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        ::google::protobuf::internal::WireFormatLite::WriteString(
-            3, this->dht_key(), output);
-    }
+  // required string dht_key = 3;
+  if (has_dht_key()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->dht_key().data(), this->dht_key().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->dht_key(), output);
+  }
 
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* ResponseSystemExternalAccess::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
+    ::google::protobuf::uint8* target) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->status(), target);
+  }
+
+  // required uint32 ext_port = 2;
+  if (has_ext_port()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->ext_port(), target);
+  }
+
+  // required string dht_key = 3;
+  if (has_dht_key()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->dht_key().data(), this->dht_key().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->dht_key(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ResponseSystemExternalAccess::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::
-                 WriteMessageNoVirtualToArray(
-                     1, this->status(), target);
+    if (has_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->status());
     }
 
     // required uint32 ext_port = 2;
-    if (has_ext_port())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->ext_port(), target);
+    if (has_ext_port()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->ext_port());
     }
 
     // required string dht_key = 3;
-    if (has_dht_key())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->dht_key().data(), this->dht_key().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        target =
-            ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-                3, this->dht_key(), target);
+    if (has_dht_key()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->dht_key());
     }
 
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
-    }
-    return target;
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
 }
 
-int ResponseSystemExternalAccess::ByteSize() const
-{
-    int total_size = 0;
-
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        // required .rsctrl.core.Status status = 1;
-        if (has_status())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                              this->status());
-        }
-
-        // required uint32 ext_port = 2;
-        if (has_ext_port())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::UInt32Size(
-                              this->ext_port());
-        }
-
-        // required string dht_key = 3;
-        if (has_dht_key())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::StringSize(
-                              this->dht_key());
-        }
-
-    }
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+void ResponseSystemExternalAccess::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ResponseSystemExternalAccess* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemExternalAccess*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
 }
 
-void ResponseSystemExternalAccess::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const ResponseSystemExternalAccess* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemExternalAccess*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+void ResponseSystemExternalAccess::MergeFrom(const ResponseSystemExternalAccess& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_status()) {
+      mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
     }
-    else
-    {
-        MergeFrom(*source);
+    if (from.has_ext_port()) {
+      set_ext_port(from.ext_port());
     }
-}
-
-void ResponseSystemExternalAccess::MergeFrom(const ResponseSystemExternalAccess& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    if (from._has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (from.has_status())
-        {
-            mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
-        }
-        if (from.has_ext_port())
-        {
-            set_ext_port(from.ext_port());
-        }
-        if (from.has_dht_key())
-        {
-            set_dht_key(from.dht_key());
-        }
+    if (from.has_dht_key()) {
+      set_dht_key(from.dht_key());
     }
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void ResponseSystemExternalAccess::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void ResponseSystemExternalAccess::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void ResponseSystemExternalAccess::CopyFrom(const ResponseSystemExternalAccess& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void ResponseSystemExternalAccess::CopyFrom(const ResponseSystemExternalAccess& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-bool ResponseSystemExternalAccess::IsInitialized() const
-{
-    if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+bool ResponseSystemExternalAccess::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
 
-    if (has_status())
-    {
-        if (!this->status().IsInitialized()) return false;
-    }
-    return true;
+  if (has_status()) {
+    if (!this->status().IsInitialized()) return false;
+  }
+  return true;
 }
 
-void ResponseSystemExternalAccess::Swap(ResponseSystemExternalAccess* other)
-{
-    if (other != this)
-    {
-        std::swap(status_, other->status_);
-        std::swap(ext_port_, other->ext_port_);
-        std::swap(dht_key_, other->dht_key_);
-        std::swap(_has_bits_[0], other->_has_bits_[0]);
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
-    }
+void ResponseSystemExternalAccess::Swap(ResponseSystemExternalAccess* other) {
+  if (other != this) {
+    std::swap(status_, other->status_);
+    std::swap(ext_port_, other->ext_port_);
+    std::swap(dht_key_, other->dht_key_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
 }
 
-::google::protobuf::Metadata ResponseSystemExternalAccess::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = ResponseSystemExternalAccess_descriptor_;
-    metadata.reflection = ResponseSystemExternalAccess_reflection_;
-    return metadata;
+::google::protobuf::Metadata ResponseSystemExternalAccess::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ResponseSystemExternalAccess_descriptor_;
+  metadata.reflection = ResponseSystemExternalAccess_reflection_;
+  return metadata;
 }
 
 
@@ -2191,185 +1851,153 @@ void ResponseSystemExternalAccess::Swap(ResponseSystemExternalAccess* other)
 #endif  // !_MSC_VER
 
 RequestSystemAccount::RequestSystemAccount()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void RequestSystemAccount::InitAsDefaultInstance()
-{
+void RequestSystemAccount::InitAsDefaultInstance() {
 }
 
 RequestSystemAccount::RequestSystemAccount(const RequestSystemAccount& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void RequestSystemAccount::SharedCtor()
-{
-    _cached_size_ = 0;
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void RequestSystemAccount::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-RequestSystemAccount::~RequestSystemAccount()
-{
-    SharedDtor();
+RequestSystemAccount::~RequestSystemAccount() {
+  SharedDtor();
 }
 
-void RequestSystemAccount::SharedDtor()
-{
-    if (this != default_instance_)
-    {
-    }
+void RequestSystemAccount::SharedDtor() {
+  if (this != default_instance_) {
+  }
 }
 
-void RequestSystemAccount::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void RequestSystemAccount::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* RequestSystemAccount::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return RequestSystemAccount_descriptor_;
+const ::google::protobuf::Descriptor* RequestSystemAccount::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return RequestSystemAccount_descriptor_;
 }
 
-const RequestSystemAccount& RequestSystemAccount::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const RequestSystemAccount& RequestSystemAccount::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 RequestSystemAccount* RequestSystemAccount::default_instance_ = NULL;
 
-RequestSystemAccount* RequestSystemAccount::New() const
-{
-    return new RequestSystemAccount;
+RequestSystemAccount* RequestSystemAccount::New() const {
+  return new RequestSystemAccount;
 }
 
-void RequestSystemAccount::Clear()
-{
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+void RequestSystemAccount::Clear() {
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool RequestSystemAccount::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-        {
-            return true;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-                input, tag, mutable_unknown_fields()));
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      return true;
     }
-    return true;
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+  return true;
 #undef DO_
 }
 
 void RequestSystemAccount::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* RequestSystemAccount::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
-    }
-    return target;
+    ::google::protobuf::uint8* target) const {
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
 }
 
-int RequestSystemAccount::ByteSize() const
-{
-    int total_size = 0;
+int RequestSystemAccount::ByteSize() const {
+  int total_size = 0;
 
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
 }
 
-void RequestSystemAccount::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const RequestSystemAccount* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemAccount*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-    }
-    else
-    {
-        MergeFrom(*source);
-    }
+void RequestSystemAccount::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const RequestSystemAccount* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const RequestSystemAccount*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
 }
 
-void RequestSystemAccount::MergeFrom(const RequestSystemAccount& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+void RequestSystemAccount::MergeFrom(const RequestSystemAccount& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void RequestSystemAccount::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void RequestSystemAccount::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-void RequestSystemAccount::CopyFrom(const RequestSystemAccount& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
+void RequestSystemAccount::CopyFrom(const RequestSystemAccount& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
-bool RequestSystemAccount::IsInitialized() const
-{
+bool RequestSystemAccount::IsInitialized() const {
 
-    return true;
+  return true;
 }
 
-void RequestSystemAccount::Swap(RequestSystemAccount* other)
-{
-    if (other != this)
-    {
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
-    }
+void RequestSystemAccount::Swap(RequestSystemAccount* other) {
+  if (other != this) {
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
 }
 
-::google::protobuf::Metadata RequestSystemAccount::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = RequestSystemAccount_descriptor_;
-    metadata.reflection = RequestSystemAccount_reflection_;
-    return metadata;
+::google::protobuf::Metadata RequestSystemAccount::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = RequestSystemAccount_descriptor_;
+  metadata.reflection = RequestSystemAccount_reflection_;
+  return metadata;
 }
 
 
@@ -2384,528 +2012,437 @@ const int ResponseSystemAccount::kSslIdFieldNumber;
 #endif  // !_MSC_VER
 
 ResponseSystemAccount::ResponseSystemAccount()
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
+  : ::google::protobuf::Message() {
+  SharedCtor();
 }
 
-void ResponseSystemAccount::InitAsDefaultInstance()
-{
-    status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
+void ResponseSystemAccount::InitAsDefaultInstance() {
+  status_ = const_cast< ::rsctrl::core::Status*>(&::rsctrl::core::Status::default_instance());
 }
 
 ResponseSystemAccount::ResponseSystemAccount(const ResponseSystemAccount& from)
-    : ::google::protobuf::Message()
-{
-    SharedCtor();
-    MergeFrom(from);
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
 }
 
-void ResponseSystemAccount::SharedCtor()
-{
-    _cached_size_ = 0;
-    status_ = NULL;
-    pgp_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    location_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
+void ResponseSystemAccount::SharedCtor() {
+  _cached_size_ = 0;
+  status_ = NULL;
+  pgp_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  location_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  pgp_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ssl_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-ResponseSystemAccount::~ResponseSystemAccount()
-{
-    SharedDtor();
+ResponseSystemAccount::~ResponseSystemAccount() {
+  SharedDtor();
 }
 
-void ResponseSystemAccount::SharedDtor()
-{
-    if (pgp_name_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete pgp_name_;
-    }
-    if (location_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete location_;
-    }
-    if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete pgp_id_;
-    }
-    if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-    {
-        delete ssl_id_;
-    }
-    if (this != default_instance_)
-    {
-        delete status_;
-    }
+void ResponseSystemAccount::SharedDtor() {
+  if (pgp_name_ != &::google::protobuf::internal::kEmptyString) {
+    delete pgp_name_;
+  }
+  if (location_ != &::google::protobuf::internal::kEmptyString) {
+    delete location_;
+  }
+  if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete pgp_id_;
+  }
+  if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete ssl_id_;
+  }
+  if (this != default_instance_) {
+    delete status_;
+  }
 }
 
-void ResponseSystemAccount::SetCachedSize(int size) const
-{
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void ResponseSystemAccount::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ResponseSystemAccount::descriptor()
-{
-    protobuf_AssignDescriptorsOnce();
-    return ResponseSystemAccount_descriptor_;
+const ::google::protobuf::Descriptor* ResponseSystemAccount::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ResponseSystemAccount_descriptor_;
 }
 
-const ResponseSystemAccount& ResponseSystemAccount::default_instance()
-{
-    if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
-    return *default_instance_;
+const ResponseSystemAccount& ResponseSystemAccount::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_system_2eproto();
+  return *default_instance_;
 }
 
 ResponseSystemAccount* ResponseSystemAccount::default_instance_ = NULL;
 
-ResponseSystemAccount* ResponseSystemAccount::New() const
-{
-    return new ResponseSystemAccount;
+ResponseSystemAccount* ResponseSystemAccount::New() const {
+  return new ResponseSystemAccount;
 }
 
-void ResponseSystemAccount::Clear()
-{
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (has_status())
-        {
-            if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
-        }
-        if (has_pgp_name())
-        {
-            if (pgp_name_ != &::google::protobuf::internal::kEmptyString)
-            {
-                pgp_name_->clear();
-            }
-        }
-        if (has_location())
-        {
-            if (location_ != &::google::protobuf::internal::kEmptyString)
-            {
-                location_->clear();
-            }
-        }
-        if (has_pgp_id())
-        {
-            if (pgp_id_ != &::google::protobuf::internal::kEmptyString)
-            {
-                pgp_id_->clear();
-            }
-        }
-        if (has_ssl_id())
-        {
-            if (ssl_id_ != &::google::protobuf::internal::kEmptyString)
-            {
-                ssl_id_->clear();
-            }
-        }
+void ResponseSystemAccount::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_status()) {
+      if (status_ != NULL) status_->::rsctrl::core::Status::Clear();
     }
-    ::memset(_has_bits_, 0, sizeof(_has_bits_));
-    mutable_unknown_fields()->Clear();
+    if (has_pgp_name()) {
+      if (pgp_name_ != &::google::protobuf::internal::kEmptyString) {
+        pgp_name_->clear();
+      }
+    }
+    if (has_location()) {
+      if (location_ != &::google::protobuf::internal::kEmptyString) {
+        location_->clear();
+      }
+    }
+    if (has_pgp_id()) {
+      if (pgp_id_ != &::google::protobuf::internal::kEmptyString) {
+        pgp_id_->clear();
+      }
+    }
+    if (has_ssl_id()) {
+      if (ssl_id_ != &::google::protobuf::internal::kEmptyString) {
+        ssl_id_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
 }
 
 bool ResponseSystemAccount::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input)
-{
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-    ::google::protobuf::uint32 tag;
-    while ((tag = input->ReadTag()) != 0)
-    {
-        switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
-        {
-            // required .rsctrl.core.Status status = 1;
-        case 1:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                        input, mutable_status()));
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(18)) goto parse_pgp_name;
-            break;
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .rsctrl.core.Status status = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_status()));
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(18)) goto parse_pgp_name;
+        break;
+      }
 
-        // required string pgp_name = 2;
-        case 2:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-parse_pgp_name:
-                DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                        input, this->mutable_pgp_name()));
-                ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-                    this->pgp_name().data(), this->pgp_name().length(),
-                    ::google::protobuf::internal::WireFormat::PARSE);
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(26)) goto parse_location;
-            break;
+      // required string pgp_name = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_pgp_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pgp_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->pgp_name().data(), this->pgp_name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(26)) goto parse_location;
+        break;
+      }
 
-        // required string location = 3;
-        case 3:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-parse_location:
-                DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                        input, this->mutable_location()));
-                ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-                    this->location().data(), this->location().length(),
-                    ::google::protobuf::internal::WireFormat::PARSE);
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(34)) goto parse_pgp_id;
-            break;
+      // required string location = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_location:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_location()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->location().data(), this->location().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(34)) goto parse_pgp_id;
+        break;
+      }
 
-        // required string pgp_id = 4;
-        case 4:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-parse_pgp_id:
-                DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                        input, this->mutable_pgp_id()));
-                ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-                    this->pgp_id().data(), this->pgp_id().length(),
-                    ::google::protobuf::internal::WireFormat::PARSE);
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectTag(42)) goto parse_ssl_id;
-            break;
+      // required string pgp_id = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_pgp_id:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pgp_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->pgp_id().data(), this->pgp_id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectTag(42)) goto parse_ssl_id;
+        break;
+      }
 
-        // required string ssl_id = 5;
-        case 5:
-        {
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED)
-            {
-parse_ssl_id:
-                DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                        input, this->mutable_ssl_id()));
-                ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-                    this->ssl_id().data(), this->ssl_id().length(),
-                    ::google::protobuf::internal::WireFormat::PARSE);
-            }
-            else
-            {
-                goto handle_uninterpreted;
-            }
-            if (input->ExpectAtEnd()) return true;
-            break;
+      // required string ssl_id = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_ssl_id:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_ssl_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->ssl_id().data(), this->ssl_id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
         }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
 
-        default:
-        {
-handle_uninterpreted:
-            if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-                    ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP)
-            {
-                return true;
-            }
-            DO_(::google::protobuf::internal::WireFormat::SkipField(
-                    input, tag, mutable_unknown_fields()));
-            break;
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
         }
-        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
     }
-    return true;
+  }
+  return true;
 #undef DO_
 }
 
 void ResponseSystemAccount::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const
-{
-    // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-            1, this->status(), output);
-    }
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->status(), output);
+  }
 
-    // required string pgp_name = 2;
-    if (has_pgp_name())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->pgp_name().data(), this->pgp_name().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        ::google::protobuf::internal::WireFormatLite::WriteString(
-            2, this->pgp_name(), output);
-    }
+  // required string pgp_name = 2;
+  if (has_pgp_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->pgp_name().data(), this->pgp_name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->pgp_name(), output);
+  }
 
-    // required string location = 3;
-    if (has_location())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->location().data(), this->location().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        ::google::protobuf::internal::WireFormatLite::WriteString(
-            3, this->location(), output);
-    }
+  // required string location = 3;
+  if (has_location()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->location().data(), this->location().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->location(), output);
+  }
 
-    // required string pgp_id = 4;
-    if (has_pgp_id())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->pgp_id().data(), this->pgp_id().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        ::google::protobuf::internal::WireFormatLite::WriteString(
-            4, this->pgp_id(), output);
-    }
+  // required string pgp_id = 4;
+  if (has_pgp_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->pgp_id().data(), this->pgp_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->pgp_id(), output);
+  }
 
-    // required string ssl_id = 5;
-    if (has_ssl_id())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->ssl_id().data(), this->ssl_id().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        ::google::protobuf::internal::WireFormatLite::WriteString(
-            5, this->ssl_id(), output);
-    }
+  // required string ssl_id = 5;
+  if (has_ssl_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->ssl_id().data(), this->ssl_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      5, this->ssl_id(), output);
+  }
 
-    if (!unknown_fields().empty())
-    {
-        ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-            unknown_fields(), output);
-    }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
 }
 
 ::google::protobuf::uint8* ResponseSystemAccount::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const
-{
+    ::google::protobuf::uint8* target) const {
+  // required .rsctrl.core.Status status = 1;
+  if (has_status()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->status(), target);
+  }
+
+  // required string pgp_name = 2;
+  if (has_pgp_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->pgp_name().data(), this->pgp_name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pgp_name(), target);
+  }
+
+  // required string location = 3;
+  if (has_location()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->location().data(), this->location().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->location(), target);
+  }
+
+  // required string pgp_id = 4;
+  if (has_pgp_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->pgp_id().data(), this->pgp_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->pgp_id(), target);
+  }
+
+  // required string ssl_id = 5;
+  if (has_ssl_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->ssl_id().data(), this->ssl_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        5, this->ssl_id(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ResponseSystemAccount::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     // required .rsctrl.core.Status status = 1;
-    if (has_status())
-    {
-        target = ::google::protobuf::internal::WireFormatLite::
-                 WriteMessageNoVirtualToArray(
-                     1, this->status(), target);
+    if (has_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->status());
     }
 
     // required string pgp_name = 2;
-    if (has_pgp_name())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->pgp_name().data(), this->pgp_name().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        target =
-            ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-                2, this->pgp_name(), target);
+    if (has_pgp_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pgp_name());
     }
 
     // required string location = 3;
-    if (has_location())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->location().data(), this->location().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        target =
-            ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-                3, this->location(), target);
+    if (has_location()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->location());
     }
 
     // required string pgp_id = 4;
-    if (has_pgp_id())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->pgp_id().data(), this->pgp_id().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        target =
-            ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-                4, this->pgp_id(), target);
+    if (has_pgp_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pgp_id());
     }
 
     // required string ssl_id = 5;
-    if (has_ssl_id())
-    {
-        ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->ssl_id().data(), this->ssl_id().length(),
-            ::google::protobuf::internal::WireFormat::SERIALIZE);
-        target =
-            ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-                5, this->ssl_id(), target);
+    if (has_ssl_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->ssl_id());
     }
 
-    if (!unknown_fields().empty())
-    {
-        target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-                     unknown_fields(), target);
-    }
-    return target;
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
 }
 
-int ResponseSystemAccount::ByteSize() const
-{
-    int total_size = 0;
-
-    if (_has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        // required .rsctrl.core.Status status = 1;
-        if (has_status())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                              this->status());
-        }
-
-        // required string pgp_name = 2;
-        if (has_pgp_name())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::StringSize(
-                              this->pgp_name());
-        }
-
-        // required string location = 3;
-        if (has_location())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::StringSize(
-                              this->location());
-        }
-
-        // required string pgp_id = 4;
-        if (has_pgp_id())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::StringSize(
-                              this->pgp_id());
-        }
-
-        // required string ssl_id = 5;
-        if (has_ssl_id())
-        {
-            total_size += 1 +
-                          ::google::protobuf::internal::WireFormatLite::StringSize(
-                              this->ssl_id());
-        }
-
-    }
-    if (!unknown_fields().empty())
-    {
-        total_size +=
-            ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-                unknown_fields());
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _cached_size_ = total_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    return total_size;
+void ResponseSystemAccount::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ResponseSystemAccount* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemAccount*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
 }
 
-void ResponseSystemAccount::MergeFrom(const ::google::protobuf::Message& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    const ResponseSystemAccount* source =
-        ::google::protobuf::internal::dynamic_cast_if_available<const ResponseSystemAccount*>(
-            &from);
-    if (source == NULL)
-    {
-        ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+void ResponseSystemAccount::MergeFrom(const ResponseSystemAccount& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_status()) {
+      mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
     }
-    else
-    {
-        MergeFrom(*source);
+    if (from.has_pgp_name()) {
+      set_pgp_name(from.pgp_name());
     }
-}
-
-void ResponseSystemAccount::MergeFrom(const ResponseSystemAccount& from)
-{
-    GOOGLE_CHECK_NE(&from, this);
-    if (from._has_bits_[0 / 32] & (0xffu << (0 % 32)))
-    {
-        if (from.has_status())
-        {
-            mutable_status()->::rsctrl::core::Status::MergeFrom(from.status());
-        }
-        if (from.has_pgp_name())
-        {
-            set_pgp_name(from.pgp_name());
-        }
-        if (from.has_location())
-        {
-            set_location(from.location());
-        }
-        if (from.has_pgp_id())
-        {
-            set_pgp_id(from.pgp_id());
-        }
-        if (from.has_ssl_id())
-        {
-            set_ssl_id(from.ssl_id());
-        }
+    if (from.has_location()) {
+      set_location(from.location());
     }
-    mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-}
-
-void ResponseSystemAccount::CopyFrom(const ::google::protobuf::Message& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
-}
-
-void ResponseSystemAccount::CopyFrom(const ResponseSystemAccount& from)
-{
-    if (&from == this) return;
-    Clear();
-    MergeFrom(from);
-}
-
-bool ResponseSystemAccount::IsInitialized() const
-{
-    if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
-
-    if (has_status())
-    {
-        if (!this->status().IsInitialized()) return false;
+    if (from.has_pgp_id()) {
+      set_pgp_id(from.pgp_id());
     }
-    return true;
-}
-
-void ResponseSystemAccount::Swap(ResponseSystemAccount* other)
-{
-    if (other != this)
-    {
-        std::swap(status_, other->status_);
-        std::swap(pgp_name_, other->pgp_name_);
-        std::swap(location_, other->location_);
-        std::swap(pgp_id_, other->pgp_id_);
-        std::swap(ssl_id_, other->ssl_id_);
-        std::swap(_has_bits_[0], other->_has_bits_[0]);
-        _unknown_fields_.Swap(&other->_unknown_fields_);
-        std::swap(_cached_size_, other->_cached_size_);
+    if (from.has_ssl_id()) {
+      set_ssl_id(from.ssl_id());
     }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-::google::protobuf::Metadata ResponseSystemAccount::GetMetadata() const
-{
-    protobuf_AssignDescriptorsOnce();
-    ::google::protobuf::Metadata metadata;
-    metadata.descriptor = ResponseSystemAccount_descriptor_;
-    metadata.reflection = ResponseSystemAccount_reflection_;
-    return metadata;
+void ResponseSystemAccount::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ResponseSystemAccount::CopyFrom(const ResponseSystemAccount& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ResponseSystemAccount::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
+
+  if (has_status()) {
+    if (!this->status().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ResponseSystemAccount::Swap(ResponseSystemAccount* other) {
+  if (other != this) {
+    std::swap(status_, other->status_);
+    std::swap(pgp_name_, other->pgp_name_);
+    std::swap(location_, other->location_);
+    std::swap(pgp_id_, other->pgp_id_);
+    std::swap(ssl_id_, other->ssl_id_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ResponseSystemAccount::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ResponseSystemAccount_descriptor_;
+  metadata.reflection = ResponseSystemAccount_reflection_;
+  return metadata;
 }
 
 
