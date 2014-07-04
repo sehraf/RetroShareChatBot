@@ -293,6 +293,43 @@ void RetroShareRPC::checkAutoJoinLobbies()
     }
 }
 
+void RetroShareRPC::checkAutoJoinIrcLobbies()
+{
+    if(_cb->_irc == NULL || _ircBridgeChannelNames->size() == 0)
+        return;
+
+    // map vector to name -> true
+    //std::cout << "RetroShareRPC::checkAutoJoinIrcLobbies() lobby to join " << std::endl;
+    std::map<std::string, bool> lobbiesToJoin;
+    {
+        std::vector<std::string>::iterator it;
+        for(it = _ircBridgeChannelNames->begin(); it != _ircBridgeChannelNames->end(); it++)
+        {
+            //std::cout << " -- " << *it << std::endl;
+            lobbiesToJoin[*it] = true;
+        }
+    }
+
+    std::map<std::string, rsctrl::chat::ChatLobbyInfo>::iterator it;
+    std::string id;
+    std::string name;
+    chat::ChatLobbyInfo lobby;
+    for( it = _lobbyMap.begin(); it != _lobbyMap.end(); it++)
+    {
+        id = it->first;
+        lobby = it->second;
+
+        name = lobby.lobby_name();
+        trim(name);
+
+        //std::cout << "RetroShareRPC::checkAutoJoinLobbies() lobby " << name << std::endl;
+
+        if(lobbiesToJoin.find(name) != lobbiesToJoin.end() && lobby.lobby_state() != chat::ChatLobbyInfo::LobbyState::ChatLobbyInfo_LobbyState_LOBBYSTATE_JOINED)
+            joinLeaveLobby(id, true);
+    }
+}
+
+
 void RetroShareRPC::checkAutoJoinLobbiesBotControl()
 {
     if(!_botControl->enable || _botControl->chatLobbyName == "")

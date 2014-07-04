@@ -177,7 +177,7 @@ void RetroShareRPC::rpcMessageLoop()
 void RetroShareRPC::addIRCBridgeChannelName(std::string& name)
 {
     _ircBridgeChannelNames->push_back(name);
-    _options->autoJoinLobbies.push_back(name);
+    //_options->autoJoinLobbies.push_back(name);
 }
 
 void RetroShareRPC::processTick()
@@ -210,6 +210,7 @@ void RetroShareRPC::processTick()
     if(_tickCounter == 45 || _tickCounter % 120 == 0)
     {
         checkAutoJoinLobbies();
+        checkAutoJoinIrcLobbies();
         checkAutoJoinLobbiesBotControl();
     }
     if(_tickCounter == 65)

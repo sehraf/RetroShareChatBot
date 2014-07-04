@@ -83,6 +83,7 @@ private:
     void ircSetNick();
 
     void checkAutoJoinLobbies();
+    void checkAutoJoinIrcLobbies();
     void checkAutoJoinLobbiesBotControl();
     void checkAutoCreatLobbies();
     void joinLeaveLobby(std::string& in, bool join, bool isID = true);
